@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="wsr_components.css" />
+  <style media="screen">
+    main {
+      width: 1000px;
+      background: #f3f3f3;
+      padding: 30px 50px;
+      margin: auto;
+      display: table;
+    }
+
+    .component-item {
+      padding-bottom: 20px;
+    }
+
+    .component-item>span:first-child {
+      font-size: 20px;
+      margin: 20px 0;
+      display: block;
+    }
+
+    .component-label {
+      font-size: 16px;
+      margin: 20px 0 10px;
+      display: block;
+    }
+
+    * {
+      font-family: var(--madefor);
+    }
+
+    table {
+      color: #333;
+      background: #efefef;
+      border: 1px solid grey;
+      border-collapse: collapse;
+      display: table;
+      width: 1000px;
+    }
+
+    table th,
+    table th {
+      color: #777;
+      background: #e6e6e6;
+      font-weight: 500;
+      letter-spacing: 1px;
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+
+    table caption {
+      padding: .5em;
+    }
+
+    table th,
+    table td {
+      padding: 8px;
+      border: 1px solid lightgrey;
+    }
+
+    td:not(:last-child) {
+      text-align: center;
+      padding: 0 15px;
+    }
+
+    xmp {
+      white-space: pre-line;
+      padding: 0 20px;
+      font-family: "Monaco";
+      font-size: 14px;
+      color: #707070;
+      cursor: pointer;
+      position: relative;
+    }
+
+    xmp:active {
+      filter: brightness(0.7);
+    }
+
+    xmp.copied:after {
+      content: "copied";
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-40%, -50%);
+      background: #575757;
+      color: #e6e6e6;
+      padding: 5px 12px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      font-family: var(--madefor);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <div class="component-item">
+      <span>Buttons</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="4">ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Skin</th>
+            <th>Priority</th>
+            <th>Icon</th>
+            <th>Disabled</th>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button" skin="standard" priority="primary">standard</button>
+            </td>
+            <td>standard</td>
+            <td>primary</td>
+            <td>-</td>
+            <td>-</td>
+            <td>
+              <xmp><button class="wsr-button" skin="standard" priority="primary">standard</button></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button" skin="standard" priority="secondary">standard</button>
+            </td>
+            <td>standard</td>
+            <td>secondary</td>
+            <td>-</td>
+            <td>-</td>
+            <td>
+              <xmp><button class="wsr-button" skin="standard" priority="secondary">standard</button></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button" skin="premium">premium</button>
+            </td>
+            <td>premium</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>
+              <xmp><button class="wsr-button" skin="premium">premium</button></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button" skin="light">light</button>
+            </td>
+            <td>light</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>
+              <xmp><button class="wsr-button" skin="light">light</button></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button" skin="inverted">inverted</button>
+            </td>
+            <td>inverted</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>
+              <xmp><button class="wsr-button" skin="inverted">inverted</button></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button wsr-button-affix" skin="standard" priority="primary" icon="prefix">
+                <img src="./wsr-icons/add-icon.svg">Prefix
+              </button>
+            </td>
+            <td>One of the options</td>
+            <td>One of the options</td>
+            <td>prefix</td>
+            <td>-</td>
+            <td>
+              <xmp><button class="wsr-button wsr-button-affix" skin="standard" priority="primary" icon="prefix">
+                  <img src="./wsr-icons/add-icon.svg">Prefix
+                </button></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button wsr-button-affix" skin="standard" priority="secondary" icon="suffix">
+                Suffix<img src="./wsr-icons/chevdown-icon.svg">
+              </button>
+            </td>
+            <td>One of the options</td>
+            <td>One of the options</td>
+            <td>suffix</td>
+            <td>-</td>
+            <td>
+              <xmp><button class="wsr-button wsr-button-affix" skin="standard" priority="secondary" icon="suffix">
+                  Suffix<img src="./wsr-icons/chevdown-icon.svg">
+                </button></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button" skin="standard" priority="primary" disabled="disabled">disabled</button>
+            </td>
+            <td>One of the options</td>
+            <td>One of the options</td>
+            <td>One of the options</td>
+            <td>+</td>
+            <td>
+              <xmp><button class="wsr-button" skin="standard" priority="primary" disabled="disabled">disabled</button></xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="component-item">
+      <span>Icon Button</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="3">ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Skin</th>
+            <th>Priority</th>
+            <th>Size</th>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button wsr-icon-button" skin="standard" priority="primary" size="large"><img src="./wsr-icons/more-icon.svg"></button>
+            </td>
+            <td>One of the options</td>
+            <td>One of the options</td>
+            <td>large</td>
+            <td>
+              <xmp><button class="wsr-button wsr-icon-button" skin="premium" priority="secondary" size="large">
+                  <img src="./wsr-icons/more-icon.svg">
+                </button></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button wsr-icon-button" skin="standard" priority="secondary" size="medium"><img src="./wsr-icons/more-icon.svg"></button>
+            </td>
+            <td>One of the options</td>
+            <td>One of the options</td>
+            <td>medium</td>
+            <td>
+              <xmp><button class="wsr-button wsr-icon-button" skin="standard" priority="secondary" size="medium">
+                  <img src="./wsr-icons/more-icon.svg">
+                </button></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button wsr-icon-button" skin="premium" size="small">
+                <img src="./wsr-icons/more-icon.svg">
+              </button>
+            </td>
+            <td>One of the options</td>
+            <td>One of the options</td>
+            <td>small</td>
+            <td>
+              <xmp><button class="wsr-button wsr-icon-button" skin="premium" size="small">
+                  <img src="./wsr-icons/more-icon.svg">
+                </button></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button class="wsr-button wsr-icon-button" skin="inverted" size="tiny">
+                <img src="./wsr-icons/more-icon.svg">
+              </button>
+            </td>
+            <td>One of the options</td>
+            <td>One of the options</td>
+            <td>tiny</td>
+            <td>
+              <xmp><button class="wsr-button wsr-icon-button" skin="inverted" size="tiny">
+                  <img src="./wsr-icons/more-icon.svg">
+                </button></xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="component-item">
+      <span>Text Field</span>
+      <table>
+        <tbody>
+          <tr>
+            <th>PREVIEW</th>
+            <th>CODE</th>
+          </tr>
+          <tr>
+            <td>
+              <input class="wsr-text-input" type="text" placeholder="This is a placeholder">
+            </td>
+            <td>
+              <xmp><input class="wsr-text-input" type="text" placeholder="This is a placeholder"></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <textarea class="wsr-text-input wsr-textarea" placeholder="This is a placeholder" rows="3"></textarea>
+            </td>
+            <td>
+              <xmp><textarea class="wsr-text-input wsr-textarea" placeholder="This is a placeholder" rows="3">
+          </textarea></xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="component-item">
+      <span>Search Field</span>
+      <table>
+        <tbody>
+          <tr>
+            <th>PREVIEW</th>
+            <th>CODE</th>
+          </tr>
+          <tr>
+            <td rowspan="3">
+              <div class="wsr-search-field">
+                <img src="./wsr-icons/search-icon.svg">
+                <input class="topbar-search-input" placeholder="Search...">
+              </div>
+            </td>
+            <td>
+              <xmp><div class="wsr-search-field">
+                  <img src="./wsr-icons/search-icon.svg">
+                  <input class="topbar-search-input" placeholder="Search...">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="1">JS</th>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <xmp> document.querySelectorAll('.topbar-search-input').forEach(function(elm) {
+                elm.addEventListener('focus', function(e) {
+                e.target.parentElement.classList.add('wsr-field-has-focus')
+                });
+
+                elm.addEventListener('focusout', function(e) {
+                e.target.parentElement.classList.remove('wsr-field-has-focus')
+                });
+                });</xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="component-item">
+      <span>Radio Button</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="2">INPUT ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Checked</th>
+            <th>Disabled</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-radio-btn-container">
+                <input class="wsr-radio-btn-input" type="radio" name="">
+                <span class="wsr-radio-btn-circle"></span>
+                <label class="wsr-radio-btn-label">Default</label>
+              </div>
+            </td>
+            <td>-</td>
+            <td>-</td>
+            <td>
+              <xmp><div class="wsr-radio-btn-container">
+                  <input class="wsr-radio-btn-input" name="" type="radio">
+                  <span class="wsr-radio-btn-circle"></span>
+                  <label class="wsr-radio-btn-label">Default</label>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-radio-btn-container">
+                <input class="wsr-radio-btn-input" type="radio" name="" checked>
+                <span class="wsr-radio-btn-circle"></span>
+                <label class="wsr-radio-btn-label">Checked</label>
+              </div>
+            </td>
+            <td>+</td>
+            <td>-</td>
+            <td>
+              <xmp><div class="wsr-radio-btn-container">
+                  <input class="wsr-radio-btn-input" type="radio" name="" checked>
+                  <span class="wsr-radio-btn-circle"></span>
+                  <label class="wsr-radio-btn-label">Checked</label>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-radio-btn-container">
+                <input class="wsr-radio-btn-input" type="radio" name="" disabled>
+                <span class="wsr-radio-btn-circle"></span>
+                <label class="wsr-radio-btn-label">Disabled</label>
+              </div>
+            </td>
+            <td>-</td>
+            <td>+</td>
+            <td>
+              <xmp><div class="wsr-radio-btn-container">
+                  <input class="wsr-radio-btn-input" type="radio" name="" disabled>
+                  <span class="wsr-radio-btn-circle"></span>
+                  <label class="wsr-radio-btn-label">Disabled</label>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="component-item">
+      <span>Checkbox</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="2">INPUT ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Checked</th>
+            <th>Disabled</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-checkbox-container">
+                <input class="wsr-checkbox-input" type="checkbox">
+                <span class="wsr-checkbox-label">Unchecked</span>
+              </div>
+            </td>
+            <td>-</td>
+            <td>-</td>
+            <td>
+              <xmp><div class="wsr-checkbox-container">
+                  <input class="wsr-checkbox-input" type="checkbox">
+                  <span class="wsr-checkbox-label">Unchecked</span>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-checkbox-container">
+                <input class="wsr-checkbox-input" type="checkbox" checked>
+                <span class="wsr-checkbox-label">Checked</span>
+              </div>
+            </td>
+            <td>+</td>
+            <td>-</td>
+            <td>
+              <xmp><div class="wsr-checkbox-container">
+                  <input class="wsr-checkbox-input" type="checkbox" checked>
+                  <span class="wsr-checkbox-label">Checked</span>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-checkbox-container">
+                <input class="wsr-checkbox-input" type="checkbox" disabled>
+                <span class="wsr-checkbox-label">Disabled</span>
+              </div>
+            </td>
+            <td>-</td>
+            <td>+</td>
+            <td>
+              <xmp><div class="wsr-checkbox-container">
+                  <input class="wsr-checkbox-input" type="checkbox" disabled>
+                  <span class="wsr-checkbox-label">Disabled</span>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="component-item">
+      <span>Number Input</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="1">DIV ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Icon</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-input-number-container">
+                <input type="number" class="wsr-number-input">
+              </div>
+            </td>
+            <td>-</td>
+            <td>
+              <xmp><div class="wsr-input-number-container">
+                  <input type="number" class="wsr-number-input">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-input-number-container" icon="suffix">
+                <input type="number" class="wsr-number-input">
+                <span class="wsr-input-affix">$</span>
+              </div>
+            </td>
+            <td>suffix</td>
+            <td>
+              <xmp><div class="wsr-input-number-container" icon="suffix">
+                  <input type="number" class="wsr-number-input">
+                  <span class="wsr-input-affix">$</span>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-input-number-container" icon="prefix">
+                <input type="number" class="wsr-number-input">
+                <span class="wsr-input-affix">$</span>
+              </div>
+            </td>
+            <td>prefix</td>
+            <td>
+              <xmp><div class="wsr-input-number-container" icon="prefix">
+                  <input type="number" class="wsr-number-input">
+                  <span class="wsr-input-affix">$</span>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="component-item">
+      <span>Dropdown</span>
+      <table>
+        <tbody>
+          <tr>
+            <th>PREVIEW</th>
+            <th>CODE</th>
+          </tr>
+          <tr>
+            <td rowspan="3">
+              <div class="wsr-dropdown">
+                <input class="wsr-text-input wsr-dropdown-input" type="text" placeholder="Select an option" readonly>
+                <div class="wsr-dropdown-content">
+                  <div class="wsr-dropdown-item" value="Option 1">Option 1</div>
+                  <div class="wsr-dropdown-item" value="Option 2">Option 2</div>
+                  <div class="wsr-dropdown-item" value="Option 3">Option 3</div>
+                  <div class="wsr-dropdown-item" value="Option 4">Option 4</div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <xmp><div class="wsr-dropdown">
+                  <input class="wsr-text-input wsr-dropdown-input" type="text" placeholder="Select an option" readonly>
+                  <div class="wsr-dropdown-content">
+                    <div class="wsr-dropdown-item" value="Option 1">Option 1</div>
+                    <div class="wsr-dropdown-item" value="Option 2">Option 2</div>
+                    <div class="wsr-dropdown-item" value="Option 3">Option 3</div>
+                    <div class="wsr-dropdown-item" value="Option 4">Option 4</div>
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="1">JS</th>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <xmp>// dropdown focus
+                document.querySelectorAll('.wsr-dropdown .wsr-text-input').forEach(function(elm) {
+                elm.addEventListener('focus', function(e) {
+                e.target.parentElement.classList.add('wsr-field-has-focus')
+                });
+                });
+
+                // select dropdown item
+                document.querySelectorAll('.wsr-dropdown-item').forEach(function(dropdownItem) {
+                dropdownItem.addEventListener('click', function(e) {
+                const input = e.target.parentElement.previousElementSibling;
+                input.value = e.target.getAttribute('value');
+                e.target.parentElement.querySelectorAll('.wsr-dropdown-item').forEach(function(sibilingItem) {
+                sibilingItem.classList.remove('selected');
+                })
+                e.target.classList.add('selected');
+                e.target.parentElement.parentElement.classList.remove('wsr-field-has-focus');
+                });
+
+                // close dropdown
+                document.addEventListener('click', function(e) {
+                if(!e.target.classList.contains('wsr-dropdown-input')) {
+                document.querySelectorAll('.wsr-dropdown').forEach(function(dropdowns) {
+                dropdowns.classList.remove('wsr-field-has-focus');
+                })
+                }
+                });
+                });</xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="component-item">
+      <span>Avatar</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="1">DIV ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Size</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-avatar" size="large"><img src="./wsr-icons/avatar-icon.svg"></div>
+            </td>
+            <td>large</td>
+            <td>
+              <xmp><div class="wsr-avatar" size="large"><img src="./wsr-icons/avatar-icon.svg"></div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-avatar" size="medium"><img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
+            </td>
+            <td>medium</td>
+            <td>
+              <xmp><div class="wsr-avatar" size="medium"><img src="http://static.wixstatic.com/media/
+              11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-avatar" size="small"><img src="./wsr-icons/avatar-icon.svg"></div>
+            </td>
+            <td>small</td>
+            <td>
+              <xmp><div class="wsr-avatar" size="small"><img src="./wsr-icons/avatar-icon.svg"></div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-avatar" size="tiny"><img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
+            </td>
+            <td>tiny</td>
+            <td>
+              <xmp><div class="wsr-avatar" size="tiny"><img src="http://static.wixstatic.com/media/
+                11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
+              </xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="component-item">
+      <span>Popover Menu</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="1">ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Dir</th>
+          </tr>
+          <tr>
+            <td rowspan="3">
+              <div class="wsr-popover-menu">Click me
+                <div class="wsr-popover wsr-popover-menu-content" dir="top">
+                  <span class="wsr-popover-menu-item">Add New Items</span>
+                  <span class="wsr-popover-menu-item">Edit This Item</span>
+                  <span class="wsr-popover-menu-item">Delete This Item</span>
+                </div>
+              </div>
+            </td>
+            <td rowspan="3">top</td>
+            <td colspan="1">
+              <xmp><div class="wsr-popover-menu">Click me
+                  <div class="wsr-popover wsr-popover-menu-content" dir="top">
+                    <span class="wsr-popover-menu-item">Add New Items</span>
+                    <span class="wsr-popover-menu-item">Edit This Item</span>
+                    <span class="wsr-popover-menu-item">Delete This Item</span>
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="1">JS</th>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <xmp>document.querySelectorAll('.wsr-popover-menu').forEach(function(popoverMenu) {
+                popoverMenu.addEventListener('click', function (e) {
+                this.classList.toggle('wsr-open-popover');
+                });
+                });</xmp>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="wsr-popover-menu">Click me
+                <div class="wsr-popover wsr-popover-menu-content" dir="right">
+                  <span class="wsr-popover-menu-item">Add New Items</span>
+                  <span class="wsr-popover-menu-item">Edit This Item</span>
+                  <span class="wsr-popover-menu-item">Delete This Item</span>
+                </div>
+              </div>
+            </td>
+            <td>right</td>
+            <td>
+              <xmp><div class="wsr-popover-menu">Click me
+                  <div class="wsr-popover wsr-popover-menu-content" dir="right">
+                    <span class="wsr-popover-menu-item">Add New Items</span>
+                    <span class="wsr-popover-menu-item">Edit This Item</span>
+                    <span class="wsr-popover-menu-item">Delete This Item</span>
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-popover-menu">Click me
+                <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                  <span class="wsr-popover-menu-item">Add New Items</span>
+                  <span class="wsr-popover-menu-item">Edit This Item</span>
+                  <span class="wsr-popover-menu-item">Delete This Item</span>
+                </div>
+              </div>
+            </td>
+            <td>bottom</td>
+            <td>
+              <xmp><div class="wsr-popover-menu">Click me
+                  <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                    <span class="wsr-popover-menu-item">Add New Items</span>
+                    <span class="wsr-popover-menu-item">Edit This Item</span>
+                    <span class="wsr-popover-menu-item">Delete This Item</span>
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-popover-menu">Click me
+                <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                  <span class="wsr-popover-menu-item">Add New Items</span>
+                  <span class="wsr-popover-menu-item">Edit This Item</span>
+                  <span class="wsr-popover-menu-item">Delete This Item</span>
+                </div>
+              </div>
+            </td>
+            <td>left</td>
+            <td>
+              <xmp><div class="wsr-popover-menu">Click me
+                  <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                    <span class="wsr-popover-menu-item">Add New Items</span>
+                    <span class="wsr-popover-menu-item">Edit This Item</span>
+                    <span class="wsr-popover-menu-item">Delete This Item</span>
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-popover-menu">Prefix Icon
+                <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                  <span class="wsr-popover-menu-item"><img src="./wsr-icons/add-icon.svg">Add New Items</span>
+                  <span class="wsr-popover-menu-item"><img src="./wsr-icons/edit-icon.svg">Edit This Item</span>
+                </div>
+              </div>
+            </td>
+            <td>bottom</td>
+            <td>
+              <xmp><div class="wsr-popover-menu">Prefix Icon
+                  <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                    <span class="wsr-popover-menu-item"><img src="./wsr-icons/add-icon.svg">Add New Items</span>
+                    <span class="wsr-popover-menu-item"><img src="./wsr-icons/edit-icon.svg">Edit This Item</span>
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-popover-menu">With Divider
+                <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                  <span class="wsr-popover-menu-item">Add New Items</span>
+                  <span class="wsr-popover-menu-item">Edit This Item</span>
+                  <span class="wsr-popover-menu-divider"></span>
+                  <span class="wsr-popover-menu-item">Delete This Item</span>
+                </div>
+              </div>
+            </td>
+            <td>bottom</td>
+            <td>
+              <xmp><div class="wsr-popover-menu">With Divider
+                  <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                    <span class="wsr-popover-menu-item">Add New Items</span>
+                    <span class="wsr-popover-menu-item">Edit This Item</span>
+                    <span class="wsr-popover-menu-divider"></span>
+                    <span class="wsr-popover-menu-item">Delete This Item</span>
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="component-item">
+      <span>Tooltips</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="1">ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Dir</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-tooltip">Hover Me
+                <div class="wsr-popover wsr-tooltip-content" dir="top">
+                  Enter your postal code, so postman can easier send you a mail.
+                </div>
+              </div>
+            </td>
+            <td>top</td>
+            <td>
+              <xmp><div class="wsr-tooltip">Hover Me
+                  <div class="wsr-popover wsr-tooltip-content" dir="top">
+                    Enter your postal code, so postman can easier send you a mail.
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-tooltip">Hover Me
+                <div class="wsr-popover wsr-tooltip-content" dir="right">
+                  Enter your postal code, so postman can easier send you a mail.
+                </div>
+              </div>
+            </td>
+            <td>right</td>
+            <td>
+              <xmp><div class="wsr-tooltip">Hover Me
+                  <div class="wsr-popover wsr-tooltip-content" dir="right">
+                    Enter your postal code, so postman can easier send you a mail.
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-tooltip">Hover Me
+                <div class="wsr-popover wsr-tooltip-content" dir="bottom">
+                  Enter your postal code, so postman can easier send you a mail.
+                </div>
+              </div>
+            </td>
+            <td>bottom</td>
+            <td>
+              <xmp><div class="wsr-tooltip">Hover Me
+                  <div class="wsr-popover wsr-tooltip-content" dir="bottom">
+                    Enter your postal code, so postman can easier send you a mail.
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-tooltip">Hover Me
+                <div class="wsr-popover wsr-tooltip-content" dir="left">
+                  Enter your postal code, so postman can easier send you a mail.
+                </div>
+              </div>
+            </td>
+            <td>left</td>
+            <td>
+              <xmp><div class="wsr-tooltip">Hover Me
+                  <div class="wsr-popover wsr-tooltip-content" dir="left">
+                    Enter your postal code, so postman can easier send you a mail.
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+<script type="text/javascript">
+  window.onload = (event) => {
+    document.querySelectorAll('.wsr-popover-menu').forEach(function(popoverMenu) {
+      popoverMenu.addEventListener('click', function(e) {
+        this.classList.toggle('wsr-open-popover');
+      });
+    });
+
+    document.querySelectorAll('.topbar-search-input').forEach(function(elm) {
+      elm.addEventListener('focus', function(e) {
+        e.target.parentElement.classList.add('wsr-field-has-focus')
+      });
+      elm.addEventListener('focusout', function(e) {
+        e.target.parentElement.classList.remove('wsr-field-has-focus')
+      });
+    });
+
+    document.querySelectorAll('.wsr-dropdown .wsr-text-input').forEach(function(elm) {
+      elm.addEventListener('focus', function(e) {
+        e.target.parentElement.classList.add('wsr-field-has-focus')
+      });
+    });
+
+    document.addEventListener('click', function(e) {
+      if (!e.target.classList.contains('wsr-dropdown-input')) {
+        document.querySelectorAll('.wsr-dropdown').forEach(function(dropdowns) {
+          dropdowns.classList.remove('wsr-field-has-focus');
+        })
+      }
+    });
+
+    document.querySelectorAll('.wsr-dropdown-item').forEach(function(dropdownItem) {
+      dropdownItem.addEventListener('click', function(e) {
+        const input = e.target.parentElement.previousElementSibling;
+        input.value = e.target.getAttribute('value');
+        e.target.parentElement.querySelectorAll('.wsr-dropdown-item').forEach(function(sibilingItem) {
+          sibilingItem.classList.remove('selected');
+        })
+        e.target.classList.add('selected');
+        e.target.parentElement.parentElement.classList.remove('wsr-field-has-focus');
+      });
+    });
+
+    document.querySelectorAll('xmp').forEach(function(codeElm) {
+      codeElm.addEventListener('click', function(e) {
+        codeElm.classList.add('copied');
+        setTimeout(function() {
+          codeElm.classList.remove('copied');
+        }, 1500);
+        if (document.body.createTextRange) {
+          var range = document.body.createTextRange();
+          range.moveToElementText(codeElm);
+          range.select();
+        } else if (window.getSelection) {
+          var selection = window.getSelection();
+          var range = document.createRange();
+          range.selectNodeContents(codeElm);
+          selection.removeAllRanges();
+          selection.addRange(range);
+          document.execCommand("copy");
+        }
+      });
+    });
+  }
+</script>
+
+</html>
