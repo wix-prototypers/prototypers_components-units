@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title></title>
+  <link rel="shortcut icon" type="image/jpg" href="https://wix-prototypers.github.io/prototypers_logo/favicon.ico">
+  <title>Component Units</title>
   <link rel="stylesheet" href="wsr_components.css" />
   <style media="screen">
   main {
@@ -103,6 +104,13 @@
     padding: 0 15px;
   }
 
+  .td-label {
+    text-align: left;
+    font-size: 12px;
+    color: #777777;
+    display: block;
+    margin: 10px 10px 0px 10px;
+  }
   xmp {
     white-space: pre-line;
     padding: 0 20px;
@@ -138,9 +146,7 @@
     <div class="main-search-container">
       <img src="./wsr-icons/search-icon.svg">
       <input id="main-search" type="text" placeholder="Search Component">
-
     </div>
-
     <div class="component-item" for="buttons">
       <span>Buttons</span>
       <table>
@@ -354,11 +360,21 @@
           </tr>
           <tr>
             <td>
+              <label class="td-label">(rows="3")</label>
               <textarea class="wsr-text-input wsr-textarea" placeholder="This is a placeholder" rows="3"></textarea>
             </td>
             <td>
               <xmp><textarea class="wsr-text-input wsr-textarea" placeholder="This is a placeholder" rows="3">
               </textarea></xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label class="td-label">(Dynamic Height)</label>
+              <div type="text" class="wsr-text-input" contenteditable="true" placeholder="Write a description"></div>
+            </td>
+            <td>
+              <xmp><div type="text"  class="wsr-text-input" contenteditable="true" placeholder="Write a description"></div></xmp>
             </td>
           </tr>
         </tbody>
@@ -735,7 +751,6 @@
     </tbody>
   </table>
 </div>
-
 <div class="component-item" for="popover menu">
   <span>Popover Menu</span>
   <table>
@@ -987,6 +1002,8 @@
   <label>Oops!</label>
   No results found
 </div>
+
+
 </main>
 </body>
 <script type="text/javascript">

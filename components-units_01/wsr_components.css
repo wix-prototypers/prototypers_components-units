@@ -263,6 +263,7 @@
 .wsr-textarea {
   resize: vertical;
   min-height: 36px;
+      margin: 10px 0 20px 8px;
 }
 
 .wsr-radio-btn-container {
@@ -732,4 +733,16 @@ input[type=checkbox].wsr-checkbox-input:disabled::before {
 
 .wsr-dropdown.wsr-field-has-focus .wsr-dropdown-content {
   visibility: visible;
+}
+
+div[type=text].wsr-text-input {
+    display: inline-block;
+    min-height: 36px;
+    text-align: left;
+    margin: 10px 0 20px 8px;
+}
+
+div[type=text].wsr-text-input[placeholder]:empty:before {
+    content: attr(placeholder);
+    color: #757575;
 }
