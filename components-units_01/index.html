@@ -797,7 +797,6 @@
         });</xmp>
       </td>
     </tr>
-
     <tr>
       <td>
         <div class="wsr-popover-menu">Click me
@@ -998,11 +997,74 @@
 </tbody>
 </table>
 </div>
+<div class="component-item" for="toggle switch">
+  <span>Toggle Switch</span>
+  <table>
+    <tbody>
+      <tr>
+        <th rowspan="2">PREVIEW</th>
+        <th colspan="1">ATTRIBUTES</th>
+        <th rowspan="2">CODE</th>
+      </tr>
+      <tr>
+        <th>Size</th>
+      </tr>
+      <tr>
+        <td>
+          <label class="wsr-toggle-switch" size="large">
+            <input class="wsr-toggle-input" type="checkbox">
+            <span class="wsr-toggle-round"></span>
+          </label>
+        </td>
+        <td>large</td>
+        <td>
+          <xmp><label class="wsr-toggle-switch" size="large">
+            <input class="wsr-toggle-input" type="checkbox">
+            <span class="wsr-toggle-round"></span>
+          </label>
+        </xmp>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label class="wsr-toggle-switch" size="medium">
+          <input class="wsr-toggle-input" type="checkbox">
+          <span class="wsr-toggle-round"></span>
+        </label>
+      </td>
+      <td>medium</td>
+      <td>
+        <xmp>        <label class="wsr-toggle-switch" size="medium">
+          <input class="wsr-toggle-input" type="checkbox">
+          <span class="wsr-toggle-round"></span>
+        </label>
+      </xmp>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <label class="wsr-toggle-switch" size="small">
+        <input class="wsr-toggle-input" type="checkbox">
+        <span class="wsr-toggle-round"></span>
+      </label>
+    </td>
+    <td>small</td>
+    <td>
+      <xmp>  <label class="wsr-toggle-switch" size="small">
+        <input class="wsr-toggle-input" type="checkbox">
+        <span class="wsr-toggle-round"></span>
+      </label>
+    </xmp>
+  </td>
+</tr>
+
+</tbody>
+</table>
+</div>
 <div class="search-empty hide">
   <label>Oops!</label>
   No results found
 </div>
-
 
 </main>
 </body>
@@ -1077,7 +1139,7 @@ window.onload = (event) => {
     document.querySelectorAll('.component-item').forEach(function(component) {
       component.classList.add('hide');
       const componentName = component.getAttribute('for');
-      if(componentName.includes(val)) {
+      if(componentName.toLowerCase().includes(val.toLowerCase())) {
         component.classList.remove('hide');
         count++;
       }
