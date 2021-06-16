@@ -764,7 +764,7 @@ input[type=checkbox].wsr-checkbox-input:disabled::before {
   visibility: visible;
 }
 
-
+/* ---------------------- Toogle ---------------------- */
 .wsr-toggle-switch[size="large"] {
   --toggle-height: 24px;
   --toggle-width: 48px;
@@ -893,7 +893,7 @@ input[type=checkbox].wsr-checkbox-input:disabled::before {
 }
 
 
-
+/* ---------------------- Segmented Toogle ---------------------- */
 .wsr-segmented-toggle {
     position: relative;
     background-color: tomato;
@@ -982,4 +982,203 @@ input[type="radio"].wsr-segmented-toggle-option[option="2"]:checked ~ .wsr-segme
 
 .wsr-segmented-toggle.wsr-icons-toggle .wsr-segmented-toggle-labels .wsr-segmented-toggle-preix {
   margin-right: 0px;
+}
+
+/* ---------------------- Date Picker ---------------------- */
+.wsr-date-picker {
+  width: 231px;
+}
+
+.wsr-date-picker > .wsr-input-affix {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: var(--D30);
+    margin-right: 6px;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.wsr-date-picker > .wsr-input-affix svg {
+  filter: var(--blue-icon)
+}
+
+.wsr-date-picker > .wsr-dropdown-input {
+  padding: 5px 12px 5px 36px;
+  width: 231px;
+}
+
+.wsr-date-picker .wsr-dropdown-content {
+  height: 342px;
+  width: 300px;
+  max-height: unset;
+  border-radius: 4px;
+}
+
+.wsr-date-picker::after {
+  content: unset;
+}
+
+.wsr-date-picker .wsr-date-picker-content {
+  width: 300px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 24px 0;
+      height: 54px;
+      box-sizing: border-box;
+}
+
+
+.wsr-date-picker .table-cont .wsr-date-picker-header, .wsr-date-picker .wsr-date-picker-content .wsr-date-picker-header {
+    /* margin-bottom: 12px; */
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 337px;
+  }
+
+  .wsr-date-picker .table-cont {
+    text-align: center;
+    background-color: #fff;
+    /* width: 375px; */
+    margin: 0 10px;
+    position: relative;
+    position: absolute;
+    top: 60px;
+    /* opacity: 0; */
+    /* z-index: -1; */
+}
+
+.wsr-date-picker table {
+  border: none;
+  background: #fff;
+  width: 300px;
+}
+
+.wsr-date-picker thead {
+    /* padding: 0 12px; */
+    box-sizing: border-box;
+    height: 48px;
+    display: flex;
+    align-items: center;
+        width: 246px;
+}
+
+.wsr-date-picker thead td {
+  font-size: 14px;
+  border: none;
+  width: 32px;
+  padding: 0;
+}
+
+.wsr-date-picker tbody {
+  width: 261px;
+}
+
+.wsr-date-picker .row-1 td {
+  margin: 0;
+  padding: 0 1px;
+      height: 36px;
+      width: 30px;
+      display: inline-flex;
+align-items: center;
+justify-content: center;
+}
+
+.wsr-date-picker .row-1 td .today-indication {
+  width: 28px;
+      height: 28px;
+      background: #f0f4f7;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+}
+
+.wsr-date-picker .wsr-date-picker-month-year {
+  font-weight: 600;
+}
+
+.wsr-date-picker .wsr-date-picker-btn {
+  background: #fff;
+  border: none;
+  pointer-events: none;
+}
+
+.wsr-date-picker .wsr-date-picker-btn svg {
+  filter: var(--blue-icon)
+}
+
+.wsr-date-picker thead tr {
+    /* width: 96%; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    height: 48px;
+    display: flex;
+    align-items: center;
+}
+
+.wsr-date-picker table,
+.wsr-date-picker thead,
+.wsr-date-picker tbody,
+.wsr-date-picker th,
+.wsr-date-picker tr,
+.wsr-date-picker td {
+    display: inline-block;
+}
+
+.wsr-date-picker td.gray-day {
+  color: var(--D55);
+  pointer-events: none;
+}
+.wsr-date-picker tbody tr td {
+    border: none !important;
+    /* padding: 0 13px !important; */
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    width: 24px;
+    height: 22px;
+    margin: 4px 10px;
+    line-height: 1.5;
+    color: var(--D10);
+    font-size: 14px;
+}
+
+.wsr-date-picker .wsr-calendar-day span {
+  height: 36px;
+width: 36px;
+background: transparent;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+position: absolute;
+}
+
+.wsr-date-picker .wsr-calendar-day:not(.gray):hover span:not(.today-indication) {
+  height: 36px;
+width: 36px;
+background: var(--B50);
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+position: absolute;
+}
+
+.wsr-date-picker .wsr-calendar-day.selected span {
+background: var(--B10);
+color: #fff;
+}
+
+.wsr-date-picker .wsr-calendar-day:not(.gray):active span:not(.today-indication) {
+  background: var(--B50);
+  border: 3px solid var(--B30);
 }
