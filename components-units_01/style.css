@@ -1,0 +1,133 @@
+main {
+  width: 75%;
+  background: #f3f3f3;
+  padding: 30px 50px;
+  margin: auto;
+  display: table;
+}
+
+.main-search-container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #818181;
+  width: 30%;
+  margin: auto auto 60px auto;
+}
+
+.main-search-container img {
+  opacity: 0.7;
+}
+
+#main-search {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  font-size: 16px;
+  padding: 5px 0 5px 8px;
+}
+
+.search-empty {
+  color: #777777;
+  margin: auto;
+  text-align: center;
+}
+
+.search-empty label {
+  font-weight: 600;
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.component-item {
+  padding-bottom: 20px;
+}
+
+.component-item>span:first-child {
+  font-size: 20px;
+  margin: 20px 0;
+  display: block;
+}
+
+.component-label {
+  font-size: 16px;
+  margin: 20px 0 10px;
+  display: block;
+}
+
+* {
+  font-family: var(--madefor);
+}
+
+table {
+  color: #333;
+  background: #efefef;
+  border: 1px solid grey;
+  border-collapse: collapse;
+  display: table;
+  width: 100%;
+}
+
+table th,
+table th {
+  color: #777;
+  background: #e6e6e6;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+table caption {
+  padding: .5em;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 1px solid lightgrey;
+}
+
+td:not(:last-child) {
+  text-align: center;
+  padding: 15px;
+}
+
+.td-label {
+  text-align: left;
+  font-size: 12px;
+  color: #777777;
+  display: block;
+  margin: 10px 10px 0px 10px;
+}
+xmp {
+  white-space: pre-line;
+  padding: 0 20px;
+  font-family: "Monaco";
+  font-size: 14px;
+  color: #707070;
+  cursor: pointer;
+  position: relative;
+  max-height: 250px;
+  overflow: scroll;
+}
+
+xmp:active {
+  filter: brightness(0.7);
+}
+
+xmp.copied:after {
+  content: "copied";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  background: #575757;
+  color: #e6e6e6;
+  padding: 5px 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: var(--madefor);
+}

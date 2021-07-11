@@ -5,141 +5,10 @@
   <meta charset="utf-8">
   <link rel="shortcut icon" type="image/jpg" href="https://wix-prototypers.github.io/prototypers_logo/favicon.ico">
   <title>Component Units</title>
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="wsr_components.css" />
   <style media="screen">
-  main {
-    width: 75%;
-    background: #f3f3f3;
-    padding: 30px 50px;
-    margin: auto;
-    display: table;
-  }
 
-  .main-search-container {
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #818181;
-    width: 30%;
-    margin: auto auto 60px auto;
-  }
-
-  .main-search-container img {
-    opacity: 0.7;
-  }
-
-  #main-search {
-    background: transparent;
-    outline: 0;
-    border: 0;
-    font-size: 16px;
-    padding: 5px 0 5px 8px;
-  }
-
-  .search-empty {
-    color: #777777;
-    margin: auto;
-    text-align: center;
-  }
-
-  .search-empty label {
-    font-weight: 600;
-    display: block;
-  }
-
-  .hide {
-    display: none;
-  }
-
-  .component-item {
-    padding-bottom: 20px;
-  }
-
-  .component-item>span:first-child {
-    font-size: 20px;
-    margin: 20px 0;
-    display: block;
-  }
-
-  .component-label {
-    font-size: 16px;
-    margin: 20px 0 10px;
-    display: block;
-  }
-
-  * {
-    font-family: var(--madefor);
-  }
-
-  table {
-    color: #333;
-    background: #efefef;
-    border: 1px solid grey;
-    border-collapse: collapse;
-    display: table;
-    width: 100%;
-  }
-
-  table th,
-  table th {
-    color: #777;
-    background: #e6e6e6;
-    font-weight: 500;
-    letter-spacing: 1px;
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-
-  table caption {
-    padding: .5em;
-  }
-
-  table th,
-  table td {
-    padding: 8px;
-    border: 1px solid lightgrey;
-  }
-
-  td:not(:last-child) {
-    text-align: center;
-    padding: 0 15px;
-  }
-
-  .td-label {
-    text-align: left;
-    font-size: 12px;
-    color: #777777;
-    display: block;
-    margin: 10px 10px 0px 10px;
-  }
-  xmp {
-    white-space: pre-line;
-    padding: 0 20px;
-    font-family: "Monaco";
-    font-size: 14px;
-    color: #707070;
-    cursor: pointer;
-    position: relative;
-    max-height: 250px;
-    overflow: scroll;
-  }
-
-  xmp:active {
-    filter: brightness(0.7);
-  }
-
-  xmp.copied:after {
-    content: "copied";
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-40%, -50%);
-    background: #575757;
-    color: #e6e6e6;
-    padding: 5px 12px;
-    box-sizing: border-box;
-    border-radius: 8px;
-    font-family: var(--madefor);
-  }
   </style>
 </head>
 
@@ -371,12 +240,14 @@
             </td>
           </tr>
           <tr>
-            <td>
+            <td style="text-align: unset;">
               <label class="td-label">(Dynamic Height)</label>
               <div type="text" class="wsr-text-input" contenteditable="true" placeholder="Write a description"></div>
             </td>
             <td>
-              <xmp><div type="text"  class="wsr-text-input" contenteditable="true" placeholder="Write a description"></div></xmp>
+              <xmp>
+                <div type="text" class="wsr-text-input" contenteditable="true" placeholder="Write a description"></div>
+              </xmp>
             </td>
           </tr>
         </tbody>
@@ -398,825 +269,866 @@
               </div>
             </td>
             <td>
-              <xmp><div class="wsr-search-field">
-                <img src="./wsr-icons/search-icon.svg">
-                <input class="topbar-search-input" placeholder="Search...">
+              <xmp>
+                <div class="wsr-search-field">
+                  <img src="./wsr-icons/search-icon.svg">
+                  <input class="topbar-search-input" placeholder="Search...">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="1">JS</th>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <xmp> document.querySelectorAll('.topbar-search-input').forEach(function(elm) {
+                elm.addEventListener('focus', function(e) {
+                  e.target.parentElement.classList.add('wsr-field-has-focus')
+                });
+
+                elm.addEventListener('focusout', function(e) {
+                  e.target.parentElement.classList.remove('wsr-field-has-focus')
+                });
+              });</xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="component-item" for="radio buttons">
+      <span>Radio Button</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="2">INPUT ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Checked</th>
+            <th>Disabled</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-radio-btn-container">
+                <input class="wsr-radio-btn-input" type="radio" name="">
+                <span class="wsr-radio-btn-circle"></span>
+                <label class="wsr-radio-btn-label">Default</label>
               </div>
-            </xmp>
-          </td>
-        </tr>
-        <tr>
-          <th colspan="1">JS</th>
-        </tr>
-        <tr>
-          <td colspan="1">
-            <xmp> document.querySelectorAll('.topbar-search-input').forEach(function(elm) {
-              elm.addEventListener('focus', function(e) {
-                e.target.parentElement.classList.add('wsr-field-has-focus')
-              });
-
-              elm.addEventListener('focusout', function(e) {
-                e.target.parentElement.classList.remove('wsr-field-has-focus')
-              });
-            });</xmp>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="component-item" for="radio buttons">
-    <span>Radio Button</span>
-    <table>
-      <tbody>
-        <tr>
-          <th rowspan="2">PREVIEW</th>
-          <th colspan="2">INPUT ATTRIBUTES</th>
-          <th rowspan="2">CODE</th>
-        </tr>
-        <tr>
-          <th>Checked</th>
-          <th>Disabled</th>
-        </tr>
-        <tr>
-          <td>
-            <div class="wsr-radio-btn-container">
-              <input class="wsr-radio-btn-input" type="radio" name="">
-              <span class="wsr-radio-btn-circle"></span>
-              <label class="wsr-radio-btn-label">Default</label>
-            </div>
-          </td>
-          <td>-</td>
-          <td>-</td>
-          <td>
-            <xmp><div class="wsr-radio-btn-container">
-              <input class="wsr-radio-btn-input" name="" type="radio">
-              <span class="wsr-radio-btn-circle"></span>
-              <label class="wsr-radio-btn-label">Default</label>
-            </div>
-          </xmp>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="wsr-radio-btn-container">
-            <input class="wsr-radio-btn-input" type="radio" name="" checked>
-            <span class="wsr-radio-btn-circle"></span>
-            <label class="wsr-radio-btn-label">Checked</label>
-          </div>
-        </td>
-        <td>+</td>
-        <td>-</td>
-        <td>
-          <xmp><div class="wsr-radio-btn-container">
-            <input class="wsr-radio-btn-input" type="radio" name="" checked>
-            <span class="wsr-radio-btn-circle"></span>
-            <label class="wsr-radio-btn-label">Checked</label>
-          </div>
-        </xmp>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="wsr-radio-btn-container">
-          <input class="wsr-radio-btn-input" type="radio" name="" disabled>
-          <span class="wsr-radio-btn-circle"></span>
-          <label class="wsr-radio-btn-label">Disabled</label>
-        </div>
-      </td>
-      <td>-</td>
-      <td>+</td>
-      <td>
-        <xmp><div class="wsr-radio-btn-container">
-          <input class="wsr-radio-btn-input" type="radio" name="" disabled>
-          <span class="wsr-radio-btn-circle"></span>
-          <label class="wsr-radio-btn-label">Disabled</label>
-        </div>
-      </xmp>
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
-<div class="component-item" for="checkbox">
-  <span>Checkbox</span>
-  <table>
-    <tbody>
-      <tr>
-        <th rowspan="2">PREVIEW</th>
-        <th colspan="2">INPUT ATTRIBUTES</th>
-        <th rowspan="2">CODE</th>
-      </tr>
-      <tr>
-        <th>Checked</th>
-        <th>Disabled</th>
-      </tr>
-      <tr>
-        <td>
-          <div class="wsr-checkbox-container">
-            <input class="wsr-checkbox-input" type="checkbox">
-            <span class="wsr-checkbox-label">Unchecked</span>
-          </div>
-        </td>
-        <td>-</td>
-        <td>-</td>
-        <td>
-          <xmp><div class="wsr-checkbox-container">
-            <input class="wsr-checkbox-input" type="checkbox">
-            <span class="wsr-checkbox-label">Unchecked</span>
-          </div>
-        </xmp>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="wsr-checkbox-container">
-          <input class="wsr-checkbox-input" type="checkbox" checked>
-          <span class="wsr-checkbox-label">Checked</span>
-        </div>
-      </td>
-      <td>+</td>
-      <td>-</td>
-      <td>
-        <xmp><div class="wsr-checkbox-container">
-          <input class="wsr-checkbox-input" type="checkbox" checked>
-          <span class="wsr-checkbox-label">Checked</span>
-        </div>
-      </xmp>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <div class="wsr-checkbox-container">
-        <input class="wsr-checkbox-input" type="checkbox" disabled>
-        <span class="wsr-checkbox-label">Disabled</span>
-      </div>
-    </td>
-    <td>-</td>
-    <td>+</td>
-    <td>
-      <xmp><div class="wsr-checkbox-container">
-        <input class="wsr-checkbox-input" type="checkbox" disabled>
-        <span class="wsr-checkbox-label">Disabled</span>
-      </div>
-    </xmp>
-  </td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="component-item" for="number input">
-  <span>Number Input</span>
-  <table>
-    <tbody>
-      <tr>
-        <th rowspan="2">PREVIEW</th>
-        <th colspan="1">DIV ATTRIBUTES</th>
-        <th rowspan="2">CODE</th>
-      </tr>
-      <tr>
-        <th>Icon</th>
-      </tr>
-      <tr>
-        <td>
-          <div class="wsr-input-number-container">
-            <input type="number" class="wsr-number-input">
-          </div>
-        </td>
-        <td>-</td>
-        <td>
-          <xmp><div class="wsr-input-number-container">
-            <input type="number" class="wsr-number-input">
-          </div>
-        </xmp>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="wsr-input-number-container" icon="suffix">
-          <input type="number" class="wsr-number-input">
-          <span class="wsr-input-affix">$</span>
-        </div>
-      </td>
-      <td>suffix</td>
-      <td>
-        <xmp><div class="wsr-input-number-container" icon="suffix">
-          <input type="number" class="wsr-number-input">
-          <span class="wsr-input-affix">$</span>
-        </div>
-      </xmp>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <div class="wsr-input-number-container" icon="prefix">
-        <input type="number" class="wsr-number-input">
-        <span class="wsr-input-affix">$</span>
-      </div>
-    </td>
-    <td>prefix</td>
-    <td>
-      <xmp><div class="wsr-input-number-container" icon="prefix">
-        <input type="number" class="wsr-number-input">
-        <span class="wsr-input-affix">$</span>
-      </div>
-    </xmp>
-  </td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="component-item" for="dropdown">
-  <span>Dropdown</span>
-  <table>
-    <tbody>
-      <tr>
-        <th rowspan="2">PREVIEW</th>
-        <th colspan="1">DIV ATTRIBUTES</th>
-        <th rowspan="2">CODE</th>
-      </tr>
-      <tr>
-        <th>Skin</th>
-      </tr>
-      <tr>
-        <td rowspan="3">
-          <div class="wsr-dropdown">
-            <input class="wsr-text-input wsr-dropdown-input" type="text" placeholder="Select an option" readonly>
-            <div class="wsr-dropdown-content">
-              <div class="wsr-dropdown-item" value="Option 1">Option 1</div>
-              <div class="wsr-dropdown-item" value="Option 2">Option 2</div>
-              <div class="wsr-dropdown-item" value="Option 3">Option 3</div>
-              <div class="wsr-dropdown-item" value="Option 4">Option 4</div>
-            </div>
-          </div>
-
-        </td>
-        <td rowspan="3">
-          -
-        </td>
-        <td>
-          <xmp><div class="wsr-dropdown">
-            <input class="wsr-text-input wsr-dropdown-input" type="text" placeholder="Select an option" readonly>
-            <div class="wsr-dropdown-content">
-              <div class="wsr-dropdown-item" value="Option 1">Option 1</div>
-              <div class="wsr-dropdown-item" value="Option 2">Option 2</div>
-              <div class="wsr-dropdown-item" value="Option 3">Option 3</div>
-              <div class="wsr-dropdown-item" value="Option 4">Option 4</div>
-            </div>
-          </div>
-        </xmp>
-      </td>
-    </tr>
-    <tr>
-      <th colspan="1">JS</th>
-    </tr>
-    <tr>
-      <td colspan="1">
-        <xmp>// dropdown focus
-          document.querySelectorAll('.wsr-dropdown .wsr-text-input').forEach(function(elm) {
-            elm.addEventListener('focus', function(e) {
-              e.target.parentElement.classList.add('wsr-field-has-focus')
-            });
-          });
-
-          // select dropdown item
-          document.querySelectorAll('.wsr-dropdown-item').forEach(function(dropdownItem) {
-            dropdownItem.addEventListener('click', function(e) {
-              const input = e.target.parentElement.previousElementSibling;
-              input.value = e.target.getAttribute('value');
-              e.target.parentElement.querySelectorAll('.wsr-dropdown-item').forEach(function(sibilingItem) {
-                sibilingItem.classList.remove('selected');
-              })
-              e.target.classList.add('selected');
-              e.target.parentElement.parentElement.classList.remove('wsr-field-has-focus');
-            });
-
-            // close dropdown
-            document.addEventListener('click', function(e) {
-              if(!e.target.classList.contains('wsr-dropdown-input')) {
-                document.querySelectorAll('.wsr-dropdown').forEach(function(dropdowns) {
-                  dropdowns.classList.remove('wsr-field-has-focus');
-                })
-              }
-            });
-          });</xmp>
-        </td>
-      </tr>
-
-      <tr>
-        <td rowspan="3">
-          <div class="wsr-dropdown" skin="badge">
-            <input class="wsr-text-input wsr-dropdown-input" color="success" type="text" placeholder="Select an option" readonly value="Active">
-            <div class="wsr-dropdown-content">
-              <div class="wsr-dropdown-item" value="Active"><label class="wsr-badge-color-tag" color="success"></label>Active</div>
-              <div class="wsr-dropdown-item" value="Inactive"><label class="wsr-badge-color-tag" color="disabled"></label>Inactive</div>
-            </div>
-          </div>
-        </td>
-        <td rowspan="3">
-          badge
-        </td>
-        <td>
-          <xmp><div class="wsr-dropdown" skin="badge">
-            <input class="wsr-text-input wsr-dropdown-input" color="success" type="text" placeholder="Select an option" readonly value="Active">
-            <div class="wsr-dropdown-content">
-              <div class="wsr-dropdown-item" value="Active"><label class="wsr-badge-color-tag" color="success"></label>Active</div>
-              <div class="wsr-dropdown-item" value="Inactive"><label class="wsr-badge-color-tag" color="disabled"></label>Inactive</div>
-            </div>
-          </div>
-        </xmp>
-      </td>
-    </tr>
-    <tr>
-      <th colspan="1">JS</th>
-    </tr>
-    <tr>
-      <td colspan="1">
-        <xmp>// dropdown focus
-          document.querySelectorAll('.wsr-dropdown .wsr-text-input').forEach(function(elm) {
-            elm.addEventListener('focus', function(e) {
-              e.target.parentElement.classList.add('wsr-field-has-focus')
-            });
-          });
-
-          // select dropdown item & and cahnge the background color
-          document.querySelectorAll('.wsr-dropdown[skin="badge"] .wsr-dropdown-content .wsr-dropdown-item').forEach(function(dropdownItem) {
-            dropdownItem.addEventListener('click', function(e) {
-              const input = e.target.parentElement.previousElementSibling;
-              input.value = e.target.getAttribute('value');
-              e.target.parentElement.querySelectorAll('.wsr-dropdown-item').forEach(function(sibilingItem) {
-                sibilingItem.classList.remove('selected');
-              })
-              e.target.classList.add('selected');
-              e.target.parentElement.parentElement.classList.remove('wsr-field-has-focus');
-              let color = e.target.children[0].getAttribute('color');
-              input.setAttribute('color', color)
-            });
-          });</xmp>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="component-item" for="avatar">
-  <span>Avatar</span>
-  <table>
-    <tbody>
-      <tr>
-        <th rowspan="2">PREVIEW</th>
-        <th colspan="1">DIV ATTRIBUTES</th>
-        <th rowspan="2">CODE</th>
-      </tr>
-      <tr>
-        <th>Size</th>
-      </tr>
-      <tr>
-        <td>
-          <div class="wsr-avatar" size="large"><img src="./wsr-icons/avatar-icon.svg"></div>
-        </td>
-        <td>large</td>
-        <td>
-          <xmp><div class="wsr-avatar" size="large"><img src="./wsr-icons/avatar-icon.svg"></div>
-          </xmp>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="wsr-avatar" size="medium"><img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
-        </td>
-        <td>medium</td>
-        <td>
-          <xmp><div class="wsr-avatar" size="medium"><img src="http://static.wixstatic.com/media/
-            11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
-          </xmp>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="wsr-avatar" size="small"><img src="./wsr-icons/avatar-icon.svg"></div>
-        </td>
-        <td>small</td>
-        <td>
-          <xmp><div class="wsr-avatar" size="small"><img src="./wsr-icons/avatar-icon.svg"></div>
-          </xmp>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <div class="wsr-avatar" size="tiny"><img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
-        </td>
-        <td>tiny</td>
-        <td>
-          <xmp><div class="wsr-avatar" size="tiny"><img src="http://static.wixstatic.com/media/
-            11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
-          </xmp>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-<div class="component-item" for="popover menu">
-  <span>Popover Menu</span>
-  <table>
-    <tbody>
-      <tr>
-        <th rowspan="2">PREVIEW</th>
-        <th colspan="1">ATTRIBUTES</th>
-        <th rowspan="2">CODE</th>
-      </tr>
-      <tr>
-        <th>Dir</th>
-      </tr>
-      <tr>
-        <td rowspan="3">
-          <div class="wsr-popover-menu">Click me
-            <div class="wsr-popover wsr-popover-menu-content" dir="top">
-              <span class="wsr-popover-menu-item">Add New Items</span>
-              <span class="wsr-popover-menu-item">Edit This Item</span>
-              <span class="wsr-popover-menu-item">Delete This Item</span>
-            </div>
-          </div>
-        </td>
-        <td rowspan="3">top</td>
-        <td colspan="1">
-          <xmp><div class="wsr-popover-menu">Click me
-            <div class="wsr-popover wsr-popover-menu-content" dir="top">
-              <span class="wsr-popover-menu-item">Add New Items</span>
-              <span class="wsr-popover-menu-item">Edit This Item</span>
-              <span class="wsr-popover-menu-item">Delete This Item</span>
-            </div>
-          </div>
-        </xmp>
-      </td>
-    </tr>
-    <tr>
-      <th colspan="1">JS</th>
-    </tr>
-    <tr>
-      <td colspan="1">
-        <xmp>document.querySelectorAll('.wsr-popover-menu').forEach(function(popoverMenu) {
-          popoverMenu.addEventListener('click', function (e) {
-            this.classList.toggle('wsr-open-popover');
-          });
-        });</xmp>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="wsr-popover-menu">Click me
-          <div class="wsr-popover wsr-popover-menu-content" dir="right">
-            <span class="wsr-popover-menu-item">Add New Items</span>
-            <span class="wsr-popover-menu-item">Edit This Item</span>
-            <span class="wsr-popover-menu-item">Delete This Item</span>
-          </div>
-        </div>
-      </td>
-      <td>right</td>
-      <td>
-        <xmp><div class="wsr-popover-menu">Click me
-          <div class="wsr-popover wsr-popover-menu-content" dir="right">
-            <span class="wsr-popover-menu-item">Add New Items</span>
-            <span class="wsr-popover-menu-item">Edit This Item</span>
-            <span class="wsr-popover-menu-item">Delete This Item</span>
-          </div>
-        </div>
-      </xmp>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <div class="wsr-popover-menu">Click me
-        <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
-          <span class="wsr-popover-menu-item">Add New Items</span>
-          <span class="wsr-popover-menu-item">Edit This Item</span>
-          <span class="wsr-popover-menu-item">Delete This Item</span>
-        </div>
-      </div>
-    </td>
-    <td>bottom</td>
-    <td>
-      <xmp><div class="wsr-popover-menu">Click me
-        <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
-          <span class="wsr-popover-menu-item">Add New Items</span>
-          <span class="wsr-popover-menu-item">Edit This Item</span>
-          <span class="wsr-popover-menu-item">Delete This Item</span>
-        </div>
-      </div>
-    </xmp>
-  </td>
-</tr>
-<tr>
-  <td>
-    <div class="wsr-popover-menu">Click me
-      <div class="wsr-popover wsr-popover-menu-content" dir="left">
-        <span class="wsr-popover-menu-item">Add New Items</span>
-        <span class="wsr-popover-menu-item">Edit This Item</span>
-        <span class="wsr-popover-menu-item">Delete This Item</span>
-      </div>
+            </td>
+            <td>-</td>
+            <td>-</td>
+            <td>
+              <xmp>
+                <div class="wsr-radio-btn-container">
+                  <input class="wsr-radio-btn-input" name="" type="radio">
+                  <span class="wsr-radio-btn-circle"></span>
+                  <label class="wsr-radio-btn-label">Default</label>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-radio-btn-container">
+                <input class="wsr-radio-btn-input" type="radio" name="" checked>
+                <span class="wsr-radio-btn-circle"></span>
+                <label class="wsr-radio-btn-label">Checked</label>
+              </div>
+            </td>
+            <td>+</td>
+            <td>-</td>
+            <td>
+              <xmp>
+                <div class="wsr-radio-btn-container">
+                  <input class="wsr-radio-btn-input" type="radio" name="" checked>
+                  <span class="wsr-radio-btn-circle"></span>
+                  <label class="wsr-radio-btn-label">Checked</label>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-radio-btn-container">
+                <input class="wsr-radio-btn-input" type="radio" name="" disabled>
+                <span class="wsr-radio-btn-circle"></span>
+                <label class="wsr-radio-btn-label">Disabled</label>
+              </div>
+            </td>
+            <td>-</td>
+            <td>+</td>
+            <td>
+              <xmp>
+                <div class="wsr-radio-btn-container">
+                  <input class="wsr-radio-btn-input" type="radio" name="" disabled>
+                  <span class="wsr-radio-btn-circle"></span>
+                  <label class="wsr-radio-btn-label">Disabled</label>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </td>
-  <td>left</td>
-  <td>
-    <xmp><div class="wsr-popover-menu">Click me
-      <div class="wsr-popover wsr-popover-menu-content" dir="left">
-        <span class="wsr-popover-menu-item">Add New Items</span>
-        <span class="wsr-popover-menu-item">Edit This Item</span>
-        <span class="wsr-popover-menu-item">Delete This Item</span>
-      </div>
+    <div class="component-item" for="checkbox">
+      <span>Checkbox</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="2">INPUT ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Checked</th>
+            <th>Disabled</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-checkbox-container">
+                <input class="wsr-checkbox-input" type="checkbox">
+                <span class="wsr-checkbox-label">Unchecked</span>
+              </div>
+            </td>
+            <td>-</td>
+            <td>-</td>
+            <td>
+              <xmp>
+                <div class="wsr-checkbox-container">
+                  <input class="wsr-checkbox-input" type="checkbox">
+                  <span class="wsr-checkbox-label">Unchecked</span>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-checkbox-container">
+                <input class="wsr-checkbox-input" type="checkbox" checked>
+                <span class="wsr-checkbox-label">Checked</span>
+              </div>
+            </td>
+            <td>+</td>
+            <td>-</td>
+            <td>
+              <xmp>
+                <div class="wsr-checkbox-container">
+                  <input class="wsr-checkbox-input" type="checkbox" checked>
+                  <span class="wsr-checkbox-label">Checked</span>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-checkbox-container">
+                <input class="wsr-checkbox-input" type="checkbox" disabled>
+                <span class="wsr-checkbox-label">Disabled</span>
+              </div>
+            </td>
+            <td>-</td>
+            <td>+</td>
+            <td>
+              <xmp>
+                <div class="wsr-checkbox-container">
+                  <input class="wsr-checkbox-input" type="checkbox" disabled>
+                  <span class="wsr-checkbox-label">Disabled</span>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </xmp>
-</td>
-</tr>
-<tr>
-  <td>
-    <div class="wsr-popover-menu">Prefix Icon
-      <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
-        <span class="wsr-popover-menu-item"><img src="./wsr-icons/add-icon.svg">Add New Items</span>
-        <span class="wsr-popover-menu-item"><img src="./wsr-icons/edit-icon.svg">Edit This Item</span>
-      </div>
+    <div class="component-item" for="number input">
+      <span>Number Input</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="1">DIV ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Icon</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-input-number-container">
+                <input type="number" class="wsr-number-input">
+              </div>
+            </td>
+            <td>-</td>
+            <td>
+              <xmp>
+                <div class="wsr-input-number-container">
+                  <input type="number" class="wsr-number-input">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-input-number-container" icon="suffix">
+                <input type="number" class="wsr-number-input">
+                <span class="wsr-input-affix">$</span>
+              </div>
+            </td>
+            <td>suffix</td>
+            <td>
+              <xmp>
+                <div class="wsr-input-number-container" icon="suffix">
+                  <input type="number" class="wsr-number-input">
+                  <span class="wsr-input-affix">$</span>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-input-number-container" icon="prefix">
+                <input type="number" class="wsr-number-input">
+                <span class="wsr-input-affix">$</span>
+              </div>
+            </td>
+            <td>prefix</td>
+            <td>
+              <xmp>
+                <div class="wsr-input-number-container" icon="prefix">
+                  <input type="number" class="wsr-number-input">
+                  <span class="wsr-input-affix">$</span>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </td>
-  <td>bottom</td>
-  <td>
-    <xmp><div class="wsr-popover-menu">Prefix Icon
-      <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
-        <span class="wsr-popover-menu-item"><img src="./wsr-icons/add-icon.svg">Add New Items</span>
-        <span class="wsr-popover-menu-item"><img src="./wsr-icons/edit-icon.svg">Edit This Item</span>
-      </div>
-    </div>
-  </xmp>
-</td>
-</tr>
-<tr>
-  <td>
-    <div class="wsr-popover-menu">With Divider
-      <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
-        <span class="wsr-popover-menu-item">Add New Items</span>
-        <span class="wsr-popover-menu-item">Edit This Item</span>
-        <span class="wsr-popover-menu-divider"></span>
-        <span class="wsr-popover-menu-item">Delete This Item</span>
-      </div>
-    </div>
-  </td>
-  <td>bottom</td>
-  <td>
-    <xmp><div class="wsr-popover-menu">With Divider
-      <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
-        <span class="wsr-popover-menu-item">Add New Items</span>
-        <span class="wsr-popover-menu-item">Edit This Item</span>
-        <span class="wsr-popover-menu-divider"></span>
-        <span class="wsr-popover-menu-item">Delete This Item</span>
-      </div>
-    </div>
-  </xmp>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="component-item" for="tooltips">
-  <span>Tooltips</span>
-  <table>
-    <tbody>
-      <tr>
-        <th rowspan="2">PREVIEW</th>
-        <th colspan="1">ATTRIBUTES</th>
-        <th rowspan="2">CODE</th>
-      </tr>
-      <tr>
-        <th>Dir</th>
-      </tr>
-      <tr>
-        <td>
-          <div class="wsr-tooltip">Hover Me
-            <div class="wsr-popover wsr-tooltip-content" dir="top">
-              Enter your postal code, so postman can easier send you a mail.
+    <div class="component-item" for="dropdown">
+      <span>Dropdown</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2">PREVIEW</th>
+            <th colspan="1">DIV ATTRIBUTES</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th>Skin</th>
+          </tr>
+          <tr>
+            <td rowspan="3">
+              <div class="wsr-dropdown">
+                <input class="wsr-text-input wsr-dropdown-input" type="text" placeholder="Select an option" readonly>
+                <div class="wsr-dropdown-content">
+                  <div class="wsr-dropdown-item" value="Option 1">Option 1</div>
+                  <div class="wsr-dropdown-item" value="Option 2">Option 2</div>
+                  <div class="wsr-dropdown-item" value="Option 3">Option 3</div>
+                  <div class="wsr-dropdown-item" value="Option 4">Option 4</div>
+                </div>
+              </div>
+
+            </td>
+            <td rowspan="3">
+              -
+            </td>
+            <td>
+              <xmp>
+                <div class="wsr-dropdown">
+                  <input class="wsr-text-input wsr-dropdown-input" type="text" placeholder="Select an option" readonly>
+                  <div class="wsr-dropdown-content">
+                    <div class="wsr-dropdown-item" value="Option 1">Option 1</div>
+                    <div class="wsr-dropdown-item" value="Option 2">Option 2</div>
+                    <div class="wsr-dropdown-item" value="Option 3">Option 3</div>
+                    <div class="wsr-dropdown-item" value="Option 4">Option 4</div>
+                  </div>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="1">JS</th>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <xmp>// dropdown focus
+                document.querySelectorAll('.wsr-dropdown .wsr-text-input').forEach(function(elm) {
+                  elm.addEventListener('focus', function(e) {
+                    e.target.parentElement.classList.add('wsr-field-has-focus')
+                  });
+                });
+
+                // select dropdown item
+                document.querySelectorAll('.wsr-dropdown-item').forEach(function(dropdownItem) {
+                  dropdownItem.addEventListener('click', function(e) {
+                    const input = e.target.parentElement.previousElementSibling;
+                    input.value = e.target.getAttribute('value');
+                    e.target.parentElement.querySelectorAll('.wsr-dropdown-item').forEach(function(sibilingItem) {
+                      sibilingItem.classList.remove('selected');
+                    })
+                    e.target.classList.add('selected');
+                    e.target.parentElement.parentElement.classList.remove('wsr-field-has-focus');
+                  });
+
+                  // close dropdown
+                  document.addEventListener('click', function(e) {
+                    if(!e.target.classList.contains('wsr-dropdown-input')) {
+                      document.querySelectorAll('.wsr-dropdown').forEach(function(dropdowns) {
+                        dropdowns.classList.remove('wsr-field-has-focus');
+                      })
+                    }
+                  });
+                });</xmp>
+              </td>
+            </tr>
+
+            <tr>
+              <td rowspan="3">
+                <div class="wsr-dropdown" skin="badge">
+                  <input class="wsr-text-input wsr-dropdown-input" color="success" type="text" placeholder="Select an option" readonly value="Active">
+                  <div class="wsr-dropdown-content">
+                    <div class="wsr-dropdown-item" value="Active"><label class="wsr-badge-color-tag" color="success"></label>Active</div>
+                    <div class="wsr-dropdown-item" value="Inactive"><label class="wsr-badge-color-tag" color="disabled"></label>Inactive</div>
+                  </div>
+                </div>
+              </td>
+              <td rowspan="3">
+                badge
+              </td>
+              <td>
+                <xmp>
+                  <div class="wsr-dropdown" skin="badge">
+                    <input class="wsr-text-input wsr-dropdown-input" color="success" type="text" placeholder="Select an option" readonly value="Active">
+                    <div class="wsr-dropdown-content">
+                      <div class="wsr-dropdown-item" value="Active"><label class="wsr-badge-color-tag" color="success"></label>Active</div>
+                      <div class="wsr-dropdown-item" value="Inactive"><label class="wsr-badge-color-tag" color="disabled"></label>Inactive</div>
+                    </div>
+                  </div>
+                </xmp>
+              </td>
+            </tr>
+            <tr>
+              <th colspan="1">JS</th>
+            </tr>
+            <tr>
+              <td colspan="1">
+                <xmp>// dropdown focus
+                  document.querySelectorAll('.wsr-dropdown .wsr-text-input').forEach(function(elm) {
+                    elm.addEventListener('focus', function(e) {
+                      e.target.parentElement.classList.add('wsr-field-has-focus')
+                    });
+                  });
+
+                  // select dropdown item & and cahnge the background color
+                  document.querySelectorAll('.wsr-dropdown[skin="badge"] .wsr-dropdown-content .wsr-dropdown-item').forEach(function(dropdownItem) {
+                    dropdownItem.addEventListener('click', function(e) {
+                      const input = e.target.parentElement.previousElementSibling;
+                      input.value = e.target.getAttribute('value');
+                      e.target.parentElement.querySelectorAll('.wsr-dropdown-item').forEach(function(sibilingItem) {
+                        sibilingItem.classList.remove('selected');
+                      })
+                      e.target.classList.add('selected');
+                      e.target.parentElement.parentElement.classList.remove('wsr-field-has-focus');
+                      let color = e.target.children[0].getAttribute('color');
+                      input.setAttribute('color', color)
+                    });
+                  });</xmp>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="component-item" for="avatar">
+          <span>Avatar</span>
+          <table>
+            <tbody>
+              <tr>
+                <th rowspan="2">PREVIEW</th>
+                <th colspan="1">DIV ATTRIBUTES</th>
+                <th rowspan="2">CODE</th>
+              </tr>
+              <tr>
+                <th>Size</th>
+              </tr>
+              <tr>
+                <td>
+                  <div class="wsr-avatar" size="large"><img src="./wsr-icons/avatar-icon.svg"></div>
+                </td>
+                <td>large</td>
+                <td>
+                  <xmp>
+                    <div class="wsr-avatar" size="large"><img src="./wsr-icons/avatar-icon.svg"></div>
+                  </xmp>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="wsr-avatar" size="medium"><img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
+                </td>
+                <td>medium</td>
+                <td>
+                  <xmp>
+                    <div class="wsr-avatar" size="medium"><img src="http://static.wixstatic.com/media/
+                      11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
+                    </xmp>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="wsr-avatar" size="small"><img src="./wsr-icons/avatar-icon.svg"></div>
+                  </td>
+                  <td>small</td>
+                  <td>
+                    <xmp>
+                      <div class="wsr-avatar" size="small"><img src="./wsr-icons/avatar-icon.svg"></div>
+                    </xmp>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="wsr-avatar" size="tiny"><img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
+                  </td>
+                  <td>tiny</td>
+                  <td>
+                    <xmp>
+                      <div class="wsr-avatar" size="tiny"><img src="http://static.wixstatic.com/media/
+                        11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>
+                      </xmp>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
-        </td>
-        <td>top</td>
-        <td>
-          <xmp><div class="wsr-tooltip">Hover Me
-            <div class="wsr-popover wsr-tooltip-content" dir="top">
-              Enter your postal code, so postman can easier send you a mail.
+            <div class="component-item" for="popover menu">
+              <span>Popover Menu</span>
+              <table>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">PREVIEW</th>
+                    <th colspan="1">ATTRIBUTES</th>
+                    <th rowspan="2">CODE</th>
+                  </tr>
+                  <tr>
+                    <th>Dir</th>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">
+                      <div class="wsr-popover-menu">Click me
+                        <div class="wsr-popover wsr-popover-menu-content" dir="top">
+                          <span class="wsr-popover-menu-item">Add New Items</span>
+                          <span class="wsr-popover-menu-item">Edit This Item</span>
+                          <span class="wsr-popover-menu-item">Delete This Item</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td rowspan="3">top</td>
+                    <td colspan="1">
+                      <xmp>
+                        <div class="wsr-popover-menu">Click me
+                          <div class="wsr-popover wsr-popover-menu-content" dir="top">
+                            <span class="wsr-popover-menu-item">Add New Items</span>
+                            <span class="wsr-popover-menu-item">Edit This Item</span>
+                            <span class="wsr-popover-menu-item">Delete This Item</span>
+                          </div>
+                        </div>
+                      </xmp>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th colspan="1">JS</th>
+                  </tr>
+                  <tr>
+                    <td colspan="1">
+                      <xmp>document.querySelectorAll('.wsr-popover-menu').forEach(function(popoverMenu) {
+                        popoverMenu.addEventListener('click', function (e) {
+                          this.classList.toggle('wsr-open-popover');
+                        });
+                      });</xmp>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="wsr-popover-menu">Click me
+                        <div class="wsr-popover wsr-popover-menu-content" dir="right">
+                          <span class="wsr-popover-menu-item">Add New Items</span>
+                          <span class="wsr-popover-menu-item">Edit This Item</span>
+                          <span class="wsr-popover-menu-item">Delete This Item</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>right</td>
+                    <td>
+                      <xmp>
+                        <div class="wsr-popover-menu">Click me
+                          <div class="wsr-popover wsr-popover-menu-content" dir="right">
+                            <span class="wsr-popover-menu-item">Add New Items</span>
+                            <span class="wsr-popover-menu-item">Edit This Item</span>
+                            <span class="wsr-popover-menu-item">Delete This Item</span>
+                          </div>
+                        </div>
+                      </xmp>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="wsr-popover-menu">Click me
+                        <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                          <span class="wsr-popover-menu-item">Add New Items</span>
+                          <span class="wsr-popover-menu-item">Edit This Item</span>
+                          <span class="wsr-popover-menu-item">Delete This Item</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>bottom</td>
+                    <td>
+                      <xmp>
+                        <div class="wsr-popover-menu">Click me
+                          <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                            <span class="wsr-popover-menu-item">Add New Items</span>
+                            <span class="wsr-popover-menu-item">Edit This Item</span>
+                            <span class="wsr-popover-menu-item">Delete This Item</span>
+                          </div>
+                        </div>
+                      </xmp>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="wsr-popover-menu">Click me
+                        <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                          <span class="wsr-popover-menu-item">Add New Items</span>
+                          <span class="wsr-popover-menu-item">Edit This Item</span>
+                          <span class="wsr-popover-menu-item">Delete This Item</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>left</td>
+                    <td>
+                      <xmp>
+                        <div class="wsr-popover-menu">Click me
+                          <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                            <span class="wsr-popover-menu-item">Add New Items</span>
+                            <span class="wsr-popover-menu-item">Edit This Item</span>
+                            <span class="wsr-popover-menu-item">Delete This Item</span>
+                          </div>
+                        </div>
+                      </xmp>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="wsr-popover-menu">Prefix Icon
+                        <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                          <span class="wsr-popover-menu-item"><img src="./wsr-icons/add-icon.svg">Add New Items</span>
+                          <span class="wsr-popover-menu-item"><img src="./wsr-icons/edit-icon.svg">Edit This Item</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>bottom</td>
+                    <td>
+                      <xmp>
+                        <div class="wsr-popover-menu">Prefix Icon
+                          <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                            <span class="wsr-popover-menu-item"><img src="./wsr-icons/add-icon.svg">Add New Items</span>
+                            <span class="wsr-popover-menu-item"><img src="./wsr-icons/edit-icon.svg">Edit This Item</span>
+                          </div>
+                        </div>
+                      </xmp>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="wsr-popover-menu">With Divider
+                        <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                          <span class="wsr-popover-menu-item">Add New Items</span>
+                          <span class="wsr-popover-menu-item">Edit This Item</span>
+                          <span class="wsr-popover-menu-divider"></span>
+                          <span class="wsr-popover-menu-item">Delete This Item</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td>bottom</td>
+                    <td>
+                      <xmp>
+                        <div class="wsr-popover-menu">With Divider
+                          <div class="wsr-popover wsr-popover-menu-content" dir="bottom">
+                            <span class="wsr-popover-menu-item">Add New Items</span>
+                            <span class="wsr-popover-menu-item">Edit This Item</span>
+                            <span class="wsr-popover-menu-divider"></span>
+                            <span class="wsr-popover-menu-item">Delete This Item</span>
+                          </div>
+                        </div>
+                      </xmp>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
-        </xmp>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="wsr-tooltip">Hover Me
-          <div class="wsr-popover wsr-tooltip-content" dir="right">
-            Enter your postal code, so postman can easier send you a mail.
-          </div>
-        </div>
-      </td>
-      <td>right</td>
-      <td>
-        <xmp><div class="wsr-tooltip">Hover Me
-          <div class="wsr-popover wsr-tooltip-content" dir="right">
-            Enter your postal code, so postman can easier send you a mail.
-          </div>
-        </div>
-      </xmp>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <div class="wsr-tooltip">Hover Me
-        <div class="wsr-popover wsr-tooltip-content" dir="bottom">
-          Enter your postal code, so postman can easier send you a mail.
-        </div>
+            <div class="component-item" for="tooltips">
+              <span>Tooltips</span>
+              <table>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">PREVIEW</th>
+                    <th colspan="1">ATTRIBUTES</th>
+                    <th rowspan="2">CODE</th>
+                  </tr>
+                  <tr>
+                    <th>Dir</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="wsr-tooltip">Hover Me
+                        <div class="wsr-popover wsr-tooltip-content" dir="top">
+                          Enter your postal code, so postman can easier send you a mail.
+                        </div>
+                      </div>
+                    </td>
+                    <td>top</td>
+                    <td>
+                      <xmp>
+                        <div class="wsr-tooltip">Hover Me
+                          <div class="wsr-popover wsr-tooltip-content" dir="top">
+                            Enter your postal code, so postman can easier send you a mail.
+                          </div>
+                        </div>
+                      </xmp>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="wsr-tooltip">Hover Me
+                        <div class="wsr-popover wsr-tooltip-content" dir="right">
+                          Enter your postal code, so postman can easier send you a mail.
+                        </div>
+                      </div>
+                    </td>
+                    <td>right</td>
+                    <td>
+                      <xmp>
+                        <div class="wsr-tooltip">Hover Me
+                          <div class="wsr-popover wsr-tooltip-content" dir="right">
+                            Enter your postal code, so postman can easier send you a mail.
+                          </div>
+                        </div>
+                      </xmp>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="wsr-tooltip">Hover Me
+                        <div class="wsr-popover wsr-tooltip-content" dir="bottom">
+                          Enter your postal code, so postman can easier send you a mail.
+                        </div>
+                      </div>
+                    </td>
+                    <td>bottom</td>
+                    <td>
+                      <xmp>
+                        <div class="wsr-tooltip">Hover Me
+                          <div class="wsr-popover wsr-tooltip-content" dir="bottom">
+                            Enter your postal code, so postman can easier send you a mail.
+                          </div>
+                        </div>
+                      </xmp>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="wsr-tooltip">Hover Me
+                        <div class="wsr-popover wsr-tooltip-content" dir="left">
+                          Enter your postal code, so postman can easier send you a mail.
+                        </div>
+                      </div>
+                    </td>
+                    <td>left</td>
+                    <td>
+                      <xmp>
+                        <div class="wsr-tooltip">Hover Me
+                          <div class="wsr-popover wsr-tooltip-content" dir="left">
+                            Enter your postal code, so postman can easier send you a mail.
+                          </div>
+                        </div>
+                      </xmp>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="component-item" for="toggle switch">
+              <span>Toggle Switch</span>
+              <table>
+                <tbody>
+                  <tr>
+                    <th rowspan="2">PREVIEW</th>
+                    <th colspan="1">ATTRIBUTES</th>
+                    <th rowspan="2">CODE</th>
+                  </tr>
+                  <tr>
+                    <th>Size</th>
+                  </tr>
+                  <tr>
+                    <td>
+                      <label class="wsr-toggle-switch" size="large">
+                        <input class="wsr-toggle-input" type="checkbox">
+                        <span class="wsr-toggle-round"></span>
+                      </label>
+                    </td>
+                    <td>large</td>
+                    <td>
+                      <xmp><label class="wsr-toggle-switch" size="large">
+                        <input class="wsr-toggle-input" type="checkbox">
+                        <span class="wsr-toggle-round"></span>
+                      </label>
+                    </xmp>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label class="wsr-toggle-switch" size="medium">
+                      <input class="wsr-toggle-input" type="checkbox">
+                      <span class="wsr-toggle-round"></span>
+                    </label>
+                  </td>
+                  <td>medium</td>
+                  <td>
+                    <xmp> <label class="wsr-toggle-switch" size="medium">
+                      <input class="wsr-toggle-input" type="checkbox">
+                      <span class="wsr-toggle-round"></span>
+                    </label>
+                  </xmp>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label class="wsr-toggle-switch" size="small">
+                    <input class="wsr-toggle-input" type="checkbox">
+                    <span class="wsr-toggle-round"></span>
+                  </label>
+                </td>
+                <td>small</td>
+                <td>
+                  <xmp> <label class="wsr-toggle-switch" size="small">
+                    <input class="wsr-toggle-input" type="checkbox">
+                    <span class="wsr-toggle-round"></span>
+                  </label>
+                </xmp>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
       </div>
-    </td>
-    <td>bottom</td>
-    <td>
-      <xmp><div class="wsr-tooltip">Hover Me
-        <div class="wsr-popover wsr-tooltip-content" dir="bottom">
-          Enter your postal code, so postman can easier send you a mail.
-        </div>
+
+
+
+
+      <div class="component-item" for="segmented toggle">
+        <span>Segmented Toggle</span>
+        <table>
+          <tbody>
+            <tr>
+              <th rowspan="1">PREVIEW</th>
+              <th rowspan="1">CODE</th>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="wsr-segmented-toggle">
+                  <input class="wsr-segmented-toggle-option" id="segmented-toggle-1" value="hide" option="1" type="radio" name="segmented-toggle" checked="">
+                  <label class="wsr-segmented-toggle-labels" for="segmented-toggle-1">Option 1</label>
+                  <input class="wsr-segmented-toggle-option" id="segmented-toggle-2" value="show" option="2" type="radio" name="segmented-toggle">
+                  <label class="wsr-segmented-toggle-labels" for="segmented-toggle-2">Option 2</label>
+                </div>
+              </td>
+              <td>
+                <xmp>
+                  <div class="wsr-segmented-toggle">
+                    <input class="wsr-segmented-toggle-option" id="segmented-toggle-1" value="hide" option="1" type="radio" name="segmented-toggle" checked="">
+                    <label class="wsr-segmented-toggle-labels" for="segmented-toggle-1">Option 1</label>
+                    <input class="wsr-segmented-toggle-option" id="segmented-toggle-2" value="show" option="2" type="radio" name="segmented-toggle">
+                    <label class="wsr-segmented-toggle-labels" for="segmented-toggle-2">Option 2</label>
+                  </div>
+                </xmp>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="wsr-segmented-toggle">
+                  <input class="wsr-segmented-toggle-option" id="icon-text-toggle-1" value="hide" option="1" type="radio" name="icon-text-segmented-toggle" checked="">
+                  <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-1"><span class="wsr-segmented-toggle-preix">%</span><span>Option 1</span></label>
+                  <input class="wsr-segmented-toggle-option" id="icon-text-toggle-2" value="show" option="2" type="radio" name="icon-text-segmented-toggle">
+                  <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span><span>Option 2</span></label>
+                </div>
+              </td>
+              <td>
+                <xmp>
+                  <div class="wsr-segmented-toggle">
+                    <input class="wsr-segmented-toggle-option" id="icon-text-toggle-1" value="hide" option="1" type="radio" name="icon-text-segmented-toggle" checked="">
+                    <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-1"><span class="wsr-segmented-toggle-preix">%</span><span>Option 1</span></label>
+                    <input class="wsr-segmented-toggle-option" id="icon-text-toggle-2" value="show" option="2" type="radio" name="icon-text-segmented-toggle">
+                    <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span><span>Option 2</span></label>
+                  </div>
+                </xmp>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="wsr-segmented-toggle wsr-icons-toggle">
+                  <input class="wsr-segmented-toggle-option" id="icon-1" value="hide" option="1" type="radio" name="icon-segmented-toggle" checked="">
+                  <label class="wsr-segmented-toggle-labels" for="icon-1"><span class="wsr-segmented-toggle-preix">%</span></label>
+                  <input class="wsr-segmented-toggle-option" id="icon-2" value="show" option="2" type="radio" name="icon-segmented-toggle">
+                  <label class="wsr-segmented-toggle-labels" for="icon-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span></label>
+                </div>
+              </td>
+              <td>
+                <xmp>
+                  <div class="wsr-segmented-toggle wsr-icons-toggle">
+                    <input class="wsr-segmented-toggle-option" id="icon-1" value="hide" option="1" type="radio" name="icon-segmented-toggle" checked="">
+                    <label class="wsr-segmented-toggle-labels" for="icon-1"><span class="wsr-segmented-toggle-preix">%</span></label>
+                    <input class="wsr-segmented-toggle-option" id="icon-2" value="show" option="2" type="radio" name="icon-segmented-toggle">
+                    <label class="wsr-segmented-toggle-labels" for="icon-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span></label>
+                  </div>
+                </xmp>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </xmp>
-  </td>
-</tr>
-<tr>
-  <td>
-    <div class="wsr-tooltip">Hover Me
-      <div class="wsr-popover wsr-tooltip-content" dir="left">
-        Enter your postal code, so postman can easier send you a mail.
-      </div>
-    </div>
-  </td>
-  <td>left</td>
-  <td>
-    <xmp><div class="wsr-tooltip">Hover Me
-      <div class="wsr-popover wsr-tooltip-content" dir="left">
-        Enter your postal code, so postman can easier send you a mail.
-      </div>
-    </div>
-  </xmp>
-</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="component-item" for="toggle switch">
-  <span>Toggle Switch</span>
-  <table>
-    <tbody>
-      <tr>
-        <th rowspan="2">PREVIEW</th>
-        <th colspan="1">ATTRIBUTES</th>
-        <th rowspan="2">CODE</th>
-      </tr>
-      <tr>
-        <th>Size</th>
-      </tr>
-      <tr>
-        <td>
-          <label class="wsr-toggle-switch" size="large">
-            <input class="wsr-toggle-input" type="checkbox">
-            <span class="wsr-toggle-round"></span>
-          </label>
-        </td>
-        <td>large</td>
-        <td>
-          <xmp><label class="wsr-toggle-switch" size="large">
-            <input class="wsr-toggle-input" type="checkbox">
-            <span class="wsr-toggle-round"></span>
-          </label>
-        </xmp>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <label class="wsr-toggle-switch" size="medium">
-          <input class="wsr-toggle-input" type="checkbox">
-          <span class="wsr-toggle-round"></span>
-        </label>
-      </td>
-      <td>medium</td>
-      <td>
-        <xmp>        <label class="wsr-toggle-switch" size="medium">
-          <input class="wsr-toggle-input" type="checkbox">
-          <span class="wsr-toggle-round"></span>
-        </label>
-      </xmp>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <label class="wsr-toggle-switch" size="small">
-        <input class="wsr-toggle-input" type="checkbox">
-        <span class="wsr-toggle-round"></span>
-      </label>
-    </td>
-    <td>small</td>
-    <td>
-      <xmp>  <label class="wsr-toggle-switch" size="small">
-        <input class="wsr-toggle-input" type="checkbox">
-        <span class="wsr-toggle-round"></span>
-      </label>
-    </xmp>
-  </td>
-</tr>
 
-</tbody>
-</table>
-</div>
-
-
-
-
-<div class="component-item" for="segmented toggle">
-  <span>Segmented Toggle</span>
-  <table>
-    <tbody>
-      <tr>
-        <th rowspan="1">PREVIEW</th>
-        <th rowspan="1">CODE</th>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="wsr-segmented-toggle">
-            <input class="wsr-segmented-toggle-option" id="segmented-toggle-1" value="hide" option="1" type="radio" name="segmented-toggle" checked="">
-            <label class="wsr-segmented-toggle-labels" for="segmented-toggle-1">Option 1</label>
-            <input class="wsr-segmented-toggle-option" id="segmented-toggle-2" value="show" option="2" type="radio" name="segmented-toggle">
-            <label class="wsr-segmented-toggle-labels" for="segmented-toggle-2">Option 2</label>
-          </div>
-        </td>
-        <td>
-          <xmp><div class="wsr-segmented-toggle">
-            <input class="wsr-segmented-toggle-option" id="segmented-toggle-1" value="hide" option="1" type="radio" name="segmented-toggle" checked="">
-            <label class="wsr-segmented-toggle-labels" for="segmented-toggle-1">Option 1</label>
-            <input class="wsr-segmented-toggle-option" id="segmented-toggle-2" value="show" option="2" type="radio" name="segmented-toggle">
-            <label class="wsr-segmented-toggle-labels" for="segmented-toggle-2">Option 2</label>
-          </div>
-        </xmp>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="wsr-segmented-toggle">
-          <input class="wsr-segmented-toggle-option" id="icon-text-toggle-1" value="hide" option="1" type="radio" name="icon-text-segmented-toggle" checked="">
-          <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-1"><span class="wsr-segmented-toggle-preix">%</span><span>Option 1</span></label>
-          <input class="wsr-segmented-toggle-option" id="icon-text-toggle-2" value="show" option="2" type="radio" name="icon-text-segmented-toggle">
-          <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span><span>Option 2</span></label>
-        </div>
-      </td>
-      <td>
-        <xmp><div class="wsr-segmented-toggle">
-          <input class="wsr-segmented-toggle-option" id="icon-text-toggle-1" value="hide" option="1" type="radio" name="icon-text-segmented-toggle" checked="">
-          <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-1"><span class="wsr-segmented-toggle-preix">%</span><span>Option 1</span></label>
-          <input class="wsr-segmented-toggle-option" id="icon-text-toggle-2" value="show" option="2" type="radio" name="icon-text-segmented-toggle">
-          <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span><span>Option 2</span></label>
-        </div>
-      </xmp>
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <div class="wsr-segmented-toggle wsr-icons-toggle">
-        <input class="wsr-segmented-toggle-option" id="icon-1" value="hide" option="1" type="radio" name="icon-segmented-toggle" checked="">
-        <label class="wsr-segmented-toggle-labels" for="icon-1"><span class="wsr-segmented-toggle-preix">%</span></label>
-        <input class="wsr-segmented-toggle-option" id="icon-2" value="show" option="2" type="radio" name="icon-segmented-toggle">
-        <label class="wsr-segmented-toggle-labels" for="icon-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span></label>
-      </div>
-    </td>
-    <td>
-      <xmp><div class="wsr-segmented-toggle wsr-icons-toggle">
-        <input class="wsr-segmented-toggle-option" id="icon-1" value="hide" option="1" type="radio" name="icon-segmented-toggle" checked="">
-        <label class="wsr-segmented-toggle-labels" for="icon-1"><span class="wsr-segmented-toggle-preix">%</span></label>
-        <input class="wsr-segmented-toggle-option" id="icon-2" value="show" option="2" type="radio" name="icon-segmented-toggle">
-        <label class="wsr-segmented-toggle-labels" for="icon-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span></label>
-      </div>
-    </xmp>
-  </td>
-</tr>
-</tbody>
-</table>
-</div>
-
-<div class="component-item" for="search field">
-  <span>Date Picker</span>
-  <table>
-    <tbody>
-      <tr>
-        <th>PREVIEW</th>
-        <th>CODE</th>
-      </tr>
-      <tr>
-        <td rowspan="3">
-          <div class="wsr-dropdown wsr-date-picker">
-            <span class="wsr-input-affix"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M19,6 L17,6 L17,7 L16,7 L16,6 L8,6 L8,7 L7,7 L7,6 L5,6 L5,9 L19,9 L19,6 Z M19,10 L5,10 L5,19 L19,19 L19,10 Z M17,5 L19,5 C19.5522847,5 20,5.44771525 20,6 L20,19 C20,19.5522847 19.5522847,20 19,20 L5,20 C4.44771525,20 4,19.5522847 4,19 L4,6 C4,5.44771525 4.44771525,5 5,5 L7,5 L7,4 L8,4 L8,5 L16,5 L16,4 L17,4 L17,5 Z"></path></svg></span>
-            <input class="wsr-text-input wsr-dropdown-input" type="text" placeholder="Select an option" value="09/14/2021" readonly>
-            <div class="wsr-dropdown-content">
-              <div class="wsr-date-picker-content">
-                <div class="wsr-date-picker-header">
-                  <button class="wsr-date-picker-btn wsr-date-picker-prev-month"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" class="s316"><path d="M9.12210136,12 L16.0596461,18.9393399 C16.352647,19.2321253 16.3528218,19.706999 16.0600364,20 C15.7672509,20.293001 15.2923772,20.2931757 14.9993763,20.0003903 L7,12 L14.9993763,3.99960971 C15.2923772,3.70682428 15.7672509,3.70699902 16.0600364,4 C16.3528218,4.29300098 16.352647,4.76787468 16.0596461,5.0606601 L9.12210136,12 Z"></path></svg></button>
-                  <span class="wsr-date-picker-month-year">June 2021</span>
-                  <button class="wsr-date-picker-btn wsr-date-picker-next-month"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" class="s316"><path d="M8.22083109,4 C8.51380539,3.70718788 8.9886791,3.70731936 9.28149122,4.00029365 L17.2763084,12 L9.28047689,19.9997063 C8.98766478,20.2926806 8.51279106,20.2928121 8.21981676,20 C7.92684246,19.7071879 7.92671099,19.2323142 8.21952311,18.9393399 L15.1555752,12 L8.22053744,5.06066013 C7.92772532,4.76768583 7.92785679,4.29281212 8.22083109,4 Z"></path></svg></button>
+      <div class="component-item" for="date picker">
+        <span>Date Picker</span>
+        <table>
+          <tbody>
+            <tr>
+              <th>PREVIEW</th>
+              <th>CODE</th>
+            </tr>
+            <tr>
+              <td rowspan="3">
+                <div class="wsr-dropdown wsr-date-picker">
+                  <span class="wsr-input-affix"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
+                    <path
+                    d="M19,6 L17,6 L17,7 L16,7 L16,6 L8,6 L8,7 L7,7 L7,6 L5,6 L5,9 L19,9 L19,6 Z M19,10 L5,10 L5,19 L19,19 L19,10 Z M17,5 L19,5 C19.5522847,5 20,5.44771525 20,6 L20,19 C20,19.5522847 19.5522847,20 19,20 L5,20 C4.44771525,20 4,19.5522847 4,19 L4,6 C4,5.44771525 4.44771525,5 5,5 L7,5 L7,4 L8,4 L8,5 L16,5 L16,4 L17,4 L17,5 Z">
+                  </path>
+                </svg></span>
+                <input class="wsr-text-input wsr-dropdown-input" type="text" placeholder="Select an option" value="09/14/2021" readonly>
+                <div class="wsr-dropdown-content">
+                  <div class="wsr-date-picker-content">
+                    <div class="wsr-date-picker-header">
+                      <button class="wsr-date-picker-btn wsr-date-picker-prev-month"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" class="s316">
+                        <path
+                        d="M9.12210136,12 L16.0596461,18.9393399 C16.352647,19.2321253 16.3528218,19.706999 16.0600364,20 C15.7672509,20.293001 15.2923772,20.2931757 14.9993763,20.0003903 L7,12 L14.9993763,3.99960971 C15.2923772,3.70682428 15.7672509,3.70699902 16.0600364,4 C16.3528218,4.29300098 16.352647,4.76787468 16.0596461,5.0606601 L9.12210136,12 Z">
+                      </path>
+                    </svg></button>
+                    <span class="wsr-date-picker-month-year">June 2021</span>
+                    <button class="wsr-date-picker-btn wsr-date-picker-next-month"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" class="s316">
+                      <path
+                      d="M8.22083109,4 C8.51380539,3.70718788 8.9886791,3.70731936 9.28149122,4.00029365 L17.2763084,12 L9.28047689,19.9997063 C8.98766478,20.2926806 8.51279106,20.2928121 8.21981676,20 C7.92684246,19.7071879 7.92671099,19.2323142 8.21952311,18.9393399 L15.1555752,12 L8.22053744,5.06066013 C7.92772532,4.76768583 7.92785679,4.29281212 8.22083109,4 Z">
+                    </path>
+                  </svg></button>
                 </div>
                 <!-- <div class="container"> -->
                 <div class="table-cont front">
@@ -1297,106 +1209,119 @@
           </div>
         </td>
         <td>
-          <xmp><div class="wsr-dropdown wsr-date-picker">
-            <span class="wsr-input-affix"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px"><path d="M19,6 L17,6 L17,7 L16,7 L16,6 L8,6 L8,7 L7,7 L7,6 L5,6 L5,9 L19,9 L19,6 Z M19,10 L5,10 L5,19 L19,19 L19,10 Z M17,5 L19,5 C19.5522847,5 20,5.44771525 20,6 L20,19 C20,19.5522847 19.5522847,20 19,20 L5,20 C4.44771525,20 4,19.5522847 4,19 L4,6 C4,5.44771525 4.44771525,5 5,5 L7,5 L7,4 L8,4 L8,5 L16,5 L16,4 L17,4 L17,5 Z"></path></svg></span>
+          <xmp>
+            <div class="wsr-dropdown wsr-date-picker">
+              <span class="wsr-input-affix"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
+                <path
+                d="M19,6 L17,6 L17,7 L16,7 L16,6 L8,6 L8,7 L7,7 L7,6 L5,6 L5,9 L19,9 L19,6 Z M19,10 L5,10 L5,19 L19,19 L19,10 Z M17,5 L19,5 C19.5522847,5 20,5.44771525 20,6 L20,19 C20,19.5522847 19.5522847,20 19,20 L5,20 C4.44771525,20 4,19.5522847 4,19 L4,6 C4,5.44771525 4.44771525,5 5,5 L7,5 L7,4 L8,4 L8,5 L16,5 L16,4 L17,4 L17,5 Z">
+              </path>
+            </svg></span>
             <input class="wsr-text-input wsr-dropdown-input" type="text" placeholder="Select an option" value="09/14/2021" readonly>
             <div class="wsr-dropdown-content">
               <div class="wsr-date-picker-content">
                 <div class="wsr-date-picker-header">
-                  <button class="wsr-date-picker-btn wsr-date-picker-prev-month"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" class="s316"><path d="M9.12210136,12 L16.0596461,18.9393399 C16.352647,19.2321253 16.3528218,19.706999 16.0600364,20 C15.7672509,20.293001 15.2923772,20.2931757 14.9993763,20.0003903 L7,12 L14.9993763,3.99960971 C15.2923772,3.70682428 15.7672509,3.70699902 16.0600364,4 C16.3528218,4.29300098 16.352647,4.76787468 16.0596461,5.0606601 L9.12210136,12 Z"></path></svg></button>
-                  <span class="wsr-date-picker-month-year">June 2021</span>
-                  <button class="wsr-date-picker-btn wsr-date-picker-next-month"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" class="s316"><path d="M8.22083109,4 C8.51380539,3.70718788 8.9886791,3.70731936 9.28149122,4.00029365 L17.2763084,12 L9.28047689,19.9997063 C8.98766478,20.2926806 8.51279106,20.2928121 8.21981676,20 C7.92684246,19.7071879 7.92671099,19.2323142 8.21952311,18.9393399 L15.1555752,12 L8.22053744,5.06066013 C7.92772532,4.76768583 7.92785679,4.29281212 8.22083109,4 Z"></path></svg></button>
-                </div>
-                <div class="table-cont front">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <td>Mo</td>
-                        <td>Tu</td>
-                        <td>We</td>
-                        <td>Th</td>
-                        <td>Fr</td>
-                        <td>Sa</td>
-                        <td>Su</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr class="row-1">
-                        <td class="wsr-calendar-day gray-day" day="30"><span>30</span></td>
-                        <td class="wsr-calendar-day gray-day" day="31"><span>31</span></td>
-                        <td class="wsr-calendar-day" day="01"><span>1</span></td>
-                        <td class="wsr-calendar-day" day="02"><span>2</span></td>
-                        <td class="wsr-calendar-day" day="03"><span>3</span></td>
-                        <td class="wsr-calendar-day" day="04"><span>4</span></td>
-                        <td class="wsr-calendar-day" day="05"><span>5</span></td>
-                        <td class="wsr-calendar-day" day="06"><span>6</span></td>
-                        <td class="wsr-calendar-day" day="07"><span>7</span></td>
-                        <td class="wsr-calendar-day" day="08"><span>8</span></td>
-                        <td class="wsr-calendar-day" day="09"><span class="today-indication">9</span></td>
-                        <td class="wsr-calendar-day" day="10"><span>10</span></td>
-                        <td class="wsr-calendar-day" day="11"><span>11</span></td>
-                        <td class="wsr-calendar-day" day="12"><span>12</span></td>
-                        <td class="wsr-calendar-day" day="13"><span>13</span></td>
-                        <td class="wsr-calendar-day selected" day="14"><span>14</span></td>
-                        <td class="wsr-calendar-day" day="15"><span>15</span></td>
-                        <td class="wsr-calendar-day" day="16"><span>16</span></td>
-                        <td class="wsr-calendar-day" day="17"><span>17</span></td>
-                        <td class="wsr-calendar-day" day="18"><span>18</span></td>
-                        <td class="wsr-calendar-day" day="19"><span>19</span></td>
-                        <td class="wsr-calendar-day" day="20"><span>20</span></td>
-                        <td class="wsr-calendar-day" day="21"><span>21</span></td>
-                        <td class="wsr-calendar-day" day="22"><span>22</span></td>
-                        <td class="wsr-calendar-day" day="23"><span>23</span></td>
-                        <td class="wsr-calendar-day" day="24"><span>24</span></td>
-                        <td class="wsr-calendar-day" day="25"><span>25</span></td>
-                        <td class="wsr-calendar-day" day="26"><span>26</span></td>
-                        <td class="wsr-calendar-day" day="27"><span>27</span></td>
-                        <td class="wsr-calendar-day" day="28"><span>28</span></td>
-                        <td class="wsr-calendar-day" day="29"><span>29</span></td>
-                        <td class="wsr-calendar-day" day="30"><span>30</span></td>
-                        <td class="wsr-calendar-day gray-day" day="01"><span>1</span></td>
-                        <td class="wsr-calendar-day gray-day" day="02"><span>2</span></td>
-                        <td class="wsr-calendar-day gray-day" day="03"><span>3</span></td>
-                        <td class="wsr-calendar-day gray-day" day="04"><span>4</span></td>
-                        <td class="wsr-calendar-day gray-day" day="05"><span>5</span></td>
-                        <td class="wsr-calendar-day gray-day" day="06"><span>6</span></td>
-                        <td class="wsr-calendar-day gray-day" day="07"><span>7</span></td>
-                        <td class="wsr-calendar-day gray-day" day="08"><span>8</span></td>
-                        <td class="wsr-calendar-day gray-day" day="09"><span>9</span></td>
-                        <td class="wsr-calendar-day gray-day" day="10"><span>10</span></td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
+                  <button class="wsr-date-picker-btn wsr-date-picker-prev-month"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" class="s316">
+                    <path
+                    d="M9.12210136,12 L16.0596461,18.9393399 C16.352647,19.2321253 16.3528218,19.706999 16.0600364,20 C15.7672509,20.293001 15.2923772,20.2931757 14.9993763,20.0003903 L7,12 L14.9993763,3.99960971 C15.2923772,3.70682428 15.7672509,3.70699902 16.0600364,4 C16.3528218,4.29300098 16.352647,4.76787468 16.0596461,5.0606601 L9.12210136,12 Z">
+                  </path>
+                </svg></button>
+                <span class="wsr-date-picker-month-year">June 2021</span>
+                <button class="wsr-date-picker-btn wsr-date-picker-next-month"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" class="s316">
+                  <path
+                  d="M8.22083109,4 C8.51380539,3.70718788 8.9886791,3.70731936 9.28149122,4.00029365 L17.2763084,12 L9.28047689,19.9997063 C8.98766478,20.2926806 8.51279106,20.2928121 8.21981676,20 C7.92684246,19.7071879 7.92671099,19.2323142 8.21952311,18.9393399 L15.1555752,12 L8.22053744,5.06066013 C7.92772532,4.76768583 7.92785679,4.29281212 8.22083109,4 Z">
+                </path>
+              </svg></button>
+            </div>
+            <div class="table-cont front">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <td>Mo</td>
+                    <td>Tu</td>
+                    <td>We</td>
+                    <td>Th</td>
+                    <td>Fr</td>
+                    <td>Sa</td>
+                    <td>Su</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="row-1">
+                    <td class="wsr-calendar-day gray-day" day="30"><span>30</span></td>
+                    <td class="wsr-calendar-day gray-day" day="31"><span>31</span></td>
+                    <td class="wsr-calendar-day" day="01"><span>1</span></td>
+                    <td class="wsr-calendar-day" day="02"><span>2</span></td>
+                    <td class="wsr-calendar-day" day="03"><span>3</span></td>
+                    <td class="wsr-calendar-day" day="04"><span>4</span></td>
+                    <td class="wsr-calendar-day" day="05"><span>5</span></td>
+                    <td class="wsr-calendar-day" day="06"><span>6</span></td>
+                    <td class="wsr-calendar-day" day="07"><span>7</span></td>
+                    <td class="wsr-calendar-day" day="08"><span>8</span></td>
+                    <td class="wsr-calendar-day" day="09"><span class="today-indication">9</span></td>
+                    <td class="wsr-calendar-day" day="10"><span>10</span></td>
+                    <td class="wsr-calendar-day" day="11"><span>11</span></td>
+                    <td class="wsr-calendar-day" day="12"><span>12</span></td>
+                    <td class="wsr-calendar-day" day="13"><span>13</span></td>
+                    <td class="wsr-calendar-day selected" day="14"><span>14</span></td>
+                    <td class="wsr-calendar-day" day="15"><span>15</span></td>
+                    <td class="wsr-calendar-day" day="16"><span>16</span></td>
+                    <td class="wsr-calendar-day" day="17"><span>17</span></td>
+                    <td class="wsr-calendar-day" day="18"><span>18</span></td>
+                    <td class="wsr-calendar-day" day="19"><span>19</span></td>
+                    <td class="wsr-calendar-day" day="20"><span>20</span></td>
+                    <td class="wsr-calendar-day" day="21"><span>21</span></td>
+                    <td class="wsr-calendar-day" day="22"><span>22</span></td>
+                    <td class="wsr-calendar-day" day="23"><span>23</span></td>
+                    <td class="wsr-calendar-day" day="24"><span>24</span></td>
+                    <td class="wsr-calendar-day" day="25"><span>25</span></td>
+                    <td class="wsr-calendar-day" day="26"><span>26</span></td>
+                    <td class="wsr-calendar-day" day="27"><span>27</span></td>
+                    <td class="wsr-calendar-day" day="28"><span>28</span></td>
+                    <td class="wsr-calendar-day" day="29"><span>29</span></td>
+                    <td class="wsr-calendar-day" day="30"><span>30</span></td>
+                    <td class="wsr-calendar-day gray-day" day="01"><span>1</span></td>
+                    <td class="wsr-calendar-day gray-day" day="02"><span>2</span></td>
+                    <td class="wsr-calendar-day gray-day" day="03"><span>3</span></td>
+                    <td class="wsr-calendar-day gray-day" day="04"><span>4</span></td>
+                    <td class="wsr-calendar-day gray-day" day="05"><span>5</span></td>
+                    <td class="wsr-calendar-day gray-day" day="06"><span>6</span></td>
+                    <td class="wsr-calendar-day gray-day" day="07"><span>7</span></td>
+                    <td class="wsr-calendar-day gray-day" day="08"><span>8</span></td>
+                    <td class="wsr-calendar-day gray-day" day="09"><span>9</span></td>
+                    <td class="wsr-calendar-day gray-day" day="10"><span>10</span></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-        </xmp>
-      </td>
-    </tr>
-    <tr>
-      <th colspan="1">JS</th>
-    </tr>
-    <tr>
-      <td colspan="1">
-        <xmp>  document.querySelectorAll('.wsr-calendar-day').forEach(function(dropdownItem) {
-          dropdownItem.addEventListener('click', function(e) {
-            document.querySelectorAll('.wsr-calendar-day').forEach(function(day) { day.classList.remove('selected'); });
-            const dayBtn = e.target.parentElement;
-            if(!dayBtn.classList.contains('gray-day')) {
-              dayBtn.classList.add('selected');
-              let theDay = dayBtn.getAttribute('day');
-              dayBtn.closest('.wsr-date-picker').children[1].value = '09/' + theDay + '/2021';
-            }
-          });
-        });</xmp>
-      </td>
-    </tr>
-  </tbody>
+        </div>
+      </div>
+    </xmp>
+  </td>
+</tr>
+<tr>
+  <th colspan="1">JS</th>
+</tr>
+<tr>
+  <td colspan="1">
+    <xmp> document.querySelectorAll('.wsr-calendar-day').forEach(function(dropdownItem) {
+      dropdownItem.addEventListener('click', function(e) {
+        document.querySelectorAll('.wsr-calendar-day').forEach(function(day) { day.classList.remove('selected'); });
+        const dayBtn = e.target.parentElement;
+        if(!dayBtn.classList.contains('gray-day')) {
+          dayBtn.classList.add('selected');
+          let theDay = dayBtn.getAttribute('day');
+          dayBtn.closest('.wsr-date-picker').children[1].value = '09/' + theDay + '/2021';
+        }
+      });
+    });</xmp>
+  </td>
+</tr>
+</tbody>
 </table>
 </div>
 
-<div class="component-item" for="search field">
+<div class="component-item" for="time picker">
   <span>Time Picker</span>
   <table>
     <tbody>
@@ -1407,28 +1332,245 @@
       <tr>
         <td>
           <div class="wsr-input-time-container" icon="suffix">
-            <span class="wsr-input-time-btn wsr-input-time-up"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5"><path d="M0 4L0.8 4.8 4 1.5 7.3 4.8 8 4 4 0z"></path></svg></span>
-            <span class="wsr-input-time-btn wsr-input-time-down"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5"><path d="M4 3.2L0.7 0 0 0.8 4 4.8 8 0.8 7.2 0z"></path></svg></span>
+            <span class="wsr-input-time-btn wsr-input-time-up"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5">
+              <path d="M0 4L0.8 4.8 4 1.5 7.3 4.8 8 4 4 0z"></path>
+            </svg></span>
+            <span class="wsr-input-time-btn wsr-input-time-down"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5">
+              <path d="M4 3.2L0.7 0 0 0.8 4 4.8 8 0.8 7.2 0z"></path>
+            </svg></span>
             <input class="wsr-text-input" type="text" placeholder="This is a placeholder" value="12:00">
             <span class="wsr-input-affix">PM</span>
           </div>
         </td>
         <td>
-          <xmp><div class="wsr-input-time-container" icon="suffix">
-            <span class="wsr-input-time-btn wsr-input-time-up"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5"><path d="M0 4L0.8 4.8 4 1.5 7.3 4.8 8 4 4 0z"></path></svg></span>
-            <span class="wsr-input-time-btn wsr-input-time-down"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5"><path d="M4 3.2L0.7 0 0 0.8 4 4.8 8 0.8 7.2 0z"></path></svg></span>
-            <input class="wsr-text-input" type="text" placeholder="This is a placeholder" value="12:00">
-            <span class="wsr-input-affix">PM</span>
-          </div>
-        </xmp>
-      </td>
-    </tr>
-
-  </tbody>
-</table>
+          <xmp>
+            <div class="wsr-input-time-container" icon="suffix">
+              <span class="wsr-input-time-btn wsr-input-time-up"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5">
+                <path d="M0 4L0.8 4.8 4 1.5 7.3 4.8 8 4 4 0z"></path>
+              </svg></span>
+              <span class="wsr-input-time-btn wsr-input-time-down"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5">
+                <path d="M4 3.2L0.7 0 0 0.8 4 4.8 8 0.8 7.2 0z"></path>
+              </svg></span>
+              <input class="wsr-text-input" type="text" placeholder="This is a placeholder" value="12:00">
+              <span class="wsr-input-affix">PM</span>
+            </div>
+          </xmp>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
+<div class="component-item" for="table">
+  <span>Table</span>
+  <table>
+    <tbody>
+      <tr>
+        <th>PREVIEW</th>
+        <th>CODE</th>
+      </tr>
+      <tr>
+        <td rowspan="3">
+          <div class="wsr-table-main-header">
+          </div>
+          <div>
+            <table class="wsr-table">
+              <tbody>
+                <tr class="wsr-table-header">
+                  <th><input class="wsr-checkbox-input wsr-table-select-all" type="checkbox"></th>
+                  <th>Apply at checkout</th>
+                  <th>Discount type</th>
+                  <th>Discount name</th>
+                  <th>Status</th>
+                  <th></th>
+                  <th style="width:0;"></th>
+                </tr>
+                <tr class="wsr-table-row">
+                  <td>
+                    <input class="wsr-checkbox-input" type="checkbox">
+                  </td>
+                  <td>Automatic</td>
+                  <td>Basic Discount</td>
+                  <td>
+                    <span style="line-height: 2;">Untitle discount</span>
+                  </td>
+                  <td>Active</td>
+                  <td class="wsr-td-more-options">
+                    <div class="wsr-popover-menu">
+                      <button class="wsr-button wsr-icon-button" skin="inverted" size="medium">
+                        <img src="./wsr-icons/more-icon.svg">
+                      </button>
+                      <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                        <span class="wsr-popover-menu-item">Add New Items</span>
+                        <span class="wsr-popover-menu-item">Edit This Item</span>
+                        <span class="wsr-popover-menu-item">Delete This Item</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="width:0; position: relative;">
+                    <div class="wsr-popover-menu">
+                      <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                        <span class="wsr-popover-menu-item">Add New Items</span>
+                        <span class="wsr-popover-menu-item">Edit This Item</span>
+                        <span class="wsr-popover-menu-item">Delete This Item</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr class="wsr-table-row">
+                  <td>
+                    <input class="wsr-checkbox-input" type="checkbox">
+                  </td>
+                  <td>Automatic</td>
+                  <td>Basic Discount</td>
+                  <td>
+                    <span style="line-height: 2;">Untitle discount</span>
+                  </td>
+                  <td>Active</td>
+                  <td class="wsr-td-more-options">
+                    <div class="wsr-popover-menu">
+                      <button class="wsr-button wsr-icon-button" skin="inverted" size="medium">
+                        <img src="./wsr-icons/more-icon.svg">
+                      </button>
+                      <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                        <span class="wsr-popover-menu-item">Add New Items</span>
+                        <span class="wsr-popover-menu-item">Edit This Item</span>
+                        <span class="wsr-popover-menu-item">Delete This Item</span>
+                      </div>
+                    </div>
+                  </td>
+                  <td style="width:0; position: relative;">
+                    <div class="wsr-popover-menu">
+                      <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                        <span class="wsr-popover-menu-item">Add New Items</span>
+                        <span class="wsr-popover-menu-item">Edit This Item</span>
+                        <span class="wsr-popover-menu-item">Delete This Item</span>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </td>
+        <td>
+          <xmp>
+            <div class="wsr-table-main-header">
+            </div>
+            <div>
+              <table class="wsr-table">
+                <tbody>
+                  <tr class="wsr-table-header">
+                    <th><input class="wsr-checkbox-input wsr-table-select-all" type="checkbox"></th>
+                    <th>Apply at checkout</th>
+                    <th>Discount type</th>
+                    <th>Discount name</th>
+                    <th>Status</th>
+                    <th></th>
+                    <th style="width:0;"></th>
+                  </tr>
+                  <tr class="wsr-table-row">
+                    <td>
+                      <input class="wsr-checkbox-input" type="checkbox">
+                    </td>
+                    <td>Automatic</td>
+                    <td>Basic Discount</td>
+                    <td>
+                      <span style="line-height: 2;">Untitle discount</span>
+                    </td>
+                    <td>Active</td>
+                    <td class="wsr-td-more-options">
+                      <div class="wsr-popover-menu">
+                        <button class="wsr-button wsr-icon-button" skin="inverted" size="medium">
+                          <img src="./wsr-icons/more-icon.svg">
+                        </button>
+                        <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                          <span class="wsr-popover-menu-item">Add New Items</span>
+                          <span class="wsr-popover-menu-item">Edit This Item</span>
+                          <span class="wsr-popover-menu-item">Delete This Item</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td style="width:0; position: relative;">
+                      <div class="wsr-popover-menu">
+                        <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                          <span class="wsr-popover-menu-item">Add New Items</span>
+                          <span class="wsr-popover-menu-item">Edit This Item</span>
+                          <span class="wsr-popover-menu-item">Delete This Item</span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="wsr-table-row">
+                    <td>
+                      <input class="wsr-checkbox-input" type="checkbox">
+                    </td>
+                    <td>Automatic</td>
+                    <td>Basic Discount</td>
+                    <td>
+                      <span style="line-height: 2;">Untitle discount</span>
+                    </td>
+                    <td>Active</td>
+                    <td class="wsr-td-more-options">
+                      <div class="wsr-popover-menu">
+                        <button class="wsr-button wsr-icon-button" skin="inverted" size="medium">
+                          <img src="./wsr-icons/more-icon.svg">
+                        </button>
+                        <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                          <span class="wsr-popover-menu-item">Add New Items</span>
+                          <span class="wsr-popover-menu-item">Edit This Item</span>
+                          <span class="wsr-popover-menu-item">Delete This Item</span>
+                        </div>
+                      </div>
+                    </td>
+                    <td style="width:0; position: relative;">
+                      <div class="wsr-popover-menu">
+                        <div class="wsr-popover wsr-popover-menu-content" dir="left">
+                          <span class="wsr-popover-menu-item">Add New Items</span>
+                          <span class="wsr-popover-menu-item">Edit This Item</span>
+                          <span class="wsr-popover-menu-item">Delete This Item</span>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </xmp>
+        </td>
+      </tr>
+      <tr>
+        <th colspan="1">JS</th>
+      </tr>
+      <tr>
+        <td colspan="1">
+          <xmp>// open more menu
+            document.querySelectorAll('.wsr-popover-menu').forEach(function(popoverMenu) {
+            popoverMenu.addEventListener('click', function (e) {
+              this.classList.toggle('wsr-open-popover');
+            });
 
+            // select all checkbox
+            document.querySelectorAll('.wsr-table-select-all').forEach(function(popoverMenu) {
+              popoverMenu.addEventListener('change', function(e) {
+                const table = e.target.parentNode.closest('.wsr-table');
+                if(e.target.checked) {
+                  table.querySelectorAll('.wsr-checkbox-input').forEach(function(checkbox) {
+                    checkbox.checked = true;
+                  });
+                } else {
+                  table.querySelectorAll('.wsr-checkbox-input').forEach(function(checkbox) {
+                    checkbox.checked = false;
+                  });
+                }
+              });
+            });
+          });</xmp>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <div class="search-empty hide">
   <label>Oops!</label>
@@ -1444,6 +1586,23 @@ window.onload = (event) => {
       this.classList.toggle('wsr-open-popover');
     });
   });
+
+  document.querySelectorAll('.wsr-table-select-all').forEach(function(popoverMenu) {
+    popoverMenu.addEventListener('change', function(e) {
+      const table = e.target.parentNode.closest('.wsr-table');
+      if(e.target.checked) {
+        table.querySelectorAll('.wsr-checkbox-input').forEach(function(checkbox) {
+          checkbox.checked = true;
+        });
+      } else {
+        table.querySelectorAll('.wsr-checkbox-input').forEach(function(checkbox) {
+          checkbox.checked = false;
+        });
+      }
+    });
+  });
+
+
 
   document.querySelectorAll('.topbar-search-input').forEach(function(elm) {
     elm.addEventListener('focus', function(e) {
@@ -1494,17 +1653,6 @@ window.onload = (event) => {
     });
   });
 
-  // $(document).on('click', '.wsr-badge-select .wsr-dropdown-item', function(e) {
-  //   e.stopPropagation();
-  //   $(this).siblings().removeClass('selected');
-  //   $(this).addClass('selected');
-  //   $(this).parents('.wsr-badge-select').removeClass('wsr-field-has-focus'); // close dropdown
-  //   let input = $(this).parent().siblings('.wsr-dropdown-input');
-  //   input.val($(this).attr('value'));
-  //   input.attr('color', $(this).children('.wsr-badge-color-tag').attr('color'));
-  //
-  // });
-
   document.querySelectorAll('xmp').forEach(function(codeElm) {
     codeElm.addEventListener('click', function(e) {
       codeElm.classList.add('copied');
@@ -1533,22 +1681,23 @@ window.onload = (event) => {
     document.querySelectorAll('.component-item').forEach(function(component) {
       component.classList.add('hide');
       const componentName = component.getAttribute('for');
-      if(componentName.toLowerCase().includes(val.toLowerCase())) {
+      if (componentName.toLowerCase().includes(val.toLowerCase())) {
         component.classList.remove('hide');
         count++;
       }
     });
-    if(count < 1) {
+    if (count < 1) {
       document.querySelector('.search-empty').classList.remove('hide');
     }
   });
 
   document.querySelectorAll('.wsr-calendar-day').forEach(function(dropdownItem) {
     dropdownItem.addEventListener('click', function(e) {
-
-      document.querySelectorAll('.wsr-calendar-day').forEach(function(day) { day.classList.remove('selected'); });
+      document.querySelectorAll('.wsr-calendar-day').forEach(function(day) {
+        day.classList.remove('selected');
+      });
       const dayBtn = e.target.parentElement;
-      if(!dayBtn.classList.contains('gray-day')) {
+      if (!dayBtn.classList.contains('gray-day')) {
         dayBtn.classList.add('selected');
         let theDay = dayBtn.getAttribute('day');
         dayBtn.closest('.wsr-date-picker').children[1].value = '09/' + theDay + '/2021';
