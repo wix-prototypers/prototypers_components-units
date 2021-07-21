@@ -346,6 +346,51 @@ div[type=text].wsr-text-input[placeholder]:empty:before {
   font-size: 14px;
 }
 
+.wsr-rich-text-area {
+  position: relative;
+  width: max-content;
+  display: grid;
+  grid-template-rows: 41px 1fr;
+  margin: 10px 0;
+}
+
+.wsr-rich-text-area .wsr-rich-text-header {
+  height: 40px;
+  z-index: 1;
+  width: -webkit-fill-available;
+  border: 1px solid var(--B30);
+  background-color: var(--D80);
+  border-radius: 6px 6px 0 0;
+  margin-left: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.wsr-rich-text-header .wsr-edit-text-btn {
+  height: 40px;
+  width: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.wsr-rich-text-header .wsr-edit-text-btn img {
+  opacity: 0.6;
+}
+
+.wsr-rich-text-header .wsr-edit-text-btn:hover img {
+  filter: var(--blue-icon);
+  opacity: 0.8;
+}
+
+.wsr-rich-text-area .wsr-textarea {
+  border-radius: 0 0 6px 6px;
+  z-index: 1;
+  padding-top: 12px;
+  margin-top: 0;
+  width: -webkit-fill-available;
+}
 
 /* ---------------------- Radio Buttons ---------------------- */
 .wsr-radio-btn-container {
