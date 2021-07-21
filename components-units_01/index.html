@@ -312,9 +312,9 @@
           <tr>
             <td>
               <div class="wsr-radio-btn-container">
-                <input class="wsr-radio-btn-input" type="radio" name="">
+                <input class="wsr-radio-btn-input" type="radio" name="" id="radio-1">
                 <span class="wsr-radio-btn-circle"></span>
-                <label class="wsr-radio-btn-label">Default</label>
+                <label class="wsr-radio-btn-label" for="radio-1">Default</label>
               </div>
             </td>
             <td>-</td>
@@ -322,9 +322,9 @@
             <td>
               <xmp>
                 <div class="wsr-radio-btn-container">
-                  <input class="wsr-radio-btn-input" name="" type="radio">
+                  <input class="wsr-radio-btn-input" name="" type="radio" id="radio-1">
                   <span class="wsr-radio-btn-circle"></span>
-                  <label class="wsr-radio-btn-label">Default</label>
+                  <label class="wsr-radio-btn-label" for="radio-1">Default</label>
                 </div>
               </xmp>
             </td>
@@ -332,9 +332,9 @@
           <tr>
             <td>
               <div class="wsr-radio-btn-container">
-                <input class="wsr-radio-btn-input" type="radio" name="" checked>
+                <input class="wsr-radio-btn-input" type="radio" name="" id="radio-2" checked >
                 <span class="wsr-radio-btn-circle"></span>
-                <label class="wsr-radio-btn-label">Checked</label>
+                <label class="wsr-radio-btn-label" for="radio-2">Checked</label>
               </div>
             </td>
             <td>+</td>
@@ -342,9 +342,9 @@
             <td>
               <xmp>
                 <div class="wsr-radio-btn-container">
-                  <input class="wsr-radio-btn-input" type="radio" name="" checked>
+                  <input class="wsr-radio-btn-input" type="radio" name="" id="radio-2" checked>
                   <span class="wsr-radio-btn-circle"></span>
-                  <label class="wsr-radio-btn-label">Checked</label>
+                  <label class="wsr-radio-btn-label" for="radio-2">Checked</label>
                 </div>
               </xmp>
             </td>
@@ -352,9 +352,9 @@
           <tr>
             <td>
               <div class="wsr-radio-btn-container">
-                <input class="wsr-radio-btn-input" type="radio" name="" disabled>
+                <input class="wsr-radio-btn-input" type="radio" name="" id="radio-3" disabled>
                 <span class="wsr-radio-btn-circle"></span>
-                <label class="wsr-radio-btn-label">Disabled</label>
+                <label class="wsr-radio-btn-label" for="radio-3">Disabled</label>
               </div>
             </td>
             <td>-</td>
@@ -362,9 +362,49 @@
             <td>
               <xmp>
                 <div class="wsr-radio-btn-container">
-                  <input class="wsr-radio-btn-input" type="radio" name="" disabled>
+                  <input class="wsr-radio-btn-input" type="radio" name="" disabled id="radio-4">
                   <span class="wsr-radio-btn-circle"></span>
-                  <label class="wsr-radio-btn-label">Disabled</label>
+                  <label class="wsr-radio-btn-label" for="radio-4">Disabled</label>
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-radio-btn-container wsr-radio-btn-2-rows">
+                <span class="wsr-radio-btn-2-rows-input">
+                  <input class="wsr-radio-btn-input" name="radio-btn-2-rows" type="radio" id="radio-5">
+                  <span class="wsr-radio-btn-circle"></span>
+                </span>
+                <span class="wsr-radio-btn-2-rows-content" >
+                  <label class="wsr-radio-btn-main-label" for="radio-5">Main Label</label>
+                  <label class="wsr-radio-btn-sub-label" for="radio-5">sub label</label>
+                </span>
+              </div>
+              <div class="wsr-radio-btn-container wsr-radio-btn-2-rows">
+                <span class="wsr-radio-btn-2-rows-input">
+                  <input class="wsr-radio-btn-input" name="radio-btn-2-rows" type="radio" id="radio-6">
+                  <span class="wsr-radio-btn-circle"></span>
+                </span>
+                <span class="wsr-radio-btn-2-rows-content" >
+                  <label class="wsr-radio-btn-main-label" for="radio-6">Main Label</label>
+                  <label class="wsr-radio-btn-sub-label" for="radio-6">sub label</label>
+                </span>
+              </div>
+            </td>
+            <td>-</td>
+            <td>-</td>
+            <td>
+              <xmp>
+                <div class="wsr-radio-btn-container wsr-radio-btn-2-rows">
+                  <span class="wsr-radio-btn-2-rows-input">
+                    <input class="wsr-radio-btn-input" name="radio-btn-2-rows" type="radio" id="radio-5">
+                    <span class="wsr-radio-btn-circle"></span>
+                  </span>
+                  <span class="wsr-radio-btn-2-rows-content" >
+                    <label class="wsr-radio-btn-main-label" for="radio-5">Main Label</label>
+                    <label class="wsr-radio-btn-sub-label" for="radio-5">sub label</label>
+                  </span>
                 </div>
               </xmp>
             </td>
@@ -1546,36 +1586,41 @@
         <td colspan="1">
           <xmp>// open more menu
             document.querySelectorAll('.wsr-popover-menu').forEach(function(popoverMenu) {
-            popoverMenu.addEventListener('click', function (e) {
-              this.classList.toggle('wsr-open-popover');
-            });
-
-            // select all checkbox
-            document.querySelectorAll('.wsr-table-select-all').forEach(function(popoverMenu) {
-              popoverMenu.addEventListener('change', function(e) {
-                const table = e.target.parentNode.closest('.wsr-table');
-                if(e.target.checked) {
-                  table.querySelectorAll('.wsr-checkbox-input').forEach(function(checkbox) {
-                    checkbox.checked = true;
-                  });
-                } else {
-                  table.querySelectorAll('.wsr-checkbox-input').forEach(function(checkbox) {
-                    checkbox.checked = false;
-                  });
-                }
+              popoverMenu.addEventListener('click', function (e) {
+                this.classList.toggle('wsr-open-popover');
               });
-            });
-          });</xmp>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
-<div class="search-empty hide">
-  <label>Oops!</label>
-  No results found
-</div>
+              // select all checkbox
+              document.querySelectorAll('.wsr-table-select-all').forEach(function(popoverMenu) {
+                popoverMenu.addEventListener('change', function(e) {
+                  const table = e.target.parentNode.closest('.wsr-table');
+                  if(e.target.checked) {
+                    table.querySelectorAll('.wsr-checkbox-input').forEach(function(checkbox) {
+                      checkbox.checked = true;
+                    });
+                  } else {
+                    table.querySelectorAll('.wsr-checkbox-input').forEach(function(checkbox) {
+                      checkbox.checked = false;
+                    });
+                  }
+                });
+              });
+            });</xmp>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+  <div class="search-empty hide">
+    <label>Oops!</label>
+    No results found
+  </div>
 
 </main>
 </body>

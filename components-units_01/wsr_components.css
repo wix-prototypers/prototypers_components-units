@@ -404,6 +404,44 @@ input[type=radio].wsr-radio-btn-input:disabled + .wsr-radio-btn-circle {
   color: var(--D20);
 }
 
+.wsr-radio-btn-container.wsr-radio-btn-2-rows:not(:last-child) {
+  margin-bottom: 0;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid var(--D60);
+}
+
+.wsr-radio-btn-container.wsr-radio-btn-2-rows:last-child {
+  padding-top: 18px;
+}
+
+
+.wsr-radio-btn-container .wsr-radio-btn-2-rows-input {
+  position: relative;
+margin-left: -24px;
+width: 24px;
+height: 35px;
+}
+
+.wsr-radio-btn-container .wsr-radio-btn-2-rows-input * {
+  top: 8px;
+}
+
+.wsr-radio-btn-2-rows-content .wsr-radio-btn-main-label {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  color: var(--D10);
+  text-align: left;
+}
+
+.wsr-radio-btn-2-rows-content .wsr-radio-btn-sub-label {
+  font-size: 12px;
+  font-weight: normal;
+  display: block;
+  color: var(--D20);
+  text-align: left;
+}
 
 /* ---------------------- Avatar ---------------------- */
 .wsr-avatar[size="large"] {
