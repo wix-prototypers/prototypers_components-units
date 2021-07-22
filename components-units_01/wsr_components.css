@@ -209,7 +209,7 @@
   border: 1px solid var(--B30);
   background-color: var(--D80);
   border-radius: 6px;
-  margin: 3px 0px 3px 8px;
+  margin: 3px 0px 3px 0px;
   min-height: 34px;
   font-size: 16px;
   align-items: center;
@@ -299,7 +299,7 @@ div[type=text].wsr-text-input[placeholder]:empty:before {
 }
 
 .wsr-input-number-container[icon="prefix"] {
-  --icon-left: 18px;
+  --icon-left: 10px;
   --icon-right: unset;
   --prefix-padding-left: 26px;
 }
