@@ -47,8 +47,18 @@
   --R50: #FFEBEB;
 
   /* Green */
-  --G10: #61bc57;
+  --G10: #60bc57;
+  --G20: #80C979;
+  --G30: #C9EEBC;
+  --G40: #DEF4D4;
+  --G50: #EDF9E5;
 
+  /* Yellow */
+  --Y10: #FDB10C;
+  --Y20: #FAC249;
+  --Y30: #FEF0BA;
+  --Y40: #FEF4CD;
+  --Y50: #FDF7DF;
 
   /* Filter */
   --blue-icon: invert(49%) sepia(83%) saturate(983%) hue-rotate(183deg) brightness(95%) contrast(95%);
@@ -1520,4 +1530,81 @@ input[type="radio"].wsr-segmented-toggle-option[option="2"]:checked ~ .wsr-segme
 .wsr-image-container .wsr-empty-image svg {
   filter: var(--blue-icon);
   opacity: 0.9;
+}
+
+
+/* ---------------------- Float Notification ---------------------- */
+
+.wsr-float-notification[type="standard"] {
+  --notif-background: var(--B50);
+  --notif-border-color: var(--B30);
+}
+
+.wsr-float-notification[type="success"] {
+  --notif-background: var(--G50);
+  --notif-border-color: var(--G30);
+}
+
+.wsr-float-notification[type="warning"] {
+  --notif-background: var(--Y50);
+  --notif-border-color: var(--Y30);
+}
+
+.wsr-float-notification[type="destructive"] {
+  --notif-background: var(--R50);
+  --notif-border-color: var(--R30);
+}
+
+.wsr-float-notification[type="premium"] {
+  --notif-background: var(--P50);
+  --notif-border-color: var(--P30);
+}
+
+.wsr-float-notification[type="preview"] {
+  --notif-background: transparent;
+  --notif-border-color: var(--D50);
+}
+
+.wsr-float-notification[type="dark"] {
+  --notif-background: var(--D10);
+  --notif-border-color: var(--D10);
+  color: var(--D80);
+}
+
+.wsr-float-notification[type="dark"] .wsr-float-notification-close {
+  filter: var(--white-icon);
+}
+
+.wsr-float-notification {
+  border-radius: 6px;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 36px;
+  padding: 0 12px;
+  min-width: 330px;
+  max-width: 540px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: var(--D10);
+  background: var(--notif-background);
+  border-color: var(--notif-border-color);
+  -webkit-font-smoothing: antialiased;
+}
+
+.wsr-float-notification.remove-notification {
+  display: none;
+}
+
+.wsr-float-notification .wsr-float-notification-label {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+}
+
+img.wsr-float-notification-close {
+  margin-left: 24px;
+  cursor: pointer;
 }

@@ -1679,6 +1679,166 @@
       </table>
     </div>
 
+    <div class="component-item" for="float notification">
+      <span>Float Notification</span>
+      <table>
+        <tbody>
+          <tr>
+            <th rowspan="2" style="min-width: 370px;">PREVIEW</th>
+            <th colspan="1">ATTRIBUTES</th>
+            <th rowspan="2" style="width: 100px">WITH PREFIX</th>
+            <th rowspan="2">CODE</th>
+          </tr>
+          <tr>
+            <th style="width: 100px">Status</th>
+
+          </tr>
+          <tr>
+            <td rowspan="3">
+              <div class="wsr-float-notification" type="standard">
+                <span>  this a standard notification (and default) </span>
+                <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+              </div>
+            </td>
+            <td rowspan="3">standard</td>
+            <td rowspan="3">false</td>
+            <td colspan="1">
+              <xmp>
+                <div class="wsr-float-notification" type="standard">
+                  <span>  this a standard notification (and default) </span>
+                  <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="1">JS</th>
+          </tr>
+          <tr>
+            <td colspan="1">
+              <xmp>    // remove this notification (after clicking on the x icon)
+                  document.querySelectorAll('.wsr-float-notification .wsr-float-notification-close').forEach(function(elm) {
+                    elm.addEventListener('click', function(e) {
+                      e.target.parentElement.classList.add('remove-notification')
+                    });
+                  });</xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-float-notification" type="success">
+                <span class="wsr-float-notification-label"><img src="./wsr-icons/edit-icon.svg"> this a success notification </span>
+                <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+              </div>
+            </td>
+            <td>success</td>
+            <td>true</td>
+            <td>
+              <xmp>
+                <div class="wsr-float-notification" type="success">
+                  <span class="wsr-float-notification-label"><img src="./wsr-icons/edit-icon.svg"> this a success notification </span>
+                  <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-float-notification" type="warning">
+                <span>  this a warning notification </span>
+                <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+              </div>
+            </td>
+            <td>warning</td>
+            <td>false</td>
+            <td>
+              <xmp>
+                <div class="wsr-float-notification" type="warning">
+                  <span>  this a warning notification </span>
+                  <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-float-notification" type="destructive">
+                <span>this a destructive notification </span>
+                <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+              </div>
+            </td>
+            <td>destructive</td>
+            <td>false</td>
+            <td>
+              <xmp>
+                <div class="wsr-float-notification" type="destructive">
+                  <span>this a destructive notification </span>
+                  <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-float-notification" type="premium">
+                <span>this a premium notification </span>
+                <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+              </div>
+            </td>
+            <td>premium</td>
+            <td>false</td>
+            <td>
+              <xmp>
+                <div class="wsr-float-notification" type="premium">
+                  <span>this a premium notification </span>
+                  <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-float-notification" type="preview">
+                <span>this a preview notification </span>
+                <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+              </div>
+            </td>
+            <td>preview</td>
+            <td>false</td>
+            <td>
+              <xmp>
+                <div class="wsr-float-notification" type="preview">
+                  <span>this a preview notification</span>
+                  <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="wsr-float-notification" type="dark">
+                <span>this a dark notification </span>
+                <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+              </div>
+            </td>
+            <td>dark</td>
+            <td>false</td>
+            <td>
+              <xmp>
+                <div class="wsr-float-notification" type="dark">
+                  <span>this a dark notification</span>
+                  <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+                </div>
+              </xmp>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+
+
     <div class="search-empty hide">
       <label>Oops!</label>
       No results found
@@ -1815,6 +1975,13 @@
     document.querySelectorAll('.wsr-input-time-up').forEach(function(dropdownItem) {
       dropdownItem.addEventListener('click', function(e) {
         // TODO:
+      });
+    });
+
+    // remove this notification (after clicking on the x icon)
+    document.querySelectorAll('.wsr-float-notification .wsr-float-notification-close').forEach(function(elm) {
+      elm.addEventListener('click', function(e) {
+        e.target.parentElement.classList.add('remove-notification')
       });
     });
   }
