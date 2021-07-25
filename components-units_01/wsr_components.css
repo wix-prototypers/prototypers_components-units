@@ -1585,7 +1585,6 @@ input[type="radio"].wsr-segmented-toggle-option[option="2"]:checked ~ .wsr-segme
   height: 36px;
   padding: 0 12px;
   min-width: 330px;
-  max-width: 540px;
   box-sizing: border-box;
   font-size: 14px;
   color: var(--D10);
