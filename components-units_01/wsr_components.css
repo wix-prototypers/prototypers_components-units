@@ -402,6 +402,38 @@ div[type=text].wsr-text-input[placeholder]:empty:before {
   width: -webkit-fill-available;
 }
 
+.wsr-input-text-container {
+      position: relative;
+      width: max-content;
+}
+
+.wsr-input-text-container[icon="suffix"] {
+  --icon-left: unset;
+    --icon-right: 6px;
+    --input-text-padding: 0 12px;
+}
+
+.wsr-input-text-container[icon="prefix"] {
+  --icon-left: 12px;
+    --icon-right: unset;
+    --input-text-padding: 0 32px;
+}
+
+.wsr-input-text-container .wsr-text-input {
+  padding: var(--input-text-padding);
+}
+
+.wsr-input-text-container .wsr-input-affix {
+  position: absolute;
+    right: var(--icon-right);
+    left: var(--icon-left);
+    top: 7px;
+    color: var(--D30);
+    margin-right: 6px;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
 /* ---------------------- Radio Buttons ---------------------- */
 .wsr-radio-btn-container {
   width: max-content;
