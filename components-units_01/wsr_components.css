@@ -214,6 +214,7 @@
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   color: var(--D10);
+  line-height: 1.6;
 }
 
 .wsr-textarea {
