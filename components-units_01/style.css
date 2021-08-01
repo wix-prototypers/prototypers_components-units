@@ -100,8 +100,9 @@ td:not(:last-child) {
   font-size: 12px;
   color: #777777;
   display: block;
-  margin: 10px 10px 0px 10px;
+  margin-bottom: 8px;
 }
+
 xmp {
   white-space: pre-line;
   padding: 0 20px;

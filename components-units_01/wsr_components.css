@@ -202,14 +202,11 @@
 
 /* ---------------------- Input Field ---------------------- */
 .wsr-text-input, .wsr-number-input {
-  max-width: 500px;
   width: 280px;
-  min-width: 100px;
   border: 1px solid var(--B30);
   background-color: var(--D80);
   border-radius: 6px;
-  margin: 3px 0px 3px 0px;
-  min-height: 34px;
+  min-height: 36px;
   font-size: 16px;
   align-items: center;
   display: flex;
@@ -222,13 +219,12 @@
 .wsr-textarea {
   resize: vertical;
   min-height: 36px;
-  margin: 10px 0 20px 8px;
 }
 
 .wsr-search-field {
   max-width: 500px;
   min-width: 180px;
-  width: calc(50vw - 466px);
+  /* width: calc(50vw - 466px); */
   transition: width .4s;
   border: 1px solid var(--B30);
   background-color: var(--D80);
@@ -261,7 +257,6 @@ div[type=text].wsr-text-input {
   display: inline-block;
   min-height: 36px;
   text-align: left;
-  margin: 10px 0 20px 8px;
 }
 
 div[type=text].wsr-text-input[placeholder]:empty:before {
@@ -300,7 +295,7 @@ div[type=text].wsr-text-input[placeholder]:empty:before {
 .wsr-input-number-container[icon="prefix"] {
   --icon-left: 8px;
   --icon-right: unset;
-  --prefix-padding-left: 26px;
+  --prefix-padding-left: 36px;
 }
 
 .wsr-input-number-container .wsr-number-input {
@@ -350,7 +345,6 @@ div[type=text].wsr-text-input[placeholder]:empty:before {
   width: max-content;
   display: grid;
   grid-template-rows: 41px 1fr;
-  margin: 10px 0;
 }
 
 .wsr-rich-text-area .wsr-rich-text-header {
@@ -360,7 +354,6 @@ div[type=text].wsr-text-input[placeholder]:empty:before {
   border: 1px solid var(--B30);
   background-color: var(--D80);
   border-radius: 6px 6px 0 0;
-  margin-left: 8px;
   display: flex;
   align-items: center;
 }
