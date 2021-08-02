@@ -614,6 +614,7 @@ input[type=checkbox].wsr-checkbox-input:disabled::before {
   font-size: 16px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 /* ---------------------- Popover & Tooltips ---------------------- */
@@ -1604,8 +1605,7 @@ input[type="radio"].wsr-segmented-toggle-option[option="2"]:checked~.wsr-segment
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  height: 36px;
-  padding: 0 12px;
+  padding: 9px 12px;
   min-width: 330px;
   box-sizing: border-box;
   font-size: 14px;
@@ -1620,9 +1620,12 @@ input[type="radio"].wsr-segmented-toggle-option[option="2"]:checked~.wsr-segment
 }
 
 .wsr-float-notification .wsr-float-notification-label {
-  display: grid;
-  grid-template-columns: 30px 1fr;
+  display: flex;
   align-items: center;
+}
+
+.wsr-float-notification .wsr-float-notification-label > img {
+  margin-right: 6px;
 }
 
 img.wsr-float-notification-close {

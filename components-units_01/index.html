@@ -509,8 +509,9 @@
           <tr>
             <td>
               <div class="wsr-checkbox-container">
-                <input class="wsr-checkbox-input" type="checkbox">
-                <span class="wsr-checkbox-label">Unchecked</span>
+                <input id="checkbox-1" class="wsr-checkbox-input" type="checkbox">
+                <label for="checkbox-1" class="wsr-checkbox-label">Unchecked</label>
+                
               </div>
             </td>
             <td>-</td>
@@ -518,8 +519,8 @@
             <td>
               <xmp>
                 <div class="wsr-checkbox-container">
-                  <input class="wsr-checkbox-input" type="checkbox">
-                  <span class="wsr-checkbox-label">Unchecked</span>
+                  <input id="checkbox-1" class="wsr-checkbox-input" type="checkbox">
+                  <label for="checkbox-1" class="wsr-checkbox-label">Unchecked</label>
                 </div>
               </xmp>
             </td>
@@ -527,8 +528,8 @@
           <tr>
             <td>
               <div class="wsr-checkbox-container">
-                <input class="wsr-checkbox-input" type="checkbox" checked>
-                <span class="wsr-checkbox-label">Checked</span>
+                <input id="checkbox-2" class="wsr-checkbox-input" type="checkbox" checked>
+                <label for="checkbox-2" class="wsr-checkbox-label">Checked</label>
               </div>
             </td>
             <td>+</td>
@@ -536,8 +537,8 @@
             <td>
               <xmp>
                 <div class="wsr-checkbox-container">
-                  <input class="wsr-checkbox-input" type="checkbox" checked>
-                  <span class="wsr-checkbox-label">Checked</span>
+                  <input id="checkbox-2" class="wsr-checkbox-input" type="checkbox" checked>
+                  <label for="checkbox-2" class="wsr-checkbox-label">Checked</label>
                 </div>
               </xmp>
             </td>
@@ -545,8 +546,8 @@
           <tr>
             <td>
               <div class="wsr-checkbox-container">
-                <input class="wsr-checkbox-input" type="checkbox" disabled>
-                <span class="wsr-checkbox-label">Disabled</span>
+                <input id="checkbox-3" class="wsr-checkbox-input" type="checkbox" disabled>
+                <label for="checkbox-3" class="wsr-checkbox-label">Disabled</label>
               </div>
             </td>
             <td>-</td>
@@ -554,8 +555,8 @@
             <td>
               <xmp>
                 <div class="wsr-checkbox-container">
-                  <input class="wsr-checkbox-input" type="checkbox" disabled>
-                  <span class="wsr-checkbox-label">Disabled</span>
+                  <input id="checkbox-3" class="wsr-checkbox-input" type="checkbox" disabled>
+                  <label for="checkbox-3" class="wsr-checkbox-label">Disabled</label>
                 </div>
               </xmp>
             </td>
@@ -1813,7 +1814,7 @@
           <tr>
             <td>
               <div class="wsr-float-notification" type="warning">
-                <span> this a warning notification </span>
+                <span class="wsr-float-notification-label"> this a warning notification </span>
                 <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
               </div>
             </td>
@@ -1822,7 +1823,7 @@
             <td>
               <xmp>
                 <div class="wsr-float-notification" type="warning">
-                  <span> this a warning notification </span>
+                  <span class="wsr-float-notification-label"> this a warning notification </span>
                   <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
                 </div>
               </xmp>
@@ -1831,7 +1832,7 @@
           <tr>
             <td>
               <div class="wsr-float-notification" type="destructive">
-                <span>this a destructive notification </span>
+                <span class="wsr-float-notification-label">this a destructive notification </span>
                 <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
               </div>
             </td>
@@ -1840,7 +1841,7 @@
             <td>
               <xmp>
                 <div class="wsr-float-notification" type="destructive">
-                  <span>this a destructive notification </span>
+                  <span class="wsr-float-notification-label">this a destructive notification </span>
                   <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
                 </div>
               </xmp>
@@ -1849,7 +1850,7 @@
           <tr>
             <td>
               <div class="wsr-float-notification" type="premium">
-                <span>this a premium notification </span>
+                <span class="wsr-float-notification-label">this a premium notification </span>
                 <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
               </div>
             </td>
@@ -1858,7 +1859,7 @@
             <td>
               <xmp>
                 <div class="wsr-float-notification" type="premium">
-                  <span>this a premium notification </span>
+                  <span class="wsr-float-notification-label">this a premium notification </span>
                   <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
                 </div>
               </xmp>
@@ -1867,7 +1868,7 @@
           <tr>
             <td>
               <div class="wsr-float-notification" type="preview">
-                <span>this a preview notification </span>
+                <span class="wsr-float-notification-label">this a preview notification </span>
                 <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
               </div>
             </td>
@@ -1876,7 +1877,7 @@
             <td>
               <xmp>
                 <div class="wsr-float-notification" type="preview">
-                  <span>this a preview notification</span>
+                  <span class="wsr-float-notification-label">this a preview notification</span>
                   <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
                 </div>
               </xmp>
@@ -1885,7 +1886,7 @@
           <tr>
             <td>
               <div class="wsr-float-notification" type="dark">
-                <span>this a dark notification </span>
+                <span class="wsr-float-notification-label">this a dark notification </span>
                 <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
               </div>
             </td>
@@ -1894,7 +1895,7 @@
             <td>
               <xmp>
                 <div class="wsr-float-notification" type="dark">
-                  <span>this a dark notification</span>
+                  <span class="wsr-float-notification-label">this a dark notification</span>
                   <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
                 </div>
               </xmp>
