@@ -204,7 +204,7 @@ const components = [
       values: ["standard", "success", "warning", "destructive", "premium", "preview", "dark"]
     }],
     htmlCode: `<div class="wsr-float-notification" type="standard">
-    <!-- Yoc can add icon here OR Delete this note -->
+    <!-- You can add icon here OR Delete this note -->
     <span> this a standard notification (and default) </span>
     <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
     </div>`,
