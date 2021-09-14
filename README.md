@@ -30,6 +30,7 @@ Enjoy! 😎
 4. Add your JS code to ```wsr_components_events.js```.
 5. Open the wsr_components.js file.
 6. Add your component according to the following object.
+
 ``` javascript
 {
   category: // [Unique] - the name of the component
