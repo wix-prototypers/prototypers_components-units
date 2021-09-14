@@ -9,7 +9,7 @@ https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@2/compo
 2. Open this [link](https://wix-prototypers.github.io/prototypers_components-units/components-units_02/index.html){:target="\_blank"} and search for the component you need.
 3. Copy the component code and use it in your prototype code.
 
-<b>Note:</b> There are components that includ wsr-icons, you can copy the wsr_icons folder from the this projcet to your prototype project or add the relevant icon yourself.
+<b>Note:</b> There are components that include wsr-icons, you can copy the wsr_icons folder from the this projcet to your prototype project or add the relevant icon yourself.
 
 Enjoy! 😎
 
