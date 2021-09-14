@@ -15,6 +15,7 @@ Enjoy! 😎
 
 ### Contribute a Component
 1. Create your component code - html, css and js (if exists).
+
 ```
 ▪️ Start each class in 'wsr-' and select clear classes (See existing components).
 
@@ -43,7 +44,7 @@ Enjoy! 😎
 }
 ```
 
-Exampel - component with attributes
+###### Example - component with attributes
 ``` javascript
 {
   category: "Regular Button",
@@ -63,7 +64,7 @@ Exampel - component with attributes
 }
 ```
 
-Exampel - component without attributes
+###### Example - component without attributes
 ``` javascript
 {
   category: "Text Feild",
