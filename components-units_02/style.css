@@ -10,6 +10,7 @@ main {
   margin: auto;
   display: table;
   width: 100vw;
+  max-width: 1600px;
   box-sizing: border-box;
 }
 
@@ -111,9 +112,9 @@ table td {
   border: 1px solid #cfcfcf;
 }
 
-table td {
+/* table td {
   height: 80px;
-}
+} */
 
 td:not(:last-child) {
   /* text-align: center; */

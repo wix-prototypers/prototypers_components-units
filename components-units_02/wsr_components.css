@@ -54,6 +54,7 @@
   /* Filter */
   --blue-icon: invert(49%) sepia(83%) saturate(983%) hue-rotate(183deg) brightness(95%) contrast(95%);
   --white-icon: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  --border-color: var(--D80);
 }
 
 /* ---------------------- Buttons ---------------------- */
@@ -618,15 +619,11 @@ input[type=checkbox].wsr-checkbox-input:disabled::before {
 }
 
 /* ---------------------- Popover & Tooltips ---------------------- */
-.wsr-popover.wsr-popover-menu-content {
+.wsr-popover-menu>.wsr-popover.wsr-popover-menu-content {
   --border-color: var(--D80);
 }
 
-.wsr-popover.wsr-tooltip-content {
-  --border-color: var(--D10);
-}
-
-.wsr-popover[dir="top"] {
+[dir="top"]>.wsr-popover {
   --top: unset;
   --bottom: 120%;
   --left: 50%;
@@ -639,7 +636,7 @@ input[type=checkbox].wsr-checkbox-input:disabled::before {
   --arrow-border-color: var(--border-color) transparent transparent transparent;
 }
 
-.wsr-popover[dir="bottom"] {
+[dir="bottom"]>.wsr-popover {
   --top: 150%;
   --bottom: unset;
   --left: 50%;
@@ -652,7 +649,7 @@ input[type=checkbox].wsr-checkbox-input:disabled::before {
   --arrow-border-color: transparent transparent var(--border-color) transparent;
 }
 
-.wsr-popover[dir="left"] {
+[dir="left"]>.wsr-popover {
   --top: 35%;
   --bottom: unset;
   --left: unset;
@@ -665,7 +662,7 @@ input[type=checkbox].wsr-checkbox-input:disabled::before {
   --arrow-border-color: transparent transparent transparent var(--border-color);
 }
 
-.wsr-popover[dir="right"] {
+[dir="right"]>.wsr-popover {
   --top: 35%;
   --bottom: unset;
   --left: 120%;
@@ -716,7 +713,7 @@ input[type=checkbox].wsr-checkbox-input:disabled::before {
   z-index: -1;
 }
 
-.wsr-popover-menu .wsr-popover-menu-content::after {
+.wsr-popover-menu-content::after {
   content: "";
   position: absolute;
   top: var(--arrow-top);
@@ -759,6 +756,10 @@ input[type=checkbox].wsr-checkbox-input:disabled::before {
   background: var(--D60);
   margin: 6px 24px 5px;
   box-sizing: border-box;
+}
+
+.wsr-popover.wsr-tooltip-content {
+  --border-color: var(--D10);
 }
 
 .wsr-tooltip {
@@ -1180,6 +1181,7 @@ input[type="radio"].wsr-segmented-toggle-option[option="2"]:checked~.wsr-segment
   border: none;
   background: #fff;
   width: 300px;
+  box-shadow: unset;
 }
 
 .wsr-date-picker thead {
@@ -1438,6 +1440,7 @@ input[type="radio"].wsr-segmented-toggle-option[option="2"]:checked~.wsr-segment
 .wsr-table-header th {
   text-align: left;
   padding: 9px 12px;
+  font-size: 14px;
   font-weight: normal;
   border: 0;
   font-weight: 400;

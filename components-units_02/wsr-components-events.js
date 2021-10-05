@@ -4,7 +4,20 @@ NOTE: Please be sure to use a separator with the element name ! */
 
 
 function wsrComponentsEvents() {
-/* --------------------------- Dropdown --------------------------- */
+
+  /* --------------------------- Search Field --------------------------- */
+  document.querySelectorAll('.topbar-search-input').forEach(function(elm) {
+    elm.addEventListener('focus', function(e) {
+      e.target.parentElement.classList.add('wsr-field-has-focus')
+    });
+
+    elm.addEventListener('focusout', function(e) {
+      e.target.parentElement.classList.remove('wsr-field-has-focus')
+    });
+  });
+
+
+  /* --------------------------- Dropdown --------------------------- */
   // dropdown focus
   document.querySelectorAll('.wsr-dropdown .wsr-text-input').forEach(function(elm) {
     elm.addEventListener('focus', function(e) {
@@ -26,7 +39,7 @@ function wsrComponentsEvents() {
 
     // close dropdown
     document.addEventListener('click', function(e) {
-      if(!e.target.classList.contains('wsr-dropdown-input')) {
+      if (!e.target.classList.contains('wsr-dropdown-input')) {
         document.querySelectorAll('.wsr-dropdown').forEach(function(dropdowns) {
           dropdowns.classList.remove('wsr-field-has-focus');
         })
@@ -35,7 +48,7 @@ function wsrComponentsEvents() {
   });
 
 
-/* --------------------------- Badge --------------------------- */
+  /* --------------------------- Badge --------------------------- */
   // dropdown focus
   document.querySelectorAll('.wsr-dropdown .wsr-text-input').forEach(function(elm) {
     elm.addEventListener('focus', function(e) {
@@ -59,11 +72,60 @@ function wsrComponentsEvents() {
   });
 
 
-/* --------------------------- Float Notification --------------------------- */
+  /* --------------------------- Float Notification --------------------------- */
   // remove this notification (after clicking on the x icon)
   document.querySelectorAll('.wsr-float-notification .wsr-float-notification-close').forEach(function(elm) {
     elm.addEventListener('click', function(e) {
       e.target.parentElement.classList.add('remove-notification')
     });
   });
+
+
+  /* --------------------------- Popover Menu --------------------------- */
+  document.querySelectorAll('.wsr-popover-menu').forEach(function(popoverMenu) {
+    popoverMenu.addEventListener('click', function(e) {
+      this.classList.toggle('wsr-open-popover');
+    });
+  });
+
+
+  /* --------------------------- Date Picker --------------------------- */
+  document.querySelectorAll('.wsr-calendar-day').forEach(function(dropdownItem) {
+    dropdownItem.addEventListener('click', function(e) {
+      document.querySelectorAll('.wsr-calendar-day').forEach(function(day) {
+        day.classList.remove('selected');
+      });
+      const dayBtn = e.target.parentElement;
+      if (!dayBtn.classList.contains('gray-day')) {
+        dayBtn.classList.add('selected');
+        let theDay = dayBtn.getAttribute('day');
+        dayBtn.closest('.wsr-date-picker').children[1].value = '09/' + theDay + '/2021';
+      }
+    });
+  });
+
+
+  /* --------------------------- Table --------------------------- */
+  // open more menu
+  // document.querySelectorAll('.wsr-popover-menu').forEach(function(popoverMenu) {
+  //   popoverMenu.addEventListener('click', function (e) {
+  //     this.classList.toggle('wsr-open-popover');
+  //   });
+  // });
+
+    // select all checkbox
+    document.querySelectorAll('.wsr-table-select-all').forEach(function(popoverMenu) {
+      popoverMenu.addEventListener('change', function(e) {
+        const table = e.target.parentNode.closest('.wsr-table');
+        if(e.target.checked) {
+          table.querySelectorAll('.wsr-checkbox-input').forEach(function(checkbox) {
+            checkbox.checked = true;
+          });
+        } else {
+          table.querySelectorAll('.wsr-checkbox-input').forEach(function(checkbox) {
+            checkbox.checked = false;
+          });
+        }
+      });
+    });
 }

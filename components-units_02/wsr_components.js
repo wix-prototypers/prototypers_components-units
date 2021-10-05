@@ -78,6 +78,14 @@ const components = [
     </button>`
   },
   {
+    category: "Search Feild",
+    htmlCode: `<div class="wsr-search-field">
+    <img src="./wsr-icons/search-icon.svg">
+    <input class="topbar-search-input" placeholder="Search...">
+    </div>`,
+    jsCode:  searchFieldJs
+  },
+  {
     category: "Text Feild",
     htmlCode: `<input class="wsr-text-input" type="text" placeholder="This is a placeholder">`
   },
@@ -247,6 +255,92 @@ const components = [
     <input class="wsr-toggle-input" type="checkbox">
     <span class="wsr-toggle-round"></span>
     </label>`
+  },
+  {
+    category: "Popover Menu",
+    htmlCode: `<div class="wsr-popover-menu" dir="top">Click Me
+    <div class="wsr-popover wsr-popover-menu-content">
+    <span class="wsr-popover-menu-item">Add New Items</span>
+    <span class="wsr-popover-menu-item">Edit This Item</span>
+    <span class="wsr-popover-menu-divider"></span>
+    <span class="wsr-popover-menu-item"><img src="./wsr-icons/edit-icon.svg">Delete This Item</span>
+    </div>
+    </div>`,
+    attributes: [{
+      attribute: "dir",
+      values: ["top", "right", "bottom", "left"]
+    }],
+    jsCode: popoverMenuJs
+  },
+  {
+    category: "Tooltips",
+    htmlCode: `<div class="wsr-tooltip" dir="top">Hover Me
+    <div class="wsr-popover wsr-tooltip-content">
+    Enter your postal code, so postman can easier send you a mail.
+    </div>
+    </div>`,
+    attributes: [{
+      attribute: "dir",
+      values: ["top", "right", "bottom", "left"]
+    }]
+  },
+  {
+    category: "Info Tooltip",
+    htmlCode: `<div class="wsr-tooltip" dir="top"><img src="./wsr-icons/info-icon.svg">
+    <div class="wsr-popover wsr-tooltip-content">
+    Enter your postal code, so postman can easier send you a mail.
+    </div>
+    </div>`
+  },
+  {
+    category: "Segmented Toggle - Text",
+    htmlCode: `<div class="wsr-segmented-toggle">
+    <input class="wsr-segmented-toggle-option" id="segmented-toggle-1" value="hide" option="1" type="radio" name="segmented-toggle" checked="">
+    <label class="wsr-segmented-toggle-labels" for="segmented-toggle-1">Option 1</label>
+    <input class="wsr-segmented-toggle-option" id="segmented-toggle-2" value="show" option="2" type="radio" name="segmented-toggle">
+    <label class="wsr-segmented-toggle-labels" for="segmented-toggle-2">Option 2</label>
+    </div>`
+  },
+  {
+    category: "Segmented Toggle - Text with Icons",
+    htmlCode: `<div class="wsr-segmented-toggle">
+    <input class="wsr-segmented-toggle-option" id="icon-text-toggle-1" value="hide" option="1" type="radio" name="icon-text-segmented-toggle" checked="">
+    <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-1"><span class="wsr-segmented-toggle-preix">%</span><span>Option 1</span></label>
+    <input class="wsr-segmented-toggle-option" id="icon-text-toggle-2" value="show" option="2" type="radio" name="icon-text-segmented-toggle">
+    <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span><span>Option 2</span></label>
+    </div>`
+  },
+  {
+    category: "Segmented Toggle - Icons",
+    htmlCode: `<div class="wsr-segmented-toggle wsr-icons-toggle">
+    <input class="wsr-segmented-toggle-option" id="icon-1" value="hide" option="1" type="radio" name="icon-segmented-toggle" checked="">
+    <label class="wsr-segmented-toggle-labels" for="icon-1"><span class="wsr-segmented-toggle-preix">%</span></label>
+    <input class="wsr-segmented-toggle-option" id="icon-2" value="show" option="2" type="radio" name="icon-segmented-toggle">
+    <label class="wsr-segmented-toggle-labels" for="icon-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span></label>
+    </div>`
+  },
+  {
+    category: "Date Picker",
+    htmlCode: datePickerHtml,
+    jsCode: datePickerJs
+  },
+  {
+    category: "Time Picker",
+    htmlCode: `<div class="wsr-input-time-container" icon="suffix">
+    <span class="wsr-input-time-btn wsr-input-time-up"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5">
+    <path d="M0 4L0.8 4.8 4 1.5 7.3 4.8 8 4 4 0z"></path>
+    </svg></span>
+    <span class="wsr-input-time-btn wsr-input-time-down"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5">
+    <path d="M4 3.2L0.7 0 0 0.8 4 4.8 8 0.8 7.2 0z"></path>
+    </svg></span>
+    <input class="wsr-text-input" type="text" placeholder="This is a placeholder" value="12:00">
+    <span class="wsr-input-affix">PM</span>
+    </div>`
+  },
+  {
+    category: "Table",
+    htmlCode: tableHtml,
+    jsCode: tableJs
   }
 ]
 
