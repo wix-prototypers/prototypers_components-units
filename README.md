@@ -4,7 +4,7 @@ This project includes component units (e.g. WSR components, inputs, tooltips ...
 ### How to Use?
 1. Copy this CDN link (the main CSS file) to your prototype project:
 ```
-https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@2/components-units_02/wsr_components.css
+https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@3/components-units_02/pcu_components.css
 ```
 2. Open this [link](https://wix-prototypers.github.io/prototypers_components-units/components-units_02/index.html){:target="\_blank"} and search for the component you need.
 3. Copy the component code and use it in your prototype code.
@@ -17,7 +17,7 @@ Enjoy! 😎
 1. Create your component code - html, css and js (if exists).
 
 ```
-▪️ Start each class in 'wsr-' and select clear classes (See existing components).
+▪️ Start each class in 'pcu-' and select clear classes (See existing components).
 
 ▪️ If your component contains several states (designs), please do so by changing a attribute.
   Note - The attribute must be in the main parent of the component.
@@ -26,9 +26,9 @@ Enjoy! 😎
 ```
 
 2. Create a new branch in this repository.
-3. Add your CCS code to ```wsr_components.css```.
-4. Add your JS code to ```wsr_components_events.js```.
-5. Open the wsr_components.js file.
+3. Add your CCS code to ```pcu_components.css```.
+4. Add your JS code to ```pcu_components_events.js```.
+5. Open the pcu_components.js file.
 6. Add your component according to the following object.
 
 ``` javascript
@@ -69,11 +69,11 @@ Enjoy! 😎
 ``` javascript
 {
   category: "Text Feild",
-  htmlCode: `<input class="wsr-text-input" type="text" placeholder="This is a placeholder">`
+  htmlCode: `<input class="pcu-text-input" type="text" placeholder="This is a placeholder">`
 }
 ```
 
-<b>Note:</b> The readability of the files is very important, so if the html code or js code of your component is long, please copy them to the variables in ```wsr_components_long_code.js``` and use the variables in the object you are adding.
+<b>Note:</b> The readability of the files is very important, so if the html code or js code of your component is long, please copy them to the variables in ```pcu_components_long_code.js``` and use the variables in the object you are adding.
 
 7. Commit your changes (in your branch) and do Publish.
 8. Create a “pull request” and write an explanation about the changes (please don’t do merge).
