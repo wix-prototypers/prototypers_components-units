@@ -19,7 +19,7 @@ const components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="wsr-button" skin="standard" priority="primary">Button</button>`
+    htmlCode: `<button class="cpu-button" skin="standard" priority="primary">Button</button>`
   },
   {
     category: "Prefix Button",
@@ -35,7 +35,7 @@ const components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="wsr-button wsr-button-affix" skin="standard" priority="primary" icon="prefix"><img src="./wsr-icons/add-icon.svg">Prefix</button>`
+    htmlCode: `<button class="cpu-button cpu-button-affix" skin="standard" priority="primary" icon="prefix"><img src="./wsr-icons/add-icon.svg">Prefix</button>`
   },
   {
     category: "Suffix Button",
@@ -51,7 +51,7 @@ const components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="wsr-button wsr-button-affix" skin="standard" priority="primary" icon="suffix">
+    htmlCode: `<button class="cpu-button cpu-button-affix" skin="standard" priority="primary" icon="suffix">
     Suffix<img src="./wsr-icons/chevdown-icon.svg">
     </button>`
   },
@@ -73,13 +73,13 @@ const components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="wsr-button wsr-icon-button" skin="standard" priority="primary" size="tiny">
+    htmlCode: `<button class="cpu-button cpu-icon-button" skin="standard" priority="primary" size="tiny">
     <img src="./wsr-icons/more-icon.svg">
     </button>`
   },
   {
     category: "Search Feild",
-    htmlCode: `<div class="wsr-search-field">
+    htmlCode: `<div class="cpu-search-field">
     <img src="./wsr-icons/search-icon.svg">
     <input class="topbar-search-input" placeholder="Search...">
     </div>`,
@@ -87,7 +87,7 @@ const components = [
   },
   {
     category: "Text Feild",
-    htmlCode: `<input class="wsr-text-input" type="text" placeholder="This is a placeholder">`
+    htmlCode: `<input class="cpu-text-input" type="text" placeholder="This is a placeholder">`
   },
   {
     category: "Text Feild with Icon",
@@ -95,28 +95,28 @@ const components = [
       attribute: "Icon",
       values: ["prefix", "suffix"]
     }],
-    htmlCode: `<div class="wsr-input-text-container" icon="prefix"><input type="text" class="wsr-text-input" placeholder="This is a placeholder"><span class="wsr-input-affix">$</span></div>`
+    htmlCode: `<div class="cpu-input-text-container" icon="prefix"><input type="text" class="cpu-text-input" placeholder="This is a placeholder"><span class="cpu-input-affix">$</span></div>`
   },
   {
     category: "Text Area (rows=3)",
-    htmlCode: `<textarea class="wsr-text-input wsr-textarea" placeholder="This is a placeholder" rows="3"></textarea>`
+    htmlCode: `<textarea class="cpu-text-input cpu-textarea" placeholder="This is a placeholder" rows="3"></textarea>`
   },
   {
     category: "Text Area (Dynamic Height)",
-    htmlCode: `<div type="text" class="wsr-text-input" contenteditable="true" placeholder="Write a description"></div>`
+    htmlCode: `<div type="text" class="cpu-text-input" contenteditable="true" placeholder="Write a description"></div>`
   },
   {
     category: "Rich Text Area (rows=5)",
-    htmlCode: `<div class="wsr-rich-text-area">
-    <div class="wsr-rich-text-header">
-    <span class="wsr-edit-text-btn"><img src="./wsr-icons/bold-text.svg"></span>
-    <span class="wsr-edit-text-btn"><img src="./wsr-icons/italic-text.svg"></span>
-    <span class="wsr-edit-text-btn"><img src="./wsr-icons/underline-text.svg"></span>
-    <span class="wsr-edit-text-btn"><img src="./wsr-icons/link-text.svg"></span>
-    <span class="wsr-edit-text-btn"><img src="./wsr-icons/bullet-text.svg"></span>
-    <span class="wsr-edit-text-btn"><img src="./wsr-icons/numbered-text.svg"></span>
+    htmlCode: `<div class="cpu-rich-text-area">
+    <div class="cpu-rich-text-header">
+    <span class="cpu-edit-text-btn"><img src="./wsr-icons/bold-text.svg"></span>
+    <span class="cpu-edit-text-btn"><img src="./wsr-icons/italic-text.svg"></span>
+    <span class="cpu-edit-text-btn"><img src="./wsr-icons/underline-text.svg"></span>
+    <span class="cpu-edit-text-btn"><img src="./wsr-icons/link-text.svg"></span>
+    <span class="cpu-edit-text-btn"><img src="./wsr-icons/bullet-text.svg"></span>
+    <span class="cpu-edit-text-btn"><img src="./wsr-icons/numbered-text.svg"></span>
     </div>
-    <textarea class="wsr-text-input wsr-textarea" placeholder="This is a placeholder" rows="5"></textarea>
+    <textarea class="cpu-text-input cpu-textarea" placeholder="This is a placeholder" rows="5"></textarea>
     </div>`
   },
   {
@@ -129,28 +129,28 @@ const components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<div class="wsr-radio-btn-container">
-    <input class="wsr-radio-btn-input" name="" type="radio" id="radio-1"><span class="wsr-radio-btn-circle"></span><label class="wsr-radio-btn-label" for="radio-1">Default</label></div>`
+    htmlCode: `<div class="cpu-radio-btn-container">
+    <input class="cpu-radio-btn-input" name="" type="radio" id="radio-1"><span class="cpu-radio-btn-circle"></span><label class="cpu-radio-btn-label" for="radio-1">Default</label></div>`
   },
   {
     category: "Radio Button - 2 Rows",
-    htmlCode: `<div class="wsr-radio-btn-container wsr-radio-btn-2-rows">
-    <span class="wsr-radio-btn-2-rows-input">
-    <input class="wsr-radio-btn-input" name="radio-btn-2-rows" type="radio" id="radio-5">
-    <span class="wsr-radio-btn-circle"></span>
+    htmlCode: `<div class="cpu-radio-btn-container cpu-radio-btn-2-rows">
+    <span class="cpu-radio-btn-2-rows-input">
+    <input class="cpu-radio-btn-input" name="radio-btn-2-rows" type="radio" id="radio-5">
+    <span class="cpu-radio-btn-circle"></span>
     </span>
-    <span class="wsr-radio-btn-2-rows-content">
-    <label class="wsr-radio-btn-main-label" for="radio-5">Main Label</label>
-    <label class="wsr-radio-btn-sub-label" for="radio-5">sub label</label>
+    <span class="cpu-radio-btn-2-rows-content">
+    <label class="cpu-radio-btn-main-label" for="radio-5">Main Label</label>
+    <label class="cpu-radio-btn-sub-label" for="radio-5">sub label</label>
     </span>
-    </div><div class="wsr-radio-btn-container wsr-radio-btn-2-rows">
-    <span class="wsr-radio-btn-2-rows-input">
-    <input class="wsr-radio-btn-input" name="radio-btn-2-rows" type="radio" id="radio-5">
-    <span class="wsr-radio-btn-circle"></span>
+    </div><div class="cpu-radio-btn-container cpu-radio-btn-2-rows">
+    <span class="cpu-radio-btn-2-rows-input">
+    <input class="cpu-radio-btn-input" name="radio-btn-2-rows" type="radio" id="radio-5">
+    <span class="cpu-radio-btn-circle"></span>
     </span>
-    <span class="wsr-radio-btn-2-rows-content">
-    <label class="wsr-radio-btn-main-label" for="radio-5">Main Label</label>
-    <label class="wsr-radio-btn-sub-label" for="radio-5">sub label</label>
+    <span class="cpu-radio-btn-2-rows-content">
+    <label class="cpu-radio-btn-main-label" for="radio-5">Main Label</label>
+    <label class="cpu-radio-btn-sub-label" for="radio-5">sub label</label>
     </span>
     </div>`
   },
@@ -164,14 +164,14 @@ const components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<div class="wsr-checkbox-container">
-    <input id="checkbox-1" class="wsr-checkbox-input" type="checkbox">
-    <label for="checkbox-1" class="wsr-checkbox-label">Unchecked</label>
+    htmlCode: `<div class="cpu-checkbox-container">
+    <input id="checkbox-1" class="cpu-checkbox-input" type="checkbox">
+    <label for="checkbox-1" class="cpu-checkbox-label">Unchecked</label>
     </div>`
   },
   {
     category: "Number Input",
-    htmlCode: `<div class="wsr-input-number-container"><input type="number" class="wsr-number-input"></div>`
+    htmlCode: `<div class="cpu-input-number-container"><input type="number" class="cpu-number-input"></div>`
   },
   {
     category: "Number Input with Icon",
@@ -179,28 +179,28 @@ const components = [
       attribute: "Icon",
       values: ["prefix", "suffix"]
     }],
-    htmlCode: `<div class="wsr-input-number-container" icon="prefix"><input type="number" class="wsr-number-input"><span class="wsr-input-affix">$</span></div>`
+    htmlCode: `<div class="cpu-input-number-container" icon="prefix"><input type="number" class="cpu-number-input"><span class="cpu-input-affix">$</span></div>`
   },
   {
     category: "Dropdown",
-    htmlCode: `<div class="wsr-dropdown">
-    <input class="wsr-text-input wsr-dropdown-input" type="text" placeholder="Select an option" readonly>
-    <div class="wsr-dropdown-content">
-    <div class="wsr-dropdown-item" value="Option 1">Option 1</div>
-    <div class="wsr-dropdown-item" value="Option 2">Option 2</div>
-    <div class="wsr-dropdown-item" value="Option 3">Option 3</div>
-    <div class="wsr-dropdown-item" value="Option 4">Option 4</div>
+    htmlCode: `<div class="cpu-dropdown">
+    <input class="cpu-text-input cpu-dropdown-input" type="text" placeholder="Select an option" readonly>
+    <div class="cpu-dropdown-content">
+    <div class="cpu-dropdown-item" value="Option 1">Option 1</div>
+    <div class="cpu-dropdown-item" value="Option 2">Option 2</div>
+    <div class="cpu-dropdown-item" value="Option 3">Option 3</div>
+    <div class="cpu-dropdown-item" value="Option 4">Option 4</div>
     </div>
     </div>`,
     jsCode: dropdownJs
   },
   {
     category: "Badge",
-    htmlCode: `<div class="wsr-dropdown" skin="badge">
-    <input class="wsr-text-input wsr-dropdown-input" color="success" type="text" placeholder="Select an option" readonly value="Active">
-    <div class="wsr-dropdown-content">
-    <div class="wsr-dropdown-item" value="Active"><label class="wsr-badge-color-tag" color="success"></label>Active</div>
-    <div class="wsr-dropdown-item" value="Inactive"><label class="wsr-badge-color-tag" color="disabled"></label>Inactive</div>
+    htmlCode: `<div class="cpu-dropdown" skin="badge">
+    <input class="cpu-text-input cpu-dropdown-input" color="success" type="text" placeholder="Select an option" readonly value="Active">
+    <div class="cpu-dropdown-content">
+    <div class="cpu-dropdown-item" value="Active"><label class="cpu-badge-color-tag" color="success"></label>Active</div>
+    <div class="cpu-dropdown-item" value="Inactive"><label class="cpu-badge-color-tag" color="disabled"></label>Inactive</div>
     </div>
     </div>`,
     jsCode: badgeJs
@@ -211,10 +211,10 @@ const components = [
       attribute: "Type",
       values: ["standard", "success", "warning", "destructive", "premium", "preview", "dark"]
     }],
-    htmlCode: `<div class="wsr-float-notification" type="standard">
+    htmlCode: `<div class="cpu-float-notification" type="standard">
     <!-- You can add icon here OR Delete this note -->
     <span> this a standard notification (and default) </span>
-    <img class="wsr-float-notification-close" src="./wsr-icons/close-icon.svg">
+    <img class="cpu-float-notification-close" src="./wsr-icons/close-icon.svg">
     </div>`,
     jsCode: floatNotificationJs
   },
@@ -224,7 +224,7 @@ const components = [
         attribute: "Size",
         values: ["tiny", "small", "medium", "large"]
     }],
-    htmlCode: `<div class="wsr-avatar" size="tiny"><img src="./wsr-icons/avatar-icon.svg"></div>`
+    htmlCode: `<div class="cpu-avatar" size="tiny"><img src="./wsr-icons/avatar-icon.svg"></div>`
   },
   {
     category: "Avatar - image",
@@ -232,13 +232,13 @@ const components = [
         attribute: "Size",
         values: ["tiny", "small", "medium", "large"]
     }],
-    htmlCode: `<div class="wsr-avatar" size="tiny">
+    htmlCode: `<div class="cpu-avatar" size="tiny">
     <img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>`
   },
   {
     category: "Add Image",
-    htmlCode: `<div class="wsr-image-container">
-    <div class="wsr-empty-image">
+    htmlCode: `<div class="cpu-image-container">
+    <div class="cpu-empty-image">
     <svg viewBox="0 0 31 31" fill="currentColor" width="31" height="31" class="s203">
     <path d="M15 15H0v1h15v15h1V16h15v-1H16V0h-1z"></path>
     </svg>
@@ -251,19 +251,19 @@ const components = [
       attribute: "Size",
       values: ["large", "medium", "small"]
     }],
-    htmlCode: `<label class="wsr-toggle-switch" size="large">
-    <input class="wsr-toggle-input" type="checkbox">
-    <span class="wsr-toggle-round"></span>
+    htmlCode: `<label class="cpu-toggle-switch" size="large">
+    <input class="cpu-toggle-input" type="checkbox">
+    <span class="cpu-toggle-round"></span>
     </label>`
   },
   {
     category: "Popover Menu",
-    htmlCode: `<div class="wsr-popover-menu" dir="top">Click Me
-    <div class="wsr-popover wsr-popover-menu-content">
-    <span class="wsr-popover-menu-item">Add New Items</span>
-    <span class="wsr-popover-menu-item">Edit This Item</span>
-    <span class="wsr-popover-menu-divider"></span>
-    <span class="wsr-popover-menu-item"><img src="./wsr-icons/edit-icon.svg">Delete This Item</span>
+    htmlCode: `<div class="cpu-popover-menu" dir="top">Click Me
+    <div class="cpu-popover cpu-popover-menu-content">
+    <span class="cpu-popover-menu-item">Add New Items</span>
+    <span class="cpu-popover-menu-item">Edit This Item</span>
+    <span class="cpu-popover-menu-divider"></span>
+    <span class="cpu-popover-menu-item"><img src="./wsr-icons/edit-icon.svg">Delete This Item</span>
     </div>
     </div>`,
     attributes: [{
@@ -274,8 +274,8 @@ const components = [
   },
   {
     category: "Tooltips",
-    htmlCode: `<div class="wsr-tooltip" dir="top">Hover Me
-    <div class="wsr-popover wsr-tooltip-content">
+    htmlCode: `<div class="cpu-tooltip" dir="top">Hover Me
+    <div class="cpu-popover cpu-tooltip-content">
     Enter your postal code, so postman can easier send you a mail.
     </div>
     </div>`,
@@ -286,37 +286,37 @@ const components = [
   },
   {
     category: "Info Tooltip",
-    htmlCode: `<div class="wsr-tooltip" dir="top"><img src="./wsr-icons/info-icon.svg">
-    <div class="wsr-popover wsr-tooltip-content">
+    htmlCode: `<div class="cpu-tooltip" dir="top"><img src="./wsr-icons/info-icon.svg">
+    <div class="cpu-popover cpu-tooltip-content">
     Enter your postal code, so postman can easier send you a mail.
     </div>
     </div>`
   },
   {
     category: "Segmented Toggle - Text",
-    htmlCode: `<div class="wsr-segmented-toggle">
-    <input class="wsr-segmented-toggle-option" id="segmented-toggle-1" value="hide" option="1" type="radio" name="segmented-toggle" checked="">
-    <label class="wsr-segmented-toggle-labels" for="segmented-toggle-1">Option 1</label>
-    <input class="wsr-segmented-toggle-option" id="segmented-toggle-2" value="show" option="2" type="radio" name="segmented-toggle">
-    <label class="wsr-segmented-toggle-labels" for="segmented-toggle-2">Option 2</label>
+    htmlCode: `<div class="cpu-segmented-toggle">
+    <input class="cpu-segmented-toggle-option" id="segmented-toggle-1" value="hide" option="1" type="radio" name="segmented-toggle" checked="">
+    <label class="cpu-segmented-toggle-labels" for="segmented-toggle-1">Option 1</label>
+    <input class="cpu-segmented-toggle-option" id="segmented-toggle-2" value="show" option="2" type="radio" name="segmented-toggle">
+    <label class="cpu-segmented-toggle-labels" for="segmented-toggle-2">Option 2</label>
     </div>`
   },
   {
     category: "Segmented Toggle - Text with Icons",
-    htmlCode: `<div class="wsr-segmented-toggle">
-    <input class="wsr-segmented-toggle-option" id="icon-text-toggle-1" value="hide" option="1" type="radio" name="icon-text-segmented-toggle" checked="">
-    <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-1"><span class="wsr-segmented-toggle-preix">%</span><span>Option 1</span></label>
-    <input class="wsr-segmented-toggle-option" id="icon-text-toggle-2" value="show" option="2" type="radio" name="icon-text-segmented-toggle">
-    <label class="wsr-segmented-toggle-labels" for="icon-text-toggle-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span><span>Option 2</span></label>
+    htmlCode: `<div class="cpu-segmented-toggle">
+    <input class="cpu-segmented-toggle-option" id="icon-text-toggle-1" value="hide" option="1" type="radio" name="icon-text-segmented-toggle" checked="">
+    <label class="cpu-segmented-toggle-labels" for="icon-text-toggle-1"><span class="cpu-segmented-toggle-preix">%</span><span>Option 1</span></label>
+    <input class="cpu-segmented-toggle-option" id="icon-text-toggle-2" value="show" option="2" type="radio" name="icon-text-segmented-toggle">
+    <label class="cpu-segmented-toggle-labels" for="icon-text-toggle-2"><span class="cpu-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span><span>Option 2</span></label>
     </div>`
   },
   {
     category: "Segmented Toggle - Icons",
-    htmlCode: `<div class="wsr-segmented-toggle wsr-icons-toggle">
-    <input class="wsr-segmented-toggle-option" id="icon-1" value="hide" option="1" type="radio" name="icon-segmented-toggle" checked="">
-    <label class="wsr-segmented-toggle-labels" for="icon-1"><span class="wsr-segmented-toggle-preix">%</span></label>
-    <input class="wsr-segmented-toggle-option" id="icon-2" value="show" option="2" type="radio" name="icon-segmented-toggle">
-    <label class="wsr-segmented-toggle-labels" for="icon-2"><span class="wsr-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span></label>
+    htmlCode: `<div class="cpu-segmented-toggle wsr-icons-toggle">
+    <input class="cpu-segmented-toggle-option" id="icon-1" value="hide" option="1" type="radio" name="icon-segmented-toggle" checked="">
+    <label class="cpu-segmented-toggle-labels" for="icon-1"><span class="cpu-segmented-toggle-preix">%</span></label>
+    <input class="cpu-segmented-toggle-option" id="icon-2" value="show" option="2" type="radio" name="icon-segmented-toggle">
+    <label class="cpu-segmented-toggle-labels" for="icon-2"><span class="cpu-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span></label>
     </div>`
   },
   {
@@ -326,15 +326,15 @@ const components = [
   },
   {
     category: "Time Picker",
-    htmlCode: `<div class="wsr-input-time-container" icon="suffix">
-    <span class="wsr-input-time-btn wsr-input-time-up"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5">
+    htmlCode: `<div class="cpu-input-time-container" icon="suffix">
+    <span class="cpu-input-time-btn cpu-input-time-up"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5">
     <path d="M0 4L0.8 4.8 4 1.5 7.3 4.8 8 4 4 0z"></path>
     </svg></span>
-    <span class="wsr-input-time-btn wsr-input-time-down"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5">
+    <span class="cpu-input-time-btn cpu-input-time-down"><svg viewBox="0 0 8 5" fill="currentColor" width="8" height="5">
     <path d="M4 3.2L0.7 0 0 0.8 4 4.8 8 0.8 7.2 0z"></path>
     </svg></span>
-    <input class="wsr-text-input" type="text" placeholder="This is a placeholder" value="12:00">
-    <span class="wsr-input-affix">PM</span>
+    <input class="cpu-text-input" type="text" placeholder="This is a placeholder" value="12:00">
+    <span class="cpu-input-affix">PM</span>
     </div>`
   },
   {
