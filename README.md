@@ -2,9 +2,11 @@
 This project includes component units (e.g. WSR components, inputs, tooltips ...) that we can use in our prototypes quickly and easily.
 
 ### How to Use?
-1. Copy this CDN link (the main CSS file) to your prototype project:
+1. Copy the relevant CSS link (CDN link) to your prototype project:
+
+###### Wix-Style-React components:
 ```
-https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@3/components-units_02/pcu_components.css
+https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@3/components-units_02/wsr_components.css
 ```
 2. Open this [link](https://wix-prototypers.github.io/prototypers_components-units/components-units_02/index.html){:target="\_blank"} and search for the component you need.
 3. Copy the component code and use it in your prototype code.
