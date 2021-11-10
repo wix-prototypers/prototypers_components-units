@@ -28,7 +28,7 @@ Enjoy! 😎
 ```
 
 2. Create a new branch in this repository.
-3. Add your CCS code to ```pcu_components.css```.
+3. Add your CCS code to relevant CSS file (For example, if it is a wsr component so add it to ```wsr_components.css```).
 4. Add your JS code to ```pcu_components_events.js```.
 5. Open the pcu_components.js file.
 6. Add your component according to the following object.
