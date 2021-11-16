@@ -6,9 +6,9 @@ This project includes component units (e.g. WSR components, inputs, tooltips ...
 
 ###### Wix-Style-React components:
 ```
-https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@3/components-units_02/wsr_components.css
+https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@3/components-units_02/pcu-wsr/wsr_components.css
 ```
-2. Open this [link](https://wix-prototypers.github.io/prototypers_components-units/components-units_02/index.html){:target="\_blank"} and search for the component you need.
+2. Open this [link](https://wix-prototypers.github.io/prototypers_components-units/components-units_02/src/index.html){:target="\_blank"} and search for the component you need.
 3. Copy the component code and use it in your prototype code.
 
 <b>Note:</b> There are components that include wsr-icons, you can copy the wsr_icons folder from the this projcet to your prototype project or add the relevant icon yourself.
@@ -30,7 +30,7 @@ Enjoy! 😎
 2. Create a new branch in this repository.
 3. Add your CCS code to relevant CSS file (For example, if it is a wsr component so add it to ```wsr_components.css```).
 4. Add your JS code to ```pcu_components_events.js```.
-5. Open the pcu_components.js file.
+5. Open the relevant JS file (For example, if it is a wsr component so ```wsr_components.js```).
 6. Add your component according to the following object.
 
 ``` javascript
