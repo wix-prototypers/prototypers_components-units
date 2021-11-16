@@ -35,7 +35,7 @@ const components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" icon="prefix"><img src="./wsr-icons/add-icon.svg">Prefix</button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" icon="prefix"><img src="../pcu-wsr/wsr-icons/add-icon.svg">Prefix</button>`
   },
   {
     category: "Suffix Button",
@@ -52,7 +52,7 @@ const components = [
       values: [false, true]
     }],
     htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" icon="suffix">
-    Suffix<img src="./wsr-icons/chevdown-icon.svg">
+    Suffix<img src="../pcu-wsr/wsr-icons/chevdown-icon.svg">
     </button>`
   },
   {
@@ -74,13 +74,13 @@ const components = [
       values: [false, true]
     }],
     htmlCode: `<button class="pcu-button pcu-icon-button" skin="standard" priority="primary" size="tiny">
-    <img src="./wsr-icons/more-icon.svg">
+    <img src="../pcu-wsr/wsr-icons/more-icon.svg">
     </button>`
   },
   {
     category: "Search Feild",
     htmlCode: `<div class="pcu-search-field">
-    <img src="./wsr-icons/search-icon.svg">
+    <img src="../pcu-wsr/wsr-icons/search-icon.svg">
     <input class="topbar-search-input" placeholder="Search...">
     </div>`,
     jsCode:  searchFieldJs
@@ -109,12 +109,12 @@ const components = [
     category: "Rich Text Area (rows=5)",
     htmlCode: `<div class="pcu-rich-text-area">
     <div class="pcu-rich-text-header">
-    <span class="pcu-edit-text-btn"><img src="./wsr-icons/bold-text.svg"></span>
-    <span class="pcu-edit-text-btn"><img src="./wsr-icons/italic-text.svg"></span>
-    <span class="pcu-edit-text-btn"><img src="./wsr-icons/underline-text.svg"></span>
-    <span class="pcu-edit-text-btn"><img src="./wsr-icons/link-text.svg"></span>
-    <span class="pcu-edit-text-btn"><img src="./wsr-icons/bullet-text.svg"></span>
-    <span class="pcu-edit-text-btn"><img src="./wsr-icons/numbered-text.svg"></span>
+    <span class="pcu-edit-text-btn"><img src="../pcu-wsr/wsr-icons/bold-text.svg"></span>
+    <span class="pcu-edit-text-btn"><img src="../pcu-wsr/wsr-icons/italic-text.svg"></span>
+    <span class="pcu-edit-text-btn"><img src="../pcu-wsr/wsr-icons/underline-text.svg"></span>
+    <span class="pcu-edit-text-btn"><img src="../pcu-wsr/wsr-icons/link-text.svg"></span>
+    <span class="pcu-edit-text-btn"><img src="../pcu-wsr/wsr-icons/bullet-text.svg"></span>
+    <span class="pcu-edit-text-btn"><img src="../pcu-wsr/wsr-icons/numbered-text.svg"></span>
     </div>
     <textarea class="pcu-text-input pcu-textarea" placeholder="This is a placeholder" rows="5"></textarea>
     </div>`
@@ -214,7 +214,7 @@ const components = [
     htmlCode: `<div class="pcu-float-notification" type="standard">
     <!-- You can add icon here OR Delete this note -->
     <span> this a standard notification (and default) </span>
-    <img class="pcu-float-notification-close" src="./wsr-icons/close-icon.svg">
+    <img class="pcu-float-notification-close" src="../pcu-wsr/wsr-icons/close-icon.svg">
     </div>`,
     jsCode: floatNotificationJs
   },
@@ -224,7 +224,7 @@ const components = [
         attribute: "Size",
         values: ["tiny", "small", "medium", "large"]
     }],
-    htmlCode: `<div class="pcu-avatar" size="tiny"><img src="./wsr-icons/avatar-icon.svg"></div>`
+    htmlCode: `<div class="pcu-avatar" size="tiny"><img src="../pcu-wsr/wsr-icons/avatar-icon.svg"></div>`
   },
   {
     category: "Avatar - image",
@@ -263,7 +263,7 @@ const components = [
     <span class="pcu-popover-menu-item">Add New Items</span>
     <span class="pcu-popover-menu-item">Edit This Item</span>
     <span class="pcu-popover-menu-divider"></span>
-    <span class="pcu-popover-menu-item"><img src="./wsr-icons/edit-icon.svg">Delete This Item</span>
+    <span class="pcu-popover-menu-item"><img src="../pcu-wsr/wsr-icons/edit-icon.svg">Delete This Item</span>
     </div>
     </div>`,
     attributes: [{
@@ -286,7 +286,7 @@ const components = [
   },
   {
     category: "Info Tooltip",
-    htmlCode: `<div class="pcu-tooltip" dir="top"><img src="./wsr-icons/info-icon.svg">
+    htmlCode: `<div class="pcu-tooltip" dir="top"><img src="../pcu-wsr/wsr-icons/info-icon.svg">
     <div class="pcu-popover pcu-tooltip-content">
     Enter your postal code, so postman can easier send you a mail.
     </div>
@@ -307,7 +307,7 @@ const components = [
     <input class="pcu-segmented-toggle-option" id="icon-text-toggle-1" value="hide" option="1" type="radio" name="icon-text-segmented-toggle" checked="">
     <label class="pcu-segmented-toggle-labels" for="icon-text-toggle-1"><span class="pcu-segmented-toggle-preix">%</span><span>Option 1</span></label>
     <input class="pcu-segmented-toggle-option" id="icon-text-toggle-2" value="show" option="2" type="radio" name="icon-text-segmented-toggle">
-    <label class="pcu-segmented-toggle-labels" for="icon-text-toggle-2"><span class="pcu-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span><span>Option 2</span></label>
+    <label class="pcu-segmented-toggle-labels" for="icon-text-toggle-2"><span class="pcu-segmented-toggle-preix"><img src="../pcu-wsr/wsr-icons/edit-icon.svg"></span><span>Option 2</span></label>
     </div>`
   },
   {
@@ -316,7 +316,7 @@ const components = [
     <input class="pcu-segmented-toggle-option" id="icon-1" value="hide" option="1" type="radio" name="icon-segmented-toggle" checked="">
     <label class="pcu-segmented-toggle-labels" for="icon-1"><span class="pcu-segmented-toggle-preix">%</span></label>
     <input class="pcu-segmented-toggle-option" id="icon-2" value="show" option="2" type="radio" name="icon-segmented-toggle">
-    <label class="pcu-segmented-toggle-labels" for="icon-2"><span class="pcu-segmented-toggle-preix"><img src="./wsr-icons/edit-icon.svg"></span></label>
+    <label class="pcu-segmented-toggle-labels" for="icon-2"><span class="pcu-segmented-toggle-preix"><img src="../pcu-wsr/wsr-icons/edit-icon.svg"></span></label>
     </div>`
   },
   {
@@ -343,184 +343,3 @@ const components = [
     jsCode: tableJs
   }
 ]
-
-let comp = ''; // new component
-let dropdown = ''; // attribute dropdown
-window.onload = (event) => {
-  // build table with for each component
-  for (i = 0; i < components.length; i++) {
-    let attributesHeader = '';
-    let { category, attributes, htmlCode, jsCode } = components[i];
-    if (attributes) { // there are attributes
-      attributesHeader = '';
-      dropdown = '';
-      for (k = 0; k < attributes.length; k++) {
-        let { attribute, values } = attributes[k];
-        let dropdownOptions = '';
-        for (j = 0; j < values.length; j++) {
-          dropdownOptions += `<div class="attribute-dropdown-item ${j==0 ? 'selected':''}" value="${values[j]}">${values[j]}</div>`
-        }
-        dropdown += `<div class="attribute-container"><span>${attribute}:</span><div class="attribute-dropdown" for-attribute=${attribute} relevant-element='${category.toLowerCase().replaceAll(' ','-')}'>
-        <input class="attribute-dropdown-input" type="text" value="${attributes[k].values[0]}" readonly="">
-        <div class="attribute-dropdown-content">
-        ${dropdownOptions}
-        </div>
-        </div></div>`;
-        attributesHeader += `<th>${attribute}</th>`
-      }
-      comp = `<div class="component-item" for="${category}">
-      <span>${category}</span>
-      <table>
-      <tbody>
-      <tr>
-      <th>PREVIEW</th>
-      <th>ATTRIBUTES</th>
-      <th>HTML CODE</th>
-      ${jsCode ? `<th>JS CODE</th>` : ``}
-      </tr>
-      <tr>
-      <td class='preview-element' name='${category.toLowerCase().replaceAll(' ','-')}'>${htmlCode.replace(/[\r\n\t]+/g,'')}</td>
-      <td class="td-attributes">${dropdown}</td>
-      <td class='code-element' name='${category.toLowerCase().replaceAll(' ','-')}'><xmp>${htmlCode}</xmp></td>
-      ${jsCode ? `<td><xmp>${jsCode}</xmp></td>` : ``}
-      </tr>
-      </tbody>
-      </table>
-      </div>`;
-    }
-    else { // there are not attributes
-      comp = `<div class="component-item" for="${category}">
-      <span>${category}</span>
-      <table>
-      <tbody>
-      <tr>
-      <th>PREVIEW</th>
-      <th>HTML CODE</th>
-      ${jsCode ? `<th>JS CODE</th>` : ``}
-      </tr>
-      <tr>
-      <td class='preview-element' name='${category.toLowerCase().replaceAll(' ','-')}'>${htmlCode.replaceAll('\n','')}</td>
-      <td class='code-element' name='${category.toLowerCase().replaceAll(' ','-')}'><xmp>${htmlCode}</xmp></td>
-      ${jsCode ? `<td><xmp>${jsCode}</xmp></td>` : ``}
-      </tr>
-      </tbody>
-      </table>
-      </div>`;
-    }
-    document.querySelector(`.components-area`).insertAdjacentHTML('beforeend', comp);
-  }
-  tablesEvents();
-  wsrComponentsEvents();
-}
-
-/* All events on the demo page - search, open attribute dropdown, select new attribute, copy code */
-function tablesEvents() {
-  copyCode();
-  document.querySelector('#main-search').addEventListener('input', function(e) {
-    const val = this.value;
-    let count = 0;
-    document.querySelector('.search-empty').classList.add('hide');
-    document.querySelectorAll('.component-item').forEach(function(component) {
-      component.classList.add('hide');
-      const componentName = component.getAttribute('for');
-      if (componentName.toLowerCase().includes(val.toLowerCase())) {
-        component.classList.remove('hide');
-        count++;
-      }
-    });
-    if (count < 1) {
-      document.querySelector('.search-empty').classList.remove('hide');
-    }
-  });
-
-  // dropdown focus
-  document.querySelectorAll('.attribute-dropdown .attribute-dropdown-input').forEach(function(elm) {
-    elm.addEventListener('focus', function(e) {
-      document.querySelectorAll('.attribute-dropdown').forEach(function(dropdowns) {
-        dropdowns.classList.remove('open-dropdown');
-      })
-      e.target.parentElement.classList.add('open-dropdown')
-    });
-  });
-
-  // select attribute dropdown item
-  document.querySelectorAll('.attribute-dropdown-item').forEach(function(dropdownItem) {
-    dropdownItem.addEventListener('click', function(e) {
-      const input = e.target.parentElement.previousElementSibling;
-      // input.value = e.target.getAttribute('value');
-      input.setAttribute('value', e.target.getAttribute('value'));
-      currentvalue = input.getAttribute('value');
-      e.target.parentElement.querySelectorAll('.attribute-dropdown-item').forEach(function(sibilingItem) {
-        sibilingItem.classList.remove('selected');
-      })
-      e.target.classList.add('selected');
-      e.target.parentElement.parentElement.classList.remove('open-dropdown');
-      updateTheElement(input.parentElement, input.value);
-    });
-
-    // change the component when hovering on attribute dropdown item
-    let currentvalue = '';
-    dropdownItem.addEventListener('mouseenter', function(e) {
-      const input = e.target.parentElement.previousElementSibling;
-      currentvalue = input.getAttribute('value');
-      updateTheElement(input.parentElement, e.target.getAttribute('value'))
-    });
-
-    // revert the component to the last selected attribute
-    dropdownItem.addEventListener('mouseout', function(e) {
-      const input = e.target.parentElement.previousElementSibling;
-      updateTheElement(input.parentElement, currentvalue)
-    });
-
-    // close dropdown
-    document.addEventListener('click', function(e) {
-      if (!e.target.classList.contains('attribute-dropdown-input')) {
-        document.querySelectorAll('.attribute-dropdown').forEach(function(dropdowns) {
-          dropdowns.classList.remove('open-dropdown');
-        })
-      }
-    });
-  });
-}
-
-// Update the component and its js code after selecting a new attribute
-function updateTheElement(dropdownChanged, newValue) {
-  let previewElement = document.querySelector(`.preview-element[name=${dropdownChanged.getAttribute('relevant-element')}]`).childNodes[0];
-  let elementInputChild = previewElement.querySelector('input');
-  let attr = dropdownChanged.getAttribute('for-attribute').toLowerCase();
-  if (attr == "disabled" || attr == "checked") {
-    elementInputChild ? elementInputChild.setAttribute(attr, newValue) : previewElement.setAttribute(attr, newValue);
-    if(newValue == "false") {
-      elementInputChild ? elementInputChild.removeAttribute(attr) : previewElement.removeAttribute(attr);
-    }
-  } else {
-    previewElement.setAttribute(attr, newValue);
-  }
-  let codeElement = document.querySelector(`.code-element[name=${dropdownChanged.getAttribute('relevant-element')}]`);
-  codeElement.innerHTML = `<xmp>${previewElement.outerHTML}</xmp>`;
-  copyCode();
-}
-
-// Copy the html / js code from the table
-function copyCode() {
-  document.querySelectorAll('xmp').forEach(function(codeElm) {
-    codeElm.addEventListener('click', function(e) {
-      codeElm.classList.add('copied');
-      setTimeout(function() {
-        codeElm.classList.remove('copied');
-      }, 1500);
-      if (document.body.createTextRange) {
-        var range = document.body.createTextRange();
-        range.moveToElementText(codeElm);
-        range.select();
-      } else if (window.getSelection) {
-        var selection = window.getSelection();
-        var range = document.createRange();
-        range.selectNodeContents(codeElm);
-        selection.removeAllRanges();
-        selection.addRange(range);
-        document.execCommand("copy");
-      }
-    });
-  });
-}
