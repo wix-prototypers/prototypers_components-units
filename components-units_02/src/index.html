@@ -6,11 +6,13 @@
   <link rel="shortcut icon" type="image/jpg" href="https://wix-prototypers.github.io/prototypers_logo/favicon.ico">
   <title>Component Units for Prototypes</title>
   <link rel="stylesheet" href="./main.css" />
-  <link rel="stylesheet" href="../pcu-wsr/wsr_components.css" />
+  <link name="pcu-css-link" id="wsr-css" rel="stylesheet" href="../pcu-wsr/wsr_components.css" />
+  <link name="pcu-css-link" id="editor-x-css" rel="stylesheet" href="../pcu-editor-x/editor-x_components.css" disabled/>
   <script src="./main.js"></script>
   <script src="./pcu_components_long_code.js"></script>
   <script src="./pcu_components_events.js"></script>
   <script src="../pcu-wsr/wsr_components.js"></script>
+  <script src="../pcu-editor-x/editor-x_components.js"></script>
   <style media="screen">
   </style>
 </head>
@@ -19,6 +21,10 @@
   <main>
     <div class="components-area">
       <div class="search-header">
+        <div>
+          <button class="pcu-style-btn" theme="wsr">Wix Style React</button>
+          <button class="pcu-style-btn" theme="editor-x">Editor X</button>
+        </div>
         <div class="main-search-container">
           <img src="../pcu-wsr/wsr-icons/search-icon.svg">
           <input id="main-search" type="text" placeholder="Search Component">

@@ -198,7 +198,7 @@ const tableHtml = `<div class="pcu-table-main-header">
 <td class="pcu-td-more-options">
 <div class="pcu-popover-menu"  dir="left">
 <button class="pcu-button pcu-icon-button" skin="inverted" size="medium">
-<img src="./wsr-icons/more-icon.svg">
+<img src="../pcu-wsr/wsr-icons/more-icon.svg">
 </button>
 <div class="pcu-popover pcu-popover-menu-content">
 <span class="pcu-popover-menu-item">Add New Items</span>
@@ -230,7 +230,7 @@ const tableHtml = `<div class="pcu-table-main-header">
 <td class="pcu-td-more-options">
 <div class="pcu-popover-menu"  dir="left">
 <button class="pcu-button pcu-icon-button" skin="inverted" size="medium">
-<img src="./wsr-icons/more-icon.svg">
+<img src="../pcu-wsr/wsr-icons/more-icon.svg">
 </button>
 <div class="pcu-popover pcu-popover-menu-content">
 <span class="pcu-popover-menu-item">Add New Items</span>

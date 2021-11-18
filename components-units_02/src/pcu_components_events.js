@@ -3,7 +3,7 @@ We need to copy all js code we created here to understand how the event works on
 NOTE: Please be sure to use a separator with the element name ! */
 
 
-function wsrComponentsEvents() {
+function pcuComponentsEvents() {
 
   /* --------------------------- Search Field --------------------------- */
   document.querySelectorAll('.topbar-search-input').forEach(function(elm) {

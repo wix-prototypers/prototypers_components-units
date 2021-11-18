@@ -1,0 +1,434 @@
+@import url('https://static.parastorage.com/unpkg/@wix/wix-fonts@1.9.3/madefor.css');
+
+:root {
+/* ---- FONTS ---- */
+  --font-madefor: "Madefor", 'Helvetica Neue', Helvetica, Arial, 'Ã£Æ’Â¡Ã£â€šÂ¤Ã£Æ’ÂªÃ£â€šÂª', 'meiryo', 'Ã£Æ’â€™Ã£Æ’Â©Ã£â€šÂ®Ã£Æ’Å½Ã¨Â§â€™Ã£â€šÂ´ pro w3', 'hiragino kaku gothic pro', sans-serif;
+  --madefor-regular: 400;
+  --madefor-bold: 700;
+  --madefor-xbold: 800;
+
+  --madefor: "Madefor";
+--weight-400: var(--wix-font-weight-regular, 400);
+--weight-700: var(--wix-font-weight-bold);
+
+/* ---- COLORS ---- */
+  /* Primary */
+  --B0: #0f62e6;
+  --B1: #116dff;
+  --B2: #418aff;
+  --B3: #7cafff;
+  --B4: #c3daff;
+  --B5: #dce9ff;
+  --B6: #f6faff;
+
+  /* Premium */
+  --P0: #4d3dd0;
+  --P1: #5a48f5;
+  --P2: #7b6df7;
+  --P3: #a59bfa;
+  --P4: #d6d1fc;
+  --P5: #e7e4fe;
+  --P6: #eeecfe;
+
+  /* Stage */
+  --E1: #ff60f9;
+  --E2: #47cb2e;
+  --E3: #e4f7e0;
+  --E4: #18d9c2;
+  --N1: #ff5c9f;
+  --SG: #f9f9f9;
+
+  /* Disabled */
+  --X1: #767676;
+  --X2: #bebebe;
+  --X3: #dfdede;
+  --X4: #f3f3f3;
+
+  /* General */
+  --D1: #000624;
+  --D2: #333850;
+  --D3: #595d70;
+  --D4: #868aa5;
+  --D5: #cfd1dc;
+  --D6: #f4f5f8;
+  --D7: #ffffff;
+  
+  /* Alert */
+  --R0: #ca3a2f;
+  --R1: #ee4437;
+  --R2: #f1695f;
+  --R3: #f69891;
+  --R4: #fbd0cd;
+  --R5: #fde3e1;
+  --R6: #fdeceb;
+  
+  /* Success */
+  --G0: #1f8c4d;
+  --G1: #25a55a;
+  --G2: #51b77b;
+  --G3: #87cea5;
+  --G4: #c8e8d6;
+  --G5: #e1f4eb;
+  --G6: #e9f6ee;
+
+  /* Warning */
+  --Y0: #d49341;
+  --Y1: #faad4d;
+  --Y2: #fabd71;
+  --Y3: #fcd29d;
+  --Y4: #fdead2;
+  --Y5: #fef3e5;
+  --Y6: #fef6ed;
+  
+  /* Urgent */
+  --O0: #d4522b;
+  --O1: #f96132;
+  --O2: #fa815b;
+  --O3: #fca88f;
+  --O4: #fdd7cc;
+  --O5: #fee8e1;
+  --O6: #feefea; 
+  
+  /* Filter */
+  --white-icon: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  --blue-icon: invert(65%) sepia(81%) saturate(7460%) hue-rotate(210deg) brightness(100%) contrast(110%);
+  --purple-icon: invert(27%) sepia(96%) saturate(3985%) hue-rotate(241deg) brightness(98%) contrast(96%);
+  --black-icon: invert(3%) sepia(73%) saturate(6557%) hue-rotate(227deg) brightness(62%) contrast(105%);
+  --grey-icon: invert(82%) sepia(48%) saturate(0%) hue-rotate(178deg) brightness(80%) contrast(113%);
+}
+
+/* ---------------------- Buttons ---------------------- */
+
+.pcu-button {
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid var(--border-color);
+    font-size: var(--text-size);
+    line-height: var(--line-height);
+    font-weight: var(--madefor-bold);
+    outline: 0;
+    border-radius: 4px;
+    padding: var(--button-padding);
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+
+[priority="primary"] {
+    --button-bg-color: var(--B1);
+    --border-color: transparent;
+    --text-color: var(--D7);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="standard"][priority="secondary"], [skin="premium"][priority="secondary"],[skin="alert"][priority="secondary"], [skin="light"],[skin="light dark"]{
+  --button-bg-color: var(--D7);
+  --border-color: #E2E3EA;
+  --text-color: var(--B1);
+  --affix-icon-filter: var(--blue-icon);
+}
+
+[skin="standard"][priority="inverted"] {
+    --button-bg-color: transparent;
+    --border-color: var(--B1);
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--blue-icon);
+}
+
+[skin="standard"][priority="text-button"] {
+    --button-bg-color: transparent;
+    --border-color: transparent;
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--blue-icon);
+}
+
+[skin="standard"], [priority="inverted"]:hover {
+    --button-bg-color: var(--B1);
+    --border-color: transparent;
+    --text-color: var(--D7);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="standard"] {
+    --button-bg-color: var(--B1);
+    --border-color: transparent;
+    --text-color: var(--D7);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="premium"] {
+    --button-bg-color: var(--P1);
+    --border-color: transparent;
+    --text-color: var(--D7);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="alert"] {
+    --button-bg-color: var(--R1);
+    --border-color: transparent;
+    --text-color: var(--D7);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[size="small"] {
+    --text-size: 12px;
+    --button-padding: 4px 12px;
+    --line-height: 18px;
+}
+
+[size="medium"] {
+    --text-size: 14px;
+    --button-padding: 6px 16px;
+    --line-height: 20px;
+}
+
+[size="large"] {
+    --text-size: 14px;
+    --button-padding: 8px 16px;
+    --line-height: 20px;
+}
+
+[skin="premium"][priority="secondary"]{
+    --text-color: var(--P1);
+    --affix-icon-filter: var(--purple-icon);
+}
+
+[skin="alert"][priority="secondary"]{
+    --text-color: (var(--D1));
+    --affix-icon-filter: var(--black-icon);
+    --border-color: transparent;
+}
+
+[skin="standard"][priority="primary"]:hover{
+    --button-bg-color: var(--B0);
+}
+
+[skin="standard"][priority="secondary"]:hover{
+    --button-bg-color: var(--D6);
+    --text-color: var(--B1);
+    --border-color: #E2E3EA;
+}
+
+[skin="premium"][priority="primary"]:hover{
+    --button-bg-color: var(--P0);
+}
+
+[skin="premium"][priority="secondary"]:hover, [skin="alert"][priority="secondary"]:hover{
+    --button-bg-color: var(--D6);
+    --border-color: transparent;
+}
+
+[skin="alert"][priority="primary"]:hover{
+    --button-bg-color: var(--R0);
+}
+
+[priority="text-button"]:hover {
+    --text-color:var(--B0);
+}
+
+[skin][priority="primary"]:disabled, [skin="standard"][priority="inverted"]:disabled  {
+    --button-bg-color: var(--X4) !important;
+    --border-color: transparent !important;
+    --text-color: var(--X2) !important;
+    --affix-icon-filter: var(--grey-icon) !important;
+}
+
+[skin="premium"][priority="secondary"]:disabled, [skin="alert"][priority="secondary"]:disabled{
+    --button-bg-color: var(--D7) !important;
+    --border-color: transparent !important;
+    --text-color: var(--X2) !important;
+    --affix-icon-filter: var(--grey-icon) !important;
+}
+
+[skin="standard"][priority="secondary"]:disabled{
+    --button-bg-color: var(--D7) !important;
+    --border-color: var(--X2) !important;
+    --text-color: var(--X2) !important;
+    --affix-icon-filter: var(--grey-icon) !important;
+    
+}
+
+[skin="standard"][priority="text-button"]:disabled{
+    --button-bg-color: transparent !important;
+    --border-color: transparent !important;
+    --text-color: var(--X2) !important;
+    --affix-icon-filter: var(--grey-icon) !important;
+    
+}
+
+.pcu-button-affix img {
+    margin: var(--icon-margin);
+    filter: var(--affix-icon-filter);
+}
+
+.pcu-button-affix[icon="prefix"][size] {
+    --button-padding: 4px 16px 4px 10px;
+    --icon-margin: 0px 4px 0px 0px;
+}
+
+.pcu-button-affix[icon="prefix"][size="small"] {
+    --button-padding: 4px 12px 4px 6px;
+    --icon-margin: 0px 4px 0px 0px;
+}
+
+.pcu-button-affix[icon="suffix"][size] {
+    --button-padding: 4px 10px 4px 16px;
+    --icon-margin: 0px 0px 0px 4px;
+}
+
+.pcu-button-affix[icon="suffix"][size="small"] {
+    --button-padding: 4px 6px 4px 12px;
+    --icon-margin: 0px 0px 0px 4px;
+}
+
+/* ---------------------- Icon Buttons ---------------------- */
+.pcu-button.pcu-icon-button img {
+    margin: var(--icon-margin);
+    filter: var(--affix-icon-filter);
+    height: var(--icon-size);
+    width: var(--icon-size);
+    padding: var(--button-padding)
+  }
+  
+  .pcu-icon-button[size="large"] {
+    --icon-size: 16px;
+    --button-padding: 6px;
+  }
+
+  .pcu-icon-button[size="medium"] {
+    --icon-size: 12px;
+    --button-padding: 6px;
+  }
+
+  .pcu-icon-button[size="small"] {
+    --icon-size: 12px;
+    --button-padding: 4px;
+  }
+  [skin="light"]{
+    --border-color: transparent;
+  }
+  
+  [skin="light dark"]{
+      --affix-icon-filter: var(--black-icon);
+
+  }
+
+[skin="standard"][priority="primary"]:disabled, [skin="standard"][priority="inverted"]:disabled, [skin="premium"][priority="primary"]:disabled, [skin="light dark"] {
+    --button-bg-color: var(--X4) !important;
+    --border-color: transparent !important;
+}
+
+[skin="light"][priority="primary"]:disabled, [skin="premium"][priority="secondary"]:disabled{
+    --button-bg-color: var(--D7) !important;
+    --border-color: transparent !important;
+}
+
+[skin="standard"][priority="secondary"]:disabled {
+    --border-color: var(--X2)  !important;
+}
+
+/* ---------------------- Tooltips ---------------------- */
+
+[dir="top"]>.pcu-popover {
+  --top: unset;
+  --bottom: 120%;
+  --left: 50%;
+  --right: unset;
+  --transform: translateX(-50%);
+}
+
+[dir="bottom"]>.pcu-popover {
+  --top: 150%;
+  --bottom: unset;
+  --left: 50%;
+  --right: unset;
+  --transform: translateX(-50%);
+}
+
+[dir="left"]>.pcu-popover {
+  --top: 35%;
+  --bottom: unset;
+  --left: unset;
+  --right: 120%;
+  --transform: translateY(-50%);
+
+}
+
+[dir="right"]>.pcu-popover {
+  --top: 35%;
+  --bottom: unset;
+  --left: 120%;
+  --right: unset;
+  --transform: translateY(-50%);
+}
+
+  .pcu-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .pcu-tooltip .pcu-tooltip-content {
+    visibility: hidden;
+    background:var(--D7);
+    border-radius: 4px;
+    box-shadow: 0px 0px 12px rgba(0, 6, 36, 0.2);
+    width: max-content;
+    max-width: 204px;
+    color: var(--D3);
+    position: absolute;
+    z-index: 1;
+    top: var(--top);
+    bottom: var(--bottom);
+    left: var(--left);
+    right: var(--right);
+    transform: var(--transform);
+    margin-left: -4px;
+    margin-bottom: 4px;
+    padding: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+  }
+  
+  .pcu-tooltip:hover .pcu-tooltip-content {
+    visibility: visible;
+  }
+
+/* ---------------------- Avatar ---------------------- */
+.pcu-avatar[size="large"] {
+    --avatar-size: 36px;
+  }
+  
+  .pcu-avatar[size="normal"] {
+    --avatar-size: 24px;
+  }
+  
+  .pcu-avatar {
+    height: var(--avatar-size);
+    width: var(--avatar-size);
+    border-radius: 50%;
+    margin-right: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--D1);
+    overflow: hidden;
+    border: 2px solid var(--B1);
+    cursor: pointer;
+  }
+  
+  .pcu-avatar img {
+    width: var(--avatar-size);
+  }
+
+  .pcu-avatar[disabled="true"]{
+    opacity: 50% !important;
+  }
+  

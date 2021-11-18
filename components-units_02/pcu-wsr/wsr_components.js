@@ -4,7 +4,7 @@
 
 /* Array with all the components, Note that there is a legality to the structure, so if you want to add a new
 component - Please read the instructions in the README file ! */
-const components = [
+const wsr_components = [
   {
     category: "Regular Button",
     attributes: [{

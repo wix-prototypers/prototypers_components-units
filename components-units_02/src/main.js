@@ -3,7 +3,113 @@
 let comp = ''; // new component
 let dropdown = ''; // attribute dropdown
 window.onload = (event) => {
-  // build table with for each component
+init(wsr_components); // display wsr components as a deafult
+mainEvents();
+}
+
+function init(relevantComponents) {
+  initComponents(relevantComponents);
+  tablesEvents();
+  pcuComponentsEvents();
+}
+
+function mainEvents() {
+    // change the theme of the components - wsr / editor-x ...
+    document.querySelectorAll('.pcu-style-btn').forEach(function(styleBtn) {
+      styleBtn.addEventListener('click', function(e) {
+        let selectedStyle = styleBtn.getAttribute('theme');
+        let relevantComponents = wsr_components;
+        selectedStyle == "editor-x" ? relevantComponents = editorx_components : relevantComponents = wsr_components;
+        // enable the relevant css file
+        document.querySelectorAll(`[name="pcu-css-link"]`).forEach(function(cssLink) {
+          cssLink.setAttribute('disabled', 'disabled');
+        });
+        document.querySelector(`#${selectedStyle}-css`).removeAttribute('disabled');
+
+        // create the relevant components depending on the theme
+        initComponents(relevantComponents);
+      });
+    });
+
+    // search component
+    document.querySelector('#main-search').addEventListener('input', function(e) {
+      const val = this.value;
+      let count = 0;
+      document.querySelector('.search-empty').classList.add('hide');
+      document.querySelectorAll('.component-item').forEach(function(component) {
+        component.classList.add('hide');
+        const componentName = component.getAttribute('for');
+        if (componentName.toLowerCase().includes(val.toLowerCase())) {
+          component.classList.remove('hide');
+          count++;
+        }
+      });
+      if (count < 1) {
+        document.querySelector('.search-empty').classList.remove('hide');
+      }
+    });
+}
+
+/* All events on the demo page - search, open attribute dropdown, select new attribute, copy code */
+function tablesEvents() {
+  copyCode();
+
+  // dropdown focus
+  document.querySelectorAll('.attribute-dropdown .attribute-dropdown-input').forEach(function(elm) {
+    elm.addEventListener('focus', function(e) {
+      document.querySelectorAll('.attribute-dropdown').forEach(function(dropdowns) {
+        dropdowns.classList.remove('open-dropdown');
+      })
+      e.target.parentElement.classList.add('open-dropdown')
+    });
+  });
+
+  // select attribute dropdown item
+  document.querySelectorAll('.attribute-dropdown-item').forEach(function(dropdownItem) {
+    dropdownItem.addEventListener('click', function(e) {
+      const input = e.target.parentElement.previousElementSibling;
+      // input.value = e.target.getAttribute('value');
+      input.setAttribute('value', e.target.getAttribute('value'));
+      currentvalue = input.getAttribute('value');
+      e.target.parentElement.querySelectorAll('.attribute-dropdown-item').forEach(function(sibilingItem) {
+        sibilingItem.classList.remove('selected');
+      })
+      e.target.classList.add('selected');
+      e.target.parentElement.parentElement.classList.remove('open-dropdown');
+      updateTheElement(input.parentElement, input.value);
+    });
+
+    // change the component when hovering on attribute dropdown item
+    let currentvalue = '';
+    dropdownItem.addEventListener('mouseenter', function(e) {
+      const input = e.target.parentElement.previousElementSibling;
+      currentvalue = input.getAttribute('value');
+      updateTheElement(input.parentElement, e.target.getAttribute('value'))
+    });
+
+    // revert the component to the last selected attribute
+    dropdownItem.addEventListener('mouseout', function(e) {
+      const input = e.target.parentElement.previousElementSibling;
+      updateTheElement(input.parentElement, currentvalue)
+    });
+
+    // close dropdown
+    document.addEventListener('click', function(e) {
+      if (!e.target.classList.contains('attribute-dropdown-input')) {
+        document.querySelectorAll('.attribute-dropdown').forEach(function(dropdowns) {
+          dropdowns.classList.remove('open-dropdown');
+        })
+      }
+    });
+  });
+}
+
+// build table for each component
+function initComponents(components) {
+  // delete the existing components
+  document.querySelectorAll('.component-item').forEach(function(item) {
+    item.remove();
+  });
   for (i = 0; i < components.length; i++) {
     let attributesHeader = '';
     let { category, attributes, htmlCode, jsCode } = components[i];
@@ -65,78 +171,6 @@ window.onload = (event) => {
     }
     document.querySelector(`.components-area`).insertAdjacentHTML('beforeend', comp);
   }
-  tablesEvents();
-  wsrComponentsEvents();
-}
-
-/* All events on the demo page - search, open attribute dropdown, select new attribute, copy code */
-function tablesEvents() {
-  copyCode();
-  document.querySelector('#main-search').addEventListener('input', function(e) {
-    const val = this.value;
-    let count = 0;
-    document.querySelector('.search-empty').classList.add('hide');
-    document.querySelectorAll('.component-item').forEach(function(component) {
-      component.classList.add('hide');
-      const componentName = component.getAttribute('for');
-      if (componentName.toLowerCase().includes(val.toLowerCase())) {
-        component.classList.remove('hide');
-        count++;
-      }
-    });
-    if (count < 1) {
-      document.querySelector('.search-empty').classList.remove('hide');
-    }
-  });
-
-  // dropdown focus
-  document.querySelectorAll('.attribute-dropdown .attribute-dropdown-input').forEach(function(elm) {
-    elm.addEventListener('focus', function(e) {
-      document.querySelectorAll('.attribute-dropdown').forEach(function(dropdowns) {
-        dropdowns.classList.remove('open-dropdown');
-      })
-      e.target.parentElement.classList.add('open-dropdown')
-    });
-  });
-
-  // select attribute dropdown item
-  document.querySelectorAll('.attribute-dropdown-item').forEach(function(dropdownItem) {
-    dropdownItem.addEventListener('click', function(e) {
-      const input = e.target.parentElement.previousElementSibling;
-      // input.value = e.target.getAttribute('value');
-      input.setAttribute('value', e.target.getAttribute('value'));
-      currentvalue = input.getAttribute('value');
-      e.target.parentElement.querySelectorAll('.attribute-dropdown-item').forEach(function(sibilingItem) {
-        sibilingItem.classList.remove('selected');
-      })
-      e.target.classList.add('selected');
-      e.target.parentElement.parentElement.classList.remove('open-dropdown');
-      updateTheElement(input.parentElement, input.value);
-    });
-
-    // change the component when hovering on attribute dropdown item
-    let currentvalue = '';
-    dropdownItem.addEventListener('mouseenter', function(e) {
-      const input = e.target.parentElement.previousElementSibling;
-      currentvalue = input.getAttribute('value');
-      updateTheElement(input.parentElement, e.target.getAttribute('value'))
-    });
-
-    // revert the component to the last selected attribute
-    dropdownItem.addEventListener('mouseout', function(e) {
-      const input = e.target.parentElement.previousElementSibling;
-      updateTheElement(input.parentElement, currentvalue)
-    });
-
-    // close dropdown
-    document.addEventListener('click', function(e) {
-      if (!e.target.classList.contains('attribute-dropdown-input')) {
-        document.querySelectorAll('.attribute-dropdown').forEach(function(dropdowns) {
-          dropdowns.classList.remove('open-dropdown');
-        })
-      }
-    });
-  });
 }
 
 // Update the component and its js code after selecting a new attribute

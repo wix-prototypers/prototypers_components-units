@@ -24,6 +24,17 @@ main {
   width: 100%;
   left: 0;
   box-shadow: 0px -80px 0 80px #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-header button {
+  margin-right: 12px;
+  border: unset;
+  padding: 12px;
+  background: #f8f8f8;
+  cursor: pointer;
 }
 
 .main-search-container {
