@@ -25,9 +25,8 @@ function mainEvents() {
           cssLink.setAttribute('disabled', 'disabled');
         });
         document.querySelector(`#${selectedStyle}-css`).removeAttribute('disabled');
-
         // create the relevant components depending on the theme
-        initComponents(relevantComponents);
+        init(relevantComponents);
       });
     });
 
