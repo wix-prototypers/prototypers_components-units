@@ -17,6 +17,10 @@ function mainEvents() {
     // change the theme of the components - wsr / editor-x ...
     document.querySelectorAll('.pcu-style-btn').forEach(function(styleBtn) {
       styleBtn.addEventListener('click', function(e) {
+        document.querySelectorAll('.pcu-style-btn').forEach(function(btn) {
+          btn.classList.remove('selected');
+        });
+        styleBtn.classList.add('selected');
         let selectedStyle = styleBtn.getAttribute('theme');
         let relevantComponents = wsr_components;
         selectedStyle == "editor-x" ? relevantComponents = editorx_components : relevantComponents = wsr_components;
@@ -25,6 +29,7 @@ function mainEvents() {
           cssLink.setAttribute('disabled', 'disabled');
         });
         document.querySelector(`#${selectedStyle}-css`).removeAttribute('disabled');
+        document.querySelector('#main-search').value = "";
         // create the relevant components depending on the theme
         init(relevantComponents);
       });
@@ -46,6 +51,16 @@ function mainEvents() {
       if (count < 1) {
         document.querySelector('.search-empty').classList.remove('hide');
       }
+    });
+
+    document.querySelectorAll('#main-search').forEach(function(searchInput) {
+      searchInput.addEventListener('focus', function(e) {
+        e.target.parentElement.classList.add('search-has-focus')
+      });
+
+      searchInput.addEventListener('focusout', function(e) {
+        e.target.parentElement.classList.remove('search-has-focus')
+      });
     });
 }
 
@@ -109,6 +124,7 @@ function initComponents(components) {
   document.querySelectorAll('.component-item').forEach(function(item) {
     item.remove();
   });
+  document.querySelector('.search-empty').classList.add('hide');
   for (i = 0; i < components.length; i++) {
     let attributesHeader = '';
     let { category, attributes, htmlCode, jsCode } = components[i];
@@ -143,7 +159,7 @@ function initComponents(components) {
       <td class='preview-element' name='${category.toLowerCase().replaceAll(' ','-')}'>${htmlCode.replace(/[\r\n\t]+/g,'')}</td>
       <td class="td-attributes">${dropdown}</td>
       <td class='code-element' name='${category.toLowerCase().replaceAll(' ','-')}'><xmp>${htmlCode}</xmp></td>
-      ${jsCode ? `<td><xmp>${jsCode}</xmp></td>` : ``}
+      ${jsCode ? `<td class="js-code-element"><xmp>${jsCode}</xmp></td>` : ``}
       </tr>
       </tbody>
       </table>
@@ -162,7 +178,7 @@ function initComponents(components) {
       <tr>
       <td class='preview-element' name='${category.toLowerCase().replaceAll(' ','-')}'>${htmlCode.replaceAll('\n','')}</td>
       <td class='code-element' name='${category.toLowerCase().replaceAll(' ','-')}'><xmp>${htmlCode}</xmp></td>
-      ${jsCode ? `<td><xmp>${jsCode}</xmp></td>` : ``}
+      ${jsCode ? `<td class="js-code-element"><xmp>${jsCode}</xmp></td>` : ``}
       </tr>
       </tbody>
       </table>
