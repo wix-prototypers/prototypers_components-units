@@ -95,6 +95,8 @@
   --purple-icon: invert(27%) sepia(96%) saturate(3985%) hue-rotate(241deg) brightness(98%) contrast(96%);
   --black-icon: invert(3%) sepia(73%) saturate(6557%) hue-rotate(227deg) brightness(62%) contrast(105%);
   --grey-icon: invert(82%) sepia(48%) saturate(0%) hue-rotate(178deg) brightness(80%) contrast(113%);
+  --blue-hover-icon: invert(24%) sepia(88%) saturate(5462%) hue-rotate(214deg) brightness(100%) contrast(88%);
+  --purple-hover-icon: invert(25%) sepia(67%) saturate(2886%) hue-rotate(238deg) brightness(82%) contrast(99%);
 }
 
 /* ---------------------- Buttons ---------------------- */
@@ -333,6 +335,84 @@
     --border-color: var(--X2)  !important;
 }
 
+/* ---------------------- Text Button ---------------------- */
+
+.pcu-text-button {
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  font-size: var(--text-size);
+  line-height: var(--line-height);
+  font-weight: var(--madefor-bold);
+  outline: 0;
+  color: var(--text-color);
+  text-decoration: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  border: unset;
+}
+
+.pcu-text-button[skin="standard"]{
+  --text-color: var(--B1);
+  --affix-icon-filter: var(--blue-icon)
+}
+.pcu-text-button[skin="premium"]{
+  --text-color: var(--P1);
+  --affix-icon-filter: var(--purple-icon)
+}
+[skin="dark"], .pcu-text-button[skin="dark"]:hover{
+  --text-color:var(--D1);
+  --affix-icon-filter: var(--black-icon)
+}
+[size="tiny"]{
+  --text-size: 11px;
+  --line-height:16px;
+
+}
+.pcu-text-button[size="medium"]{
+  --text-size: 14px;
+  --line-height:20px;
+
+}
+.pcu-text-button[size="small"]{
+  --text-size: 12px;
+  --line-height:16px;
+}
+.pcu-text-button[affix="suffix"]::after{
+  content: url('/pcu-editor-x/editor-x-icons/Arrows/arrowDown.svg');
+  filter: var(--affix-icon-filter);
+  margin-left: 4px;
+  width: 16px;
+  height: 16px;
+}
+.pcu-text-button[affix="prefix"]::before{
+  content: url('/pcu-editor-x/editor-x-icons/Arrows/arrowDown.svg');
+  filter: var(--affix-icon-filter);
+  margin-right: 4px;
+  width: 16px;
+  height: 16px;
+}
+[weight="thin"]{
+  font-weight: var(--madefor-regular);
+}
+[underline="always"]{
+  text-decoration: underline;
+}
+.pcu-text-button[skin="standard"]:hover{
+  --text-color:var(--B0);
+  --affix-icon-filter: var(--blue-hover-icon)
+}
+.pcu-text-button[skin="premium"]:hover{
+  --text-color:var(--P0);
+  --affix-icon-filter: var(--purple-hover-icon)
+}
+.pcu-text-button:disabled {
+  --text-color: var(--X2)  !important;
+  --affix-icon-filter: var(--grey-icon) !important;
+}
 /* ---------------------- Tooltips ---------------------- */
 
 [dir="top"]>.pcu-popover {
