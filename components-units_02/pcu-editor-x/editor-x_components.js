@@ -150,17 +150,5 @@ const editorx_components = [
       values: ["top", "right", "bottom", "left"]
     }]
   },
-  {
-    category: "Avatar - image",
-    attributes: [{
-        attribute: "Size",
-        values: ["normal", "large"]
-    },
-    {
-      attribute: "Disabled",
-      values: [false, true]
-    }],
-    htmlCode: `<div class="pcu-avatar" size="normal">
-    <img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>`
-  },
+  
 ]
