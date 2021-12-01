@@ -67,7 +67,7 @@ const editorx_components = [
       values: [false, true]
     }],
     htmlCode: `<button class="pcu-button pcu-button-affix" size="medium" skin="standard" priority="primary" icon="suffix">
-    Suffix<img src="/pcu-editor-x/editor-x-icons/Arrows/arrowDown.svg">
+    Suffix<img src="/pcu-editor-x/editor-x-icons/Arrows/chevronDown.svg">
     </button>`
   },
   {
@@ -120,6 +120,23 @@ const editorx_components = [
       values: [false, true]
     }],
     htmlCode: `<button class="pcu-text-button" size="small" skin="standard" affix="none" weight="normal" underline="none">Text Button</button>`
+  },
+  {
+    category: "Numeric Input",
+    attributes:[
+      {
+        attribute:"Size",
+        values:["large", "medium", "small"]
+      },
+      {
+        attribute: "Disabled",
+        values: [false, true]
+      }
+    ],
+    htmlCode: `<div class="pcu-numeric-input-container" size="large">
+    <input type="text" pattern="\d*" maxlength="4" value="3" class="pcu-numeric-input" >
+    <span class="pcu-input-affix">px</span>
+    </div>`
   },
   {
     category: "Tooltips",

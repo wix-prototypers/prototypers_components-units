@@ -178,19 +178,19 @@
     --affix-icon-filter: var(--white-icon);
 }
 
-[size="small"] {
+.pcu-button[size="small"] {
     --text-size: 12px;
     --button-padding: 4px 12px;
     --line-height: 18px;
 }
 
-[size="medium"] {
+.pcu-button[size="medium"] {
     --text-size: 14px;
     --button-padding: 6px 16px;
     --line-height: 20px;
 }
 
-[size="large"] {
+.pcu-button[size="large"] {
     --text-size: 14px;
     --button-padding: 8px 16px;
     --line-height: 20px;
@@ -413,6 +413,85 @@
   --text-color: var(--X2)  !important;
   --affix-icon-filter: var(--grey-icon) !important;
 }
+/* ---------------------- Numeric Input ---------------------- */
+
+.pcu-numeric-input-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  width: max-content;
+}
+
+.pcu-numeric-input {
+  width: 56px;
+  border: 1px solid #E2E3EA;
+  background-color: var(--D7);
+  border-radius: 4px;
+  min-height: 24px;
+  font-size: 12px;
+  align-items: center;
+  display: flex;
+  padding: var(--input-padding);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  color: var(--D1);
+  line-height: 16px;
+  cursor: pointer;
+  height:var(--input-height);
+}
+
+.pcu-numeric-input-container[size="large"] .pcu-numeric-input{
+  --input-height: 32px;
+  --input-padding: 8px 0px 8px 8px;
+}
+
+.pcu-numeric-input-container[size="medium"] .pcu-numeric-input{
+  --input-height: 28px;
+  --input-padding: 6px 0px 6px 8px;
+}
+.pcu-numeric-input-container[size="small"] .pcu-numeric-input{
+  --input-height: 24px;
+  --input-padding: 4px 0px 4px 8px;
+}
+
+.pcu-numeric-input:hover:not(:focus) {
+  border: 1px solid var(--D4);
+}
+
+.pcu-numeric-input:focus{
+    outline: none !important;
+    border: 1px solid var(--B1);
+    cursor: text;
+}
+
+.pcu-input-affix {
+  position: relative;
+  right: 19px;
+  font-size: 11px;
+  color: var(--D1);
+  -webkit-font-smoothing: antialiased;
+  background-color: white;
+  width: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.pcu-numeric-input:disabled{
+  background-color: var(--X4) !important;
+  color: var(--X2) !important;
+  border-color: var(--X2) !important;
+}
+
+.pcu-numeric-input:disabled ~ .pcu-input-affix {
+  color: var(--X2) !important;
+  background-color: var(--X4) !important;
+}
+
 /* ---------------------- Tooltips ---------------------- */
 
 [dir="top"]>.pcu-popover {
