@@ -97,6 +97,7 @@
   --grey-icon: invert(82%) sepia(48%) saturate(0%) hue-rotate(178deg) brightness(80%) contrast(113%);
   --blue-hover-icon: invert(24%) sepia(88%) saturate(5462%) hue-rotate(214deg) brightness(100%) contrast(88%);
   --purple-hover-icon: invert(25%) sepia(67%) saturate(2886%) hue-rotate(238deg) brightness(82%) contrast(99%);
+  --dark-blue-icon: invert(65%) sepia(8%) saturate(913%) hue-rotate(195deg) brightness(84%) contrast(87%);
 }
 
 /* ---------------------- Buttons ---------------------- */
@@ -490,6 +491,45 @@ input[type=number]::-webkit-inner-spin-button {
 .pcu-numeric-input:disabled ~ .pcu-input-affix {
   color: var(--X2) !important;
   background-color: var(--X4) !important;
+}
+
+/* ---------------------- Search Bar ---------------------- */
+
+.pcu-search-field {
+  max-width: 228px;
+  transition: width .4s;
+  border: 1px solid var(--X3);
+  border-radius: 4px;
+  height: 30px;
+  align-items: center;
+  display: flex;
+  padding: 9px 16px;
+  box-sizing: border-box;
+  color: var(--D1);
+  background-color: white;
+
+}
+
+.topbar-search-input::placeholder{
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--D4);
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.pcu-search-field img {
+  filter: var(--dark-blue-icon);
+  margin-right: 8px;
+}
+
+.topbar-search-input{
+  border: unset;
+  background-color: unset;
+  outline: none;
+  font-size: 11px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ---------------------- Tooltips ---------------------- */

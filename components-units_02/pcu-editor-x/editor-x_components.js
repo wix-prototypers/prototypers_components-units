@@ -139,6 +139,14 @@ const editorx_components = [
     </div>`
   },
   {
+    category: "Search Bar",
+    htmlCode: `<div class="pcu-search-field">
+    <img src="../pcu-editor-x/editor-x-icons/Layers/SearchBox.svg">
+    <input class="topbar-search-input" placeholder="Search business type">
+    </div>`,
+    jsCode: searchFieldJs
+  },
+  {
     category: "Tooltips",
     htmlCode: `<div class="pcu-tooltip" dir="top">Hover Me
     <div class="pcu-popover pcu-tooltip-content">
@@ -150,5 +158,17 @@ const editorx_components = [
       values: ["top", "right", "bottom", "left"]
     }]
   },
-  
+  {
+    category: "Avatar - image",
+    attributes: [{
+        attribute: "Size",
+        values: ["normal", "large"]
+    },
+    {
+      attribute: "Disabled",
+      values: [false, true]
+    }],
+    htmlCode: `<div class="pcu-avatar" size="normal">
+    <img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>`
+  },
 ]
