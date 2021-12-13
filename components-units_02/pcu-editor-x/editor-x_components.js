@@ -157,8 +157,9 @@ const editorx_components = [
   {
     category: "Search Bar",
     htmlCode: `<div class="pcu-search-field">
-    <img src="../pcu-editor-x/editor-x-icons/Layers/SearchBox.svg">
+    <img class="pcu-search-icon" src="../pcu-editor-x/editor-x-icons/Layers/SearchBox.svg">
     <input class="topbar-search-input" placeholder="Search business type">
+    <img class="pcu-search-field-delete" src="../pcu-editor-x/editor-x-icons/Layers/X-Search.svg">
     </div>`,
     jsCode: searchFieldJs
   },
