@@ -163,6 +163,21 @@ const editorx_components = [
     jsCode: searchFieldJs
   },
   {
+    category: "Context Menu",
+    htmlCode: `<div class="pcu-context-menu-container">
+    <input type="text" id="pcu-context-menu">
+    <label for="pcu-context-menu"">
+        <img class="pcu-context-menu-icon" src="../pcu-editor-x/editor-x-icons/Top Bar/More.svg">
+    </label>
+    <div class="pcu-context-menu-content"> 
+        <span class="pcu-context-menu-item">Add New Items</span> 
+        <span class="pcu-context-menu-item">Edit This Item</span> 
+        <span class="pcu-context-menu-divider"></span>
+        <span class="pcu-context-menu-item">Delete This Item</span> 
+    </div> 
+</div>`
+  },
+  {
     category: "Tooltips",
     htmlCode: `<div class="pcu-tooltip" dir="top">Hover Me
     <div class="pcu-popover pcu-tooltip-content">
