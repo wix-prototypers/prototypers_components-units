@@ -122,6 +122,23 @@ const editorx_components = [
     htmlCode: `<button class="pcu-text-button" size="small" skin="standard" affix="none" weight="normal" underline="none">Text Button</button>`
   },
   {
+    category: "Numeric Input with Affix",
+    attributes:[
+      {
+        attribute:"Size",
+        values:["large", "medium", "small"]
+      },
+      {
+        attribute: "Disabled",
+        values: [false, true]
+      }
+    ],
+    htmlCode: `<div class="pcu-numeric-input-affix-container" size="large">
+    <input type="text" pattern="\d*" value="3" class="pcu-numeric-input" >
+    <span class="pcu-input-affix">px</span>
+    </div>`
+  },
+  {
     category: "Numeric Input",
     attributes:[
       {
@@ -134,8 +151,7 @@ const editorx_components = [
       }
     ],
     htmlCode: `<div class="pcu-numeric-input-container" size="large">
-    <input type="text" pattern="\d*" maxlength="4" value="3" class="pcu-numeric-input" >
-    <span class="pcu-input-affix">px</span>
+    <input type="text" pattern="\d*" value="3" class="pcu-numeric-input" >
     </div>`
   },
   {

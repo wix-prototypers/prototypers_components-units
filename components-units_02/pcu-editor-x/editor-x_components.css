@@ -416,9 +416,10 @@
 }
 /* ---------------------- Numeric Input ---------------------- */
 
-.pcu-numeric-input-container {
+.pcu-numeric-input-container, .pcu-numeric-input-affix-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: row;
   position: relative;
   width: max-content;
@@ -444,16 +445,34 @@
 
 .pcu-numeric-input-container[size="large"] .pcu-numeric-input{
   --input-height: 32px;
-  --input-padding: 8px 0px 8px 8px;
+  --input-padding: 8px 8px 8px 8px;
 }
 
 .pcu-numeric-input-container[size="medium"] .pcu-numeric-input{
   --input-height: 28px;
-  --input-padding: 6px 0px 6px 8px;
+  --input-padding: 6px 8px 6px 8px;
 }
 .pcu-numeric-input-container[size="small"] .pcu-numeric-input{
   --input-height: 24px;
-  --input-padding: 4px 0px 4px 8px;
+  --input-padding: 4px 8px 4px 8px;
+}
+
+.pcu-numeric-input-affix-container[size="large"] .pcu-numeric-input, .pcu-numeric-input-affix-container[size="large"] .pcu-input-affix
+{
+  --input-height: 32px;
+  --input-padding: 8px 20px 8px 8px;
+}
+
+.pcu-numeric-input-affix-container[size="medium"] .pcu-numeric-input, .pcu-numeric-input-affix-container[size="medium"] .pcu-input-affix
+{
+  --input-height: 28px;
+  --input-padding: 6px 20px 6px 8px;
+}
+
+.pcu-numeric-input-affix-container[size="small"] .pcu-numeric-input, .pcu-numeric-input-affix-container[size="small"] .pcu-input-affix
+{
+  --input-height: 24px;
+  --input-padding: 4px 20px 4px 8px;
 }
 
 .pcu-numeric-input:hover:not(:focus) {
@@ -470,13 +489,22 @@
   position: relative;
   right: 19px;
   font-size: 11px;
-  color: var(--D1);
+  color: var(--B1);
   -webkit-font-smoothing: antialiased;
   background-color: white;
-  width: 15px;
   display: flex;
   justify-content: center;
-  align-items: center;}
+  align-items: center;
+  padding: 0 3px;
+  height: calc(var(--input-height) - 2px)   ;
+  border-radius: 0 4px 4px 0;
+}
+
+  .pcu-input-affix:hover{
+    background-color: var(--D6);
+    cursor: pointer;
+
+  }
 
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -486,12 +514,17 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: var(--X4) !important;
   color: var(--X2) !important;
   border-color: var(--X2) !important;
+  cursor:initial !important;
 }
 
 .pcu-numeric-input:disabled ~ .pcu-input-affix {
   color: var(--X2) !important;
   background-color: var(--X4) !important;
+  cursor:initial !important;
+
 }
+
+
 
 /* ---------------------- Search Bar ---------------------- */
 
