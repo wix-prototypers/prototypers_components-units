@@ -20,7 +20,7 @@ function pcuComponentsEvents() {
   /* --------------------------- Dropdown --------------------------- */
   // dropdown focus
   document.querySelectorAll('.pcu-dropdown .pcu-text-input').forEach(function(elm) {
-    elm.addEventListener('focus', function(e) {
+    elm.addEventListener('click', function(e) {
       e.target.parentElement.classList.add('pcu-field-has-focus')
     });
   });

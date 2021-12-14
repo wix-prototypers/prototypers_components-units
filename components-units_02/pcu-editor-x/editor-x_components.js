@@ -122,6 +122,30 @@ const editorx_components = [
     htmlCode: `<button class="pcu-text-button" size="small" skin="standard" affix="none" weight="normal" underline="none">Text Button</button>`
   },
   {
+    category: "Button Group - Two Selections",
+    htmlCode: `<div class="pcu-button-group">
+    <input class="pcu-button-group-option" id="button-group-1" value="hide" option="1" type="radio" name="button-group-toggle" checked="">
+    <label class="pcu-button-group-labels" for="button-group-1">Fixed</label>
+    <input class="pcu-button-group-option" id="button-group-2" value="show" option="2" type="radio" name="button-group-toggle">
+    <label class="pcu-button-group-labels" for="button-group-2">Fluid</label>
+    </div>`
+  },
+  {
+    category: "Context Menu",
+    htmlCode: `<div class="pcu-context-menu-container">
+    <input type="text" id="pcu-context-menu">
+    <label for="pcu-context-menu"">
+        <img class="pcu-context-menu-icon" src="../pcu-editor-x/editor-x-icons/Top Bar/More.svg">
+    </label>
+    <div class="pcu-context-menu-content"> 
+        <span class="pcu-context-menu-item">Add New Items</span> 
+        <span class="pcu-context-menu-item">Edit This Item</span> 
+        <span class="pcu-context-menu-divider"></span>
+        <span class="pcu-context-menu-item">Delete This Item</span> 
+    </div> 
+</div>`
+  },
+  {
     category: "Numeric Input with Affix",
     attributes:[
       {
@@ -155,6 +179,18 @@ const editorx_components = [
     </div>`
   },
   {
+    category: "Dropdown",
+    htmlCode: `<div class="pcu-dropdown">
+    <input class="pcu-text-input pcu-dropdown-input" type="text" value="Default" readonly>
+    <div class="pcu-dropdown-content">
+    <div class="pcu-dropdown-item selected" value="Default">Default</div>
+    <div class="pcu-dropdown-item" value="Sticky">Sticky</div>
+    <div class="pcu-dropdown-item" value="Pinned">Pinned</div>
+    </div>
+    </div>`,
+    jsCode: dropdownJs
+  },
+  {
     category: "Search Bar",
     htmlCode: `<div class="pcu-search-field">
     <img class="pcu-search-icon" src="../pcu-editor-x/editor-x-icons/Layers/SearchBox.svg">
@@ -162,21 +198,6 @@ const editorx_components = [
     <img class="pcu-search-field-delete" src="../pcu-editor-x/editor-x-icons/Layers/X-Search.svg">
     </div>`,
     jsCode: searchFieldJs
-  },
-  {
-    category: "Context Menu",
-    htmlCode: `<div class="pcu-context-menu-container">
-    <input type="text" id="pcu-context-menu">
-    <label for="pcu-context-menu"">
-        <img class="pcu-context-menu-icon" src="../pcu-editor-x/editor-x-icons/Top Bar/More.svg">
-    </label>
-    <div class="pcu-context-menu-content"> 
-        <span class="pcu-context-menu-item">Add New Items</span> 
-        <span class="pcu-context-menu-item">Edit This Item</span> 
-        <span class="pcu-context-menu-divider"></span>
-        <span class="pcu-context-menu-item">Delete This Item</span> 
-    </div> 
-</div>`
   },
   {
     category: "Tooltips",
