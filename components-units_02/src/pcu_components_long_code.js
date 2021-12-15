@@ -1,6 +1,51 @@
 /* This file allows us to save long code (html / js) separately.
 So you can define a variable with the long code and use it in wsr_components.js file.
 Use a consistent name depending on the component ! */
+const dockingPanelHTML=`
+<div class="control-docking-panel-outer" top="true" right="true" bottom="true" left="true">
+      <div class="docking-panel-inner">
+        <div data-direction="top" class="docking-direction top">
+          <div data-hook="top-direction" class="docking-point"></div>
+        <div class="docking-line"></div>
+        </div>
+        <div class="docking-rail left">
+          <div data-direction="left" class="docking-direction left ">
+            <div data-hook="left-direction" class="docking-point"></div>
+            <div class="docking-line"></div>
+          </div>
+        </div>
+        <div class="docking-element center">
+          <div class="control-docking-plane-button-outer ">
+            <div class="control-docking-plane-button">
+              <div class="docking-point"></div>
+            </div>
+        </div>
+      </div>
+      <div class="docking-rail right">
+        <div data-direction="right" class="docking-direction right ">
+          <div data-hook="right-direction" class="docking-point"></div>
+            <div class="docking-line"></div>
+          </div>
+        </div>
+        <div data-direction="bottom" class="docking-direction bottom ">
+          <div data-hook="bottom-direction" class="docking-point"></div>
+          <div class="docking-line"></div>
+        </div>
+      </div>
+    </div>
+`
+const dockingPanelJs=`
+document.querySelectorAll('.docking-point').forEach(function(elm) {
+  elm.addEventListener('click', function(e) {
+    if(e.target.parentElement.classList.contains('direction-docked')){
+      e.target.parentElement.classList.remove('direction-docked')
+    }
+    else{
+      e.target.parentElement.classList.add('direction-docked')
+    }
+  });
+});
+`
 const searchFieldJs = `document.querySelectorAll('.topbar-search-input').forEach(function(elm) {
   elm.addEventListener('focus', function(e) {
     e.target.parentElement.classList.add('pcu-field-has-focus')

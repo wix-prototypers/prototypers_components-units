@@ -191,6 +191,11 @@ const editorx_components = [
     jsCode: dropdownJs
   },
   {
+    category: "Docking Panel",
+    htmlCode: dockingPanelHTML,
+    jsCode: dockingPanelJs
+  },
+  {
     category: "Search Bar",
     htmlCode: `<div class="pcu-search-field">
     <img class="pcu-search-icon" src="../pcu-editor-x/editor-x-icons/Layers/SearchBox.svg">

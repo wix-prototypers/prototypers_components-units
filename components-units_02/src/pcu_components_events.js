@@ -4,7 +4,17 @@ NOTE: Please be sure to use a separator with the element name ! */
 
 
 function pcuComponentsEvents() {
-
+  /* --------------------------- Docking Panel --------------------------- */
+  document.querySelectorAll('.docking-point').forEach(function(elm) {
+    elm.addEventListener('click', function(e) {
+      if(e.target.parentElement.classList.contains('direction-docked')){
+        e.target.parentElement.classList.remove('direction-docked')
+      }
+      else{
+        e.target.parentElement.classList.add('direction-docked')
+      }
+    });
+  });
   /* --------------------------- Search Field --------------------------- */
   document.querySelectorAll('.topbar-search-input').forEach(function(elm) {
     elm.addEventListener('focus', function(e) {

@@ -871,3 +871,207 @@ input[type="radio"].pcu-button-group-option {
 input:focus{
   outline: none;
 }
+
+/* ---------------------- Docking Panel ---------------------- */
+
+.control-docking-panel-outer {
+  display: flex;
+  height: 100px;
+  width: 104px;
+}
+.control-docking-panel-outer .docking-panel-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  height: 100px;
+  width: 104px;
+  border-radius: 6px;
+  border: solid 1px #e2e3ea;
+  background-color: #f8faff;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.top {
+  position: absolute;
+  transition: width 0.3s ease, height 0.3s ease;
+  justify-content: center;
+  height: 18px;
+  bottom: 61px;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.left {
+  position: absolute;
+  transition: width 0.3s ease, height 0.3s ease;
+  align-items: center;
+  width: 18px;
+  height: 8px;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.right {
+  position: absolute;
+  transition: width 0.3s ease, height 0.3s ease;
+  align-items: center;
+  width: 18px;
+  height: 8px;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.bottom {
+  position: absolute;
+  transition: width 0.3s ease, height 0.3s ease;
+  justify-content: center;
+  height: 18px;
+  top: 61px;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction .docking-line {
+  visibility: hidden;
+  position: absolute;
+  border: none;
+  pointer-events: none;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.top .docking-line,
+.control-docking-panel-outer .docking-panel-inner .docking-direction.bottom .docking-line {
+  border-right: 1px dashed #116dff;
+  height: 100%;
+}
+.control-docking-panel-outer .docking-panel-inner .docking-direction.right .docking-line,
+.control-docking-panel-outer .docking-panel-inner .docking-direction.left .docking-line{
+  border-top: 1px dashed #116dff;
+  width: 100%;
+}
+.control-docking-panel-outer .docking-panel-inner .docking-direction.top .docking-point {
+  top: -6px;
+  left: -4px;
+}
+.control-docking-panel-outer .docking-panel-inner .docking-direction.bottom .docking-point {
+  bottom: -6px;
+  left: -5px;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.right .docking-point {
+  right: -6px;
+  bottom: 0;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.left .docking-point {
+  left: -6px;
+  bottom: 0;
+}
+
+
+.control-docking-panel-outer .docking-panel-inner .docking-element .docking-point, 
+.control-docking-panel-outer .docking-panel-inner .docking-direction .docking-point {
+  width: 8px;
+  height: 8px;
+  background-color: #c3daff;
+  border: 1px solid #116dff;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-rail {
+  display: flex;
+  position: relative;
+  height: 8px;
+  width: 100%;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-rail.left {
+  flex-direction: row-reverse;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction {
+  display: flex;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.control-docking-plane-button-outer .control-docking-plane-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #e2e3ea;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.2s ease, bottom 0.2s ease, left 0.2s ease, right 0.2s ease;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-element .docking-point {
+  position: relative;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-element.direction-docked .docking-line, 
+.control-docking-panel-outer .docking-panel-inner .docking-direction.direction-docked .docking-line {
+  visibility: visible;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.top.direction-docked {
+  height: 37px;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.top.direction-docked {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.left.direction-docked {
+  width: 100%;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.left.direction-docked {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.bottom.direction-docked {
+  height: 37px;
+}
+.control-docking-panel-outer .docking-panel-inner .docking-direction.bottom.direction-docked {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.right.direction-docked {
+  width: 100%;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-direction.right.direction-docked {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.control-docking-plane-button-outer:not(.is-disabled) .control-docking-plane-button:hover {
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+}
+.control-docking-plane-button-outer:not(.is-disabled) .control-docking-plane-button:hover .docking-point {
+  background-color: #7cafff;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-element .docking-point:hover, 
+.control-docking-panel-outer .docking-panel-inner .docking-direction .docking-point:hover {
+  background-color: #7cafff;
+}
+
+.control-docking-panel-outer .docking-panel-inner .docking-element.direction-docked .docking-point, 
+.control-docking-panel-outer .docking-panel-inner .docking-direction.direction-docked .docking-point {
+  opacity: 1;
+  background-color: #116dff;
+}
