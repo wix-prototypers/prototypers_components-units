@@ -2,34 +2,34 @@
 So you can define a variable with the long code and use it in wsr_components.js file.
 Use a consistent name depending on the component ! */
 const dockingPanelHTML=`
-<div class="control-docking-panel-outer" top="true" right="true" bottom="true" left="true">
-      <div class="docking-panel-inner">
-        <div data-direction="top" class="docking-direction top">
-          <div data-hook="top-direction" class="docking-point"></div>
-        <div class="docking-line"></div>
+<div class="pcu-docking-panel-outer">
+      <div class="pcu-docking-panel-inner">
+        <div data-direction="top" class="pcu-docking-direction top">
+          <div data-hook="top-direction" class="pcu-docking-point"></div>
+        <div class="pcu-docking-line"></div>
         </div>
-        <div class="docking-rail left">
-          <div data-direction="left" class="docking-direction left ">
-            <div data-hook="left-direction" class="docking-point"></div>
-            <div class="docking-line"></div>
+        <div class="pcu-docking-rail left">
+          <div data-direction="left" class="pcu-docking-direction left ">
+            <div data-hook="left-direction" class="pcu-docking-point"></div>
+            <div class="pcu-docking-line"></div>
           </div>
         </div>
-        <div class="docking-element center">
-          <div class="control-docking-plane-button-outer ">
-            <div class="control-docking-plane-button">
-              <div class="docking-point"></div>
+        <div class="pcu-docking-element center">
+          <div class="pcu-docking-plane-button-outer ">
+            <div class="pcu-docking-plane-button">
+              <div class="pcu-docking-point"></div>
             </div>
         </div>
       </div>
-      <div class="docking-rail right">
-        <div data-direction="right" class="docking-direction right ">
-          <div data-hook="right-direction" class="docking-point"></div>
-            <div class="docking-line"></div>
+      <div class="pcu-docking-rail right">
+        <div data-direction="right" class="pcu-docking-direction right ">
+          <div data-hook="right-direction" class="pcu-docking-point"></div>
+            <div class="pcu-docking-line"></div>
           </div>
         </div>
-        <div data-direction="bottom" class="docking-direction bottom ">
-          <div data-hook="bottom-direction" class="docking-point"></div>
-          <div class="docking-line"></div>
+        <div data-direction="bottom" class="pcu-docking-direction bottom ">
+          <div data-hook="bottom-direction" class="pcu-docking-point"></div>
+          <div class="pcu-docking-line"></div>
         </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ NOTE: Please be sure to use a separator with the element name ! */
 
 function pcuComponentsEvents() {
   /* --------------------------- Docking Panel --------------------------- */
-  document.querySelectorAll('.docking-point').forEach(function(elm) {
+  document.querySelectorAll('.pcu-docking-point').forEach(function(elm) {
     elm.addEventListener('click', function(e) {
       if(e.target.parentElement.classList.contains('direction-docked')){
         e.target.parentElement.classList.remove('direction-docked')

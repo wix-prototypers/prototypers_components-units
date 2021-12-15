@@ -874,12 +874,12 @@ input:focus{
 
 /* ---------------------- Docking Panel ---------------------- */
 
-.control-docking-panel-outer {
+.pcu-docking-panel-outer {
   display: flex;
   height: 100px;
   width: 104px;
 }
-.control-docking-panel-outer .docking-panel-inner {
+.pcu-docking-panel-outer .pcu-docking-panel-inner {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -892,7 +892,7 @@ input:focus{
   background-color: #f8faff;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.top {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.top {
   position: absolute;
   transition: width 0.3s ease, height 0.3s ease;
   justify-content: center;
@@ -900,7 +900,7 @@ input:focus{
   bottom: 61px;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.left {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.left {
   position: absolute;
   transition: width 0.3s ease, height 0.3s ease;
   align-items: center;
@@ -908,7 +908,7 @@ input:focus{
   height: 8px;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.right {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.right {
   position: absolute;
   transition: width 0.3s ease, height 0.3s ease;
   align-items: center;
@@ -916,7 +916,7 @@ input:focus{
   height: 8px;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.bottom {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.bottom {
   position: absolute;
   transition: width 0.3s ease, height 0.3s ease;
   justify-content: center;
@@ -924,45 +924,44 @@ input:focus{
   top: 61px;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction .docking-line {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction .pcu-docking-line {
   visibility: hidden;
   position: absolute;
   border: none;
   pointer-events: none;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.top .docking-line,
-.control-docking-panel-outer .docking-panel-inner .docking-direction.bottom .docking-line {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.top .pcu-docking-line,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.bottom .pcu-docking-line {
   border-right: 1px dashed #116dff;
   height: 100%;
 }
-.control-docking-panel-outer .docking-panel-inner .docking-direction.right .docking-line,
-.control-docking-panel-outer .docking-panel-inner .docking-direction.left .docking-line{
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.right .pcu-docking-line,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.left .pcu-docking-line{
   border-top: 1px dashed #116dff;
   width: 100%;
 }
-.control-docking-panel-outer .docking-panel-inner .docking-direction.top .docking-point {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.top .pcu-docking-point {
   top: -6px;
   left: -4px;
 }
-.control-docking-panel-outer .docking-panel-inner .docking-direction.bottom .docking-point {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.bottom .pcu-docking-point {
   bottom: -6px;
   left: -5px;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.right .docking-point {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.right .pcu-docking-point{
   right: -6px;
   bottom: 0;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.left .docking-point {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.left .pcu-docking-point {
   left: -6px;
   bottom: 0;
 }
 
-
-.control-docking-panel-outer .docking-panel-inner .docking-element .docking-point, 
-.control-docking-panel-outer .docking-panel-inner .docking-direction .docking-point {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element .pcu-docking-point, 
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction .pcu-docking-point {
   width: 8px;
   height: 8px;
   background-color: #c3daff;
@@ -974,22 +973,22 @@ input:focus{
   justify-content: center;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-rail {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-rail {
   display: flex;
   position: relative;
   height: 8px;
   width: 100%;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-rail.left {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-rail.left {
   flex-direction: row-reverse;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction {
   display: flex;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-element {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -999,7 +998,7 @@ input:focus{
   z-index: 1;
 }
 
-.control-docking-plane-button-outer .control-docking-plane-button {
+.pcu-docking-plane-button-outer .pcu-docking-plane-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1015,63 +1014,109 @@ input:focus{
   transition: top 0.2s ease, bottom 0.2s ease, left 0.2s ease, right 0.2s ease;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-element .docking-point {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element .pcu-docking-point {
   position: relative;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-element.direction-docked .docking-line, 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.direction-docked .docking-line {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element.direction-docked .pcu-docking-line, 
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.direction-docked .pcu-docking-line {
   visibility: visible;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.top.direction-docked {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.top.direction-docked,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.bottom.direction-docked {
   height: 37px;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.top.direction-docked {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.top.direction-docked,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.left.direction-docked,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.bottom.direction-docked,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.right.direction-docked  {
   transition: width 0.3s ease, height 0.3s ease;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.left.direction-docked {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.left.direction-docked,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.right.direction-docked  {
   width: 100%;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.left.direction-docked {
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-.control-docking-panel-outer .docking-panel-inner .docking-direction.bottom.direction-docked {
-  height: 37px;
-}
-.control-docking-panel-outer .docking-panel-inner .docking-direction.bottom.direction-docked {
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-.control-docking-panel-outer .docking-panel-inner .docking-direction.right.direction-docked {
-  width: 100%;
-}
-
-.control-docking-panel-outer .docking-panel-inner .docking-direction.right.direction-docked {
-  transition: width 0.3s ease, height 0.3s ease;
-}
-
-.control-docking-plane-button-outer:not(.is-disabled) .control-docking-plane-button:hover {
+.pcu-docking-plane-button-outer:not(.is-disabled) .pcu-docking-plane-button:hover {
   top: -2px;
   bottom: -2px;
   left: -2px;
   right: -2px;
 }
-.control-docking-plane-button-outer:not(.is-disabled) .control-docking-plane-button:hover .docking-point {
+.pcu-docking-plane-button-outer:not(.is-disabled) .pcu-docking-plane-button:hover .pcu-docking-point {
   background-color: #7cafff;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-element .docking-point:hover, 
-.control-docking-panel-outer .docking-panel-inner .docking-direction .docking-point:hover {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element .pcu-docking-point:hover, 
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction .pcu-docking-point:hover {
   background-color: #7cafff;
 }
 
-.control-docking-panel-outer .docking-panel-inner .docking-element.direction-docked .docking-point, 
-.control-docking-panel-outer .docking-panel-inner .docking-direction.direction-docked .docking-point {
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element.direction-docked .pcu-docking-point, 
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.direction-docked .pcu-docking-point {
   opacity: 1;
   background-color: #116dff;
+}
+
+/* ---------------------- Checkbox ---------------------- */
+.pcu-checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+input[type=checkbox].pcu-checkbox-input {
+  position: relative;
+  cursor: pointer;
+  margin-top: 2px;
+  border: solid 1px var(--D4);
+  background-color: var(--D7);
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+input[type=checkbox].pcu-checkbox-input:checked{
+  background-color: var(--B1);
+  border: solid 1px var(--B1);
+}
+input[type=checkbox].pcu-checkbox-input:hover:checked{
+  background-color: var(--B2);
+  border: solid 1px var(--B2);
+}
+input[type=checkbox].pcu-checkbox-input:checked:after {
+  content: url('../pcu-editor-x/editor-x-icons/Checkbox/V.svg');
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 4px;
+}
+
+input[type=checkbox].pcu-checkbox-input:hover:not(:checked) {
+  background-color: var(--D6);
+}
+
+input[type=checkbox].pcu-checkbox-input:disabled {
+  border-color: var(--X2) !important;
+  background-color: var(--X4) !important;
+  cursor: default !important;
+
+}
+
+.pcu-checkbox-container .pcu-checkbox-label {
+  color: var(--D1);
+  margin-left: 12px;
+  line-height: 16px;
+  font-size: 12px;
+  cursor: pointer;
+}
+input[type=checkbox].pcu-checkbox-input:disabled:checked {
+  border-color: var(--X1) !important;
+  background-color: var(--X1) !important;
+  cursor: default !important;
 }

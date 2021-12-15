@@ -191,6 +191,19 @@ const editorx_components = [
     jsCode: dropdownJs
   },
   {
+    category: "Checkbox",
+    attributes:[
+      {
+        attribute: "Disabled",
+        values: [false, true]
+      }
+    ],
+    htmlCode: `<div class="pcu-checkbox-container">
+    <input id="checkbox-1" class="pcu-checkbox-input" type="checkbox">
+    <label for="checkbox-1" class="pcu-checkbox-label">Checkbox</label>
+    </div>`,
+  },
+  {
     category: "Docking Panel",
     htmlCode: dockingPanelHTML,
     jsCode: dockingPanelJs
