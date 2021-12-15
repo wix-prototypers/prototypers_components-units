@@ -122,6 +122,47 @@ const editorx_components = [
     htmlCode: `<button class="pcu-text-button" size="small" skin="standard" affix="none" weight="normal" underline="none">Text Button</button>`
   },
   {
+    category: "Button Group - Two Selections",
+    htmlCode: `<div class="pcu-button-group">
+    <input class="pcu-button-group-option" id="button-group-1" value="hide" option="1" type="radio" name="button-group-toggle" checked="">
+    <label class="pcu-button-group-labels" for="button-group-1">Fixed</label>
+    <input class="pcu-button-group-option" id="button-group-2" value="show" option="2" type="radio" name="button-group-toggle">
+    <label class="pcu-button-group-labels" for="button-group-2">Fluid</label>
+    </div>`
+  },
+  {
+    category: "Context Menu",
+    htmlCode: `<div class="pcu-context-menu-container">
+    <input type="text" id="pcu-context-menu">
+    <label for="pcu-context-menu"">
+        <img class="pcu-context-menu-icon" src="../pcu-editor-x/editor-x-icons/Top Bar/More.svg">
+    </label>
+    <div class="pcu-context-menu-content"> 
+        <span class="pcu-context-menu-item">Add New Items</span> 
+        <span class="pcu-context-menu-item">Edit This Item</span> 
+        <span class="pcu-context-menu-divider"></span>
+        <span class="pcu-context-menu-item">Delete This Item</span> 
+    </div> 
+</div>`
+  },
+  {
+    category: "Numeric Input with Affix",
+    attributes:[
+      {
+        attribute:"Size",
+        values:["large", "medium", "small"]
+      },
+      {
+        attribute: "Disabled",
+        values: [false, true]
+      }
+    ],
+    htmlCode: `<div class="pcu-numeric-input-affix-container" size="large">
+    <input type="text" pattern="\d*" value="3" class="pcu-numeric-input" >
+    <span class="pcu-input-affix">px</span>
+    </div>`
+  },
+  {
     category: "Numeric Input",
     attributes:[
       {
@@ -134,9 +175,73 @@ const editorx_components = [
       }
     ],
     htmlCode: `<div class="pcu-numeric-input-container" size="large">
-    <input type="text" pattern="\d*" maxlength="4" value="3" class="pcu-numeric-input" >
-    <span class="pcu-input-affix">px</span>
+    <input type="text" pattern="\d*" value="3" class="pcu-numeric-input" >
     </div>`
+  },
+  {
+    category: "Dropdown",
+    htmlCode: `<div class="pcu-dropdown">
+    <input class="pcu-text-input pcu-dropdown-input" type="text" value="Default" readonly>
+    <div class="pcu-dropdown-content">
+    <div class="pcu-dropdown-item selected" value="Default">Default</div>
+    <div class="pcu-dropdown-item" value="Sticky">Sticky</div>
+    <div class="pcu-dropdown-item" value="Pinned">Pinned</div>
+    </div>
+    </div>`,
+    jsCode: dropdownJs
+  },
+  {
+    category: "Checkbox",
+    attributes:[
+      {
+        attribute: "Disabled",
+        values: [false, true]
+      }
+    ],
+    htmlCode: `<div class="pcu-checkbox-container">
+    <input id="checkbox-1" class="pcu-checkbox-input" type="checkbox">
+    <label for="checkbox-1" class="pcu-checkbox-label">Checkbox</label>
+    </div>`,
+  },
+  {
+    category: "Radio Button",
+    attributes: [
+    {
+      attribute: "Disabled",
+      values: [false, true]
+    }],
+    htmlCode: `
+    <div class="pcu-radio-btn-container">
+      <input class="pcu-radio-btn-input" name="pcu-radio-btn" type="radio" id="radio-1">
+      <span class="pcu-radio-btn-circle"></span>
+      <label class="pcu-radio-btn-label" for="radio-1">Option 1</label>
+    </div>
+    <div class="pcu-radio-btn-container">
+      <input class="pcu-radio-btn-input" name="pcu-radio-btn" type="radio" id="radio-2">
+      <span class="pcu-radio-btn-circle"></span>
+      <label class="pcu-radio-btn-label" for="radio-2">Option 2</label>
+    </div>`
+  },
+  {
+    category: "Toggle Switch",
+    htmlCode: `<label class="pcu-toggle-switch" size="large">
+    <input class="pcu-toggle-input" type="checkbox">
+    <span class="pcu-toggle-round"></span>
+    </label>`
+  },
+  {
+    category: "Docking Panel",
+    htmlCode: dockingPanelHTML,
+    jsCode: dockingPanelJs
+  },
+  {
+    category: "Search Bar",
+    htmlCode: `<div class="pcu-search-field">
+    <img class="pcu-search-icon" src="../pcu-editor-x/editor-x-icons/Layers/SearchBox.svg">
+    <input class="topbar-search-input" placeholder="Search business type">
+    <img class="pcu-search-field-delete" src="../pcu-editor-x/editor-x-icons/Layers/X-Search.svg">
+    </div>`,
+    jsCode: searchFieldJs
   },
   {
     category: "Tooltips",

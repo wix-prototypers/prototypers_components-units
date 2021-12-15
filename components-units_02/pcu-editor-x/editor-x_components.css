@@ -97,6 +97,7 @@
   --grey-icon: invert(82%) sepia(48%) saturate(0%) hue-rotate(178deg) brightness(80%) contrast(113%);
   --blue-hover-icon: invert(24%) sepia(88%) saturate(5462%) hue-rotate(214deg) brightness(100%) contrast(88%);
   --purple-hover-icon: invert(25%) sepia(67%) saturate(2886%) hue-rotate(238deg) brightness(82%) contrast(99%);
+  --dark-blue-icon: invert(65%) sepia(8%) saturate(913%) hue-rotate(195deg) brightness(84%) contrast(87%);
 }
 
 /* ---------------------- Buttons ---------------------- */
@@ -415,9 +416,10 @@
 }
 /* ---------------------- Numeric Input ---------------------- */
 
-.pcu-numeric-input-container {
+.pcu-numeric-input-container, .pcu-numeric-input-affix-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: row;
   position: relative;
   width: max-content;
@@ -443,16 +445,34 @@
 
 .pcu-numeric-input-container[size="large"] .pcu-numeric-input{
   --input-height: 32px;
-  --input-padding: 8px 0px 8px 8px;
+  --input-padding: 8px 8px 8px 8px;
 }
 
 .pcu-numeric-input-container[size="medium"] .pcu-numeric-input{
   --input-height: 28px;
-  --input-padding: 6px 0px 6px 8px;
+  --input-padding: 6px 8px 6px 8px;
 }
 .pcu-numeric-input-container[size="small"] .pcu-numeric-input{
   --input-height: 24px;
-  --input-padding: 4px 0px 4px 8px;
+  --input-padding: 4px 8px 4px 8px;
+}
+
+.pcu-numeric-input-affix-container[size="large"] .pcu-numeric-input, .pcu-numeric-input-affix-container[size="large"] .pcu-input-affix
+{
+  --input-height: 32px;
+  --input-padding: 8px 20px 8px 8px;
+}
+
+.pcu-numeric-input-affix-container[size="medium"] .pcu-numeric-input, .pcu-numeric-input-affix-container[size="medium"] .pcu-input-affix
+{
+  --input-height: 28px;
+  --input-padding: 6px 20px 6px 8px;
+}
+
+.pcu-numeric-input-affix-container[size="small"] .pcu-numeric-input, .pcu-numeric-input-affix-container[size="small"] .pcu-input-affix
+{
+  --input-height: 24px;
+  --input-padding: 4px 20px 4px 8px;
 }
 
 .pcu-numeric-input:hover:not(:focus) {
@@ -469,13 +489,22 @@
   position: relative;
   right: 19px;
   font-size: 11px;
-  color: var(--D1);
+  color: var(--B1);
   -webkit-font-smoothing: antialiased;
   background-color: white;
-  width: 15px;
   display: flex;
   justify-content: center;
-  align-items: center;}
+  align-items: center;
+  padding: 0 3px;
+  height: calc(var(--input-height) - 2px)   ;
+  border-radius: 0 4px 4px 0;
+}
+
+  .pcu-input-affix:hover{
+    background-color: var(--D6);
+    cursor: pointer;
+
+  }
 
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -485,11 +514,70 @@ input[type=number]::-webkit-inner-spin-button {
   background-color: var(--X4) !important;
   color: var(--X2) !important;
   border-color: var(--X2) !important;
+  cursor:initial !important;
 }
 
 .pcu-numeric-input:disabled ~ .pcu-input-affix {
   color: var(--X2) !important;
   background-color: var(--X4) !important;
+  cursor:initial !important;
+
+}
+
+
+
+/* ---------------------- Search Bar ---------------------- */
+
+.pcu-search-field {
+  width: 228px;
+  border: 1px solid var(--X3);
+  border-radius: 4px;
+  height: 30px;
+  align-items: center;
+  display: flex;
+  padding: 8px 28px 8px 12px;
+  box-sizing: border-box;
+  color: var(--D1);
+  background-color: var(--D6);
+  position: relative;
+
+}
+
+.topbar-search-input::placeholder{
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--D4);
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.pcu-field-has-focus{
+  background-color: white;  
+}
+.pcu-search-field-delete{
+  visibility:hidden;
+  position: absolute;
+  right: 12px;
+  width: 20px;
+  filter: var(--dark-blue-icon);
+}
+
+.pcu-field-has-focus .pcu-search-field-delete{
+  visibility: visible;
+}
+
+.pcu-search-icon {
+  filter: var(--dark-blue-icon);
+  margin-right: 8px;
+}
+
+.topbar-search-input{
+  border: unset;
+  background-color: unset;
+  outline: none;
+  font-size: 11px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* ---------------------- Tooltips ---------------------- */
@@ -591,3 +679,589 @@ input[type=number]::-webkit-inner-spin-button {
     opacity: 50% !important;
   }
   
+
+/* ---------------------- Context Menu ---------------------- */
+
+  #pcu-context-menu{
+    opacity: 0;
+    width: 0;
+  }
+
+  .pcu-context-menu-icon{
+    width: 18px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.pcu-context-menu-content{
+  width: 220px;
+    background-color: var(--D7);
+    color: var(--D1);
+    border-radius: 4px;
+    padding: 8px 0px;
+    position: absolute;
+    top: var(--top);
+    bottom: var(--bottom);
+    left: var(--left);
+    right: var(--right);
+    transform: var(--transform);
+    box-shadow: 0px 0px 12px rgb(0 6 36 / 20%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    cursor: pointer;
+    z-index: 500;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+#pcu-context-menu:focus ~ .pcu-context-menu-content{
+  visibility: visible;
+}
+
+.pcu-context-menu-item{
+  font-size: 14px;
+  line-height: 24px;
+  display: inline-flex;
+  padding: 8px 12px;
+  cursor: pointer;
+  align-items: center;
+  width: 100%;
+}
+
+.pcu-context-menu-divider{
+  height: 1px;
+  width: 100%;
+  background: var(--X3);
+  box-sizing: border-box;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.pcu-context-menu-item:hover {
+  background-color: var(--D6);
+}
+
+/* ---------------------- Button Group ---------------------- */
+
+.pcu-button-group{
+  position: relative;
+  z-index: 5;
+  width: max-content;
+  border-radius: 4px;
+  border: var(--D5) solid 1px;
+  background-color: var(--D7);
+  color: var(--D1);
+  height: 32px;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  margin: 12px 24px;
+}
+
+input[type="radio"].pcu-button-group-option {
+  display: none;
+  height: 32px;
+}
+  
+  .pcu-button-group-labels {
+    display: flex;
+    justify-content: center;
+    height: 32px;
+    text-align: center;
+    z-index: 2;
+    cursor: pointer;
+    padding: 5px 6px;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 8px 24px;
+    align-items: center;
+    width: 106px;
+    border-radius: 4px;
+}
+
+.pcu-button-group-option:checked+.pcu-button-group-labels {
+  border: 1px solid var(--B3);
+  color: var(--B1);
+  background-color: var(--B5);
+}
+
+/* ---------------------- Drop Down ---------------------- */
+.pcu-dropdown {
+  border-radius: 4px;
+  color: var(--D1);
+  border: 1px solid var(--D5);
+  background-color: var(--D7);
+  display: flex;
+  position: relative;
+  width:212px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+}
+
+.pcu-dropdown::after {
+  content: url("../pcu-editor-x/editor-x-icons/Arrows/chevronDown.svg");
+  position: absolute;
+  right: 14px;
+  width: 12px;
+  filter: var(--dark-blue-icon);
+  cursor: pointer;
+  top: 25%;
+}
+
+.pcu-dropdown-input {
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  font-size: 12px;
+  box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  }
+.pcu-dropdown-item {
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+  padding-right: 24px;
+  min-height: 36px;
+}
+.pcu-dropdown-item.selected {
+  color: var(--B1);
+  background-color: var(--B5);
+}
+
+.pcu-dropdown-item:not(.selected):hover {
+  background: var(--D6);
+}
+
+.pcu-dropdown-content {
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: var(--pcu-shadow30, 0 6px 6px 0 rgba(22, 45, 61, 0.06), 0 0 18px 0 rgba(22, 45, 61, 0.12));
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--D1);
+  background: var(--D80);
+  position: absolute;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  z-index: 10;
+  max-height: 252px;
+  overflow: scroll;
+  visibility: hidden;
+  margin-top: 1px;
+  bottom: 34px;
+  left: 0;
+}
+
+.pcu-dropdown.pcu-field-has-focus .pcu-dropdown-content {
+  visibility: visible;
+}
+
+input:focus{
+  outline: none;
+}
+
+/* ---------------------- Docking Panel ---------------------- */
+
+.pcu-docking-panel-outer {
+  display: flex;
+  height: 100px;
+  width: 104px;
+}
+.pcu-docking-panel-outer .pcu-docking-panel-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  height: 100px;
+  width: 104px;
+  border-radius: 6px;
+  border: solid 1px #e2e3ea;
+  background-color: #f8faff;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.top {
+  position: absolute;
+  transition: width 0.3s ease, height 0.3s ease;
+  justify-content: center;
+  height: 18px;
+  bottom: 61px;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.left {
+  position: absolute;
+  transition: width 0.3s ease, height 0.3s ease;
+  align-items: center;
+  width: 18px;
+  height: 8px;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.right {
+  position: absolute;
+  transition: width 0.3s ease, height 0.3s ease;
+  align-items: center;
+  width: 18px;
+  height: 8px;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.bottom {
+  position: absolute;
+  transition: width 0.3s ease, height 0.3s ease;
+  justify-content: center;
+  height: 18px;
+  top: 61px;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction .pcu-docking-line {
+  visibility: hidden;
+  position: absolute;
+  border: none;
+  pointer-events: none;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.top .pcu-docking-line,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.bottom .pcu-docking-line {
+  border-right: 1px dashed #116dff;
+  height: 100%;
+}
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.right .pcu-docking-line,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.left .pcu-docking-line{
+  border-top: 1px dashed #116dff;
+  width: 100%;
+}
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.top .pcu-docking-point {
+  top: -6px;
+  left: -4px;
+}
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.bottom .pcu-docking-point {
+  bottom: -6px;
+  left: -5px;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.right .pcu-docking-point{
+  right: -6px;
+  bottom: 0;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.left .pcu-docking-point {
+  left: -6px;
+  bottom: 0;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element .pcu-docking-point, 
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction .pcu-docking-point {
+  width: 8px;
+  height: 8px;
+  background-color: #c3daff;
+  border: 1px solid #116dff;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-rail {
+  display: flex;
+  position: relative;
+  height: 8px;
+  width: 100%;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-rail.left {
+  flex-direction: row-reverse;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction {
+  display: flex;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.pcu-docking-plane-button-outer .pcu-docking-plane-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 0 5px #e2e3ea;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: top 0.2s ease, bottom 0.2s ease, left 0.2s ease, right 0.2s ease;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element .pcu-docking-point {
+  position: relative;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element.direction-docked .pcu-docking-line, 
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.direction-docked .pcu-docking-line {
+  visibility: visible;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.top.direction-docked,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.bottom.direction-docked {
+  height: 37px;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.top.direction-docked,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.left.direction-docked,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.bottom.direction-docked,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.right.direction-docked  {
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.left.direction-docked,
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.right.direction-docked  {
+  width: 100%;
+}
+
+.pcu-docking-plane-button-outer:not(.is-disabled) .pcu-docking-plane-button:hover {
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+}
+.pcu-docking-plane-button-outer:not(.is-disabled) .pcu-docking-plane-button:hover .pcu-docking-point {
+  background-color: #7cafff;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element .pcu-docking-point:hover, 
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction .pcu-docking-point:hover {
+  background-color: #7cafff;
+}
+
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-element.direction-docked .pcu-docking-point, 
+.pcu-docking-panel-outer .pcu-docking-panel-inner .pcu-docking-direction.direction-docked .pcu-docking-point {
+  opacity: 1;
+  background-color: #116dff;
+}
+
+/* ---------------------- Checkbox ---------------------- */
+.pcu-checkbox-container {
+  display: flex;
+  align-items: center;
+  width: max-content;
+}
+
+input[type=checkbox].pcu-checkbox-input {
+  position: relative;
+  cursor: pointer;
+  margin-top: 2px;
+  border: solid 1px var(--D4);
+  background-color: var(--D7);
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+input[type=checkbox].pcu-checkbox-input:checked{
+  background-color: var(--B1);
+  border: solid 1px var(--B1);
+}
+input[type=checkbox].pcu-checkbox-input:hover:checked{
+  background-color: var(--B2);
+  border: solid 1px var(--B2);
+}
+input[type=checkbox].pcu-checkbox-input:checked:after {
+  content: url('../pcu-editor-x/editor-x-icons/Checkbox/V.svg');
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 4px;
+}
+
+input[type=checkbox].pcu-checkbox-input:hover:not(:checked) {
+  background-color: var(--D6);
+}
+
+input[type=checkbox].pcu-checkbox-input:disabled {
+  border-color: var(--X2) !important;
+  background-color: var(--X4) !important;
+  cursor: default !important;
+
+}
+
+.pcu-checkbox-container .pcu-checkbox-label {
+  color: var(--D1);
+  margin-left: 12px;
+  line-height: 16px;
+  font-size: 12px;
+  cursor: pointer;
+}
+input[type=checkbox].pcu-checkbox-input:disabled:checked {
+  border-color: var(--X1) !important;
+  background-color: var(--X1) !important;
+  cursor: default !important;
+}
+
+/* ---------------------- Radio Buttons ---------------------- */
+.pcu-radio-btn-container {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type=radio].pcu-radio-btn-input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  left: -1px;
+  z-index: 1;
+}
+
+.pcu-radio-btn-circle {
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: var(--D7);
+  border-radius: 50%;
+  border: 1px solid var(--D4);
+}
+
+input[type=radio].pcu-radio-btn-input:hover:not(:checked)+.pcu-radio-btn-circle {
+  background-color: var(--D6);
+}
+
+input[type=radio].pcu-radio-btn-input:checked+.pcu-radio-btn-circle {
+  background-color: var(--B1);
+  border: 1px solid var(--B1);
+}
+
+input[type=radio].pcu-radio-btn-input:checked+.pcu-radio-btn-circle:after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--D7);
+  position: absolute;
+  top: calc(50% - 4px/2);
+  left: calc(50% - 4px/2);
+}
+input[type=radio].pcu-radio-btn-input:disabled+.pcu-radio-btn-circle {
+  border-color: var(--X2) !important;
+  background-color: var(--X4) !important;
+}
+input[type=radio].pcu-radio-btn-input:checked:disabled+.pcu-radio-btn-circle {
+  border-color: var(--X2) !important;
+  background-color: var(--X2) !important;
+}
+
+
+.pcu-radio-btn-label {
+  color: var(--D1);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* ---------------------- Toogle ---------------------- */
+
+.pcu-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 20px;
+  box-sizing: border-box;
+}
+
+.pcu-toggle-switch .pcu-toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
+}
+
+.pcu-toggle-input:checked+.pcu-toggle-round {
+  background-color: var(--B1);
+}
+
+.pcu-toggle-round {
+  border-radius: 34px;
+}
+
+.pcu-toggle-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--D3);
+  -webkit-transition: .1s;
+  transition: 0.1s ease-in-out;
+}
+
+.pcu-toggle-round:hover {
+  background-color: var(--D4);
+}
+
+.pcu-toggle-input:checked+.pcu-toggle-round:hover {
+  background-color: var(--B1);
+
+}
+
+.pcu-toggle-input:checked+.pcu-toggle-round:before {
+  content: "";
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+  left:0px;
+}
+
+.pcu-toggle-round:before {
+  border-radius: 50%;
+}
+
+.pcu-toggle-round:before {
+  content: "";
+  padding-bottom: 6px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--D7);
+  -webkit-transition: .1s;
+  transition: 0.1s ease-in-out;
+}
