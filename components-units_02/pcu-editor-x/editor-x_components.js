@@ -223,6 +223,13 @@ const editorx_components = [
     </div>`
   },
   {
+    category: "Toggle Switch",
+    htmlCode: `<label class="pcu-toggle-switch" size="large">
+    <input class="pcu-toggle-input" type="checkbox">
+    <span class="pcu-toggle-round"></span>
+    </label>`
+  },
+  {
     category: "Docking Panel",
     htmlCode: dockingPanelHTML,
     jsCode: dockingPanelJs

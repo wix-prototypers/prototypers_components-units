@@ -1191,37 +1191,77 @@ input[type=radio].pcu-radio-btn-input:checked:disabled+.pcu-radio-btn-circle {
   line-height: 16px;
 }
 
-/* ---------------------- Radio Buttons - 2 Rows Label ---------------------- */
-.pcu-radio-btn-container.pcu-radio-btn-2-rows {
-  margin-bottom: 0;
-  padding-top: 4px;
-  padding-bottom: 4px;
-}
+/* ---------------------- Toogle ---------------------- */
 
-
-/* .pcu-radio-btn-container .pcu-radio-btn-2-rows-input {
+.pcu-toggle-switch {
   position: relative;
-  margin-left: -24px;
-  width: 35px;
-  height: 35px;
-} */
-
-.pcu-radio-btn-container .pcu-radio-btn-2-rows-input * {
-  top: 12px;
+  display: inline-block;
+  width: 32px;
+  height: 20px;
+  box-sizing: border-box;
 }
 
-.pcu-radio-btn-2-rows-content .pcu-radio-btn-main-label {
-  font-size: 16px;
-  font-weight: 500;
-  display: block;
-  color: var(--D10);
-  text-align: left;
+.pcu-toggle-switch .pcu-toggle-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  padding: 0;
 }
 
-.pcu-radio-btn-2-rows-content .pcu-radio-btn-sub-label {
-  font-size: 12px;
-  font-weight: normal;
-  display: block;
-  color: var(--D20);
-  text-align: left;
+.pcu-toggle-input:checked+.pcu-toggle-round {
+  background-color: var(--B1);
+}
+
+.pcu-toggle-round {
+  border-radius: 34px;
+}
+
+.pcu-toggle-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--D3);
+  -webkit-transition: .1s;
+  transition: 0.1s ease-in-out;
+}
+
+.pcu-toggle-round:hover {
+  background-color: var(--D4);
+}
+
+.pcu-toggle-input:checked+.pcu-toggle-round:hover {
+  background-color: var(--B1);
+
+}
+
+.pcu-toggle-input:checked+.pcu-toggle-round:before {
+  content: "";
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+  left:0px;
+}
+
+.pcu-toggle-round:before {
+  border-radius: 50%;
+}
+
+.pcu-toggle-round:before {
+  content: "";
+  padding-bottom: 6px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: var(--D7);
+  -webkit-transition: .1s;
+  transition: 0.1s ease-in-out;
 }
