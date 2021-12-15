@@ -204,6 +204,25 @@ const editorx_components = [
     </div>`,
   },
   {
+    category: "Radio Button",
+    attributes: [
+    {
+      attribute: "Disabled",
+      values: [false, true]
+    }],
+    htmlCode: `
+    <div class="pcu-radio-btn-container">
+      <input class="pcu-radio-btn-input" name="pcu-radio-btn" type="radio" id="radio-1">
+      <span class="pcu-radio-btn-circle"></span>
+      <label class="pcu-radio-btn-label" for="radio-1">Option 1</label>
+    </div>
+    <div class="pcu-radio-btn-container">
+      <input class="pcu-radio-btn-input" name="pcu-radio-btn" type="radio" id="radio-2">
+      <span class="pcu-radio-btn-circle"></span>
+      <label class="pcu-radio-btn-label" for="radio-2">Option 2</label>
+    </div>`
+  },
+  {
     category: "Docking Panel",
     htmlCode: dockingPanelHTML,
     jsCode: dockingPanelJs

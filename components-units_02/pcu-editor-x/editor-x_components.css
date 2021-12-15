@@ -1065,6 +1065,7 @@ input:focus{
 .pcu-checkbox-container {
   display: flex;
   align-items: center;
+  width: max-content;
 }
 
 input[type=checkbox].pcu-checkbox-input {
@@ -1119,4 +1120,108 @@ input[type=checkbox].pcu-checkbox-input:disabled:checked {
   border-color: var(--X1) !important;
   background-color: var(--X1) !important;
   cursor: default !important;
+}
+
+/* ---------------------- Radio Buttons ---------------------- */
+.pcu-radio-btn-container {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 6px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type=radio].pcu-radio-btn-input {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  left: -1px;
+  z-index: 1;
+}
+
+.pcu-radio-btn-circle {
+  position: absolute;
+  box-sizing: border-box;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: var(--D7);
+  border-radius: 50%;
+  border: 1px solid var(--D4);
+}
+
+input[type=radio].pcu-radio-btn-input:hover:not(:checked)+.pcu-radio-btn-circle {
+  background-color: var(--D6);
+}
+
+input[type=radio].pcu-radio-btn-input:checked+.pcu-radio-btn-circle {
+  background-color: var(--B1);
+  border: 1px solid var(--B1);
+}
+
+input[type=radio].pcu-radio-btn-input:checked+.pcu-radio-btn-circle:after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--D7);
+  position: absolute;
+  top: calc(50% - 4px/2);
+  left: calc(50% - 4px/2);
+}
+input[type=radio].pcu-radio-btn-input:disabled+.pcu-radio-btn-circle {
+  border-color: var(--X2) !important;
+  background-color: var(--X4) !important;
+}
+input[type=radio].pcu-radio-btn-input:checked:disabled+.pcu-radio-btn-circle {
+  border-color: var(--X2) !important;
+  background-color: var(--X2) !important;
+}
+
+
+.pcu-radio-btn-label {
+  color: var(--D1);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* ---------------------- Radio Buttons - 2 Rows Label ---------------------- */
+.pcu-radio-btn-container.pcu-radio-btn-2-rows {
+  margin-bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+
+/* .pcu-radio-btn-container .pcu-radio-btn-2-rows-input {
+  position: relative;
+  margin-left: -24px;
+  width: 35px;
+  height: 35px;
+} */
+
+.pcu-radio-btn-container .pcu-radio-btn-2-rows-input * {
+  top: 12px;
+}
+
+.pcu-radio-btn-2-rows-content .pcu-radio-btn-main-label {
+  font-size: 16px;
+  font-weight: 500;
+  display: block;
+  color: var(--D10);
+  text-align: left;
+}
+
+.pcu-radio-btn-2-rows-content .pcu-radio-btn-sub-label {
+  font-size: 12px;
+  font-weight: normal;
+  display: block;
+  color: var(--D20);
+  text-align: left;
 }
