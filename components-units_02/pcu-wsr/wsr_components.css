@@ -5,6 +5,7 @@
   --madefor: "Madefor";
   --weight-400: var(--wix-font-weight-regular, 400);
   --weight-700: var(--wix-font-weight-bold);
+  
   /* ---- COLORS ---- */
   /* General */
   --D10: #162D3D;
