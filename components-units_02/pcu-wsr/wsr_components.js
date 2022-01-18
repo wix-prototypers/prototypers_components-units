@@ -55,7 +55,6 @@ const wsr_components = [
     Suffix<img src="../pcu-wsr/wsr-icons/chevdown-icon.svg">
     </button>`
   },
-  /* ---------------------- Loader Button ---------------------- */
   {
     category: "Loader Button",
     attributes: [
@@ -278,6 +277,28 @@ const wsr_components = [
     <input class="pcu-toggle-input" type="checkbox">
     <span class="pcu-toggle-round"></span>
     </label>`
+  }, 
+  // modal
+  {
+    category: "Modal",
+    htmlCode: `<div class="pcu-button-modal">Click Me</div>
+                <div class="pcu-modal-wrapper">
+                  <div class="pcu-modal-card" style="">
+                    <div class="pcu-modal-card-header">
+                      <div>Discard Changes?</div>
+                      <img src="../pcu-wsr/wsr-icons/close-icon.svg" alt="">
+                    </div>
+                    <div>
+                      You are about to be redirected to another page. Are you sure you want to leave this page? Your changes will not
+                      be saved.
+                    </div>
+                    <div class="pcu-modal-card-actions">
+                      <button class="pcu-button" skin="standard" priority="secondary">Cancel</button>
+                      <button class="pcu-button" skin="standard" priority="primary">Discard</button>
+                    </div>
+                  </div>
+                </div>`,
+    jsCode: popoverMenuJs
   },
   {
     category: "Popover Menu",
