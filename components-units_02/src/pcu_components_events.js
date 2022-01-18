@@ -106,6 +106,35 @@ function pcuComponentsEvents() {
   });
 
 
+  /* --------------------------- Modal --------------------------- */
+  function displayModal(opacity, zIndex){
+    document.querySelectorAll('.pcu-modal-wrapper').forEach(function (modal) {
+      modal.style.opacity = opacity;
+      modal.style.zIndex = zIndex;
+    });
+  }
+
+  function animationModalCard(scaleVal){
+    document.querySelectorAll('.pcu-modal-card').forEach(function (card) {
+      card.style.transform = `scale(${scaleVal})`
+    });  }
+
+  displayModal(0, -1)
+
+  document.querySelectorAll('.pcu-button-modal').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      displayModal(1, 5000);
+      animationModalCard("1")
+    });
+  });
+
+  document.querySelectorAll('.closeModal').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      displayModal(0, -1)
+      animationModalCard("0.93")
+    });
+  });
+
   /* --------------------------- Popover Menu --------------------------- */
   document.querySelectorAll('.pcu-popover-menu').forEach(function (popoverMenu) {
     popoverMenu.addEventListener('click', function (e) {

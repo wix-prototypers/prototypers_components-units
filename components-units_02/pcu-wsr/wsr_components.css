@@ -675,6 +675,9 @@ input[type=checkbox].pcu-checkbox-input:disabled::before {
 }
 
 /* ---------------------- Popover & Tooltips ---------------------- */
+.pcu-button-modal {
+  cursor: pointer;
+}
 
 .pcu-modal-wrapper {
   position: fixed;
@@ -687,8 +690,8 @@ input[type=checkbox].pcu-checkbox-input:disabled::before {
   background: rgba(22, 45, 61, 0.66) !important;
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-  background: 0 0;
   opacity: 1;
+  transform: scale(1);
 }
 
 .pcu-modal-card {
@@ -703,6 +706,9 @@ input[type=checkbox].pcu-checkbox-input:disabled::before {
   box-shadow: 0 8px 8px 0 rgb(22 45 61 / 12%), 0 3px 24px 0 rgb(22 45 61 / 18%);
   color: var(--D10);
   -webkit-font-smoothing: antialiased;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  transform: scale(0.93);
 }
 
 .pcu-modal-card .pcu-modal-card-header {
@@ -713,6 +719,11 @@ input[type=checkbox].pcu-checkbox-input:disabled::before {
   line-height: 30px;
   font-weight: 700;
   margin-bottom: 18px;
+}
+
+.pcu-modal-card .pcu-modal-card-header img {
+  width: 12px;
+  cursor: pointer;
 }
 
 .pcu-modal-card .pcu-modal-card-actions {

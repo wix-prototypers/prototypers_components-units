@@ -278,7 +278,6 @@ const wsr_components = [
     <span class="pcu-toggle-round"></span>
     </label>`
   }, 
-  // modal
   {
     category: "Modal",
     htmlCode: `<div class="pcu-button-modal">Click Me</div>
@@ -286,19 +285,18 @@ const wsr_components = [
                   <div class="pcu-modal-card" style="">
                     <div class="pcu-modal-card-header">
                       <div>Discard Changes?</div>
-                      <img src="../pcu-wsr/wsr-icons/close-icon.svg" alt="">
+                      <img class="closeModal" src="../pcu-wsr/wsr-icons/close-icon.svg" alt="">
                     </div>
                     <div>
-                      You are about to be redirected to another page. Are you sure you want to leave this page? Your changes will not
-                      be saved.
+                      Are you sure you want to leave this page? Your changes won't be saved.
                     </div>
                     <div class="pcu-modal-card-actions">
-                      <button class="pcu-button" skin="standard" priority="secondary">Cancel</button>
-                      <button class="pcu-button" skin="standard" priority="primary">Discard</button>
+                      <button class="pcu-button closeModal" skin="standard" priority="secondary">Cancel</button>
+                      <button class="pcu-button closeModal" skin="standard" priority="primary">Discard</button>
                     </div>
                   </div>
                 </div>`,
-    jsCode: popoverMenuJs
+    jsCode: modalJs
   },
   {
     category: "Popover Menu",
