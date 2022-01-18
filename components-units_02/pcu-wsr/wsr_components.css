@@ -201,6 +201,62 @@
   border-radius: 50%;
 }
 
+/* ---------------------- Loader Button ---------------------- */
+
+#pcu-button-loader-icon > svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  display: block;
+}
+
+.pcu-button-loader-iconTop {
+  animation: rotate-loader-iconTop 666ms linear infinite;
+  stroke: #2B81CB;
+  position: absolute;
+}
+
+.pcu-button-loader-iconBottom{
+  animation: rotate-loader-iconBottom 2s linear infinite;
+  stroke: #C1E4FE;
+}
+
+@keyframes rotate-loader-iconTop {
+  from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+
+  to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-loader-iconBottom {
+  from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+  }
+
+  to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
 /* ---------------------- Input Field ---------------------- */
 .pcu-text-input, .pcu-number-input {
   width: 280px;

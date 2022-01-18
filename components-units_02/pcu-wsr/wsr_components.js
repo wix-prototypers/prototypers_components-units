@@ -55,6 +55,29 @@ const wsr_components = [
     Suffix<img src="../pcu-wsr/wsr-icons/chevdown-icon.svg">
     </button>`
   },
+  /* ---------------------- Loader Button ---------------------- */
+  {
+    category: "Loader Button",
+    attributes: [
+      {
+        attribute: "Disabled",
+        values: [false, true]
+      }],
+    htmlCode: `<button class="pcu-button pcu-button-loader" skin="standard" priority="primary">
+                <div id="pcu-button-loader-txt" style="">
+                  Loader
+                </div>
+                <div id="pcu-button-loader-icon" style="display: none;">
+                  <svg class="pcu-button-loader-iconTop" xmlns="http://www.w3.org/2000/svg" viewBox="-9 -9 18 18">
+                    <path stroke-width="3" d="M -4.4083893921935475 6.067627457812106 A 7.5 7.5 0 1 0 4.592425496802575e-16 -7.5"></path>
+                  </svg>
+                  <svg class="pcu-button-loader-iconBottom" xmlns="http://www.w3.org/2000/svg" viewBox="-9 -9 18 18">
+                    <path stroke-width="3" d="M 4.408389392193548 6.067627457812106 A 7.5 7.5 0 0 0 4.592425496802575e-16 -7.5"></path>
+                  </svg>
+                </div>
+              </button>`,
+    jsCode: loaderButtonJs
+  },
   {
     category: "Icon Button",
     attributes: [{
@@ -83,7 +106,7 @@ const wsr_components = [
     <img src="../pcu-wsr/wsr-icons/search-icon.svg">
     <input class="topbar-search-input" placeholder="Search...">
     </div>`,
-    jsCode:  searchFieldJs
+    jsCode: searchFieldJs
   },
   {
     category: "Text Feild",
@@ -221,16 +244,16 @@ const wsr_components = [
   {
     category: "Avatar - placeholder",
     attributes: [{
-        attribute: "Size",
-        values: ["tiny", "small", "medium", "large"]
+      attribute: "Size",
+      values: ["tiny", "small", "medium", "large"]
     }],
     htmlCode: `<div class="pcu-avatar" size="tiny"><img src="../pcu-wsr/wsr-icons/avatar-icon.svg"></div>`
   },
   {
     category: "Avatar - image",
     attributes: [{
-        attribute: "Size",
-        values: ["tiny", "small", "medium", "large"]
+      attribute: "Size",
+      values: ["tiny", "small", "medium", "large"]
     }],
     htmlCode: `<div class="pcu-avatar" size="tiny">
     <img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>`

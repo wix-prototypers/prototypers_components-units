@@ -1,6 +1,22 @@
 /* This file allows us to save long code (html / js) separately.
 So you can define a variable with the long code and use it in wsr_components.js file.
 Use a consistent name depending on the component ! */
+
+ const loaderButtonJs = `
+document.querySelectorAll('.pcu-button-loader').forEach(function (elm) {
+  elm.addEventListener('click', function (e) {
+    var loaderTxt = document.getElementById("pcu-button-loader-txt");
+    var loaderIcon = document.getElementById("pcu-button-loader-icon");
+    loaderTxt.style.display = "none";
+    loaderIcon.style.display = "block";
+    setTimeout(() => {
+      loaderTxt.style.display = "block";
+      loaderIcon.style.display = "none";
+    }, 2000);
+  });
+});
+`
+
 const dockingPanelHTML=`
 <div class="pcu-docking-panel-outer">
       <div class="pcu-docking-panel-inner">
