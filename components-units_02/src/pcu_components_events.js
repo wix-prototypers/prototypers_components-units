@@ -107,17 +107,17 @@ function pcuComponentsEvents() {
 
 
   /* --------------------------- Modal --------------------------- */
-  function displayModal(opacity, zIndex) {
+  function displayModal(opacity, zIndex, modalId) {
     let modalSelector ='';
 
-    // if (opacity == 0) {
-    //   modalSelector = ".pcu-modal-wrapper"
-    // }
-    // if (opacity == 1) {
-    //   modalSelector = ".pcu-modal-wrapper"
-    // }
+    if (opacity == 0) {
+      modalSelector = ".pcu-modal-wrapper"
+    }
+    if (opacity == 1) {
+      modalSelector = "#" + modalId
+    }
 
-    document.querySelectorAll('.pcu-modal-wrapper').forEach(function (modal) {
+    document.querySelectorAll(`${modalSelector}`).forEach(function (modal) {
       modal.style.opacity = opacity;
       modal.style.zIndex = zIndex;
     });
@@ -132,10 +132,9 @@ function pcuComponentsEvents() {
   displayModal(0, -1)
 
   document.querySelectorAll('.pcu-button-modal').forEach(function (btn) {
-    // let openModal = btn
-    // console.log(btn.openmodalId);
     btn.addEventListener('click', function (e) {
-      displayModal(1, 5000);
+      let modalId = btn.getAttribute("openmodalid");
+      displayModal(1, 5000, modalId);
       animationModalCard("1")
     });
   });
