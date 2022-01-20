@@ -280,8 +280,8 @@ const wsr_components = [
   }, 
   {
     category: "Modal",
-    htmlCode: `<div class="pcu-button-modal">Click Me</div>
-                <div class="pcu-modal-wrapper">
+    htmlCode: `<div class="pcu-button-modal" openModalId="modal-1">Click Me</div>
+                <div id="modal-1" class="pcu-modal-wrapper">
                   <div class="pcu-modal-card" style="">
                     <div class="pcu-modal-card-header">
                       <div>Discard Changes?</div>

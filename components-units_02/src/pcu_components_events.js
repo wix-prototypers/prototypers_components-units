@@ -107,21 +107,33 @@ function pcuComponentsEvents() {
 
 
   /* --------------------------- Modal --------------------------- */
-  function displayModal(opacity, zIndex){
+  function displayModal(opacity, zIndex) {
+    let modalSelector ='';
+
+    // if (opacity == 0) {
+    //   modalSelector = ".pcu-modal-wrapper"
+    // }
+    // if (opacity == 1) {
+    //   modalSelector = ".pcu-modal-wrapper"
+    // }
+
     document.querySelectorAll('.pcu-modal-wrapper').forEach(function (modal) {
       modal.style.opacity = opacity;
       modal.style.zIndex = zIndex;
     });
   }
 
-  function animationModalCard(scaleVal){
+  function animationModalCard(scaleVal) {
     document.querySelectorAll('.pcu-modal-card').forEach(function (card) {
       card.style.transform = `scale(${scaleVal})`
-    });  }
+    });
+  }
 
   displayModal(0, -1)
 
   document.querySelectorAll('.pcu-button-modal').forEach(function (btn) {
+    // let openModal = btn
+    // console.log(btn.openmodalId);
     btn.addEventListener('click', function (e) {
       displayModal(1, 5000);
       animationModalCard("1")
