@@ -195,11 +195,6 @@ function pcuComponentsEvents() {
   });
 
   /* --------------------------- Collapse Expand --------------------------- */
-  //   $(".pcu-toggle-input").change(function (e) {
-  //     toggleCss(this)
-  //     displayMedia(this);
-  //     emptyStateMsg();
-  // });
   document.querySelectorAll('.collapse-input').forEach(function (collapseInput) {
     collapseInput.onchange = toggleCollpase;
   });

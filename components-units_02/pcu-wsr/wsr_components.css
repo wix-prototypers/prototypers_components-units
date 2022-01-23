@@ -1761,6 +1761,7 @@ img.pcu-float-notification-close {
   min-width: 280px;
   max-width: 400px;
   box-sizing: border-box;
+  margin-top: 15px;
 }
 
 .collapse-header {
@@ -1773,14 +1774,15 @@ img.pcu-float-notification-close {
   box-sizing: border-box;
 }
 
-.collapse-divider{
+.collapse-divider {
   width: 100%;
   height: 1px;
   background-color: var(--D60);
 }
 
-.collapse-collapsible{
+.collapse-collapsible {
   width: 100%;
+  height: 100px;
   box-sizing: border-box;
   margin-right: 30px;
   overflow: hidden;
@@ -1788,7 +1790,7 @@ img.pcu-float-notification-close {
 
 }
 
-.collapse-content{
+.collapse-content {
   padding: 10px;
 }
 
@@ -1796,6 +1798,34 @@ img.pcu-float-notification-close {
   max-height: 1000px;
 }
 
-.slideup{
+.slideup {
   max-height: 0;
+}
+
+.collapse-input {
+  cursor: pointer;
+}
+
+.label-chevron {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.chevron-input {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  opacity: 0;
+}
+
+.chevron-input-img {
+  transform: rotate(180deg);
+  transition: ease-in 0.2s;
+}
+
+.chevron-input:checked+.chevron-input-img{
+  transform: rotate(360deg);
+  transition: ease-in 0.2s;
 }

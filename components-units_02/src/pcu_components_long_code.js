@@ -377,3 +377,15 @@ document.querySelectorAll('.pcu-popover-menu').forEach(function(popoverMenu) {
     });
   });
 });`
+
+const collapseJs=`
+document.querySelectorAll('.collapse-input').forEach(function (collapseInput) {
+  collapseInput.onchange = toggleCollpase;
+});
+
+function toggleCollpase(){
+  let collapsible = this.closest('.collapse-container').querySelector('.collapse-collapsible');
+  collapsible.classList.toggle('slidedown')
+  collapsible.classList.toggle('slideup')
+}
+`

@@ -387,12 +387,28 @@ const wsr_components = [
   {
     category: "Collapse Expande",
     htmlCode: `
+    <!--Collapse Toggle-->
+     <div class="collapse-container">
+       <div class="collapse-header">
+         <div>Collapse Expande Toggle</div>
+         <label class="pcu-toggle-switch" size="large">
+           <input class="pcu-toggle-input collapse-input" type="checkbox">
+           <span class="pcu-toggle-round"></span>
+         </label>
+       </div>
+       <div class="collapse-collapsible slideup">
+         <div class="collapse-divider"></div>
+         <div class="collapse-content">some collapse expand content</div>
+       </div>
+    </div>
+
+    <!--Collapse Chevron-->
     <div class="collapse-container">
       <div class="collapse-header">
-        <div>collapse expande</div>
-        <label class="pcu-toggle-switch" size="large">
-          <input class="pcu-toggle-input collapse-input" type="checkbox">
-          <span class="pcu-toggle-round"></span>
+        <label class="label-chevron">
+          <div>Collapse Expande Chevron</div>
+          <input class="collapse-input chevron-input" type="checkbox">
+          <img class="chevron-input-img" src="../pcu-wsr/wsr-icons/chevdown-icon.svg">        
         </label>
       </div>
       <div class="collapse-collapsible slideup">
@@ -401,5 +417,6 @@ const wsr_components = [
       </div>
     </div>
     `,
+    jsCode: collapseJs
   }
 ]
