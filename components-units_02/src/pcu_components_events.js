@@ -108,7 +108,7 @@ function pcuComponentsEvents() {
 
   /* --------------------------- Modal --------------------------- */
   function displayModal(opacity, zIndex, modalId) {
-    let modalSelector ='';
+    let modalSelector = '';
 
     if (opacity == 0) {
       modalSelector = ".pcu-modal-wrapper"
@@ -193,7 +193,22 @@ function pcuComponentsEvents() {
       }
     });
   });
-}
 
   /* --------------------------- Collapse Expand --------------------------- */
+  //   $(".pcu-toggle-input").change(function (e) {
+  //     toggleCss(this)
+  //     displayMedia(this);
+  //     emptyStateMsg();
+  // });
+  document.querySelectorAll('.collapse-input').forEach(function (collapseInput) {
+    collapseInput.onchange = toggleCollpase;
+  });
+
+  function toggleCollpase(){
+    let collapsible = this.closest('.collapse-container').querySelector('.collapse-collapsible');
+    collapsible.classList.toggle('slidedown')
+    collapsible.classList.toggle('slideup')
+  }
+}
+
 

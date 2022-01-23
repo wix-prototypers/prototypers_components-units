@@ -387,15 +387,16 @@ const wsr_components = [
   {
     category: "Collapse Expande",
     htmlCode: `
-    <div class="collapse-container" style="">
+    <div class="collapse-container">
       <div class="collapse-header">
         <div>collapse expande</div>
         <label class="pcu-toggle-switch" size="large">
-          <input class="pcu-toggle-input collapse-toggle" type="checkbox">
+          <input class="pcu-toggle-input collapse-input" type="checkbox">
           <span class="pcu-toggle-round"></span>
         </label>
       </div>
-      <div class="collapse-collapsible slidedown">
+      <div class="collapse-collapsible slideup">
+        <div class="collapse-divider"></div>
         <div class="collapse-content">some collapse expand content</div>
       </div>
     </div>

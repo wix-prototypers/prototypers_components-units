@@ -1773,6 +1773,12 @@ img.pcu-float-notification-close {
   box-sizing: border-box;
 }
 
+.collapse-divider{
+  width: 100%;
+  height: 1px;
+  background-color: var(--D60);
+}
+
 .collapse-collapsible{
   width: 100%;
   box-sizing: border-box;
@@ -1780,6 +1786,10 @@ img.pcu-float-notification-close {
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
 
+}
+
+.collapse-content{
+  padding: 10px;
 }
 
 .slidedown {
