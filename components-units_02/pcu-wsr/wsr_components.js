@@ -277,7 +277,7 @@ const wsr_components = [
     <input class="pcu-toggle-input" type="checkbox">
     <span class="pcu-toggle-round"></span>
     </label>`
-  }, 
+  },
   {
     category: "Modal",
     htmlCode: `<div class="pcu-button-modal" openModalId="modal-1">Click Me</div>
@@ -383,5 +383,22 @@ const wsr_components = [
     category: "Table",
     htmlCode: tableHtml,
     jsCode: tableJs
+  },
+  {
+    category: "Collapse Expande",
+    htmlCode: `
+    <div class="collapse-container" style="">
+      <div class="collapse-header">
+        <div>collapse expande</div>
+        <label class="pcu-toggle-switch" size="large">
+          <input class="pcu-toggle-input collapse-toggle" type="checkbox">
+          <span class="pcu-toggle-round"></span>
+        </label>
+      </div>
+      <div class="collapse-collapsible">
+        <div class="collapse-content">some collapse expand content</div>
+      </div>
+    </div>
+    `,
   }
 ]
