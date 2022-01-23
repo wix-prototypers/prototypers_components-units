@@ -395,7 +395,7 @@ const wsr_components = [
           <span class="pcu-toggle-round"></span>
         </label>
       </div>
-      <div class="collapse-collapsible">
+      <div class="collapse-collapsible slidedown">
         <div class="collapse-content">some collapse expand content</div>
       </div>
     </div>

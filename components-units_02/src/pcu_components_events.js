@@ -194,3 +194,6 @@ function pcuComponentsEvents() {
     });
   });
 }
+
+  /* --------------------------- Collapse Expand --------------------------- */
+
