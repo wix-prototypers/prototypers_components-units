@@ -56,6 +56,28 @@ const wsr_components = [
     </button>`
   },
   {
+    category: "Loader Button",
+    attributes: [
+      {
+        attribute: "Disabled",
+        values: [false, true]
+      }],
+    htmlCode: `<button class="pcu-button pcu-button-loader" skin="standard" priority="primary">
+                <div id="pcu-button-loader-txt" style="">
+                  Loader
+                </div>
+                <div id="pcu-button-loader-icon" style="display: none;">
+                  <svg class="pcu-button-loader-iconTop" xmlns="http://www.w3.org/2000/svg" viewBox="-9 -9 18 18">
+                    <path stroke-width="3" d="M -4.4083893921935475 6.067627457812106 A 7.5 7.5 0 1 0 4.592425496802575e-16 -7.5"></path>
+                  </svg>
+                  <svg class="pcu-button-loader-iconBottom" xmlns="http://www.w3.org/2000/svg" viewBox="-9 -9 18 18">
+                    <path stroke-width="3" d="M 4.408389392193548 6.067627457812106 A 7.5 7.5 0 0 0 4.592425496802575e-16 -7.5"></path>
+                  </svg>
+                </div>
+              </button>`,
+    jsCode: loaderButtonJs
+  },
+  {
     category: "Icon Button",
     attributes: [{
       attribute: "Skin",
@@ -83,7 +105,7 @@ const wsr_components = [
     <img src="../pcu-wsr/wsr-icons/search-icon.svg">
     <input class="topbar-search-input" placeholder="Search...">
     </div>`,
-    jsCode:  searchFieldJs
+    jsCode: searchFieldJs
   },
   {
     category: "Text Feild",
@@ -221,16 +243,16 @@ const wsr_components = [
   {
     category: "Avatar - placeholder",
     attributes: [{
-        attribute: "Size",
-        values: ["tiny", "small", "medium", "large"]
+      attribute: "Size",
+      values: ["tiny", "small", "medium", "large"]
     }],
     htmlCode: `<div class="pcu-avatar" size="tiny"><img src="../pcu-wsr/wsr-icons/avatar-icon.svg"></div>`
   },
   {
     category: "Avatar - image",
     attributes: [{
-        attribute: "Size",
-        values: ["tiny", "small", "medium", "large"]
+      attribute: "Size",
+      values: ["tiny", "small", "medium", "large"]
     }],
     htmlCode: `<div class="pcu-avatar" size="tiny">
     <img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>`
@@ -255,6 +277,26 @@ const wsr_components = [
     <input class="pcu-toggle-input" type="checkbox">
     <span class="pcu-toggle-round"></span>
     </label>`
+  },
+  {
+    category: "Modal",
+    htmlCode: `<div class="pcu-button-modal" openModalId="modal-1">Click Me</div>
+                <div id="modal-1" class="pcu-modal-wrapper">
+                  <div class="pcu-modal-card" style="">
+                    <div class="pcu-modal-card-header">
+                      <div>Discard Changes?</div>
+                      <img class="closeModal" src="../pcu-wsr/wsr-icons/close-icon.svg" alt="">
+                    </div>
+                    <div>
+                      Are you sure you want to leave this page? Your changes won't be saved.
+                    </div>
+                    <div class="pcu-modal-card-actions">
+                      <button class="pcu-button closeModal" skin="standard" priority="secondary">Cancel</button>
+                      <button class="pcu-button closeModal" skin="standard" priority="primary">Discard</button>
+                    </div>
+                  </div>
+                </div>`,
+    jsCode: modalJs
   },
   {
     category: "Popover Menu",
@@ -341,5 +383,40 @@ const wsr_components = [
     category: "Table",
     htmlCode: tableHtml,
     jsCode: tableJs
+  },
+  {
+    category: "Collapse Expande",
+    htmlCode: `
+    <!--Collapse Toggle-->
+     <div class="pcu-collapse-container">
+       <div class="pcu-collapse-header">
+         <div>Collapse Expande Toggle</div>
+         <label class="pcu-toggle-switch" size="large">
+           <input class="pcu-toggle-input pcu-collapse-input" type="checkbox">
+           <span class="pcu-toggle-round"></span>
+         </label>
+       </div>
+       <div class="pcu-collapse-collapsible pcu-slideup">
+         <div class="pcu-collapse-divider"></div>
+         <div class="pcu-collapse-content">some collapse expand content</div>
+       </div>
+    </div>
+
+    <!--Collapse Chevron-->
+    <div class="pcu-collapse-container">
+      <div class="pcu-collapse-header">
+        <label class="pcu-label-chevron">
+          <div>Collapse Expande Chevron</div>
+          <input class="pcu-collapse-input pcu-chevron-input" type="checkbox">
+          <img class="pcu-chevron-input-img" src="../pcu-wsr/wsr-icons/chevdown-icon.svg">        
+        </label>
+      </div>
+      <div class="pcu-collapse-collapsible pcu-slideup">
+        <div class="pcu-collapse-divider"></div>
+        <div class="pcu-collapse-content">some collapse expand content</div>
+      </div>
+    </div>
+    `,
+    jsCode: collapseJs
   }
 ]

@@ -1,6 +1,22 @@
 /* This file allows us to save long code (html / js) separately.
 So you can define a variable with the long code and use it in wsr_components.js file.
 Use a consistent name depending on the component ! */
+
+ const loaderButtonJs = `
+document.querySelectorAll('.pcu-button-loader').forEach(function (elm) {
+  elm.addEventListener('click', function (e) {
+    var loaderTxt = document.getElementById("pcu-button-loader-txt");
+    var loaderIcon = document.getElementById("pcu-button-loader-icon");
+    loaderTxt.style.display = "none";
+    loaderIcon.style.display = "block";
+    setTimeout(() => {
+      loaderTxt.style.display = "block";
+      loaderIcon.style.display = "none";
+    }, 2000);
+  });
+});
+`
+
 const dockingPanelHTML=`
 <div class="pcu-docking-panel-outer">
       <div class="pcu-docking-panel-inner">
@@ -113,6 +129,47 @@ document.querySelectorAll('.pcu-float-notification .pcu-float-notification-close
     e.target.parentElement.classList.add('remove-notification')
   });
 });`
+
+const modalJs = `
+function displayModal(opacity, zIndex, modalId) {
+  let modalSelector ='';
+
+  if (opacity == 0) {
+    modalSelector = ".pcu-modal-wrapper"
+  }
+  if (opacity == 1) {
+    modalSelector = "#" + modalId
+  }
+
+  document.querySelectorAll(\`\${modalSelector}\`).forEach(function (modal) {
+    modal.style.opacity = opacity;
+    modal.style.zIndex = zIndex;
+  });
+}
+
+function animationModalCard(scaleVal) {
+  document.querySelectorAll('.pcu-modal-card').forEach(function (card) {
+    card.style.transform = \`scale(\${scaleVal})\`
+  });
+}
+
+displayModal(0, -1)
+
+document.querySelectorAll('.pcu-button-modal').forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    let modalId = btn.getAttribute("openmodalid");
+    displayModal(1, 5000, modalId);
+    animationModalCard("1")
+  });
+});
+
+document.querySelectorAll('.closeModal').forEach(function (btn) {
+  btn.addEventListener('click', function (e) {
+    displayModal(0, -1)
+    animationModalCard("0.93")
+  });
+});
+`
 
 const popoverMenuJs = `document.querySelectorAll('.pcu-popover-menu').forEach(function(popoverMenu) {
   popoverMenu.addEventListener('click', function (e) {
@@ -320,3 +377,15 @@ document.querySelectorAll('.pcu-popover-menu').forEach(function(popoverMenu) {
     });
   });
 });`
+
+const collapseJs=`
+document.querySelectorAll('.pcu-collapse-input').forEach(function (collapseInput) {
+  collapseInput.onchange = toggleCollpase;
+});
+
+function toggleCollpase(){
+  let collapsible = this.closest('.pcu-collapse-container').querySelector('.pcu-collapse-collapsible');
+  collapsible.classList.toggle('pcu-slidedown')
+  collapsible.classList.toggle('pcu-slideup')
+}
+`
