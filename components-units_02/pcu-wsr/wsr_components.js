@@ -388,32 +388,32 @@ const wsr_components = [
     category: "Collapse Expande",
     htmlCode: `
     <!--Collapse Toggle-->
-     <div class="collapse-container">
-       <div class="collapse-header">
+     <div class="pcu-collapse-container">
+       <div class="pcu-collapse-header">
          <div>Collapse Expande Toggle</div>
          <label class="pcu-toggle-switch" size="large">
-           <input class="pcu-toggle-input collapse-input" type="checkbox">
+           <input class="pcu-toggle-input pcu-collapse-input" type="checkbox">
            <span class="pcu-toggle-round"></span>
          </label>
        </div>
-       <div class="collapse-collapsible slideup">
-         <div class="collapse-divider"></div>
-         <div class="collapse-content">some collapse expand content</div>
+       <div class="pcu-collapse-collapsible pcu-slideup">
+         <div class="pcu-collapse-divider"></div>
+         <div class="pcu-collapse-content">some collapse expand content</div>
        </div>
     </div>
 
     <!--Collapse Chevron-->
-    <div class="collapse-container">
-      <div class="collapse-header">
-        <label class="label-chevron">
+    <div class="pcu-collapse-container">
+      <div class="pcu-collapse-header">
+        <label class="pcu-label-chevron">
           <div>Collapse Expande Chevron</div>
-          <input class="collapse-input chevron-input" type="checkbox">
-          <img class="chevron-input-img" src="../pcu-wsr/wsr-icons/chevdown-icon.svg">        
+          <input class="pcu-collapse-input pcu-chevron-input" type="checkbox">
+          <img class="pcu-chevron-input-img" src="../pcu-wsr/wsr-icons/chevdown-icon.svg">        
         </label>
       </div>
-      <div class="collapse-collapsible slideup">
-        <div class="collapse-divider"></div>
-        <div class="collapse-content">some collapse expand content</div>
+      <div class="pcu-collapse-collapsible pcu-slideup">
+        <div class="pcu-collapse-divider"></div>
+        <div class="pcu-collapse-content">some collapse expand content</div>
       </div>
     </div>
     `,

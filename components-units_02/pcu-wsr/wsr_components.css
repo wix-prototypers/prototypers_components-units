@@ -1755,7 +1755,7 @@ img.pcu-float-notification-close {
 
 /* ---------------------- Collapse Expand ---------------------- */
 
-.collapse-container {
+.pcu-collapse-container {
   background: white;
   border-radius: 8px;
   min-width: 280px;
@@ -1764,7 +1764,7 @@ img.pcu-float-notification-close {
   margin-top: 15px;
 }
 
-.collapse-header {
+.pcu-collapse-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1774,13 +1774,13 @@ img.pcu-float-notification-close {
   box-sizing: border-box;
 }
 
-.collapse-divider {
+.pcu-collapse-divider {
   width: 100%;
   height: 1px;
   background-color: var(--D60);
 }
 
-.collapse-collapsible {
+.pcu-collapse-collapsible {
   width: 100%;
   height: 100px;
   box-sizing: border-box;
@@ -1789,42 +1789,42 @@ img.pcu-float-notification-close {
   transition: max-height 0.5s ease-in-out;
 }
 
-.collapse-content {
+.pcu-collapse-content {
   padding: 10px;
 }
 
-.slidedown {
+.pcu-slidedown {
   max-height: 1000px;
 }
 
-.slideup {
+.pcu-slideup {
   max-height: 0;
 }
 
-.collapse-input {
+.pcu-collapse-input {
   cursor: pointer;
 }
 
-.label-chevron {
+.pcu-label-chevron {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.chevron-input {
+.pcu-chevron-input {
   position: absolute;
   width: 100%;
   left: 0;
   opacity: 0;
 }
 
-.chevron-input-img {
+.pcu-chevron-input-img {
   transform: rotate(180deg);
   transition: ease-in 0.2s;
 }
 
-.chevron-input:checked+.chevron-input-img{
+.pcu-chevron-input:checked+.pcu-chevron-input-img{
   transform: rotate(360deg);
   transition: ease-in 0.2s;
 }

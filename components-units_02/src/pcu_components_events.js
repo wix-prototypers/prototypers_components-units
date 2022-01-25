@@ -195,14 +195,14 @@ function pcuComponentsEvents() {
   });
 
   /* --------------------------- Collapse Expand --------------------------- */
-  document.querySelectorAll('.collapse-input').forEach(function (collapseInput) {
+  document.querySelectorAll('.pcu-collapse-input').forEach(function (collapseInput) {
     collapseInput.onchange = toggleCollpase;
   });
 
   function toggleCollpase(){
-    let collapsible = this.closest('.collapse-container').querySelector('.collapse-collapsible');
-    collapsible.classList.toggle('slidedown')
-    collapsible.classList.toggle('slideup')
+    let collapsible = this.closest('.pcu-collapse-container').querySelector('.pcu-collapse-collapsible');
+    collapsible.classList.toggle('pcu-slidedown')
+    collapsible.classList.toggle('pcu-slideup')
   }
 }
 
