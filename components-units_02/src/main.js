@@ -23,7 +23,17 @@ function mainEvents() {
         styleBtn.classList.add('selected');
         let selectedStyle = styleBtn.getAttribute('theme');
         let relevantComponents = wsr_components;
-        selectedStyle == "editor-x" ? relevantComponents = editorx_components : relevantComponents = wsr_components;
+        switch (selectedStyle) {
+          case "wsr":
+            relevantComponents = wsr_components;
+          break;
+          case "editor-x":
+            relevantComponents = editorx_components;
+          break;
+          case "base-ui":
+            relevantComponents = baseui_components;
+          break;
+        }
         // enable the relevant css file
         document.querySelectorAll(`[name="pcu-css-link"]`).forEach(function(cssLink) {
           cssLink.setAttribute('disabled', 'disabled');
