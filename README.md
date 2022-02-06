@@ -12,6 +12,10 @@ https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.1/com
 ```
 https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.1/components-units_02/pcu-editor-x/editor-x_components.css
 ```
+###### Base-UI components:
+```
+https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.1/components-units_02/pcu-base-ui/base-ui_components.css
+```
 <br>
 2. Open this [link](https://wix-prototypers.github.io/prototypers_components-units/components-units_02/src/index.html){:target="\_blank"} and search for the component you need.
 3. Copy the component code and use it in your prototype code.
