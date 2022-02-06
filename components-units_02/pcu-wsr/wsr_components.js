@@ -385,7 +385,7 @@ const wsr_components = [
     jsCode: tableJs
   },
   {
-    category: "Collapse Expande",
+    category: "Collapse Expand",
     htmlCode: `
     <!--Collapse Toggle-->
      <div class="pcu-collapse-container">
@@ -408,7 +408,7 @@ const wsr_components = [
         <label class="pcu-label-chevron">
           <div>Collapse Expande Chevron</div>
           <input class="pcu-collapse-input pcu-chevron-input" type="checkbox">
-          <img class="pcu-chevron-input-img" src="../pcu-wsr/wsr-icons/chevdown-icon.svg">        
+          <img class="pcu-chevron-input-img" src="../pcu-wsr/wsr-icons/chevdown-icon.svg">
         </label>
       </div>
       <div class="pcu-collapse-collapsible pcu-slideup">
