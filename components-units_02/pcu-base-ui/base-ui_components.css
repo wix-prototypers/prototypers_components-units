@@ -1,0 +1,42 @@
+/* ---------------------- Generals ---------------------- */
+:root {
+    --B1: #116dff;
+    --B2: #3885ff;
+    --B3: #80b1ff;
+    --B4: #d6e6ff;
+    --B5: #ebf2ff;
+}
+
+.preview-element>div {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* ---------------------- Thumbnails ---------------------- */
+.pcu-thumbnail-input {
+    display: none;
+}
+
+.pcu-horizontal-thumbnails>label>svg {
+    background: var(--B5);
+    border-radius: 4px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.pcu-horizontal-thumbnails>label>svg:hover {
+    background: var(--B4) !important;
+}
+
+.pcu-horizontal-thumbnails>label>input:checked+svg {
+    background: var(--B1) !important;
+    cursor: default;
+}
+
+.pcu-horizontal-thumbnails>label>input:checked+svg > g > path:first-child {
+    fill:var(--B4)
+}
+
+.pcu-horizontal-thumbnails>label>input:checked+svg > g > path:last-child {
+    fill:var(--B3)
+}
