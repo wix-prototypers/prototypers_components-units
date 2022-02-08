@@ -20,6 +20,13 @@
     --R2: #fc6d63;
     --R3: #fec5c1;
     --R4: #fee2e0;
+
+    /* Filter */
+    --filter-B1: invert(33%) sepia(39%) saturate(5273%) hue-rotate(209deg) brightness(99%) contrast(104%);
+    --filter-R1: invert(39%) sepia(49%) saturate(5097%) hue-rotate(341deg) brightness(101%) contrast(108%);
+    --filter-P10: invert(36%) sepia(71%) saturate(1166%) hue-rotate(254deg) brightness(89%) contrast(86%);
+    --filter-white: invert(94%) sepia(39%) saturate(2%) hue-rotate(316deg) brightness(108%) contrast(100%);
+    --filter-disable: invert(82%) sepia(10%) saturate(25%) hue-rotate(354deg) brightness(93%) contrast(84%);
 }
 
 .preview-element>div {
@@ -29,107 +36,149 @@
 
 
 /* ---------------------- Buttons ---------------------- */
-
-[skin="standard"][priority="primary"], [skin="standard"][priority="primary"]:active, [priority="inverted"]:active{
-    --button-bg-color: var(--B1);
-    --border-color: var(--B1);
-    --text-color: white;
-    --affix-icon-filter: var(--white-icon);
-}
-
-[skin="standard"][priority="primary"]:hover, [priority="inverted"]:hover{
+[skin="standard"][priority="primary"]:hover, [priority="inverted"]:hover {
     --button-bg-color: var(--B2);
     --border-color: var(--B2);
     --text-color: white;
-    --affix-icon-filter: var(--white-icon);
+    --affix-icon-filter: var(--filter-white);
 }
 
-[skin="standard"][priority="secondary"], [skin="standard"][priority="secondary"]:active{
-    --button-bg-color: var(--B5);
-    --border-color: var(--B5);
-    --text-color: var(--B1);
-    --affix-icon-filter: var(--white-icon);
+[skin="standard"][priority="primary"], [skin="standard"][priority="primary"]:active, [priority="inverted"]:active {
+    --button-bg-color: var(--B1);
+    --border-color: var(--B1);
+    --text-color: white;
+    --affix-icon-filter: var(--filter-white);
 }
 
-[skin="standard"][priority="secondary"]:hover{
+[skin="standard"][priority="secondary"]:hover {
     --button-bg-color: var(--B4);
     --border-color: var(--B4);
     --text-color: var(--B1);
-    --affix-icon-filter: var(--white-icon);
+    --affix-icon-filter: var(--filter-B1);
 }
 
-[skin="premium"][priority="primary"], [skin="premium"][priority="primary"]:active{
-    --button-bg-color: var(--P10);
-    --border-color: var(--P10);
-    --text-color: white;
-    --affix-icon-filter: var(--white-icon);
+[skin="standard"][priority="secondary"], [skin="standard"][priority="secondary"]:active {
+    --button-bg-color: var(--B5);
+    --border-color: var(--B5);
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--filter-B1);
 }
 
-[skin="premium"][priority="primary"]:hover{
+[skin="standard"][priority="secondary"]:disabled, [skin="premium"][priority="secondary"]:disabled {
+    --button-bg-color: #f0f0f0 !important;
+    --border-color: #f0f0f0 !important;
+    --text-color: #bcbcbc !important;
+    --affix-icon-filter: var(--filter-disable) !important;
+}
+
+[skin="premium"][priority="primary"]:hover {
     --button-bg-color: var(--P20);
     --border-color: var(--P20);
     --text-color: white;
-    --affix-icon-filter: var(--white-icon);
+    --affix-icon-filter: var(--filter-white);
 }
 
-[skin="premium"][priority="secondary"], [skin="premium"][priority="secondary"]:active{
-    --button-bg-color: var(--P40);
-    --border-color: var(--P40);
-    --text-color: var(--P10);
-    --affix-icon-filter: var(--white-icon);
+[skin="premium"][priority="primary"], [skin="premium"][priority="primary"]:active {
+    --button-bg-color: var(--P10);
+    --border-color: var(--P10);
+    --text-color: white;
+    --affix-icon-filter: var(--filter-white);
 }
 
-[skin="premium"][priority="secondary"]:hover{
+[skin="premium"][priority="secondary"]:hover {
     --button-bg-color: var(--P30);
     --border-color: var(--P30);
     --text-color: var(--P10);
-    --affix-icon-filter: var(--white-icon);
+    --affix-icon-filter: var(--filter-P10);
 }
 
-[skin="danger"][priority="primary"], [skin="danger"][priority="primary"]:active{
-    --button-bg-color: var(--R1);
-    --border-color: var(--R1);
-    --text-color: white;
-    --affix-icon-filter: var(--white-icon);
+[skin="premium"][priority="secondary"], [skin="premium"][priority="secondary"]:active {
+    --button-bg-color: var(--P40);
+    --border-color: var(--P40);
+    --text-color: var(--P10);
+    --affix-icon-filter: var(--filter-P10);
 }
 
-[skin="danger"][priority="primary"]:hover{
+[skin="danger"][priority="primary"]:hover {
     --button-bg-color: var(--R2);
     --border-color: var(--R2);
     --text-color: white;
-    --affix-icon-filter: var(--white-icon);
+    --affix-icon-filter: var(--filter-white);
 }
 
-[skin="danger"][priority="secondary"], [skin="danger"][priority="secondary"]:active{
-    --button-bg-color: var(--R4);
-    --border-color: var(--R4);
-    --text-color: var(--R1);
-    --affix-icon-filter: var(--white-icon);
+[skin="danger"][priority="primary"], [skin="danger"][priority="primary"]:active {
+    --button-bg-color: var(--R1);
+    --border-color: var(--R1);
+    --text-color: white;
+    --affix-icon-filter: var(--filter-white);
 }
 
-[skin="danger"][priority="secondary"]:hover{
+[skin="danger"][priority="secondary"]:hover {
     --button-bg-color: var(--R3);
     --border-color: var(--R3);
     --text-color: var(--R1);
-    --affix-icon-filter: var(--white-icon);
+    --affix-icon-filter: var(--filter-R1);
 }
 
-[priority="inverted"]{
+[skin="danger"][priority="secondary"], [skin="danger"][priority="secondary"]:active {
+    --button-bg-color: var(--R4);
+    --border-color: var(--R4);
+    --text-color: var(--R1);
+    --affix-icon-filter: var(--filter-R1);
+}
+
+[priority="inverted"] {
     --button-bg-color: transparent;
     --border-color: var(--B1);
     --text-color: var(--B1);
-    --affix-icon-filter: var(--white-icon);
+    --affix-icon-filter: var(--filter-B1);
 }
 
-[priority="text-button"]{
+[priority="text-button"] {
     --button-bg-color: transparent;
     --border-color: transparent;
     --text-color: var(--B1);
-    --affix-icon-filter: var(--white-icon);
+    --affix-icon-filter: var(--filter-B1);
 }
 
-[priority="text-button"]:hover{
+[priority="text-button"]:disabled {
+    --button-bg-color: transparent;
+    --border-color: transparent;
+    --text-color: #bcbcbc;
+    --affix-icon-filter: var(--filter-disable);
+}
+
+[priority="text-button"]:hover {
     text-decoration: underline;
+    --affix-icon-filter: var(--filter-disable);
+}
+
+[disabled="true"] {
+    --button-bg-color: #bcbcbc !important;
+    --border-color: #bcbcbc !important;
+    --text-color: white !important;
+    --affix-icon-filter: var(--filter-white) !important;
+}
+
+.pcu-button[size="small"] {
+    --font-size: 12px;
+    --button-height: 24px;
+    --button-padding: 0px 12px;
+    --line-height: 18px;
+}
+
+.pcu-button[size="medium"] {
+    --font-size: 14px;
+    --button-height: 30px;
+    --button-padding: 0px 18px;
+    --line-height: 18px;
+}
+
+.pcu-button[size="large"] {
+    --font-size: 16px;
+    --button-height: 36px;
+    --button-padding: 0px 24px;
+    --line-height: 24px;
 }
 
 .pcu-button {
@@ -139,18 +188,17 @@
     align-items: center;
     display: flex;
     border: 1px solid var(--border-color);
-    font-size: 16px;
-    line-height: 24px;
+    font-size: var(--font-size);
+    line-height: var(--line-height);
     font-weight: 400;
     font-weight: var(--pcu-font-weight-medium, 500);
     outline: 0;
     transition-duration: 100ms;
     transition-timing-function: linear;
     transition-property: background-color, color, border-color;
-    height: 36px;
-    min-width: 104px;
+    height: var(--button-height);
     border-radius: 18px;
-    padding: 0 23px;
+    padding: var(--button-padding);
     background-color: var(--button-bg-color);
     color: var(--text-color);
     text-decoration: none;
@@ -159,11 +207,27 @@
     cursor: pointer;
 }
 
-.pcu-button:disabled {
-    --button-bg-color: var(--D50) !important;
-    --border-color: var(--D50) !important;
-    --text-color: var(--D80) !important;
-    --affix-icon-filter: var(--white-icon) !important;
+.pcu-icon-button[size="small"], .pcu-icon-button[size="medium"] {
+    --icon-size: 18px;
+}
+
+.pcu-icon-button[size="large"] {
+    --icon-size: 24px;
+}
+
+.pcu-button-affix[icon="prefix"] {
+    --icon-margin: 0 6px 0 -6px;
+}
+
+.pcu-button-affix[icon="suffix"] {
+    --icon-margin: 0 -6px 0 6px;
+}
+
+.pcu-button-affix img, .pcu-button.pcu-icon-button img {
+    margin: var(--icon-margin);
+    filter: var(--affix-icon-filter);
+    height: var(--icon-size);
+    width: var(--icon-size);
 }
 
 /* ---------------------- Thumbnails ---------------------- */

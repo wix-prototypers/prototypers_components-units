@@ -12,21 +12,41 @@ const baseui_components = [
       values: ["standard", "premium", "danger"]
     },
     {
+      attribute: "Priority",
+      values: ["primary", "secondary", "inverted", "text-button"]
+    },
+    {
       attribute: "Size",
       values: ["small", "medium", "large"]
+    },
+    {
+      attribute: "Disabled",
+      values: [false, true]
+    }],
+    htmlCode: `<button class="pcu-button" skin="standard" priority="primary" size="small">Button</button>`
+  },
+  {
+    category: "Prefix Button",
+    attributes: [{
+      attribute: "Skin",
+      values: ["standard", "premium", "danger"]
     },
     {
       attribute: "Priority",
       values: ["primary", "secondary", "inverted", "text-button"]
     },
     {
+      attribute: "Size",
+      values: ["small", "medium", "large"]
+    },
+    {
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button" size="small" skin="standard" priority="primary">Button</button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="prefix"><img src="../pcu-wsr/wsr-icons/add-icon.svg">Prefix</button>`
   },
   {
-    category: "Alignment thumbnail",
+    category: "Alignment Thumbnail",
     attributes: [{
       attribute: "Alignment",
       values: ["horizontal", "vertical"]
