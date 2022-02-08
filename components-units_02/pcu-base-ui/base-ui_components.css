@@ -1,15 +1,169 @@
-/* ---------------------- Generals ---------------------- */
+/* ---------------------- Generals & Preset ---------------------- */
 :root {
+    /* primary */
     --B1: #116dff;
     --B2: #3885ff;
     --B3: #80b1ff;
     --B4: #d6e6ff;
     --B5: #ebf2ff;
+
+    /* Premium */
+    --P00: #8E21B1;
+    --P10: #AA4DC8;
+    --P20: #bb71d3;
+    --P30: #E5C9EE;
+    --P40: #EEDBF4;
+    --P50: #FAEEFF;
+
+    /* danger */
+    --R1: #fc3d2f;
+    --R2: #fc6d63;
+    --R3: #fec5c1;
+    --R4: #fee2e0;
 }
 
 .preview-element>div {
     width: fit-content;
     margin: 0 auto;
+}
+
+
+/* ---------------------- Buttons ---------------------- */
+
+[skin="standard"][priority="primary"], [skin="standard"][priority="primary"]:active, [priority="inverted"]:active{
+    --button-bg-color: var(--B1);
+    --border-color: var(--B1);
+    --text-color: white;
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="standard"][priority="primary"]:hover, [priority="inverted"]:hover{
+    --button-bg-color: var(--B2);
+    --border-color: var(--B2);
+    --text-color: white;
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="standard"][priority="secondary"], [skin="standard"][priority="secondary"]:active{
+    --button-bg-color: var(--B5);
+    --border-color: var(--B5);
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="standard"][priority="secondary"]:hover{
+    --button-bg-color: var(--B4);
+    --border-color: var(--B4);
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="premium"][priority="primary"], [skin="premium"][priority="primary"]:active{
+    --button-bg-color: var(--P10);
+    --border-color: var(--P10);
+    --text-color: white;
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="premium"][priority="primary"]:hover{
+    --button-bg-color: var(--P20);
+    --border-color: var(--P20);
+    --text-color: white;
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="premium"][priority="secondary"], [skin="premium"][priority="secondary"]:active{
+    --button-bg-color: var(--P40);
+    --border-color: var(--P40);
+    --text-color: var(--P10);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="premium"][priority="secondary"]:hover{
+    --button-bg-color: var(--P30);
+    --border-color: var(--P30);
+    --text-color: var(--P10);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="danger"][priority="primary"], [skin="danger"][priority="primary"]:active{
+    --button-bg-color: var(--R1);
+    --border-color: var(--R1);
+    --text-color: white;
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="danger"][priority="primary"]:hover{
+    --button-bg-color: var(--R2);
+    --border-color: var(--R2);
+    --text-color: white;
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="danger"][priority="secondary"], [skin="danger"][priority="secondary"]:active{
+    --button-bg-color: var(--R4);
+    --border-color: var(--R4);
+    --text-color: var(--R1);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[skin="danger"][priority="secondary"]:hover{
+    --button-bg-color: var(--R3);
+    --border-color: var(--R3);
+    --text-color: var(--R1);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[priority="inverted"]{
+    --button-bg-color: transparent;
+    --border-color: var(--B1);
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[priority="text-button"]{
+    --button-bg-color: transparent;
+    --border-color: transparent;
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--white-icon);
+}
+
+[priority="text-button"]:hover{
+    text-decoration: underline;
+}
+
+.pcu-button {
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-weight: var(--pcu-font-weight-medium, 500);
+    outline: 0;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    transition-property: background-color, color, border-color;
+    height: 36px;
+    min-width: 104px;
+    border-radius: 18px;
+    padding: 0 23px;
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+
+.pcu-button:disabled {
+    --button-bg-color: var(--D50) !important;
+    --border-color: var(--D50) !important;
+    --text-color: var(--D80) !important;
+    --affix-icon-filter: var(--white-icon) !important;
 }
 
 /* ---------------------- Thumbnails ---------------------- */
