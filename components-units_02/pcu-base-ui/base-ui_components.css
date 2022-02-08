@@ -13,6 +13,11 @@
 }
 
 /* ---------------------- Thumbnails ---------------------- */
+
+.pcu-horizontal-thumbnails {
+    display: flex;
+}
+
 .pcu-thumbnail-input {
     display: none;
 }
@@ -24,6 +29,10 @@
     cursor: pointer;
 }
 
+.pcu-horizontal-thumbnails[alignment="vertical"]>label>svg {
+    transform: rotate(90deg);
+}
+
 .pcu-horizontal-thumbnails>label>svg:hover {
     background: var(--B4) !important;
 }
@@ -33,10 +42,10 @@
     cursor: default;
 }
 
-.pcu-horizontal-thumbnails>label>input:checked+svg > g > path:first-child {
-    fill:var(--B4)
+.pcu-horizontal-thumbnails>label>input:checked+svg>g>path:first-child {
+    fill: var(--B4)
 }
 
-.pcu-horizontal-thumbnails>label>input:checked+svg > g > path:last-child {
-    fill:var(--B3)
+.pcu-horizontal-thumbnails>label>input:checked+svg>g>path:last-child {
+    fill: var(--B3)
 }
