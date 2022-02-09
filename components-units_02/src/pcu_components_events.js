@@ -199,11 +199,20 @@ function pcuComponentsEvents() {
     collapseInput.onchange = toggleCollpase;
   });
 
-  function toggleCollpase(){
+  function toggleCollpase() {
     let collapsible = this.closest('.pcu-collapse-container').querySelector('.pcu-collapse-collapsible');
     collapsible.classList.toggle('pcu-slidedown')
     collapsible.classList.toggle('pcu-slideup')
   }
+
+  /* --------------------------- Slider --------------------------- */
+  // var slider = document.getElementById("myRange");
+  // var output = document.getElementById("demo");
+  // output.innerHTML = slider.value;
+
+  // slider.oninput = function () {
+  //   output.innerHTML = this.value;
+  // }
 }
 
 
