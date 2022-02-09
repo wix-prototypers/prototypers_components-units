@@ -43,7 +43,27 @@ const baseui_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="prefix"><img src="../pcu-wsr/wsr-icons/add-icon.svg">Prefix</button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="prefix"><img src="../pcu-base-ui/base-ui-icons/add-icon.svg">Prefix</button>`
+  },
+  {
+    category: "Suffix Button",
+    attributes: [{
+      attribute: "Skin",
+      values: ["standard", "premium", "danger"]
+    },
+    {
+      attribute: "Priority",
+      values: ["primary", "secondary", "inverted", "text-button"]
+    },
+    {
+      attribute: "Size",
+      values: ["small", "medium", "large"]
+    },
+    {
+      attribute: "Disabled",
+      values: [false, true]
+    }],
+    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="suffix">Suffix<img src="../pcu-base-ui/base-ui-icons/chevdown-icon.svg"></button>`
   },
   {
     category: "Alignment Thumbnail",
@@ -80,5 +100,18 @@ const baseui_components = [
            </svg>
          </label>  
     </div>`
-  }
+  },
+  {
+    category: "Dropdown",
+    htmlCode: `
+    <div class="pcu-dropdown">
+      <input class="pcu-text-input pcu-dropdown-input" type="text" value="Default" readonly>
+      <div class="pcu-dropdown-content">
+        <div class="pcu-dropdown-item selected" value="Default">Default</div>
+        <div class="pcu-dropdown-item" value="Sticky">Sticky</div>
+        <div class="pcu-dropdown-item" value="Pinned">Pinned</div>
+      </div>
+    </div>`,
+    jsCode: dropdownJs
+  },
 ]
