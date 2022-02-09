@@ -2,9 +2,10 @@
 :root {
     /* General */
     --D1: #17191c;
-    --D2: #333850;
+    --D2: #424851;
     --D3: #595d70;
     --D4: #868aa5;
+    --D35: #bec2ca;
     --D5: #cfd1dc;
     --D6: #f4f5f8;
     --D7: #ffffff;
@@ -270,6 +271,48 @@
 }
 
 /* ---------------------- Drop Down ---------------------- */
+
+.pcu-dropdown-composite{
+    background-color: var(--D7);
+    padding: 14px 24px;
+}
+
+.pcu-dropdown-with-color {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pcu-dropdown-with-color-divider {
+    width: 1px;
+    height: 24px;
+    background: #d9e1e8;
+    margin: 0px 8px;
+}
+
+.pcu-color-picker{
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid var(--D35);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pcu-color-picker:hover{
+    border: 2px solid var(--B4);
+}
+
+.pcu-dropdown-label{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 18px;
+    color: var(--D2);
+}
+
 .pcu-dropdown {
     background-color: var(--D7);
     display: flex;
