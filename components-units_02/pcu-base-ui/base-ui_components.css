@@ -494,7 +494,7 @@ input:focus {
     border-radius: 3px;
 }
 
-.pcu-container-input-number{
+.pcu-container-input-number {
     position: relative;
 }
 
@@ -512,11 +512,19 @@ input:focus {
     border-radius: 8px;
 }
 
-.pcu-input-number-units{
+.pcu-input-number-units {
     font-size: 12px;
     position: absolute;
     pointer-events: none;
     z-index: 1;
-    right: 0;
+    right: 4px;
     bottom: 10px;
+}
+
+.pcu-slider:hover .pcu-input-number {
+    background: var(--B5);
+}
+
+.pcu-input-number:hover{
+    background-color: var(--B4) !important;
 }
