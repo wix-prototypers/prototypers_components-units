@@ -134,7 +134,8 @@ const baseui_components = [
           <span class="pcu-input-number-units">px</span>
       </div>
     </div>
-      `
+      `,
+      jsCode: sliderJs
   },
 ]
 
