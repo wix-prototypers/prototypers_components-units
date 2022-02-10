@@ -206,13 +206,36 @@ function pcuComponentsEvents() {
   }
 
   /* --------------------------- Slider --------------------------- */
-  // var slider = document.getElementById("myRange");
-  // var output = document.getElementById("demo");
-  // output.innerHTML = slider.value;
+  document.querySelectorAll('.prt-slider').forEach((sliderField) => {
+    changesSliderWidth(sliderField, sliderField.getAttribute('value'))
+  });
 
-  // slider.oninput = function () {
-  //   output.innerHTML = this.value;
-  // }
+  /* Update the background width of the slider after changing the value
+PARAMETERS: name = for get the relevant input field, value = the selected value */
+  function changesSliderWidth(sliderInput, value) {
+    const inputMin = sliderInput.getAttribute('min'); //0
+    const inputMax = sliderInput.getAttribute('max'); //100
+    const gapValues = inputMax - inputMin; //100
+    const inputStep = sliderInput.getAttribute('step'); //1
+    const sumSteps = gapValues / inputStep; //100
+    const sliderWidth = 175; // The width set for the slider
+    const stepWidth = sliderWidth / sumSteps; //100
+    const currentVal = value; //50
+    const finalVal = currentVal - inputMin; // The current value is less than the initial value //50
+    const moveSteps = finalVal / inputStep; // 50
+    const finalWidth = Math.round(moveSteps * stepWidth); //
+    console.log(finalWidth);
+    // append the new slider style
+    const styleTagID = `prt-panel-${sliderInput.name}-styling`;
+    const newStyling = `.prt-slider[name=${sliderInput.name}]::after{width:${finalWidth}px}`;
+    const sliderStyleTag = document.getElementById(styleTagID);
+    // if there is an exsit style for this slider - update the style tag conent, if not - create a new style tag
+    if (sliderStyleTag) {
+      sliderStyleTag.innerHTML = newStyling;
+    } else {
+      document.head.insertAdjacentHTML('beforeend', `<style id='${styleTagID}'>${newStyling}</style>`)
+    }
+  }
 }
 
 
