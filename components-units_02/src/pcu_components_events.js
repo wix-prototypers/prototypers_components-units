@@ -224,7 +224,6 @@ PARAMETERS: name = for get the relevant input field, value = the selected value 
     const finalVal = currentVal - inputMin; // The current value is less than the initial value //50
     const moveSteps = finalVal / inputStep; // 50
     const finalWidth = Math.round(moveSteps * stepWidth); //
-    console.log(finalWidth);
     // append the new slider style
     const styleTagID = `prt-panel-${sliderInput.name}-styling`;
     const newStyling = `.prt-slider[name=${sliderInput.name}]::after{width:${finalWidth}px}`;
@@ -236,6 +235,15 @@ PARAMETERS: name = for get the relevant input field, value = the selected value 
       document.head.insertAdjacentHTML('beforeend', `<style id='${styleTagID}'>${newStyling}</style>`)
     }
   }
+  document.querySelectorAll('.prt-slider').forEach((inputChanged) => {
+    inputChanged.addEventListener('input', function (e) {
+      const inputElm = e.target;
+      let selectedValue = inputElm.value;
+      changesSliderWidth(inputElm, selectedValue);
+      let spinnerField = document.querySelector('.prt-spinner');
+      spinnerField.value = selectedValue;
+    })
+  })
 }
 
 
