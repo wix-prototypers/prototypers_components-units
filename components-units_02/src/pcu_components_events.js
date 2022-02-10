@@ -232,7 +232,6 @@ PARAMETERS: name = for get the relevant input field, value = the selected value 
     if (sliderStyleTag) {
       sliderStyleTag.innerHTML = newStyling;
     } else {
-      console.log("hhh");
       document.head.insertAdjacentHTML('beforeend', `<style id='${styleTagID}'>${newStyling}</style>`)
     }
   }
@@ -241,8 +240,16 @@ PARAMETERS: name = for get the relevant input field, value = the selected value 
       const inputElm = e.target;
       let selectedValue = inputElm.value;
       changesSliderWidth(inputElm, selectedValue);
-      let spinnerField = document.querySelector('.pcu-input-number');
-      spinnerField.value = selectedValue;
+      // let spinnerField = document.querySelector('.pcu-input-number');
+      // spinnerField.value = selectedValue;
+      if (inputElm.classList.contains('pcu-input-number')) { // need to update the slider value
+        let sliderField = document.querySelector('.pcu-slider-input');
+        sliderField.value = selectedValue;
+      }
+      if (e.target.classList.contains('pcu-slider-input')) { // need to update the spinner value
+        let spinnerField = document.querySelector('.pcu-input-number');
+        spinnerField.value = selectedValue;
+      }
     })
   })
 }

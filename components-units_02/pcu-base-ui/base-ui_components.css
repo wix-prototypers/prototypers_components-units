@@ -524,3 +524,14 @@ input:focus {
 .pcu-input-number:hover{
     background-color: var(--B4) !important;
 }
+
+.pcu-input-number::-webkit-inner-spin-button {
+    appearance: auto;
+    display: inline-block;
+    cursor: default;
+    align-self: stretch;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-user-modify: read-only !important;
+    flex: 0 0 auto;
+}
