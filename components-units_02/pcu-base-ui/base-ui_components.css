@@ -356,6 +356,9 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    background: #00ffff00;
+    position: relative;
+    z-index: 1;
 }
 
 .pcu-dropdown-item {
