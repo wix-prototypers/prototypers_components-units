@@ -128,10 +128,11 @@ const baseui_components = [
     <div class="pcu-slider-composite">
       <div class="pcu-slider-label">Text vertical padding</div>
       <div class="pcu-slider">
-        <input type="range" class="pcu-slider-input" name="slider" value="50" min="0" max="100" step="1">
+        <input type="range" class="pcu-slider-input" name="slider1" value="50" min="0" max="100" step="1">
         <div class="pcu-container-input-number">
-          <input type="number" class="pcu-input-number" name="slider" min="0" max="100" step="1" suffix="px" value="50">
+          <input type="number" class="pcu-input-number" name="slider1" min="0" max="100" step="1" suffix="px" value="50">
           <span class="pcu-input-number-units">px</span>
+        </div>
       </div>
     </div>
       `,

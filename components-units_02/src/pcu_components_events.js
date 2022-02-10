@@ -236,6 +236,7 @@ PARAMETERS: name = for get the relevant input field, value = the selected value 
     }
   }
   document.querySelectorAll('.pcu-slider input').forEach((inputChanged) => {
+    const inputChangedParent = inputChanged.closest('.pcu-slider ');
     inputChanged.addEventListener('input', function (e) {
       const inputElm = e.target;
       let selectedValue = inputElm.value;
@@ -243,11 +244,11 @@ PARAMETERS: name = for get the relevant input field, value = the selected value 
       // let spinnerField = document.querySelector('.pcu-input-number');
       // spinnerField.value = selectedValue;
       if (inputElm.classList.contains('pcu-input-number')) { // need to update the slider value
-        let sliderField = document.querySelector('.pcu-slider-input');
+        let sliderField = inputChangedParent.querySelector('.pcu-slider-input');
         sliderField.value = selectedValue;
       }
       if (e.target.classList.contains('pcu-slider-input')) { // need to update the spinner value
-        let spinnerField = document.querySelector('.pcu-input-number');
+        let spinnerField = inputChangedParent.querySelector('.pcu-input-number');
         spinnerField.value = selectedValue;
       }
     })
