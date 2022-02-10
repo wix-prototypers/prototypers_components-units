@@ -206,41 +206,42 @@ function pcuComponentsEvents() {
   }
 
   /* --------------------------- Slider --------------------------- */
-  document.querySelectorAll('.prt-slider').forEach((sliderField) => {
+  document.querySelectorAll('.pcu-slider-input').forEach((sliderField) => {
     changesSliderWidth(sliderField, sliderField.getAttribute('value'))
   });
 
   /* Update the background width of the slider after changing the value
 PARAMETERS: name = for get the relevant input field, value = the selected value */
   function changesSliderWidth(sliderInput, value) {
-    const inputMin = sliderInput.getAttribute('min'); //0
-    const inputMax = sliderInput.getAttribute('max'); //100
-    const gapValues = inputMax - inputMin; //100
-    const inputStep = sliderInput.getAttribute('step'); //1
-    const sumSteps = gapValues / inputStep; //100
+    const inputMin = sliderInput.getAttribute('min');
+    const inputMax = sliderInput.getAttribute('max');
+    const gapValues = inputMax - inputMin;
+    const inputStep = sliderInput.getAttribute('step');
+    const sumSteps = gapValues / inputStep;
     const sliderWidth = 175; // The width set for the slider
-    const stepWidth = sliderWidth / sumSteps; //100
-    const currentVal = value; //50
-    const finalVal = currentVal - inputMin; // The current value is less than the initial value //50
-    const moveSteps = finalVal / inputStep; // 50
+    const stepWidth = sliderWidth / sumSteps;
+    const currentVal = value;
+    const finalVal = currentVal - inputMin; // The current value is less than the initial value
+    const moveSteps = finalVal / inputStep;
     const finalWidth = Math.round(moveSteps * stepWidth); //
     // append the new slider style
-    const styleTagID = `prt-panel-${sliderInput.name}-styling`;
-    const newStyling = `.prt-slider[name=${sliderInput.name}]::after{width:${finalWidth}px}`;
+    const styleTagID = `pcu-slider-input-${sliderInput.name}-styling`;
+    const newStyling = `.pcu-slider-input[name=${sliderInput.name}]::after{width:${finalWidth}px}`;
     const sliderStyleTag = document.getElementById(styleTagID);
     // if there is an exsit style for this slider - update the style tag conent, if not - create a new style tag
     if (sliderStyleTag) {
       sliderStyleTag.innerHTML = newStyling;
     } else {
+      console.log("hhh");
       document.head.insertAdjacentHTML('beforeend', `<style id='${styleTagID}'>${newStyling}</style>`)
     }
   }
-  document.querySelectorAll('.prt-slider').forEach((inputChanged) => {
+  document.querySelectorAll('.pcu-slider input').forEach((inputChanged) => {
     inputChanged.addEventListener('input', function (e) {
       const inputElm = e.target;
       let selectedValue = inputElm.value;
       changesSliderWidth(inputElm, selectedValue);
-      let spinnerField = document.querySelector('.prt-spinner');
+      let spinnerField = document.querySelector('.pcu-input-number');
       spinnerField.value = selectedValue;
     })
   })

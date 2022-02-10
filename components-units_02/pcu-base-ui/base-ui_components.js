@@ -127,11 +127,11 @@ const baseui_components = [
     htmlCode: `
     <div class="pcu-slider-composite">
       <div class="pcu-slider-label">Text vertical padding</div>
-      <div class="pcu-slider prt-input-number-area">
-        <input type="range" class="pcu-slider-input prt-slider prt-unchecked-input" name="example-input-number" value="50" min="0" max="100" step="1">
-        <div class="pcu-container-input-number prt-container-input-number">
-          <input type="number" class="pcu-input-number prt-spinner prt-unchecked-input" name="example-input-number" min="0" max="100" step="1" suffix="px" value="50">
-          <span class="pcu-input-number-units prt-sfx-label">px</span></div>
+      <div class="pcu-slider">
+        <input type="range" class="pcu-slider-input" name="slider" value="50" min="0" max="100" step="1">
+        <div class="pcu-container-input-number">
+          <input type="number" class="pcu-input-number" name="slider" min="0" max="100" step="1" suffix="px" value="50">
+          <span class="pcu-input-number-units">px</span>
       </div>
     </div>
       `
