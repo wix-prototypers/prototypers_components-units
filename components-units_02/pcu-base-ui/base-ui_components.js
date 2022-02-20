@@ -153,5 +153,14 @@ const baseui_components = [
     </div>
       `,
   },
+  {
+    category: "Checkbox",
+    htmlCode: `
+    <div class="pcu-checkbox-container">
+     <input id="checkbox-1" class="pcu-checkbox-input" type="checkbox">
+     <label for="checkbox-1" class="pcu-checkbox-label">Unchecked</label> 
+    </div>
+      `,
+  },
 ]
 
