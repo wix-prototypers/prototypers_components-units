@@ -136,7 +136,7 @@ const baseui_components = [
       </div>
     </div>
       `,
-      jsCode: sliderJs
+    jsCode: sliderJs
   },
   {
     category: "Tabs",
@@ -155,12 +155,18 @@ const baseui_components = [
   },
   {
     category: "Checkbox",
-    htmlCode: `
-    <div class="pcu-checkbox-container">
-     <input id="checkbox-1" class="pcu-checkbox-input" type="checkbox">
-     <label for="checkbox-1" class="pcu-checkbox-label">Unchecked</label> 
-    </div>
-      `,
+    attributes: [{
+      attribute: "Checked",
+      values: [false, true]
+    },
+    {
+      attribute: "Disabled",
+      values: [false, true]
+    }],
+    htmlCode: `<div class="pcu-checkbox-container">
+    <input id="checkbox-1" class="pcu-checkbox-input" type="checkbox">
+    <label for="checkbox-1" class="pcu-checkbox-label">Unchecked</label>
+    </div>`
   },
 ]
 

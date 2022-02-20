@@ -646,9 +646,15 @@ input[name="pcu-tabs-input"]:checked+.pcu-tabs-label:after {
   }
   
   input[type=checkbox].pcu-checkbox-input:disabled::before {
-    border-color: rgba(22, 45, 61, .3) !important;
-    background-color: #e8e9ea !important;
-    box-shadow: inset 0 0 0 2px #e8e9ea !important;
+    border-color: #bcbcbc !important;
+    background-color: var(--D7) !important;
+    box-shadow: inset 0 0 0 2px var(--D7) !important;
+  }
+
+  input[type=checkbox].pcu-checkbox-input:checked:disabled:before {
+    border-color: #bcbcbc !important;
+    background-color: #bcbcbc !important;
+    box-shadow: inset 0 0 0 2px #bcbcbc !important;
   }
   
   .pcu-checkbox-container .pcu-checkbox-label {
