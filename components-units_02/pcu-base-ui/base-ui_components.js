@@ -138,5 +138,20 @@ const baseui_components = [
       `,
       jsCode: sliderJs
   },
+  {
+    category: "Tabs",
+    htmlCode: `
+    <div class="pcu-tabs" style="">
+        <input type="radio" id="pcu-tab-1" name="pcu-tabs-input" value="on" checked="">
+        <label class="pcu-tabs-label" for="pcu-tab-1">
+            Option 1
+        </label>
+        <input type="radio" id="pcu-tab-2" name="pcu-tabs-input" value="around">
+        <label class="pcu-tabs-label" for="pcu-tab-2">
+            Option 2
+        </label>
+    </div>
+      `,
+  },
 ]
 
