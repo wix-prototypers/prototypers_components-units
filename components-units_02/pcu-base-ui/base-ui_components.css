@@ -315,6 +315,7 @@
     display: flex;
     position: relative;
     min-width: 192px;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
 }

@@ -102,6 +102,25 @@ const baseui_components = [
     </div>`
   },
   {
+    category: "Dropdown",
+    htmlCode: `
+    <div class="pcu-dropdown-composite">
+      <div class="pcu-dropdown-label">Font and Color</div>
+      <div class="pcu-dropdown-with-color">
+        <div class="pcu-dropdown">
+          <input class="pcu-text-input pcu-dropdown-input" type="text" value="Default" readonly>
+          <div class="pcu-dropdown-content">
+            <div class="pcu-dropdown-item selected" value="Default">Default</div>
+            <div class="pcu-dropdown-item" value="Sticky">Sticky</div>
+            <div class="pcu-dropdown-item" value="Pinned">Pinned</div>
+          </div>
+        </div>
+      </div>
+    </div>
+      `,
+    jsCode: dropdownJs
+  },
+  {
     category: "Dropdown with Color Picker",
     htmlCode: `
     <div class="pcu-dropdown-composite">
