@@ -4,7 +4,7 @@
 
 /* Array with all the components, Note that there is a legality to the structure, so if you want to add a new
 component - Please read the instructions in the README file ! */
-const baseui_components = [
+const classicEditor_components = [
   {
     category: "Regular Button",
     attributes: [{
@@ -43,7 +43,7 @@ const baseui_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="prefix"><img src="../pcu-base-ui/base-ui-icons/add-icon.svg">Prefix</button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="prefix"><img src="../pcu-base-ui/classic-editor-icons/add-icon.svg">Prefix</button>`
   },
   {
     category: "Suffix Button",
@@ -63,7 +63,7 @@ const baseui_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="suffix">Suffix<img src="../pcu-base-ui/base-ui-icons/chevdown-icon.svg"></button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="suffix">Suffix<img src="../pcu-base-ui/classic-editor-icons/chevdown-icon.svg"></button>`
   },
   {
     category: "Alignment Thumbnail",
@@ -98,7 +98,7 @@ const baseui_components = [
                  <path fill="#3885ff" d="M24.3636364,13 C24.3636364,11.896 23.4676364,11 22.3636364,11 L16.3636364,11 C15.2596364,11 14.3636364,11.896 14.3636364,13 L14.3636364,16 C14.3636364,17.104 15.2596364,18 16.3636364,18 L22.3636364,18 C23.4676364,18 24.3636364,17.104 24.3636364,16 L24.3636364,13 Z"></path>
              </g>
            </svg>
-         </label>  
+         </label>
     </div>`
   },
   {
@@ -116,8 +116,7 @@ const baseui_components = [
           </div>
         </div>
       </div>
-    </div>
-      `,
+    </div>`,
     jsCode: dropdownJs
   },
   {
@@ -137,8 +136,7 @@ const baseui_components = [
         <div class="pcu-dropdown-with-color-divider"></div>
         <div class="pcu-color-picker"></div>
       </div>
-    </div>
-      `,
+    </div>`,
     jsCode: dropdownJs
   },
   {
@@ -153,8 +151,7 @@ const baseui_components = [
           <span class="pcu-input-number-units">px</span>
         </div>
       </div>
-    </div>
-      `,
+    </div>`,
     jsCode: sliderJs
   },
   {
@@ -169,8 +166,7 @@ const baseui_components = [
         <label class="pcu-tabs-label" for="pcu-tab-2">
             Option 2
         </label>
-    </div>
-      `,
+    </div>`,
   },
   {
     category: "Checkbox",
@@ -188,4 +184,3 @@ const baseui_components = [
     </div>`
   },
 ]
-
