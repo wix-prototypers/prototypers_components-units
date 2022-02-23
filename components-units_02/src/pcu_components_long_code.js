@@ -389,3 +389,53 @@ function toggleCollpase(){
   collapsible.classList.toggle('pcu-slideup')
 }
 `
+
+const sliderJs = `
+document.querySelectorAll('.pcu-slider-input').forEach((sliderField) => {
+  changesSliderWidth(sliderField, sliderField.getAttribute('value'))
+});
+
+/* Update the background width of the slider after changing the value
+PARAMETERS: name = for get the relevant input field, value = the selected value */
+function changesSliderWidth(sliderInput, value) {
+  const inputMin = sliderInput.getAttribute('min');
+  const inputMax = sliderInput.getAttribute('max');
+  const gapValues = inputMax - inputMin;
+  const inputStep = sliderInput.getAttribute('step');
+  const sumSteps = gapValues / inputStep;
+  const sliderWidth = 175; // The width set for the slider
+  const stepWidth = sliderWidth / sumSteps;
+  const currentVal = value;
+  const finalVal = currentVal - inputMin; // The current value is less than the initial value
+  const moveSteps = finalVal / inputStep;
+  const finalWidth = Math.round(moveSteps * stepWidth); //
+  // append the new slider style
+  const styleTagID = \`pcu-slider-input-\${sliderInput.name}-styling\`;
+  const newStyling = \`.pcu-slider-input[name=\${sliderInput.name}]::after{width:\${finalWidth}px}\`;
+  const sliderStyleTag = document.getElementById(styleTagID);
+  // if there is an exsit style for this slider - update the style tag conent, if not - create a new style tag
+  if (sliderStyleTag) {
+    sliderStyleTag.innerHTML = newStyling;
+  } else {
+    document.head.insertAdjacentHTML('beforeend', \`<style id='\${styleTagID}'>\${newStyling}</style>\`)
+  }
+}
+document.querySelectorAll('.pcu-slider input').forEach((inputChanged) => {
+  const inputChangedParent = inputChanged.closest('.pcu-slider ');
+  inputChanged.addEventListener('input', function (e) {
+    const inputElm = e.target;
+    let selectedValue = inputElm.value;
+    changesSliderWidth(inputElm, selectedValue);
+    // let spinnerField = document.querySelector('.pcu-input-number');
+    // spinnerField.value = selectedValue;
+    if (inputElm.classList.contains('pcu-input-number')) { // need to update the slider value
+      let sliderField = inputChangedParent.querySelector('.pcu-slider-input');
+      sliderField.value = selectedValue;
+    }
+    if (e.target.classList.contains('pcu-slider-input')) { // need to update the spinner value
+      let spinnerField = inputChangedParent.querySelector('.pcu-input-number');
+      spinnerField.value = selectedValue;
+    }
+  })
+})
+`

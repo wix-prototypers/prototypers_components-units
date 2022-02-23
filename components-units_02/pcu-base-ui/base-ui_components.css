@@ -1,0 +1,668 @@
+/* ---------------------- Generals & Preset ---------------------- */
+:root {
+    /* General */
+    --D1: #17191c;
+    --D2: #424851;
+    --D3: #595d70;
+    --D4: #868aa5;
+    --D35: #bec2ca;
+    --D5: #cfd1dc;
+    --D6: #f4f5f8;
+    --D7: #ffffff;
+
+    /* primary */
+    --B1: #116dff;
+    --B2: #3885ff;
+    --B3: #80b1ff;
+    --B35: #a5c7ff;
+    --B4: #d6e6ff;
+    --B5: #ebf2ff;
+
+    /* Premium */
+    --P00: #8E21B1;
+    --P10: #AA4DC8;
+    --P20: #bb71d3;
+    --P30: #E5C9EE;
+    --P40: #EEDBF4;
+    --P50: #FAEEFF;
+
+    /* danger */
+    --R1: #fc3d2f;
+    --R2: #fc6d63;
+    --R3: #fec5c1;
+    --R4: #fee2e0;
+
+    /* Filter */
+    --filter-B1: invert(33%) sepia(39%) saturate(5273%) hue-rotate(209deg) brightness(99%) contrast(104%);
+    --filter-R1: invert(39%) sepia(49%) saturate(5097%) hue-rotate(341deg) brightness(101%) contrast(108%);
+    --filter-P10: invert(36%) sepia(71%) saturate(1166%) hue-rotate(254deg) brightness(89%) contrast(86%);
+    --filter-white: invert(94%) sepia(39%) saturate(2%) hue-rotate(316deg) brightness(108%) contrast(100%);
+    --filter-disable: invert(82%) sepia(10%) saturate(25%) hue-rotate(354deg) brightness(93%) contrast(84%);
+}
+
+/* ---------------------- Buttons ---------------------- */
+[skin="standard"][priority="primary"]:hover, [priority="inverted"]:hover {
+    --button-bg-color: var(--B2);
+    --border-color: var(--B2);
+    --text-color: white;
+    --affix-icon-filter: var(--filter-white);
+}
+
+[skin="standard"][priority="primary"], [skin="standard"][priority="primary"]:active, [priority="inverted"]:active {
+    --button-bg-color: var(--B1);
+    --border-color: var(--B1);
+    --text-color: white;
+    --affix-icon-filter: var(--filter-white);
+}
+
+[skin="standard"][priority="secondary"]:hover {
+    --button-bg-color: var(--B4);
+    --border-color: var(--B4);
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--filter-B1);
+}
+
+[skin="standard"][priority="secondary"], [skin="standard"][priority="secondary"]:active {
+    --button-bg-color: var(--B5);
+    --border-color: var(--B5);
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--filter-B1);
+}
+
+[skin="standard"][priority="secondary"]:disabled, [skin="premium"][priority="secondary"]:disabled {
+    --button-bg-color: #f0f0f0 !important;
+    --border-color: #f0f0f0 !important;
+    --text-color: #bcbcbc !important;
+    --affix-icon-filter: var(--filter-disable) !important;
+}
+
+[skin="premium"][priority="primary"]:hover {
+    --button-bg-color: var(--P20);
+    --border-color: var(--P20);
+    --text-color: white;
+    --affix-icon-filter: var(--filter-white);
+}
+
+[skin="premium"][priority="primary"], [skin="premium"][priority="primary"]:active {
+    --button-bg-color: var(--P10);
+    --border-color: var(--P10);
+    --text-color: white;
+    --affix-icon-filter: var(--filter-white);
+}
+
+[skin="premium"][priority="secondary"]:hover {
+    --button-bg-color: var(--P30);
+    --border-color: var(--P30);
+    --text-color: var(--P10);
+    --affix-icon-filter: var(--filter-P10);
+}
+
+[skin="premium"][priority="secondary"], [skin="premium"][priority="secondary"]:active {
+    --button-bg-color: var(--P40);
+    --border-color: var(--P40);
+    --text-color: var(--P10);
+    --affix-icon-filter: var(--filter-P10);
+}
+
+[skin="danger"][priority="primary"]:hover {
+    --button-bg-color: var(--R2);
+    --border-color: var(--R2);
+    --text-color: white;
+    --affix-icon-filter: var(--filter-white);
+}
+
+[skin="danger"][priority="primary"], [skin="danger"][priority="primary"]:active {
+    --button-bg-color: var(--R1);
+    --border-color: var(--R1);
+    --text-color: white;
+    --affix-icon-filter: var(--filter-white);
+}
+
+[skin="danger"][priority="secondary"]:hover {
+    --button-bg-color: var(--R3);
+    --border-color: var(--R3);
+    --text-color: var(--R1);
+    --affix-icon-filter: var(--filter-R1);
+}
+
+[skin="danger"][priority="secondary"], [skin="danger"][priority="secondary"]:active {
+    --button-bg-color: var(--R4);
+    --border-color: var(--R4);
+    --text-color: var(--R1);
+    --affix-icon-filter: var(--filter-R1);
+}
+
+[priority="inverted"] {
+    --button-bg-color: transparent;
+    --border-color: var(--B1);
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--filter-B1);
+}
+
+[priority="text-button"] {
+    --button-bg-color: transparent;
+    --border-color: transparent;
+    --text-color: var(--B1);
+    --affix-icon-filter: var(--filter-B1);
+}
+
+[priority="text-button"]:disabled {
+    --button-bg-color: transparent;
+    --border-color: transparent;
+    --text-color: #bcbcbc;
+    --affix-icon-filter: var(--filter-disable);
+}
+
+[priority="text-button"]:hover {
+    text-decoration: underline;
+    --affix-icon-filter: var(--filter-disable);
+}
+
+[disabled="true"] {
+    --button-bg-color: #bcbcbc !important;
+    --border-color: #bcbcbc !important;
+    --text-color: white !important;
+    --affix-icon-filter: var(--filter-white) !important;
+}
+
+.pcu-button[size="small"] {
+    --font-size: 12px;
+    --button-height: 24px;
+    --button-padding: 0px 12px;
+    --line-height: 18px;
+}
+
+.pcu-button[size="medium"] {
+    --font-size: 14px;
+    --button-height: 30px;
+    --button-padding: 0px 18px;
+    --line-height: 18px;
+}
+
+.pcu-button[size="large"] {
+    --font-size: 16px;
+    --button-height: 36px;
+    --button-padding: 0px 24px;
+    --line-height: 24px;
+}
+
+.pcu-button {
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border: 1px solid var(--border-color);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    font-weight: 400;
+    font-weight: var(--pcu-font-weight-medium, 500);
+    outline: 0;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    transition-property: background-color, color, border-color;
+    height: var(--button-height);
+    border-radius: 18px;
+    padding: var(--button-padding);
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    text-decoration: none;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+}
+
+.pcu-button-affix[icon="prefix"] {
+    --icon-margin: 0 6px 0 -6px;
+}
+
+.pcu-button-affix[icon="suffix"] {
+    --icon-margin: 0 -6px 0 6px;
+}
+
+.pcu-button-affix img, .pcu-button.pcu-icon-button img {
+    margin: var(--icon-margin);
+    filter: var(--affix-icon-filter);
+    height: var(--icon-size);
+    width: var(--icon-size);
+}
+
+/* ---------------------- Thumbnails ---------------------- */
+
+.pcu-horizontal-thumbnails {
+    display: flex;
+}
+
+.pcu-thumbnail-input {
+    display: none;
+}
+
+.pcu-horizontal-thumbnails>label>svg {
+    background: var(--B5);
+    border-radius: 4px;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.pcu-horizontal-thumbnails[alignment="vertical"]>label>svg {
+    transform: rotate(90deg);
+}
+
+.pcu-horizontal-thumbnails>label>svg:hover {
+    background: var(--B4) !important;
+}
+
+.pcu-horizontal-thumbnails>label>input:checked+svg {
+    background: var(--B1) !important;
+    cursor: default;
+}
+
+.pcu-horizontal-thumbnails>label>input:checked+svg>g>path:first-child {
+    fill: var(--B4)
+}
+
+.pcu-horizontal-thumbnails>label>input:checked+svg>g>path:last-child {
+    fill: var(--B3)
+}
+
+/* ---------------------- Drop Down ---------------------- */
+
+.pcu-dropdown-composite {
+    background-color: var(--D7);
+    padding: 14px 24px;
+    min-width: 288px;
+    box-sizing: border-box;
+}
+
+.pcu-dropdown-with-color {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pcu-dropdown-with-color-divider {
+    width: 1px;
+    height: 24px;
+    background: #d9e1e8;
+    margin: 0px 8px;
+}
+
+.pcu-color-picker {
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid var(--D35);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.pcu-color-picker:hover {
+    border: 2px solid var(--B4);
+}
+
+.pcu-dropdown-label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 18px;
+    color: var(--D2);
+}
+
+.pcu-dropdown {
+    background-color: var(--D7);
+    display: flex;
+    position: relative;
+    min-width: 192px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pcu-dropdown::after {
+    content: url(../pcu-base-ui/base-ui-icons/dropdown-chevron-icon.svg);
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+    border: 2px solid var(--B35);
+    border-radius: 50%;
+    flex: 0 0 auto;
+}
+
+.pcu-dropdown:hover::after {
+    border: 2px solid var(--B1);
+}
+
+.pcu-dropdown:hover .pcu-dropdown-input {
+    color: var(--B1);
+}
+
+.pcu-dropdown-input {
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    line-height: 36px;
+    color: var(--D1);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background: #00ffff00;
+    position: relative;
+    z-index: 1;
+}
+
+.pcu-dropdown-item {
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+    padding-right: 24px;
+    min-height: 36px;
+}
+
+.pcu-dropdown-item.selected {
+    color: var(--D7);
+    background-color: var(--B1);
+}
+
+.pcu-dropdown-item:not(.selected):hover {
+    background: var(--B4);
+}
+
+.pcu-dropdown-content {
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 15%), 0 6px 10px 0 rgb(0 0 0 / 10%), 0 1px 18px 0 rgb(0 0 0 / 8%);
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+    line-height: 36px;
+    color: var(--D1);
+    background: var(--D7);
+    position: absolute;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    z-index: 10;
+    overflow: scroll;
+    visibility: hidden;
+    margin-top: 1px;
+    left: 0;
+    top: 36px;
+}
+
+.pcu-dropdown.pcu-field-has-focus .pcu-dropdown-content {
+    visibility: visible;
+}
+
+input:focus {
+    outline: none;
+}
+
+/* ---------------------- Slider ---------------------- */
+.pcu-slider-composite {
+    background-color: var(--D7);
+    padding: 14px 24px;
+    min-width: 288px;
+    width: fit-content;
+    box-sizing: border-box;
+}
+
+.pcu-slider-label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    line-height: 18px;
+    color: var(--D2);
+}
+
+.pcu-slider {
+    display: flex;
+    align-items: baseline;
+}
+
+.pcu-slider-input {
+    cursor: pointer;
+    height: 6px;
+    width: 175px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 rgb(0 0 0 / 5%);
+    border-radius: 3px;
+    background: var(--B4);
+    -webkit-appearance: none;
+}
+
+.pcu-slider-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--B1);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 1px 3px 0 rgb(43 86 114 / 43%);
+    width: 16px;
+    height: 16px;
+    will-change: left;
+    transition: box-shadow 0.25s ease-in-out 0s;
+    position: relative;
+    z-index: 1;
+}
+
+.pcu-slider-input::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 4px 1px var(--B3);
+}
+
+.pcu-slider-input::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--B1);
+    cursor: pointer;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 1px 3px 0 rgb(43 86 114 / 43%);
+    width: 16px;
+    height: 16px;
+    will-change: left;
+    transition: box-shadow 0.25s ease-in-out 0s;
+    position: relative;
+    z-index: 1;
+}
+
+.pcu-slider-input::-moz-range-thumb:hover {
+    box-shadow: 0 0 4px 1px var(--B3);
+}
+
+
+.pcu-slider-input::after {
+    content: "";
+    height: 6px;
+    width: 100px;
+    background: var(--B1);
+    position: absolute;
+    border-radius: 3px;
+}
+
+.pcu-container-input-number {
+    position: relative;
+}
+
+.pcu-input-number {
+    margin-left: 12px;
+    background: white;
+    border: 1px solid transparent;
+    min-width: 66px;
+    text-align: right;
+    text-overflow: clip;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+    height: 36px;
+    border-radius: 8px;
+}
+
+.pcu-input-number-units {
+    font-size: 12px;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    right: 4px;
+    bottom: 10px;
+}
+
+.pcu-slider:hover .pcu-input-number {
+    background: var(--B5);
+}
+
+.pcu-input-number:hover{
+    background-color: var(--B4) !important;
+}
+
+.pcu-input-number::-webkit-inner-spin-button {
+    appearance: auto;
+    display: inline-block;
+    cursor: default;
+    align-self: stretch;
+    opacity: 0;
+    pointer-events: none;
+    -webkit-user-modify: read-only !important;
+    flex: 0 0 auto;
+}
+/* ---------------------- Tabs ---------------------- */
+.pcu-tabs {
+    display: flex;
+    justify-content: space-between;
+}
+
+label.pcu-tabs-label {
+    color: #116DFF;
+    border-bottom: 3px solid transparent;
+    padding: 18px 6px;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    font-weight: 400;
+    font-size: 14px;
+    position: relative;
+    transition-duration: .2s;
+    box-shadow: inset 0 -2px 0 0 rgb(23 25 28 / 5%);
+}
+
+label.pcu-tabs-label:hover {
+    border-bottom-color: #80b1ff;
+    color: #424851;
+    cursor: pointer;
+    transition-duration: .2s;
+    box-shadow: none;
+}
+
+input[name="pcu-tabs-input"]:checked+.pcu-tabs-label {
+    border-bottom: 3px solid #116dff;
+    color: #424851;
+    cursor: default;
+}
+
+.pcu-tabs-label:after {
+    content: "";
+    content: "";
+    position: absolute;
+    border-width: 0 9px 7px;
+    border-style: solid;
+    bottom: -3px;
+    left: calc(50% - 9px);
+    border-color: transparent transparent #116dff transparent;
+    opacity: 0;
+    transition-duration: .2s;
+}
+
+input[name="pcu-tabs-input"]:checked+.pcu-tabs-label:after {
+    opacity: 1;
+}
+
+.pcu-tabs input[name="pcu-tabs-input"] {
+    display: none;
+}
+
+/* ---------------------- Checkbox ---------------------- */
+.pcu-checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  input[type=checkbox].pcu-checkbox-input {
+    position: relative;
+    cursor: pointer;
+    margin-top: 2px;
+    box-shadow: inset 0px 0px 0px 2px var(--D7);
+  }
+  
+  input[type=checkbox].pcu-checkbox-input:before {
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    border: solid 1px var(--B1);
+    background-color: var(--D7);
+    content: "";
+    position: absolute;
+  }
+  
+  input[type=checkbox].pcu-checkbox-input:checked:before {
+    background-color: var(--B1);
+  }
+  
+  input[type=checkbox].pcu-checkbox-input:checked:after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 6px;
+    border: solid var(--D7);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 3px;
+    left: 5px;
+  }
+  
+  input[type=checkbox].pcu-checkbox-input:hover:not(:checked)::before {
+    background-color: var(--B4);
+    box-shadow: inset 0 0 0 2px var(--B4);
+  }
+
+  input[type=checkbox].pcu-checkbox-input:hover:checked::before {
+    background-color: var(--B2);
+    box-shadow: inset 0 0 0 2px var(--B2);
+  }
+  
+  input[type=checkbox].pcu-checkbox-input:disabled::before {
+    border-color: #bcbcbc !important;
+    background-color: var(--D7) !important;
+    box-shadow: inset 0 0 0 2px var(--D7) !important;
+  }
+
+  input[type=checkbox].pcu-checkbox-input:checked:disabled:before {
+    border-color: #bcbcbc !important;
+    background-color: #bcbcbc !important;
+    box-shadow: inset 0 0 0 2px #bcbcbc !important;
+  }
+  
+  .pcu-checkbox-container .pcu-checkbox-label {
+    color: var(--D1);
+    margin-left: 12px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
