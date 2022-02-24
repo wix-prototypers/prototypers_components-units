@@ -546,7 +546,7 @@ input:focus {
 }
 
 label.pcu-tabs-label {
-    color: #116DFF;
+    color: #424851;
     border-bottom: 3px solid transparent;
     padding: 18px 6px;
     text-align: center;
@@ -569,7 +569,7 @@ label.pcu-tabs-label:hover {
 
 input[name="pcu-tabs-input"]:checked+.pcu-tabs-label {
     border-bottom: 3px solid #116dff;
-    color: #424851;
+    color: #116DFF;
     cursor: default;
 }
 
