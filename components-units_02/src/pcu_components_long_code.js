@@ -419,6 +419,9 @@ function changesSliderWidth(sliderInput, value) {
   } else {
     document.head.insertAdjacentHTML('beforeend', \`<style id='\${styleTagID}'>\${newStyling}</style>\`)
   }
+  if (sliderInput.getAttribute("colorpicker") == "true"){
+    changeOpacityColorPicker(sliderInput.name, currentVal)
+  }
 }
 document.querySelectorAll('.pcu-slider input').forEach((inputChanged) => {
   const inputChangedParent = inputChanged.closest('.pcu-slider ');
@@ -436,6 +439,18 @@ document.querySelectorAll('.pcu-slider input').forEach((inputChanged) => {
       let spinnerField = inputChangedParent.querySelector('.pcu-input-number');
       spinnerField.value = selectedValue;
     }
+
+    if (inputElm.getAttribute("colorpicker") == "true"){
+      changeOpacityColorPicker(inputElm.name, selectedValue)
+    }
+    // changeOpacityColorPicker(currentVal)
   })
 })
+
+function changeOpacityColorPicker(sliderName , sliderValue){
+  // let colorPicker = $(\`.pcu-slider-with-color .pcu-color-picker[slidername=\${sliderName}]:after\`)
+  let colorPicker = document.querySelector(\`.pcu-slider-with-color .pcu-color-picker[slidername=\${sliderName}]\`)
+  let colorPickerChild = colorPicker.querySelector("span")
+  colorPickerChild.style.opacity = sliderValue/100;
+}
 `

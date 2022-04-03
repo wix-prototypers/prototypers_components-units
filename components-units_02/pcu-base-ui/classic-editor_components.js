@@ -155,6 +155,24 @@ const classicEditor_components = [
     jsCode: sliderJs
   },
   {
+    category: "Slider with Color Picker",
+    htmlCode: `
+    <div class="pcu-slider-composite">
+      <div class="pcu-slider-label">Text vertical padding</div>
+      <div class="pcu-slider-with-color">
+        <div class="pcu-slider">
+          <input type="range" class="pcu-slider-input" name="slider2" colorpicker="true" value="50" min="0" max="100" step="1">
+          <div class="pcu-container-input-number">
+            <input type="number" class="pcu-input-number" name="slider2" min="0" max="100" step="1" suffix="px" value="50">
+            <span class="pcu-input-number-units">%</span>
+          </div>
+        </div>
+        <div class="pcu-color-picker" sliderName="slider2"><span></span></div>
+      </div>
+    </div>`,
+    jsCode: sliderJs
+  },
+  {
     category: "Tabs",
     htmlCode: `
     <div class="pcu-tabs" style="">
