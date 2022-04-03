@@ -7,52 +7,56 @@
   --weight-700: var(--wix-font-weight-bold);
   /* ---- COLORS ---- */
   /* General */
-  --D10: #162D3D;
-  --D20: #32536A;
-  --D30: #577083;
-  --D40: #7A92A5;
-  --D50: #B6C1CD;
-  --D55: #CBD3DC;
+  --D10: #000624;
+  --D20: #333853;
+  --D30: #595D70;
+  --D40: #868AA5;
+  --D50: #ACAFC4;
+  --D55: #CFD1DC;
   --D60: #DFE5EB;
-  --D70: #F0F4F7;
+  --D70: #ECEFF3;
   --D80: #fff;
   /* Primary */
-  --B00: #2B81CB;
-  --B05: #308DDD;
-  --B10: #3899EC;
-  --B20: #4EB7F5;
-  --B30: #C1E4FE;
-  --B40: #DAEFFE;
-  --B50: #EAF7FF;
+  --B00: #084EBD;
+  --B05: #0F62E6;
+  --B10: #116DFF;
+  --B20: #5999FF;
+  --B30: #A8CAFF;
+  --B40: #D6E6FE;
+  --B50: #E7F0FF;
   /* Premium */
-  --P00: #8E21B1;
-  --P10: #AA4DC8;
-  --P20: #CD68ED;
-  --P30: #E5C9EE;
-  --P40: #EEDBF4;
-  --P50: #FAEEFF;
+  --P00: #8214CE;
+  --P10: #A82DFD;
+  --P20: #BE63FD;
+  --P30: #CD89FC;
+  --P40: #E5C0FE;
+  --P50: #F4E3FF;
   /* Destructive (red) */
-  --R00: #D6453D;
-  --R05: #D8504C;
-  --R10: #EE5951;
-  --R20: #f66;
-  --R30: #FFD7D7;
-  --R40: #FFE1E1;
-  --R50: #FFEBEB;
+  --R00: #D0180B;
+  --R05: #D0180B;
+  --R10: #E62214;
+  --R20: #FF6D63;
+  --R30: #F69891;
+  --R40: #FBD0CD;
+  --R50: #FDE3E1;
   /* Green */
-  --G10: #60bc57;
-  --G20: #80C979;
-  --G30: #C9EEBC;
-  --G40: #DEF4D4;
-  --G50: #EDF9E5;
+  --G00: #1D8649;
+  --G05: #229954;
+  --G10: #25A55A;
+  --G20: #51B77B;
+  --G30: #87CEA5;
+  --G40: #C8E8D6;
+  --G50: #E1F4EB;
   /* Yellow */
-  --Y10: #FDB10C;
-  --Y20: #FAC249;
-  --Y30: #FEF0BA;
-  --Y40: #FEF4CD;
-  --Y50: #FDF7DF;
+  --Y00: #D59900;
+  --Y05: #E7A600;
+  --Y10: #FFB700;
+  --Y20: #FFC23D;
+  --Y30: #FFD16E;
+  --Y40: #FFE2A5;
+  --Y50: #FFF0D1;
   /* Filter */
-  --blue-icon: invert(49%) sepia(83%) saturate(983%) hue-rotate(183deg) brightness(95%) contrast(95%);
+  --blue-icon: invert(33%) sepia(42%) saturate(6560%) hue-rotate(211deg) brightness(103%) contrast(103%);
   --white-icon: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
   --border-color: var(--D80);
 }
@@ -260,7 +264,7 @@
 /* ---------------------- Input Field ---------------------- */
 .pcu-text-input, .pcu-number-input {
   width: 280px;
-  border: 1px solid var(--B30);
+  border: 1px solid var(--B40);
   background-color: var(--D80);
   border-radius: 6px;
   min-height: 36px;
@@ -301,8 +305,8 @@
 .pcu-text-input:not(.pcu-dropdown-input):focus,
 .pcu-number-input:focus {
   outline: 0;
-  border-color: var(--B10) !important;
-  box-shadow: 0 0 0 3px #aadbfc;
+  border-color: #0F62E6 !important;
+  box-shadow: 0 0 0 3px var(--B30);
 }
 
 .pcu-search-field:not(.pcu-field-has-focus):hover,
@@ -409,7 +413,7 @@ div[type=text].pcu-text-input[placeholder]:empty:before {
   height: 40px;
   z-index: 1;
   width: -webkit-fill-available;
-  border: 1px solid var(--B30);
+  border: 1px solid var(--B40);
   background-color: var(--D80);
   border-radius: 6px 6px 0 0;
   display: flex;
@@ -1136,11 +1140,10 @@ input[type=checkbox].pcu-checkbox-input:disabled::before {
 /* ---------------------- Segmented Toogle ---------------------- */
 .pcu-segmented-toggle {
   position: relative;
-  background-color: tomato;
   z-index: 5;
   width: max-content;
   border-radius: 6px;
-  box-shadow: inset 0 0 0 1px var(--B30);
+  box-shadow: inset 0 0 0 1px var(--B40);
   background-color: var(--D80);
   color: var(--D10);
   height: 36px;
@@ -1181,7 +1184,7 @@ input[type="radio"].pcu-segmented-toggle-option {
 
 .pcu-segmented-toggle-labels:hover {
   background-color: var(--B50);
-  box-shadow: inset 0 0 0 1px var(--B30);
+  /* box-shadow: inset 0 0 0 1px var(--B30); */
 }
 
 .pcu-segmented-toggle-bckgrnd {
@@ -1533,14 +1536,14 @@ input[type="radio"].pcu-segmented-toggle-option[option="2"]:checked~.pcu-segment
 }
 
 .pcu-table-header {
-  background: rgb(218, 239, 254) !important;
+  background: var(--B40) !important;
   border-radius: 0px;
-  box-shadow: inset 0px -1px 0px 0px rgb(193 228 254), inset 0px 1px 0px 0px rgb(193 228 254);
+  box-shadow: inset 0px -1px 0px 0px var(--B30), inset 0px 1px 0px 0px var(--B30);
   height: 42px;
 }
 
 .pcu-table-header th {
-  background: rgb(218, 239, 254) !important;
+  background: var(--B40) !important;
 }
 
 .pcu-table-header th:first-child {
@@ -1561,7 +1564,7 @@ input[type="radio"].pcu-segmented-toggle-option[option="2"]:checked~.pcu-segment
   font-weight: 400;
   color: var(--D10);
   letter-spacing: 0;
-  box-shadow: inset 0 1px 0 0 #c1e4fe, inset 0 -1px 0 0 #c1e4fe;
+  box-shadow: inset 0 1px 0 0 var(--B30), inset 0 -1px 0 0 var(--B30);
 }
 
 .pcu-table-row {
