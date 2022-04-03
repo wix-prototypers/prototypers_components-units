@@ -294,6 +294,7 @@
     border: 1px solid var(--D35);
     border-radius: 4px;
     cursor: pointer;
+    position: relative;
 }
 
 .pcu-color-picker:hover {
@@ -539,6 +540,61 @@ input:focus {
     -webkit-user-modify: read-only !important;
     flex: 0 0 auto;
 }
+
+.pcu-slider-with-color{
+    display: flex;
+}
+
+.pcu-slider-with-color .pcu-color-picker{
+    margin-left: 6px;
+    background: white;
+    background-image: linear-gradient(45deg, #d9e1e8 26%, transparent 26%, transparent 74%, #d9e1e8 74%, #d9e1e8),linear-gradient(45deg, #d9e1e8 26%, transparent 26%, transparent 74%, #d9e1e8 74%, #d9e1e8);
+    background-size: 8px 8px;
+    background-position: 0 0,4px 4px,4px 4px,0 0;
+}
+
+
+.pcu-slider-with-color .pcu-color-picker > span {
+    content: "";
+    background: #116dff;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border: 1px solid var(--D35);
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+
+
+.pcu-slider-with-color .pcu-color-picker:hover {
+    border: 1px solid var(--B4);
+}
+
+.pcu-slider-with-color .pcu-slider-input{
+    background: white;
+        background-image: linear-gradient(45deg, #d9e1e8 26%, transparent 26%, transparent 74%, #d9e1e8 74%, #d9e1e8),linear-gradient(45deg, #d9e1e8 26%, transparent 26%, transparent 74%, #d9e1e8 74%, #d9e1e8);
+    background-size: 8px 8px;
+    background-position: 0 0,4px 4px,4px 4px,0 0;
+    border: 1px solid #d5d5d5;
+}
+
+.pcu-slider-with-color .pcu-slider-input:before {
+    content: "";
+    height: 6px;
+    width: 175px;
+    position: absolute;
+    border-radius: 3px;
+    background: linear-gradient(90deg, transparent 0%, white 100%);
+}
+
+.pcu-slider-with-color .pcu-slider-input::after{
+    background: none;
+}
+
+
 /* ---------------------- Tabs ---------------------- */
 .pcu-tabs {
     display: flex;
@@ -546,7 +602,7 @@ input:focus {
 }
 
 label.pcu-tabs-label {
-    color: #116DFF;
+    color: #424851;
     border-bottom: 3px solid transparent;
     padding: 18px 6px;
     text-align: center;
@@ -569,7 +625,7 @@ label.pcu-tabs-label:hover {
 
 input[name="pcu-tabs-input"]:checked+.pcu-tabs-label {
     border-bottom: 3px solid #116dff;
-    color: #424851;
+    color: #116DFF;
     cursor: default;
 }
 
