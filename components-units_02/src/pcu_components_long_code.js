@@ -178,23 +178,15 @@ const popoverMenuJs = `document.querySelectorAll('.pcu-popover-menu').forEach(fu
 });`
 
 const datePickerHtml = `  <div class="pcu-dropdown pcu-date-picker">
-<span class="pcu-input-affix"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px">
-<path d="M19,6 L17,6 L17,7 L16,7 L16,6 L8,6 L8,7 L7,7 L7,6 L5,6 L5,9 L19,9 L19,6 Z M19,10 L5,10 L5,19 L19,19 L19,10 Z M17,5 L19,5 C19.5522847,5 20,5.44771525 20,6 L20,19 C20,19.5522847 19.5522847,20 19,20 L5,20 C4.44771525,20 4,19.5522847 4,19 L4,6 C4,5.44771525 4.44771525,5 5,5 L7,5 L7,4 L8,4 L8,5 L16,5 L16,4 L17,4 L17,5 Z">
-</path>
-</svg></span>
+<span class="pcu-input-affix"><i data-icon="wsr-Date"></i></span>
 <input class="pcu-text-input pcu-dropdown-input" type="text" placeholder="Select an option" value="09/14/2021" readonly>
 <div class="pcu-dropdown-content">
 <div class="pcu-date-picker-content">
 <div class="pcu-date-picker-header">
-<button class="pcu-date-picker-btn pcu-date-picker-prev-month"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" class="s316">
-<path d="M9.12210136,12 L16.0596461,18.9393399 C16.352647,19.2321253 16.3528218,19.706999 16.0600364,20 C15.7672509,20.293001 15.2923772,20.2931757 14.9993763,20.0003903 L7,12 L14.9993763,3.99960971 C15.2923772,3.70682428 15.7672509,3.70699902 16.0600364,4 C16.3528218,4.29300098 16.352647,4.76787468 16.0596461,5.0606601 L9.12210136,12 Z">
-</path>
-</svg></button>
+<button class="pcu-date-picker-btn pcu-date-picker-prev-month">
+<i data-icon="wsr-ChevronLeftLarge"></i></button>
 <span class="pcu-date-picker-month-year">June 2021</span>
-<button class="pcu-date-picker-btn pcu-date-picker-next-month"><svg viewBox="0 0 24 24" fill="currentColor" width="24px" height="24px" class="s316">
-<path d="M8.22083109,4 C8.51380539,3.70718788 8.9886791,3.70731936 9.28149122,4.00029365 L17.2763084,12 L9.28047689,19.9997063 C8.98766478,20.2926806 8.51279106,20.2928121 8.21981676,20 C7.92684246,19.7071879 7.92671099,19.2323142 8.21952311,18.9393399 L15.1555752,12 L8.22053744,5.06066013 C7.92772532,4.76768583 7.92785679,4.29281212 8.22083109,4 Z">
-</path>
-</svg></button>
+<button class="pcu-date-picker-btn pcu-date-picker-next-month"><i data-icon="wsr-ChevronRightLarge"></i></button>
 </div>
 <div class="table-cont front">
 <table>
@@ -273,10 +265,10 @@ const datePickerJs = `document.querySelectorAll('.pcu-calendar-day').forEach(fun
   });
 });`
 
-const tableHtml = `<div class="pcu-table-main-header">
+const tableHtml = `<div class="pcu-table-main-header" data-library="wsr">
 </div>
 <div>
-<table class="pcu-table">
+<table class="pcu-table" data-library="wsr">
 <tbody>
 <tr class="pcu-table-header">
 <th><input class="pcu-checkbox-input pcu-table-select-all" type="checkbox"></th>
@@ -300,7 +292,7 @@ const tableHtml = `<div class="pcu-table-main-header">
 <td class="pcu-td-more-options">
 <div class="pcu-popover-menu"  dir="left">
 <button class="pcu-button pcu-icon-button" skin="inverted" size="medium">
-<img src="../pcu-wsr/wsr-icons/more-icon.svg">
+<i data-icon="wsr-More"></i>
 </button>
 <div class="pcu-popover pcu-popover-menu-content">
 <span class="pcu-popover-menu-item">Add New Items</span>
@@ -332,7 +324,7 @@ const tableHtml = `<div class="pcu-table-main-header">
 <td class="pcu-td-more-options">
 <div class="pcu-popover-menu"  dir="left">
 <button class="pcu-button pcu-icon-button" skin="inverted" size="medium">
-<img src="../pcu-wsr/wsr-icons/more-icon.svg">
+<i data-icon="wsr-More"></i>
 </button>
 <div class="pcu-popover pcu-popover-menu-content">
 <span class="pcu-popover-menu-item">Add New Items</span>

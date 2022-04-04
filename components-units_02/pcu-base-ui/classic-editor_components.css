@@ -220,7 +220,7 @@
     --icon-margin: 0 -6px 0 6px;
 }
 
-.pcu-button-affix img, .pcu-button.pcu-icon-button img {
+.pcu-button-affix i, .pcu-button.pcu-icon-button i {
     margin: var(--icon-margin);
     filter: var(--affix-icon-filter);
     height: var(--icon-size);

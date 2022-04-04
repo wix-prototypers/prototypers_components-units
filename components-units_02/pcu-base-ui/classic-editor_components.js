@@ -43,7 +43,7 @@ const classicEditor_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="prefix"><img src="../pcu-base-ui/classic-editor-icons/add-icon.svg">Prefix</button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="prefix"><i data-icon="wsr-Add"></i>Prefix</button>`
   },
   {
     category: "Suffix Button",
