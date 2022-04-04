@@ -43,7 +43,7 @@ const classicEditor_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="prefix"><i data-icon="wsr-Add"></i>Prefix</button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="prefix"><i data-icon="base-ui-Add"></i>Prefix</button>`
   },
   {
     category: "Suffix Button",
@@ -63,7 +63,7 @@ const classicEditor_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="suffix">Suffix<img src="../pcu-base-ui/classic-editor-icons/chevdown-icon.svg"></button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="suffix">Suffix<i data-icon="base-ui-ChevronDownSmall"></i></button>`
   },
   {
     category: "Alignment Thumbnail",
