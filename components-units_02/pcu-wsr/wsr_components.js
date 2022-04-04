@@ -119,7 +119,7 @@ const wsr_components = [
       attribute: "Icon",
       values: ["prefix", "suffix"]
     }],
-    htmlCode: `<div class="pcu-input-text-container" data-library="${currentLibrary}" icon="prefix"><input type="text" class="pcu-text-input" placeholder="This is a placeholder"><span class="pcu-input-affix">$</span></div>`
+    htmlCode: `<div class="pcu-input-text-container" data-library="${currentLibrary}" icon="prefix"><input type="text" class="pcu-text-input" data-library="${currentLibrary}" placeholder="This is a placeholder"><span class="pcu-input-affix">$</span></div>`
   },
   {
     category: "Text Area (rows=3)",
@@ -140,7 +140,7 @@ const wsr_components = [
     <span class="pcu-edit-text-btn"><i data-icon="wsr-RichTextBullet"></i></span>
     <span class="pcu-edit-text-btn"><i data-icon="wsr-RichTextNumberList"></i></span>
     </div>
-    <textarea class="pcu-text-input pcu-textarea" placeholder="This is a placeholder" rows="5"></textarea>
+    <textarea class="pcu-text-input pcu-textarea" placeholder="This is a placeholder" data-library="${currentLibrary}" rows="5"></textarea>
     </div>`
   },
   {
@@ -160,16 +160,16 @@ const wsr_components = [
     category: "Radio Button - 2 Rows",
     htmlCode: `<div class="pcu-radio-btn-container pcu-radio-btn-2-rows" data-library="${currentLibrary}">
     <span class="pcu-radio-btn-2-rows-input">
-    <input class="pcu-radio-btn-input" name="radio-btn-2-rows" type="radio" id="radio-5">
+    <input class="pcu-radio-btn-input" data-library="${currentLibrary}" name="radio-btn-2-rows" type="radio" id="radio-5">
     <span class="pcu-radio-btn-circle"></span>
     </span>
     <span class="pcu-radio-btn-2-rows-content">
     <label class="pcu-radio-btn-main-label" for="radio-5">Main Label</label>
     <label class="pcu-radio-btn-sub-label" for="radio-5">sub label</label>
     </span>
-    </div><div class="pcu-radio-btn-container pcu-radio-btn-2-rows">
+    </div><div class="pcu-radio-btn-container pcu-radio-btn-2-rows" data-library="${currentLibrary}">
     <span class="pcu-radio-btn-2-rows-input">
-    <input class="pcu-radio-btn-input" name="radio-btn-2-rows" type="radio" id="radio-5">
+    <input class="pcu-radio-btn-input" data-library="${currentLibrary}" name="radio-btn-2-rows" type="radio" id="radio-5">
     <span class="pcu-radio-btn-circle"></span>
     </span>
     <span class="pcu-radio-btn-2-rows-content">
@@ -195,7 +195,7 @@ const wsr_components = [
   },
   {
     category: "Number Input",
-    htmlCode: `<div class="pcu-input-number-container" data-library="${currentLibrary}"><input type="number" class="pcu-number-input"></div>`
+    htmlCode: `<div class="pcu-input-number-container" data-library="${currentLibrary}"><input type="number" class="pcu-number-input" data-library="${currentLibrary}"></div>`
   },
   {
     category: "Number Input with Icon",
@@ -203,12 +203,12 @@ const wsr_components = [
       attribute: "Icon",
       values: ["prefix", "suffix"]
     }],
-    htmlCode: `<div class="pcu-input-number-container" data-library="${currentLibrary}" icon="prefix"><input type="number" class="pcu-number-input"><span class="pcu-input-affix">$</span></div>`
+    htmlCode: `<div class="pcu-input-number-container" data-library="${currentLibrary}" icon="prefix"><input type="number" class="pcu-number-input" data-library="${currentLibrary}"><span class="pcu-input-affix">$</span></div>`
   },
   {
     category: "Dropdown",
     htmlCode: `<div class="pcu-dropdown" data-library="${currentLibrary}">
-    <input class="pcu-text-input pcu-dropdown-input" type="text" placeholder="Select an option" readonly>
+    <input class="pcu-text-input pcu-dropdown-input" data-library="${currentLibrary}" type="text" placeholder="Select an option" readonly>
     <div class="pcu-dropdown-content">
     <div class="pcu-dropdown-item" value="Option 1">Option 1</div>
     <div class="pcu-dropdown-item" value="Option 2">Option 2</div>
@@ -221,7 +221,7 @@ const wsr_components = [
   {
     category: "Badge",
     htmlCode: `<div class="pcu-dropdown" data-library="${currentLibrary}" skin="badge">
-    <input class="pcu-text-input pcu-dropdown-input" color="success" type="text" placeholder="Select an option" readonly value="Active">
+    <input class="pcu-text-input pcu-dropdown-input" data-library="${currentLibrary}" color="success" type="text" placeholder="Select an option" readonly value="Active">
     <div class="pcu-dropdown-content">
     <div class="pcu-dropdown-item" value="Active"><label class="pcu-badge-color-tag" color="success"></label>Active</div>
     <div class="pcu-dropdown-item" value="Inactive"><label class="pcu-badge-color-tag" color="disabled"></label>Inactive</div>
@@ -285,7 +285,7 @@ const wsr_components = [
     category: "Modal",
     htmlCode: `<div class="pcu-button-modal" data-library="${currentLibrary}" openModalId="modal-1">Click Me</div>
                 <div id="modal-1" class="pcu-modal-wrapper" data-library="${currentLibrary}">
-                  <div class="pcu-modal-card" style="">
+                  <div class="pcu-modal-card" data-library="${currentLibrary}" style="">
                     <div class="pcu-modal-card-header">
                       <div>Discard Changes?</div>
                       <i class="closeModal" data-icon="wsr-Dismiss"></i>
@@ -294,8 +294,8 @@ const wsr_components = [
                       Are you sure you want to leave this page? Your changes won't be saved.
                     </div>
                     <div class="pcu-modal-card-actions">
-                      <button class="pcu-button closeModal" skin="standard" priority="secondary">Cancel</button>
-                      <button class="pcu-button closeModal" skin="standard" priority="primary">Discard</button>
+                      <button class="pcu-button closeModal" skin="standard" data-library="${currentLibrary}" priority="secondary">Cancel</button>
+                      <button class="pcu-button closeModal" skin="standard" data-library="${currentLibrary}" priority="primary">Discard</button>
                     </div>
                   </div>
                 </div>`,
@@ -374,7 +374,7 @@ const wsr_components = [
     htmlCode: `<div class="pcu-input-time-container" data-library="${currentLibrary}" icon="suffix">
     <span class="pcu-input-time-btn pcu-input-time-up"><i data-icon="wsr-ChevronUpSmall"></i></span>
     <span class="pcu-input-time-btn pcu-input-time-down"><i data-icon="wsr-ChevronDownSmall"></i></span>
-    <input class="pcu-text-input" type="text" placeholder="This is a placeholder" value="12:00">
+    <input class="pcu-text-input" data-library="${currentLibrary}" type="text" placeholder="This is a placeholder" value="12:00">
     <span class="pcu-input-affix">PM</span>
     </div>`
   },
@@ -390,7 +390,7 @@ const wsr_components = [
      <div class="pcu-collapse-container" data-library="${currentLibrary}">
        <div class="pcu-collapse-header">
          <div>Collapse Expande Toggle</div>
-         <label class="pcu-toggle-switch" size="large">
+         <label class="pcu-toggle-switch" data-library="${currentLibrary}" size="large">
            <input class="pcu-toggle-input pcu-collapse-input" type="checkbox">
            <span class="pcu-toggle-round"></span>
          </label>
@@ -402,7 +402,7 @@ const wsr_components = [
     </div>
 
     <!--Collapse Chevron-->
-    <div class="pcu-collapse-container">
+    <div class="pcu-collapse-container" data-library="${currentLibrary}">
       <div class="pcu-collapse-header">
         <label class="pcu-label-chevron">
           <div>Collapse Expande Chevron</div>

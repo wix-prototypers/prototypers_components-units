@@ -177,9 +177,9 @@ const popoverMenuJs = `document.querySelectorAll('.pcu-popover-menu').forEach(fu
   });
 });`
 
-const datePickerHtml = `  <div class="pcu-dropdown pcu-date-picker">
+const datePickerHtml = `  <div class="pcu-dropdown pcu-date-picker" data-library="wsr">
 <span class="pcu-input-affix"><i data-icon="wsr-Date"></i></span>
-<input class="pcu-text-input pcu-dropdown-input" type="text" placeholder="Select an option" value="09/14/2021" readonly>
+<input class="pcu-text-input pcu-dropdown-input" data-library="wsr" type="text" placeholder="Select an option" value="09/14/2021" readonly>
 <div class="pcu-dropdown-content">
 <div class="pcu-date-picker-content">
 <div class="pcu-date-picker-header">
@@ -290,8 +290,8 @@ const tableHtml = `<div class="pcu-table-main-header" data-library="wsr">
 </td>
 <td>Active</td>
 <td class="pcu-td-more-options">
-<div class="pcu-popover-menu"  dir="left">
-<button class="pcu-button pcu-icon-button" skin="inverted" size="medium">
+<div class="pcu-popover-menu" data-library="wsr" dir="left">
+<button class="pcu-button pcu-icon-button" data-library="wsr" skin="inverted" size="medium">
 <i data-icon="wsr-More"></i>
 </button>
 <div class="pcu-popover pcu-popover-menu-content">
@@ -302,7 +302,7 @@ const tableHtml = `<div class="pcu-table-main-header" data-library="wsr">
 </div>
 </td>
 <td style="width:0; position: relative;">
-<div class="pcu-popover-menu"  dir="left">
+<div class="pcu-popover-menu" data-library="wsr" dir="left">
 <div class="pcu-popover pcu-popover-menu-content">
 <span class="pcu-popover-menu-item">Add New Items</span>
 <span class="pcu-popover-menu-item">Edit This Item</span>
@@ -322,8 +322,8 @@ const tableHtml = `<div class="pcu-table-main-header" data-library="wsr">
 </td>
 <td>Active</td>
 <td class="pcu-td-more-options">
-<div class="pcu-popover-menu"  dir="left">
-<button class="pcu-button pcu-icon-button" skin="inverted" size="medium">
+<div class="pcu-popover-menu" data-library="wsr" dir="left">
+<button class="pcu-button pcu-icon-button" data-library="wsr" skin="inverted" size="medium">
 <i data-icon="wsr-More"></i>
 </button>
 <div class="pcu-popover pcu-popover-menu-content">
@@ -334,7 +334,7 @@ const tableHtml = `<div class="pcu-table-main-header" data-library="wsr">
 </div>
 </td>
 <td style="width:0; position: relative;">
-<div class="pcu-popover-menu" dir="left">
+<div class="pcu-popover-menu" data-library="wsr" dir="left">
 <div class="pcu-popover pcu-popover-menu-content" >
 <span class="pcu-popover-menu-item">Add New Items</span>
 <span class="pcu-popover-menu-item">Edit This Item</span>
