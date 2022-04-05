@@ -269,5 +269,3 @@ PARAMETERS: name = for get the relevant input field, value = the selected value 
     colorPickerChild.style.opacity = sliderValue/100;
   }
 }
-
-

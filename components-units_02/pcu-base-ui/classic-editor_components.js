@@ -4,6 +4,8 @@
 
 /* Array with all the components, Note that there is a legality to the structure, so if you want to add a new
 component - Please read the instructions in the README file ! */
+currentLibrary = 'base-ui';
+
 const classicEditor_components = [
   {
     category: "Regular Button",
@@ -23,7 +25,7 @@ const classicEditor_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button" skin="standard" priority="primary" size="small">Button</button>`
+    htmlCode: `<button class="pcu-button" data-library="${currentLibrary}" skin="standard" priority="primary" size="small">Button</button>`
   },
   {
     category: "Prefix Button",
@@ -43,7 +45,7 @@ const classicEditor_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="prefix"><i data-icon="base-ui-Add"></i>Prefix</button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" size="small" icon="prefix"><i data-icon="base-ui-Add"></i>Prefix</button>`
   },
   {
     category: "Suffix Button",
@@ -63,7 +65,7 @@ const classicEditor_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" skin="standard" priority="primary" size="small" icon="suffix">Suffix<i data-icon="base-ui-ChevronDownSmall"></i></button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" size="small" icon="suffix">Suffix<i data-icon="base-ui-ChevronDownSmall"></i></button>`
   },
   {
     category: "Alignment Thumbnail",
@@ -71,7 +73,7 @@ const classicEditor_components = [
       attribute: "Alignment",
       values: ["horizontal", "vertical"]
     }],
-    htmlCode: `<div class="pcu-horizontal-thumbnails" alignment="horizontal">
+    htmlCode: `<div class="pcu-horizontal-thumbnails" data-library="${currentLibrary}" alignment="horizontal">
          <label for="pcu-thumbnail-left">
            <input id="pcu-thumbnail-left" class="pcu-thumbnail-input" type="radio" name="thunbnails" checked>
            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38">
@@ -104,7 +106,7 @@ const classicEditor_components = [
   {
     category: "Dropdown",
     htmlCode: `
-    <div class="pcu-dropdown-composite">
+    <div class="pcu-dropdown-composite" data-library="${currentLibrary}">
       <div class="pcu-dropdown-label">Font and Color</div>
       <div class="pcu-dropdown-with-color">
         <div class="pcu-dropdown">
@@ -122,7 +124,7 @@ const classicEditor_components = [
   {
     category: "Dropdown with Color Picker",
     htmlCode: `
-    <div class="pcu-dropdown-composite">
+    <div class="pcu-dropdown-composite" data-library="${currentLibrary}">
       <div class="pcu-dropdown-label">Font and Color</div>
       <div class="pcu-dropdown-with-color">
         <div class="pcu-dropdown">
@@ -142,12 +144,12 @@ const classicEditor_components = [
   {
     category: "Slider",
     htmlCode: `
-    <div class="pcu-slider-composite">
+    <div class="pcu-slider-composite" data-library="${currentLibrary}">
       <div class="pcu-slider-label">Text vertical padding</div>
       <div class="pcu-slider">
         <input type="range" class="pcu-slider-input" name="slider1" value="50" min="0" max="100" step="1">
         <div class="pcu-container-input-number">
-          <input type="number" class="pcu-input-number" name="slider1" min="0" max="100" step="1" suffix="px" value="50">
+          <input type="number" class="pcu-input-number" data-library="${currentLibrary}" name="slider1" min="0" max="100" step="1" suffix="px" value="50">
           <span class="pcu-input-number-units">px</span>
         </div>
       </div>
@@ -157,13 +159,13 @@ const classicEditor_components = [
   {
     category: "Slider with Color Picker",
     htmlCode: `
-    <div class="pcu-slider-composite">
+    <div class="pcu-slider-composite" data-library="${currentLibrary}">
       <div class="pcu-slider-label">Text vertical padding</div>
       <div class="pcu-slider-with-color">
         <div class="pcu-slider">
           <input type="range" class="pcu-slider-input" name="slider2" colorpicker="true" value="50" min="0" max="100" step="1">
           <div class="pcu-container-input-number">
-            <input type="number" class="pcu-input-number" name="slider2" min="0" max="100" step="1" suffix="px" value="50">
+            <input type="number" class="pcu-input-number" data-library="${currentLibrary}" name="slider2" min="0" max="100" step="1" suffix="px" value="50">
             <span class="pcu-input-number-units">%</span>
           </div>
         </div>
@@ -175,7 +177,7 @@ const classicEditor_components = [
   {
     category: "Tabs",
     htmlCode: `
-    <div class="pcu-tabs" style="">
+    <div class="pcu-tabs" data-library="${currentLibrary}" style="">
         <input type="radio" id="pcu-tab-1" name="pcu-tabs-input" value="on" checked="">
         <label class="pcu-tabs-label" for="pcu-tab-1">
             Option 1
@@ -196,7 +198,7 @@ const classicEditor_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<div class="pcu-checkbox-container">
+    htmlCode: `<div class="pcu-checkbox-container" data-library="${currentLibrary}">
     <input id="checkbox-1" class="pcu-checkbox-input" type="checkbox">
     <label for="checkbox-1" class="pcu-checkbox-label">Unchecked</label>
     </div>`
