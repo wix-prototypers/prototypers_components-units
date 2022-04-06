@@ -6,15 +6,15 @@ This project includes component units (e.g. WSR components, inputs, tooltips ...
 
 ###### Wix-Style-React components:
 ```
-https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.1/components-units_02/pcu-wsr/wsr_components.css
+https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.2/components-units_02/pcu-wsr/wsr_components.css
 ```
 ###### Editor-X components:
 ```
-https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.1/components-units_02/pcu-editor-x/editor-x_components.css
+https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.2/components-units_02/pcu-editor-x/editor-x_components.css
 ```
 ###### Base-UI components:
 ```
-https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.1/components-units_02/pcu-base-ui/base-ui_components.css
+https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.2/components-units_02/pcu-base-ui/base-ui_components.css
 ```
 <br>
 2. Open this [link](https://wix-prototypers.github.io/prototypers_components-units/components-units_02/src/index.html){:target="\_blank"} and search for the component you need.
@@ -29,6 +29,8 @@ Enjoy! 😎
 
 ```
 ▪️ Start each class in 'pcu-' and select clear classes (See existing components).
+
+▪️ Add 'data-icon' attribute with the current library and use it in the CSS file as well (See existing components).
 
 ▪️ If your component contains several states (designs), please do so by changing a attribute.
   Note - The attribute must be in the main parent of the component.
@@ -72,7 +74,7 @@ Enjoy! 😎
     attribute: "Disabled",
     values: [false, true]
   }],
-  htmlCode: `<button class="wsr-button" skin="standard" priority="primary">Button</button>`
+  htmlCode: `<button class="pcu-button" data-library="${currentLibrary}" skin="standard" priority="primary">Button</button>`
 }
 ```
 
@@ -80,7 +82,7 @@ Enjoy! 😎
 ``` javascript
 {
   category: "Text Feild",
-  htmlCode: `<input class="pcu-text-input" type="text" placeholder="This is a placeholder">`
+  htmlCode: `<input class="pcu-text-input" type="text" data-library="${currentLibrary}" placeholder="This is a placeholder">`
 }
 ```
 
