@@ -45,7 +45,7 @@ const editorx_components = [
       attribute: "Disabled",
       values: [false, true]
     }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" size="medium" skin="standard" priority="primary" icon="prefix"><img src="/pcu-editor-x/editor-x-icons/Panels/Add.svg">Prefix</button>`
+    htmlCode: `<button class="pcu-button pcu-button-affix" size="medium" skin="standard" priority="primary" icon="prefix"><img src="../pcu-editor-x/editor-x-icons/Panels/Add.svg">Prefix</button>`
   },
   {
     category: "Suffix Button",
@@ -67,7 +67,7 @@ const editorx_components = [
       values: [false, true]
     }],
     htmlCode: `<button class="pcu-button pcu-button-affix" size="medium" skin="standard" priority="primary" icon="suffix">
-    Suffix<img src="/pcu-editor-x/editor-x-icons/Arrows/chevronDown.svg">
+    Suffix<img src="../pcu-editor-x/editor-x-icons/Arrows/chevronDown.svg">
     </button>`
   },
   {
@@ -89,7 +89,7 @@ const editorx_components = [
       values: [false, true]
     }],
     htmlCode: `<button class="pcu-button pcu-icon-button" skin="standard" priority="primary" size="small">
-    <img src="/pcu-editor-x/editor-x-icons/Panels/Close.svg">
+    <img src="../pcu-editor-x/editor-x-icons/Panels/Close.svg">
     </button>`
   },
   {
@@ -137,12 +137,12 @@ const editorx_components = [
     <label for="pcu-context-menu"">
         <img class="pcu-context-menu-icon" src="../pcu-editor-x/editor-x-icons/Top Bar/More.svg">
     </label>
-    <div class="pcu-context-menu-content"> 
-        <span class="pcu-context-menu-item">Add New Items</span> 
-        <span class="pcu-context-menu-item">Edit This Item</span> 
+    <div class="pcu-context-menu-content">
+        <span class="pcu-context-menu-item">Add New Items</span>
+        <span class="pcu-context-menu-item">Edit This Item</span>
         <span class="pcu-context-menu-divider"></span>
-        <span class="pcu-context-menu-item">Delete This Item</span> 
-    </div> 
+        <span class="pcu-context-menu-item">Delete This Item</span>
+    </div>
 </div>`
   },
   {
