@@ -6,7 +6,7 @@
 component - Please read the instructions in the README file ! */
 currentLibrary = 'base-ui';
 
-const classicEditor_components = [
+const baseUi_components = [
   {
     category: "Regular Button",
     attributes: [{
