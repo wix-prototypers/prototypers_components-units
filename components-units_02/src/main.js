@@ -30,8 +30,8 @@ function mainEvents() {
           case "editor-x":
             relevantComponents = editorx_components;
           break;
-          case "classic-editor":
-            relevantComponents = classicEditor_components;
+          case "base-ui":
+            relevantComponents = baseUi_components;
           break;
         }
         // enable the relevant css file
