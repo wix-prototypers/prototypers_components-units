@@ -17,7 +17,7 @@ https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.3/com
 https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.3/components-units_02/pcu-base-ui/base-ui_components.css
 ```
 <br>
-2. Open this [link](https://wix-prototypers.github.io/prototypers_components-units/components-units_02/src/index.html){:target="\_blank"} and search for the component you need.
+2. Open this [link](https://wix-prototypers.github.io/prototypers_components-units/components-units_02/src/index.html) and search for the component you need.
 3. Copy the component code and use it in your prototype code.
 
 <b>Note:</b> There are components that include wsr-icons, you can copy the wsr_icons folder from the this projcet to your prototype project or add the relevant icon yourself.
