@@ -4,66 +4,85 @@
 
 /* Array with all the components, Note that there is a legality to the structure, so if you want to add a new
 component - Please read the instructions in the README file ! */
-let currentLibrary = 'wsr';
+let currentLibrary = "wsr";
 
 const wsr_components = [
   {
     category: "Regular Button",
-    attributes: [{
-      attribute: "Skin",
-      values: ["standard", "premium", "light", "inverted"]
-    },
-    {
-      attribute: "Priority",
-      values: ["primary", "secondary"]
-    },
-    {
-      attribute: "Disabled",
-      values: [false, true]
-    }],
-    htmlCode: `<button class="pcu-button" data-library="${currentLibrary}" skin="standard" priority="primary">Button</button>`
+    attributes: [
+      {
+        attribute: "Skin",
+        values: [
+          "standard",
+          "light",
+          "destructive",
+          "premium",
+          "premium-light",
+          "dark",
+          "transparent",
+        ],
+      },
+      {
+        attribute: "Priority",
+        values: ["primary", "secondary"],
+      },
+      {
+        attribute: "Size",
+        values: ["tiny", "small", "medium", "large"],
+      },
+      {
+        attribute: "Disabled",
+        values: [false, true],
+      },
+    ],
+    htmlCode: `<button class="pcu-button" data-library="${currentLibrary}" skin="standard" priority="primary">Button</button>`,
   },
   {
     category: "Prefix Button",
-    attributes: [{
-      attribute: "Skin",
-      values: ["standard", "premium", "light", "inverted"]
-    },
-    {
-      attribute: "Priority",
-      values: ["primary", "secondary"]
-    },
-    {
-      attribute: "Disabled",
-      values: [false, true]
-    }],
-    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" icon="prefix"><i data-icon="wsr-Add"></i>Prefix</button>`
+    attributes: [
+      {
+        attribute: "Skin",
+        values: ["standard", "premium", "light", "inverted"],
+      },
+      {
+        attribute: "Priority",
+        values: ["primary", "secondary"],
+      },
+      {
+        attribute: "Disabled",
+        values: [false, true],
+      },
+    ],
+    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" icon="prefix"><i data-icon="wsr-Add"></i>Prefix</button>`,
   },
   {
     category: "Suffix Button",
-    attributes: [{
-      attribute: "Skin",
-      values: ["standard", "premium", "light", "inverted"]
-    },
-    {
-      attribute: "Priority",
-      values: ["primary", "secondary"]
-    },
-    {
-      attribute: "Disabled",
-      values: [false, true]
-    }],
+    attributes: [
+      {
+        attribute: "Skin",
+        values: ["standard", "premium", "light", "inverted"],
+      },
+      {
+        attribute: "Priority",
+        values: ["primary", "secondary"],
+      },
+      {
+        attribute: "Disabled",
+        values: [false, true],
+      },
+    ],
     htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" icon="suffix">
     Suffix<i data-icon="wsr-ChevronDown"></i>
-    </button>`
+    </button>`,
   },
   {
     category: "Loader Button",
     attributes: [
       {
         attribute: "Disabled",
-        values: [false, true]
-      }],
+        values: [false, true],
+      },
+    ],
     htmlCode: `<button class="pcu-button pcu-button-loader" data-library="${currentLibrary}" skin="standard" priority="primary">
                 <div id="pcu-button-loader-txt" style="">
                   Loader
@@ -77,29 +96,31 @@ const wsr_components = [
                   </svg>
                 </div>
               </button>`,
-    jsCode: loaderButtonJs
+    jsCode: loaderButtonJs,
   },
   {
     category: "Icon Button",
-    attributes: [{
-      attribute: "Skin",
-      values: ["standard", "premium", "light", "inverted"]
-    },
-    {
-      attribute: "Priority",
-      values: ["primary", "secondary"]
-    },
-    {
-      attribute: "Size",
-      values: ["tiny", "small", "medium", "large"]
-    },
-    {
-      attribute: "Disabled",
-      values: [false, true]
-    }],
+    attributes: [
+      {
+        attribute: "Skin",
+        values: ["standard", "premium", "light", "inverted"],
+      },
+      {
+        attribute: "Priority",
+        values: ["primary", "secondary"],
+      },
+      {
+        attribute: "Size",
+        values: ["tiny", "small", "medium", "large"],
+      },
+      {
+        attribute: "Disabled",
+        values: [false, true],
+      },
+    ],
     htmlCode: `<button class="pcu-button pcu-icon-button" data-library="${currentLibrary}" skin="standard" priority="primary" size="tiny">
     <i data-icon="wsr-More"></i>
-    </button>`
+    </button>`,
   },
   {
     category: "Search Feild",
@@ -107,27 +128,29 @@ const wsr_components = [
     <i data-icon="wsr-Search"></i>
     <input class="topbar-search-input" placeholder="Search...">
     </div>`,
-    jsCode: searchFieldJs
+    jsCode: searchFieldJs,
   },
   {
     category: "Text Feild",
-    htmlCode: `<input class="pcu-text-input" type="text" data-library="${currentLibrary}" placeholder="This is a placeholder">`
+    htmlCode: `<input class="pcu-text-input" type="text" data-library="${currentLibrary}" placeholder="This is a placeholder">`,
   },
   {
     category: "Text Feild with Icon",
-    attributes: [{
-      attribute: "Icon",
-      values: ["prefix", "suffix"]
-    }],
-    htmlCode: `<div class="pcu-input-text-container" data-library="${currentLibrary}" icon="prefix"><input type="text" class="pcu-text-input" data-library="${currentLibrary}" placeholder="This is a placeholder"><span class="pcu-input-affix">$</span></div>`
+    attributes: [
+      {
+        attribute: "Icon",
+        values: ["prefix", "suffix"],
+      },
+    ],
+    htmlCode: `<div class="pcu-input-text-container" data-library="${currentLibrary}" icon="prefix"><input type="text" class="pcu-text-input" data-library="${currentLibrary}" placeholder="This is a placeholder"><span class="pcu-input-affix">$</span></div>`,
   },
   {
     category: "Text Area (rows=3)",
-    htmlCode: `<textarea class="pcu-text-input pcu-textarea" data-library="${currentLibrary}" placeholder="This is a placeholder" rows="3"></textarea>`
+    htmlCode: `<textarea class="pcu-text-input pcu-textarea" data-library="${currentLibrary}" placeholder="This is a placeholder" rows="3"></textarea>`,
   },
   {
     category: "Text Area (Dynamic Height)",
-    htmlCode: `<div type="text" class="pcu-text-input" data-library="${currentLibrary}" contenteditable="true" placeholder="Write a description"></div>`
+    htmlCode: `<div type="text" class="pcu-text-input" data-library="${currentLibrary}" contenteditable="true" placeholder="Write a description"></div>`,
   },
   {
     category: "Rich Text Area (rows=5)",
@@ -141,20 +164,22 @@ const wsr_components = [
     <span class="pcu-edit-text-btn"><i data-icon="wsr-RichTextNumberList"></i></span>
     </div>
     <textarea class="pcu-text-input pcu-textarea" placeholder="This is a placeholder" data-library="${currentLibrary}" rows="5"></textarea>
-    </div>`
+    </div>`,
   },
   {
     category: "Radio Button",
-    attributes: [{
-      attribute: "Checked",
-      values: [false, true]
-    },
-    {
-      attribute: "Disabled",
-      values: [false, true]
-    }],
+    attributes: [
+      {
+        attribute: "Checked",
+        values: [false, true],
+      },
+      {
+        attribute: "Disabled",
+        values: [false, true],
+      },
+    ],
     htmlCode: `<div class="pcu-radio-btn-container" data-library="${currentLibrary}">
-    <input class="pcu-radio-btn-input" name="" type="radio" id="radio-1"><span class="pcu-radio-btn-circle"></span><label class="pcu-radio-btn-label" for="radio-1">Default</label></div>`
+    <input class="pcu-radio-btn-input" name="" type="radio" id="radio-1"><span class="pcu-radio-btn-circle"></span><label class="pcu-radio-btn-label" for="radio-1">Default</label></div>`,
   },
   {
     category: "Radio Button - 2 Rows",
@@ -176,34 +201,38 @@ const wsr_components = [
     <label class="pcu-radio-btn-main-label" for="radio-5">Main Label</label>
     <label class="pcu-radio-btn-sub-label" for="radio-5">sub label</label>
     </span>
-    </div>`
+    </div>`,
   },
   {
     category: "Checkbox",
-    attributes: [{
-      attribute: "Checked",
-      values: [false, true]
-    },
-    {
-      attribute: "Disabled",
-      values: [false, true]
-    }],
+    attributes: [
+      {
+        attribute: "Checked",
+        values: [false, true],
+      },
+      {
+        attribute: "Disabled",
+        values: [false, true],
+      },
+    ],
     htmlCode: `<div class="pcu-checkbox-container" data-library="${currentLibrary}">
     <input id="checkbox-1" class="pcu-checkbox-input" type="checkbox">
     <label for="checkbox-1" class="pcu-checkbox-label">Unchecked</label>
-    </div>`
+    </div>`,
   },
   {
     category: "Number Input",
-    htmlCode: `<div class="pcu-input-number-container" data-library="${currentLibrary}"><input type="number" class="pcu-number-input" data-library="${currentLibrary}"></div>`
+    htmlCode: `<div class="pcu-input-number-container" data-library="${currentLibrary}"><input type="number" class="pcu-number-input" data-library="${currentLibrary}"></div>`,
   },
   {
     category: "Number Input with Icon",
-    attributes: [{
-      attribute: "Icon",
-      values: ["prefix", "suffix"]
-    }],
-    htmlCode: `<div class="pcu-input-number-container" data-library="${currentLibrary}" icon="prefix"><input type="number" class="pcu-number-input" data-library="${currentLibrary}"><span class="pcu-input-affix">$</span></div>`
+    attributes: [
+      {
+        attribute: "Icon",
+        values: ["prefix", "suffix"],
+      },
+    ],
+    htmlCode: `<div class="pcu-input-number-container" data-library="${currentLibrary}" icon="prefix"><input type="number" class="pcu-number-input" data-library="${currentLibrary}"><span class="pcu-input-affix">$</span></div>`,
   },
   {
     category: "Dropdown",
@@ -216,7 +245,7 @@ const wsr_components = [
     <div class="pcu-dropdown-item" value="Option 4">Option 4</div>
     </div>
     </div>`,
-    jsCode: dropdownJs
+    jsCode: dropdownJs,
   },
   {
     category: "Badge",
@@ -227,38 +256,52 @@ const wsr_components = [
     <div class="pcu-dropdown-item" value="Inactive"><label class="pcu-badge-color-tag" color="disabled"></label>Inactive</div>
     </div>
     </div>`,
-    jsCode: badgeJs
+    jsCode: badgeJs,
   },
   {
     category: "Float Notification",
-    attributes: [{
-      attribute: "Type",
-      values: ["standard", "success", "warning", "destructive", "premium", "preview", "dark"]
-    }],
+    attributes: [
+      {
+        attribute: "Type",
+        values: [
+          "standard",
+          "success",
+          "warning",
+          "destructive",
+          "premium",
+          "preview",
+          "dark",
+        ],
+      },
+    ],
     htmlCode: `<div class="pcu-float-notification" data-library="${currentLibrary}" type="standard">
     <!-- You can add icon here OR Delete this note -->
     <span> this a standard notification (and default) </span>
     <i class="pcu-float-notification-close" data-icon="wsr-DismissSmall"></i>
     </div>`,
-    jsCode: floatNotificationJs
+    jsCode: floatNotificationJs,
   },
   {
     category: "Avatar - placeholder",
-    attributes: [{
-      attribute: "Size",
-      values: ["tiny", "small", "medium", "large"]
-    }],
+    attributes: [
+      {
+        attribute: "Size",
+        values: ["tiny", "small", "medium", "large"],
+      },
+    ],
     htmlCode: `<div class="pcu-avatar" data-library="${currentLibrary}" size="tiny"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#aadbfc" viewBox="0 0 48 48"><path d="M24,12 C28.418278,12 32,15.581722 32,20 L32,22 C32,26.418278 28.418278,30 24,30 C19.581722,30 16,26.418278 16,22 L16,20 C16,15.581722 19.581722,12 24,12 Z M24,32 C33.8734019,32 42.1092023,38.8710577 44,48 L4,48 C5.89079771,38.8710577 14.1265981,32 24,32 Z"></path></svg>
-</div>`
+</div>`,
   },
   {
     category: "Avatar - image",
-    attributes: [{
-      attribute: "Size",
-      values: ["tiny", "small", "medium", "large"]
-    }],
+    attributes: [
+      {
+        attribute: "Size",
+        values: ["tiny", "small", "medium", "large"],
+      },
+    ],
     htmlCode: `<div class="pcu-avatar" data-library="${currentLibrary}" size="tiny">
-    <img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>`
+    <img src="http://static.wixstatic.com/media/11062b_533069931c2c46e38d1f3c01be8edf56~mv2.jpg"></div>`,
   },
   {
     category: "Add Image",
@@ -268,18 +311,20 @@ const wsr_components = [
     <path d="M15 15H0v1h15v15h1V16h15v-1H16V0h-1z"></path>
     </svg>
     </div>
-    </div>`
+    </div>`,
   },
   {
     category: "Toggle Switch",
-    attributes: [{
-      attribute: "Size",
-      values: ["large", "medium", "small"]
-    }],
+    attributes: [
+      {
+        attribute: "Size",
+        values: ["large", "medium", "small"],
+      },
+    ],
     htmlCode: `<label class="pcu-toggle-switch" data-library="${currentLibrary}" size="large">
     <input class="pcu-toggle-input" type="checkbox">
     <span class="pcu-toggle-round"></span>
-    </label>`
+    </label>`,
   },
   {
     category: "Modal",
@@ -299,7 +344,7 @@ const wsr_components = [
                     </div>
                   </div>
                 </div>`,
-    jsCode: modalJs
+    jsCode: modalJs,
   },
   {
     category: "Popover Menu",
@@ -311,11 +356,13 @@ const wsr_components = [
     <span class="pcu-popover-menu-item"><i data-icon="wsr-Edit"></i>Delete This Item</span>
     </div>
     </div>`,
-    attributes: [{
-      attribute: "dir",
-      values: ["top", "right", "bottom", "left"]
-    }],
-    jsCode: popoverMenuJs
+    attributes: [
+      {
+        attribute: "dir",
+        values: ["top", "right", "bottom", "left"],
+      },
+    ],
+    jsCode: popoverMenuJs,
   },
   {
     category: "Tooltips",
@@ -324,10 +371,12 @@ const wsr_components = [
     Enter your postal code, so postman can easier send you a mail.
     </div>
     </div>`,
-    attributes: [{
-      attribute: "dir",
-      values: ["top", "right", "bottom", "left"]
-    }]
+    attributes: [
+      {
+        attribute: "dir",
+        values: ["top", "right", "bottom", "left"],
+      },
+    ],
   },
   {
     category: "Info Tooltip",
@@ -335,7 +384,7 @@ const wsr_components = [
     <div class="pcu-popover pcu-tooltip-content">
     Enter your postal code, so postman can easier send you a mail.
     </div>
-    </div>`
+    </div>`,
   },
   {
     category: "Segmented Toggle - Text",
@@ -344,7 +393,7 @@ const wsr_components = [
     <label class="pcu-segmented-toggle-labels" for="segmented-toggle-1">Option 1</label>
     <input class="pcu-segmented-toggle-option" id="segmented-toggle-2" value="show" option="2" type="radio" name="segmented-toggle">
     <label class="pcu-segmented-toggle-labels" for="segmented-toggle-2">Option 2</label>
-    </div>`
+    </div>`,
   },
   {
     category: "Segmented Toggle - Text with Icons",
@@ -353,7 +402,7 @@ const wsr_components = [
     <label class="pcu-segmented-toggle-labels" for="icon-text-toggle-1"><span class="pcu-segmented-toggle-preix">%</span><span>Option 1</span></label>
     <input class="pcu-segmented-toggle-option" id="icon-text-toggle-2" value="show" option="2" type="radio" name="icon-text-segmented-toggle">
     <label class="pcu-segmented-toggle-labels" for="icon-text-toggle-2"><span class="pcu-segmented-toggle-preix"><i data-icon="wsr-Edit"></i></span><span>Option 2</span></label>
-    </div>`
+    </div>`,
   },
   {
     category: "Segmented Toggle - Icons",
@@ -362,12 +411,12 @@ const wsr_components = [
     <label class="pcu-segmented-toggle-labels" for="icon-1"><span class="pcu-segmented-toggle-preix">%</span></label>
     <input class="pcu-segmented-toggle-option" id="icon-2" value="show" option="2" type="radio" name="icon-segmented-toggle">
     <label class="pcu-segmented-toggle-labels" for="icon-2"><span class="pcu-segmented-toggle-preix"><i data-icon="wsr-Edit"></i></span></label>
-    </div>`
+    </div>`,
   },
   {
     category: "Date Picker",
     htmlCode: datePickerHtml,
-    jsCode: datePickerJs
+    jsCode: datePickerJs,
   },
   {
     category: "Time Picker",
@@ -376,12 +425,12 @@ const wsr_components = [
     <span class="pcu-input-time-btn pcu-input-time-down"><i data-icon="wsr-ChevronDownSmall"></i></span>
     <input class="pcu-text-input" data-library="${currentLibrary}" type="text" placeholder="This is a placeholder" value="12:00">
     <span class="pcu-input-affix">PM</span>
-    </div>`
+    </div>`,
   },
   {
     category: "Table",
     htmlCode: tableHtml,
-    jsCode: tableJs
+    jsCode: tableJs,
   },
   {
     category: "Collapse Expand",
@@ -416,6 +465,6 @@ const wsr_components = [
       </div>
     </div>
     `,
-    jsCode: collapseJs
-  }
-]
+    jsCode: collapseJs,
+  },
+];
