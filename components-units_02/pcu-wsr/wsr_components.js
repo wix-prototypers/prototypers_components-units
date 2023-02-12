@@ -35,7 +35,7 @@ const wsr_components = [
         values: [false, true],
       },
     ],
-    htmlCode: `<button class="pcu-button" data-library="${currentLibrary}" skin="standard" priority="primary">Button</button>`,
+    htmlCode: `<button class="pcu-button" data-library="${currentLibrary}" skin="standard" priority="primary" size="medium">Button</button>`,
   },
   {
     category: "Prefix Button",

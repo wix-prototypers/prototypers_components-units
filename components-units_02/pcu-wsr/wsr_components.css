@@ -293,6 +293,48 @@
   --text-color: var(--D80);
 }
 
+/* Size Buttons */
+
+.pcu-button[data-library="wsr"][size="tiny"] {
+  --font-size: 12px;
+  --line-height: 16px;
+  --font-weight: 700;
+  --height: 24px;
+  --min-width: 60px;
+  --border-radius: 18px;
+  --padding: 0 11px;
+}
+
+.pcu-button[data-library="wsr"][size="small"] {
+  --font-size: 14px;
+  --line-height: 18px;
+  --font-weight: 530;
+  --height: 30px;
+  --min-width: 72px;
+  --border-radius: 15px;
+  --padding: 0 17px;
+}
+
+.pcu-button[data-library="wsr"][size="medium"] {
+  --font-size: 16px;
+  --line-height: 24px;
+  --font-weight: 530;
+  --height: 36px;
+  --min-width: 84px;
+  --border-radius: 18px;
+  --padding: 0 23px;
+}
+
+.pcu-button[data-library="wsr"][size="large"] {
+  --font-size: 16px;
+  --line-height: 24px;
+  --font-weight: 530;
+  --height: 42px;
+  --min-width: 102px;
+  --border-radius: 21px;
+  --padding: 0 29px;
+}
+
 /* general style button */
 
 .pcu-button[data-library="wsr"] {
@@ -302,18 +344,17 @@
   align-items: center;
   display: flex;
   border: 1px solid var(--border-color);
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-  font-weight: var(--pcu-font-weight-medium, 500);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
   outline: 0;
   transition-duration: 100ms;
   transition-timing-function: linear;
   transition-property: background-color, color, border-color;
-  height: 36px;
-  min-width: 104px;
-  border-radius: 18px;
-  padding: 0 23px;
+  height: var(--height);
+  min-width: var(--min-width);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
   background-color: var(--button-bg-color);
   color: var(--text-color);
   text-decoration: none;
