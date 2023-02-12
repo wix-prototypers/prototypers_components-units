@@ -53,7 +53,7 @@ const wsr_components = [
         values: [false, true],
       },
     ],
-    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" icon="prefix"><i data-icon="wsr-Add"></i>Prefix</button>`,
+    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" icon="prefix" size="medium"><i data-icon="wsr-Add"></i>Prefix</button>`,
   },
   {
     category: "Suffix Button",
@@ -71,7 +71,7 @@ const wsr_components = [
         values: [false, true],
       },
     ],
-    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" icon="suffix">
+    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" icon="suffix" size="medium">
     Suffix<i data-icon="wsr-ChevronDown"></i>
     </button>`,
   },
@@ -83,7 +83,7 @@ const wsr_components = [
         values: [false, true],
       },
     ],
-    htmlCode: `<button class="pcu-button pcu-button-loader" data-library="${currentLibrary}" skin="standard" priority="primary">
+    htmlCode: `<button class="pcu-button pcu-button-loader" data-library="${currentLibrary}" skin="standard" priority="primary" size="medium">
                 <div id="pcu-button-loader-txt" style="">
                   Loader
                 </div>
