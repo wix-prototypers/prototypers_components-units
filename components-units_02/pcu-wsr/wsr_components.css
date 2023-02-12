@@ -25,20 +25,22 @@
   --B40: #D6E6FE;
   --B50: #E7F0FF;
   /* Premium */
-  --P00: #8214CE;
-  --P10: #A82DFD;
-  --P20: #BE63FD;
-  --P30: #CD89FC;
-  --P40: #E5C0FE;
-  --P50: #F4E3FF;
+  --P00: #7416A5;
+  --P05: #8E1DD1;
+  --P10: #9A27D5;
+  --P20: #C161F0;
+  --P30: #CF8CF1;
+  --P40: #E3C3F4;
+  --P50: #F1E0F9;
+  --P60: #F7EDFC;
   /* Destructive (red) */
-  --R00: #D0180B;
+  --R00: #B81206;
   --R05: #D0180B;
   --R10: #E62214;
-  --R20: #FF6D63;
+  --R20: #F69891;
   --R30: #F69891;
   --R40: #FBD0CD;
-  --R50: #FDE3E1;
+  --R50: #FDECEB;
   /* Green */
   --G00: #1D8649;
   --G05: #229954;
@@ -139,39 +141,159 @@
   --affix-icon-filter: var(--blue-icon);
 }
 
-[data-library="wsr"][skin="light"][priority="primary"]:hover {
+[data-library="wsr"][skin="light"][priority="primary"]:hover,
+[data-library="wsr"][skin="light"][priority="secondary"]:hover {
   --button-bg-color: var(--B50);
   --border-color: var(--B50);
   --text-color: var(--B10);
 }
 
-[data-library="wsr"][skin="light"][priority="primary"]:active {
+[data-library="wsr"][skin="light"][priority="primary"]:active,
+[data-library="wsr"][skin="light"][priority="secondary"]:active {
   --button-bg-color: var(--B40);
   --text-color: var(--B10);
 }
 
 /* skin - destructive */
-
-[data-library="wsr"][skin="premium"]:hover {
-  --button-bg-color: var(--P20);
-  --border-color: var(--P20);
+[data-library="wsr"][skin="destructive"][priority="primary"] {
+  --button-bg-color: var(--R10);
+  --border-color: var(--R10);
   --text-color: var(--D80);
 }
 
-[data-library="wsr"][skin="premium"], [data-library="wsr"][skin="premium"]:active {
+[data-library="wsr"][skin="destructive"][priority="secondary"] {
+  --button-bg-color: var(--D80);
+  --border-color: var(--R40);
+  --text-color: var(--R10);
+}
+
+[data-library="wsr"][skin="destructive"][priority="primary"]:hover,
+[data-library="wsr"][skin="destructive"][priority="secondary"]:hover {
+  --button-bg-color: var(--R05);
+  --border-color: var(--R05);
+  --text-color: var(--D80);
+}
+
+[data-library="wsr"][skin="destructive"][priority="primary"]:active,
+[data-library="wsr"][skin="destructive"][priority="secondary"]:active {
+  --button-bg-color: var(--R00);
+  --border-color: var(--R00);
+  --text-color: var(--D80);
+}
+
+/* skin - premium */
+
+[data-library="wsr"][skin="premium"][priority="primary"] {
   --button-bg-color: var(--P10);
   --border-color: var(--P10);
   --text-color: var(--D80);
-  --affix-icon-filter: var(--white-icon);
 }
 
-.pcu-button-affix[data-library="wsr"][icon="prefix"] {
-  --icon-margin: 0 6px 0 -6px;
+[data-library="wsr"][skin="premium"][priority="secondary"] {
+  --button-bg-color: var(--D80);
+  --border-color: var(--P40);
+  --text-color: var(--P10);
 }
 
-.pcu-button-affix[data-library="wsr"][icon="suffix"] {
-  --icon-margin: 0 -6px 0 6px;
+[data-library="wsr"][skin="premium"][priority="primary"]:hover,
+[data-library="wsr"][skin="premium"][priority="secondary"]:hover {
+  --button-bg-color: var(--P05);
+  --border-color: var(--P05);
+  --text-color: var(--D80);
 }
+
+[data-library="wsr"][skin="premium"][priority="primary"]:active,
+[data-library="wsr"][skin="premium"][priority="secondary"]:active {
+  --button-bg-color: var(--P00);
+  --border-color: var(--P00);
+  --text-color: var(--D80);
+}
+
+/* skin - premium-light */
+
+[data-library="wsr"][skin="premium-light"][priority="primary"] {
+  --button-bg-color: var(--D80);
+  --border-color: var(--D80);
+  --text-color: var(--P10);
+}
+
+[data-library="wsr"][skin="premium-light"][priority="secondary"] {
+  --button-bg-color: transparent;
+  --border-color: var(--D80-50);
+  --text-color: var(--D80);
+}
+
+[data-library="wsr"][skin="premium-light"][priority="primary"]:hover,
+[data-library="wsr"][skin="premium-light"][priority="secondary"]:hover {
+  --button-bg-color: var(--P50);
+  --border-color: var(--P50);
+  --text-color: var(--P10);
+}
+
+[data-library="wsr"][skin="premium-light"][priority="primary"]:active,
+[data-library="wsr"][skin="premium-light"][priority="secondary"]:active {
+  --button-bg-color: var(--P40);
+  --border-color: var(--P40);
+  --text-color: var(--P10);
+}
+
+/* skin - dark */
+
+[data-library="wsr"][skin="dark"][priority="primary"] {
+  --button-bg-color: var(--D10);
+  --border-color: var(--D10);
+  --text-color: var(--D80);
+}
+
+[data-library="wsr"][skin="dark"][priority="secondary"] {
+  --button-bg-color: transparent;
+  --border-color: var(--D40);
+  --text-color: var(--D10);
+}
+
+[data-library="wsr"][skin="dark"][priority="primary"]:hover,
+[data-library="wsr"][skin="dark"][priority="secondary"]:hover {
+  --button-bg-color: var(--D20);
+  --border-color: var(--D20);
+  --text-color: var(--D80);
+}
+
+[data-library="wsr"][skin="dark"][priority="primary"]:active,
+[data-library="wsr"][skin="dark"][priority="secondary"]:active {
+  --button-bg-color: var(--D10);
+  --border-color: var(--D10);
+  --text-color: var(--D80);
+}
+
+/* skin - transparent */
+
+[data-library="wsr"][skin="transparent"][priority="primary"] {
+  --button-bg-color: var(--D20-48);
+  --border-color: transparent;
+  --text-color: var(--D80);
+}
+
+[data-library="wsr"][skin="transparent"][priority="secondary"] {
+  --button-bg-color: transparent;
+  --border-color: transparent;
+  --text-color: var(--D80);
+}
+
+[data-library="wsr"][skin="transparent"][priority="primary"]:hover,
+[data-library="wsr"][skin="transparent"][priority="secondary"]:hover {
+  --button-bg-color: var(--D20-54);
+  --border-color: transparent;
+  --text-color: var(--D80);
+}
+
+[data-library="wsr"][skin="transparent"][priority="primary"]:active,
+[data-library="wsr"][skin="transparent"][priority="secondary"]:active {
+  --button-bg-color: var(--D20-60);
+  --border-color: transparent;
+  --text-color: var(--D80);
+}
+
+/* general style button */
 
 .pcu-button[data-library="wsr"] {
   justify-content: center;
