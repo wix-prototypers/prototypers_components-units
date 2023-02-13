@@ -550,14 +550,14 @@
 .pcu-search-field[data-library="wsr"] {
   max-width: 500px;
   min-width: 180px;
-  /* width: calc(50vw - 466px); */
   transition: width .4s;
-  border: 1px solid var(--B30);
+  border: 1px solid var(--B40);
   background-color: var(--D80);
   border-radius: 40px;
   margin: 3px 18px 3px 8px;
-  height: 34px;
-  font-size: 14px;
+  height: 36px;
+  font-size: 16px;
+  line-height: 24px;
   align-items: center;
   display: flex;
   padding: 0 6px;
@@ -591,7 +591,7 @@ div[type=text].pcu-text-input[data-library="wsr"][placeholder]:empty:before {
 }
 
 .pcu-search-field[data-library="wsr"]>i {
-  filter: var(--blue-icon);
+  filter: var(--icon-B10);
   height: 24px;
 }
 
