@@ -98,6 +98,46 @@
 
 /* ---------------------- Buttons ---------------------- */
 
+/* general style button */
+
+.pcu-button[data-library="wsr"] {
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  outline: 0;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
+  transition-property: background-color, color, border-color;
+  text-decoration: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
+  height: var(--height);
+  min-width: var(--min-width);
+  border-radius: var(--border-radius);
+  padding: var(--padding);
+  background-color: var(--button-bg-color);
+  color: var(--text-color);
+}
+
+.pcu-button[data-library="wsr"] i {
+  filter: var(--affix-icon-filter);
+}
+
+.pcu-button[data-library="wsr"]:disabled {
+  --button-bg-color: var(--D50) !important;
+  --border-color: var(--D50) !important;
+  --text-color: var(--D80) !important;
+  --affix-icon-filter: var(--icon-D80) !important;
+  cursor: default !important;
+}
+
 /* skin - standard */
 [data-library="wsr"][skin="standard"][priority="primary"] {
   --button-bg-color: var(--B10);
@@ -354,73 +394,41 @@
   --padding: 0 29px;
 }
 
-/* general style button */
+/* Affix Buttons */
 
-.pcu-button[data-library="wsr"] {
-  justify-content: center;
-  box-sizing: border-box;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  border: 1px solid var(--border-color);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  font-weight: var(--font-weight);
-  outline: 0;
-  transition-duration: 100ms;
-  transition-timing-function: linear;
-  transition-property: background-color, color, border-color;
-  height: var(--height);
-  min-width: var(--min-width);
-  border-radius: var(--border-radius);
-  padding: var(--padding);
-  background-color: var(--button-bg-color);
-  color: var(--text-color);
-  text-decoration: none;
-  user-select: none;
-  -webkit-font-smoothing: antialiased;
-  cursor: pointer;
+.pcu-button-affix[data-library="wsr"][icon="prefix"][size="large"] i {
+  margin: 0 12px 0 -12px;
 }
 
-.pcu-button[data-library="wsr"]:disabled {
-  --button-bg-color: var(--D50) !important;
-  --border-color: var(--D50) !important;
-  --text-color: var(--D80) !important;
-  --affix-icon-filter: var(--white-icon) !important;
+.pcu-button-affix[data-library="wsr"][icon="suffix"][size="large"] i {
+  margin: 0 -12px 0 12px;
+}
+
+.pcu-button-affix[data-library="wsr"][icon="prefix"][size="medium"] i {
+  margin: 0 6px 0 -12px;
+}
+
+.pcu-button-affix[data-library="wsr"][icon="suffix"][size="medium"] i {
+  margin: 0 -12px 0 6px;
+}
+
+.pcu-button-affix[data-library="wsr"][icon="prefix"][size="small"] i {
+  margin: 0 6px 0 -6px;
+}
+
+.pcu-button-affix[data-library="wsr"][icon="suffix"][size="small"] i {
+  margin: 0 -6px 0 6px;
+}
+
+.pcu-button-affix[data-library="wsr"][icon="prefix"][size="tiny"] i {
+  margin: 0 3px 0 -6px;
+}
+
+.pcu-button-affix[data-library="wsr"][icon="suffix"][size="tiny"] i {
+  margin: 0 -6px 0 3px;
 }
 
 /* ---------------------- Icon Buttons ---------------------- */
-.pcu-button-affix[data-library="wsr"] i, .pcu-button.pcu-icon-button[data-library="wsr"] i {
-  filter: var(--affix-icon-filter);
-  margin: var(--icon-margin);
-  height: var(--icon-size);
-  width: var(--icon-size);
-}
-
-.pcu-icon-button[data-library="wsr"][size="large"] {
-  --button-size: 40px;
-}
-
-.pcu-icon-button[data-library="wsr"][size="medium"] {
-  --button-size: 34px;
-}
-
-.pcu-icon-button[data-library="wsr"][size="large"], .pcu-icon-button[size="medium"] {
-  --icon-size: 24px;
-}
-
-.pcu-icon-button[data-library="wsr"][size="small"] {
-  --button-size: 28px;
-}
-
-.pcu-icon-button[data-library="wsr"][size="tiny"] {
-  --button-size: 22px;
-}
-
-.pcu-icon-button[data-library="wsr"][size="small"], .pcu-icon-button[size="tiny"] {
-  --icon-size: 18px;
-}
-
 .pcu-button.pcu-icon-button[data-library="wsr"] {
   height: var(--button-size);
   width: var(--button-size);
@@ -428,6 +436,37 @@
   min-width: var(--button-size);
   padding: 0;
   border-radius: 50%;
+}
+
+.pcu-button.pcu-icon-button[data-library="wsr"] i {
+  filter: var(--affix-icon-filter);
+  margin: var(--icon-margin);
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.pcu-icon-button[data-library="wsr"][size="large"] {
+  --button-size: 42px;
+}
+
+.pcu-icon-button[data-library="wsr"][size="medium"] {
+  --button-size: 36px;
+}
+
+.pcu-icon-button[data-library="wsr"][size="small"] {
+  --button-size: 30px;
+}
+
+.pcu-icon-button[data-library="wsr"][size="tiny"] {
+  --button-size: 24px;
+}
+
+.pcu-icon-button[data-library="wsr"][size="large"], .pcu-icon-button[size="medium"] {
+  --icon-size: 24px;
+}
+
+.pcu-icon-button[data-library="wsr"][size="small"], .pcu-icon-button[size="tiny"] {
+  --icon-size: 18px;
 }
 
 /* ---------------------- Loader Button ---------------------- */

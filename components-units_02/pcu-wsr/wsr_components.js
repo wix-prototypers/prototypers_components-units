@@ -79,12 +79,40 @@ const wsr_components = [
         values: ["primary", "secondary"],
       },
       {
+        attribute: "Size",
+        values: ["tiny", "small", "medium", "large"],
+      },
+      {
         attribute: "Disabled",
         values: [false, true],
       },
     ],
     htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" size="medium" icon="suffix" size="medium">
     Suffix<i data-icon="wsr-ChevronDown"></i>
+    </button>`,
+  },
+  {
+    category: "Icon Button",
+    attributes: [
+      {
+        attribute: "Skin",
+        values: ["standard", "premium", "light", "inverted"],
+      },
+      {
+        attribute: "Priority",
+        values: ["primary", "secondary"],
+      },
+      {
+        attribute: "Size",
+        values: ["tiny", "small", "medium", "large"],
+      },
+      {
+        attribute: "Disabled",
+        values: [false, true],
+      },
+    ],
+    htmlCode: `<button class="pcu-button pcu-icon-button" data-library="${currentLibrary}" skin="standard" priority="primary" size="medium">
+    <i data-icon="wsr-More"></i>
     </button>`,
   },
   {
@@ -109,30 +137,6 @@ const wsr_components = [
                 </div>
               </button>`,
     jsCode: loaderButtonJs,
-  },
-  {
-    category: "Icon Button",
-    attributes: [
-      {
-        attribute: "Skin",
-        values: ["standard", "premium", "light", "inverted"],
-      },
-      {
-        attribute: "Priority",
-        values: ["primary", "secondary"],
-      },
-      {
-        attribute: "Size",
-        values: ["tiny", "small", "medium", "large"],
-      },
-      {
-        attribute: "Disabled",
-        values: [false, true],
-      },
-    ],
-    htmlCode: `<button class="pcu-button pcu-icon-button" data-library="${currentLibrary}" skin="standard" priority="primary" size="tiny">
-    <i data-icon="wsr-More"></i>
-    </button>`,
   },
   {
     category: "Search Feild",
