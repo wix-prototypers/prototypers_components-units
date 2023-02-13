@@ -42,18 +42,30 @@ const wsr_components = [
     attributes: [
       {
         attribute: "Skin",
-        values: ["standard", "premium", "light", "inverted"],
+        values: [
+          "standard",
+          "light",
+          "destructive",
+          "premium",
+          "premium-light",
+          "dark",
+          "transparent",
+        ],
       },
       {
         attribute: "Priority",
         values: ["primary", "secondary"],
       },
       {
+        attribute: "Size",
+        values: ["tiny", "small", "medium", "large"],
+      },
+      {
         attribute: "Disabled",
         values: [false, true],
       },
     ],
-    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" icon="prefix" size="medium"><i data-icon="wsr-Add"></i>Prefix</button>`,
+    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" size="medium" icon="prefix" size="medium"><i data-icon="wsr-Add"></i>Prefix</button>`,
   },
   {
     category: "Suffix Button",
@@ -71,7 +83,7 @@ const wsr_components = [
         values: [false, true],
       },
     ],
-    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" icon="suffix" size="medium">
+    htmlCode: `<button class="pcu-button pcu-button-affix" data-library="${currentLibrary}" skin="standard" priority="primary" size="medium" icon="suffix" size="medium">
     Suffix<i data-icon="wsr-ChevronDown"></i>
     </button>`,
   },
