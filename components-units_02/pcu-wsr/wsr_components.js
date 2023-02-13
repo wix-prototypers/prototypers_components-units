@@ -72,7 +72,15 @@ const wsr_components = [
     attributes: [
       {
         attribute: "Skin",
-        values: ["standard", "premium", "light", "inverted"],
+        values: [
+          "standard",
+          "light",
+          "destructive",
+          "premium",
+          "premium-light",
+          "dark",
+          "transparent",
+        ],
       },
       {
         attribute: "Priority",
@@ -96,7 +104,7 @@ const wsr_components = [
     attributes: [
       {
         attribute: "Skin",
-        values: ["standard", "premium", "light", "inverted"],
+        values: ["standard", "light", "premium", "transparent"],
       },
       {
         attribute: "Priority",
