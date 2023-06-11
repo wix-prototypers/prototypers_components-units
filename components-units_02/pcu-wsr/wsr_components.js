@@ -130,6 +130,10 @@ const wsr_components = [
         attribute: "Disabled",
         values: [false, true],
       },
+      {
+        attribute: "Size",
+        values: ["small", "medium", "large"],
+      },
     ],
     htmlCode: `<button class="pcu-button pcu-button-loader" data-library="${currentLibrary}" skin="standard" priority="primary" size="medium">
                 <div id="pcu-button-loader-txt" style="">

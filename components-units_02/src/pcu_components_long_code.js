@@ -2,11 +2,11 @@
 So you can define a variable with the long code and use it in wsr_components.js file.
 Use a consistent name depending on the component ! */
 
- const loaderButtonJs = `
-document.querySelectorAll('.pcu-button-loader').forEach(function (elm) {
-  elm.addEventListener('click', function (e) {
-    var loaderTxt = document.getElementById("pcu-button-loader-txt");
-    var loaderIcon = document.getElementById("pcu-button-loader-icon");
+const loaderButtonJs = `
+document.querySelectorAll(".pcu-button-loader").forEach(function (elm) {
+  elm.addEventListener("click", function (e) {
+    var loaderTxt = elm.querySelector("#pcu-button-loader-txt");
+    var loaderIcon = elm.querySelector("#pcu-button-loader-icon");
     loaderTxt.style.display = "none";
     loaderIcon.style.display = "block";
     setTimeout(() => {
@@ -15,9 +15,9 @@ document.querySelectorAll('.pcu-button-loader').forEach(function (elm) {
     }, 2000);
   });
 });
-`
+`;
 
-const dockingPanelHTML=`
+const dockingPanelHTML = `
 <div class="pcu-docking-panel-outer">
       <div class="pcu-docking-panel-inner">
         <div data-direction="top" class="pcu-docking-direction top">
@@ -49,8 +49,8 @@ const dockingPanelHTML=`
         </div>
       </div>
     </div>
-`
-const dockingPanelJs=`
+`;
+const dockingPanelJs = `
 document.querySelectorAll('.docking-point').forEach(function(elm) {
   elm.addEventListener('click', function(e) {
     if(e.target.parentElement.classList.contains('direction-docked')){
@@ -61,7 +61,7 @@ document.querySelectorAll('.docking-point').forEach(function(elm) {
     }
   });
 });
-`
+`;
 const searchFieldJs = `document.querySelectorAll('.topbar-search-input').forEach(function(elm) {
   elm.addEventListener('focus', function(e) {
     e.target.parentElement.classList.add('pcu-field-has-focus')
@@ -70,7 +70,7 @@ const searchFieldJs = `document.querySelectorAll('.topbar-search-input').forEach
   elm.addEventListener('focusout', function(e) {
     e.target.parentElement.classList.remove('pcu-field-has-focus')
   });
-});`
+});`;
 
 const dropdownJs = `// dropdown focus
 document.querySelectorAll('.pcu-dropdown .pcu-text-input').forEach(function(elm) {
@@ -99,7 +99,7 @@ document.querySelectorAll('.pcu-dropdown-item').forEach(function(dropdownItem) {
       })
     }
   });
-});`
+});`;
 
 const badgeJs = `// dropdown focus
 document.querySelectorAll('.pcu-dropdown .pcu-text-input').forEach(function(elm) {
@@ -121,14 +121,14 @@ document.querySelectorAll('.pcu-dropdown[skin="badge"] .pcu-dropdown-content .pc
     let color = e.target.children[0].getAttribute('color');
     input.setAttribute('color', color)
   });
-});`
+});`;
 
 const floatNotificationJs = `// remove this notification (after clicking on the x icon)
 document.querySelectorAll('.pcu-float-notification .pcu-float-notification-close').forEach(function(elm) {
   elm.addEventListener('click', function(e) {
     e.target.parentElement.classList.add('remove-notification')
   });
-});`
+});`;
 
 const modalJs = `
 function displayModal(opacity, zIndex, modalId) {
@@ -169,13 +169,13 @@ document.querySelectorAll('.closeModal').forEach(function (btn) {
     animationModalCard("0.93")
   });
 });
-`
+`;
 
 const popoverMenuJs = `document.querySelectorAll('.pcu-popover-menu').forEach(function(popoverMenu) {
   popoverMenu.addEventListener('click', function (e) {
     this.classList.toggle('pcu-open-popover');
   });
-});`
+});`;
 
 const datePickerHtml = `  <div class="pcu-dropdown pcu-date-picker" data-library="wsr">
 <span class="pcu-input-affix"><i data-icon="wsr-Date"></i></span>
@@ -251,7 +251,7 @@ const datePickerHtml = `  <div class="pcu-dropdown pcu-date-picker" data-library
 </div>
 </div>
 </div>
-</div>`
+</div>`;
 
 const datePickerJs = `document.querySelectorAll('.pcu-calendar-day').forEach(function(dropdownItem) {
   dropdownItem.addEventListener('click', function(e) {
@@ -263,7 +263,7 @@ const datePickerJs = `document.querySelectorAll('.pcu-calendar-day').forEach(fun
       dayBtn.closest('.pcu-date-picker').children[1].value = '09/' + theDay + '/2021';
     }
   });
-});`
+});`;
 
 const tableHtml = `<div class="pcu-table-main-header" data-library="wsr">
 </div>
@@ -345,7 +345,7 @@ const tableHtml = `<div class="pcu-table-main-header" data-library="wsr">
 </tr>
 </tbody>
 </table>
-</div>`
+</div>`;
 
 const tableJs = `// open more menu
 document.querySelectorAll('.pcu-popover-menu').forEach(function(popoverMenu) {
@@ -368,9 +368,9 @@ document.querySelectorAll('.pcu-popover-menu').forEach(function(popoverMenu) {
       }
     });
   });
-});`
+});`;
 
-const collapseJs=`
+const collapseJs = `
 document.querySelectorAll('.pcu-collapse-input').forEach(function (collapseInput) {
   collapseInput.onchange = toggleCollpase;
 });
@@ -380,7 +380,7 @@ function toggleCollpase(){
   collapsible.classList.toggle('pcu-slidedown')
   collapsible.classList.toggle('pcu-slideup')
 }
-`
+`;
 
 const sliderJs = `
 document.querySelectorAll('.pcu-slider-input').forEach((sliderField) => {
@@ -445,4 +445,4 @@ function changeOpacityColorPicker(sliderName , sliderValue){
   let colorPickerChild = colorPicker.querySelector("span")
   colorPickerChild.style.opacity = sliderValue/100;
 }
-`
+`;
