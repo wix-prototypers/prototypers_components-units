@@ -363,8 +363,8 @@ const wsr_components = [
                       Are you sure you want to leave this page? Your changes won't be saved.
                     </div>
                     <div class="pcu-modal-card-actions">
-                      <button class="pcu-button closeModal" skin="standard" data-library="${currentLibrary}" priority="secondary">Cancel</button>
-                      <button class="pcu-button closeModal" skin="standard" data-library="${currentLibrary}" priority="primary">Discard</button>
+                      <button class="pcu-button closeModal" data-library="${currentLibrary}" skin="standard" priority="secondary" size="medium">Cancel</button>
+                      <button class="pcu-button closeModal" data-library="${currentLibrary}" skin="standard" priority="primary" size="medium">Discard</button>
                     </div>
                   </div>
                 </div>`,
