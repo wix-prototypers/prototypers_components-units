@@ -277,6 +277,42 @@ const wsr_components = [
   },
   {
     category: "Badge",
+    attributes: [
+      {
+        attribute: "Skin",
+        values: [
+          "general",
+          "standard",
+          "neutralStandard",
+          "danger",
+          "neutralDanger",
+          "success",
+          "neutralSuccess",
+          "neutral",
+          "neutralLight",
+          "warning",
+          "warningLight",
+          "urgent",
+          "premium",
+        ],
+      },
+      {
+        attribute: "Type",
+        values: ["solid", "outlined", "transparent"],
+      },
+      {
+        attribute: "Size",
+        values: ["tiny", "small", "medium"],
+      },
+      {
+        attribute: "uppercase",
+        values: ["true", "false"],
+      },
+    ],
+    htmlCode: `<div class="pcu-badge" data-library="${currentLibrary}" skin="general" type="solid" size="medium" uppercase="true">Badge</div>`,
+  },
+  {
+    category: "Badge Select",
     htmlCode: `<div class="pcu-dropdown" data-library="${currentLibrary}" skin="badge">
     <input class="pcu-text-input pcu-dropdown-input" data-library="${currentLibrary}" color="success" type="text" placeholder="Select an option" readonly value="Active">
     <div class="pcu-dropdown-content">
