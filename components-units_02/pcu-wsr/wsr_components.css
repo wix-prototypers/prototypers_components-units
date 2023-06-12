@@ -57,6 +57,10 @@
   --Y30: #FFD16E;
   --Y40: #FFE2A5;
   --Y50: #FFF0D1;
+  /* Orange */
+  --O00: #DF4D00;
+  --O10: #FE620F;
+  --O20: #FF7D38;
   /* Transparent */
   --D10-03: rgba(0, 6, 36, 0.03);
   --D10-05: rgba(0, 6, 36, 0.05);
@@ -524,6 +528,83 @@
 
 .pcu-badge[data-library="wsr"][uppercase="false"] {
   --text-transform: capitalize;
+}
+
+/* Type Badge */
+.pcu-badge[data-library="wsr"][type="solid"] {
+  --border-color: var(--skin-color);
+  --background-color: var(--skin-color);
+  --color: white;
+}
+
+.pcu-badge[data-library="wsr"][type="outlined"] {
+  --border-color: var(--skin-color);
+  --background-color: white;
+  --color: var(--skin-color);
+}
+
+.pcu-badge[data-library="wsr"][type="transparent"] {
+  --border-color: transparent;
+  --background-color: transparent;
+  --color: var(--skin-color);
+}
+
+/* Skin Badge */
+.pcu-badge[data-library="wsr"][skin="general"] {
+  --skin-color: var(--D20)
+}
+
+.pcu-badge[data-library="wsr"][skin="standard"] {
+  --skin-color: var(--B20)
+}
+
+.pcu-badge[data-library="wsr"][skin="neutralStandard"] {
+  --skin-color: var(--B40);
+  --color: var(--D20);
+}
+
+.pcu-badge[data-library="wsr"][skin="danger"] {
+  --skin-color: var(--R10)
+}
+
+.pcu-badge[data-library="wsr"][skin="neutralDanger"] {
+  --skin-color: var(--R40);
+  --color: var(--D20);
+}
+
+.pcu-badge[data-library="wsr"][skin="success"] {
+  --skin-color: var(--G10)
+}
+
+.pcu-badge[data-library="wsr"][skin="neutralSuccess"] {
+  --skin-color: var(--G40);
+  --color: var(--D20);
+}
+
+.pcu-badge[data-library="wsr"][skin="neutral"] {
+  --skin-color: var(--D40)
+}
+
+.pcu-badge[data-library="wsr"][skin="neutralLight"] {
+  --skin-color: var(--D70);
+  --color: var(--D20);
+}
+
+.pcu-badge[data-library="wsr"][skin="warning"] {
+  --skin-color: var(--Y10)
+}
+
+.pcu-badge[data-library="wsr"][skin="warningLight"] {
+  --skin-color: var(--Y40);
+  --color: var(--D20);
+}
+
+.pcu-badge[data-library="wsr"][skin="urgent"] {
+  --skin-color: var(--O10)
+}
+
+.pcu-badge[data-library="wsr"][skin="premium"] {
+  --skin-color: var(--P10)
 }
 
 /* ---------------------- Loader Button ---------------------- */
