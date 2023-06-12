@@ -6,15 +6,15 @@ This project includes component units (e.g. WSR components, inputs, tooltips ...
 
 ###### Wix-Style-React components:
 ```
-https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.4/components-units_02/pcu-wsr/wsr_components.css
+https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.4.1/components-units_02/pcu-wsr/wsr_components.css
 ```
 ###### Editor-X components:
 ```
-https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.4/components-units_02/pcu-editor-x/editor-x_components.css
+https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.4.1/components-units_02/pcu-editor-x/editor-x_components.css
 ```
 ###### Base-UI components:
 ```
-https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.4/components-units_02/pcu-base-ui/base-ui_components.css
+https://cdn.jsdelivr.net/gh/wix-prototypers/prototypers_components-units@5.4.1/components-units_02/pcu-base-ui/base-ui_components.css
 ```
 <br>
 2. Open this [link](https://wix-prototypers.github.io/prototypers_components-units/components-units_02/src/index.html) and search for the component you need.
