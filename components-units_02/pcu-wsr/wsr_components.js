@@ -130,6 +130,10 @@ const wsr_components = [
         attribute: "Disabled",
         values: [false, true],
       },
+      {
+        attribute: "Size",
+        values: ["small", "medium", "large"],
+      },
     ],
     htmlCode: `<button class="pcu-button pcu-button-loader" data-library="${currentLibrary}" skin="standard" priority="primary" size="medium">
                 <div id="pcu-button-loader-txt" style="">
@@ -273,6 +277,42 @@ const wsr_components = [
   },
   {
     category: "Badge",
+    attributes: [
+      {
+        attribute: "Skin",
+        values: [
+          "general",
+          "standard",
+          "neutralStandard",
+          "danger",
+          "neutralDanger",
+          "success",
+          "neutralSuccess",
+          "neutral",
+          "neutralLight",
+          "warning",
+          "warningLight",
+          "urgent",
+          "premium",
+        ],
+      },
+      {
+        attribute: "Type",
+        values: ["solid", "outlined", "transparent"],
+      },
+      {
+        attribute: "Size",
+        values: ["tiny", "small", "medium"],
+      },
+      {
+        attribute: "uppercase",
+        values: ["true", "false"],
+      },
+    ],
+    htmlCode: `<div class="pcu-badge" data-library="${currentLibrary}" skin="general" type="solid" size="medium" uppercase="true">Badge</div>`,
+  },
+  {
+    category: "Badge Select",
     htmlCode: `<div class="pcu-dropdown" data-library="${currentLibrary}" skin="badge">
     <input class="pcu-text-input pcu-dropdown-input" data-library="${currentLibrary}" color="success" type="text" placeholder="Select an option" readonly value="Active">
     <div class="pcu-dropdown-content">
@@ -363,8 +403,8 @@ const wsr_components = [
                       Are you sure you want to leave this page? Your changes won't be saved.
                     </div>
                     <div class="pcu-modal-card-actions">
-                      <button class="pcu-button closeModal" skin="standard" data-library="${currentLibrary}" priority="secondary">Cancel</button>
-                      <button class="pcu-button closeModal" skin="standard" data-library="${currentLibrary}" priority="primary">Discard</button>
+                      <button class="pcu-button closeModal" data-library="${currentLibrary}" skin="standard" priority="secondary" size="medium">Cancel</button>
+                      <button class="pcu-button closeModal" data-library="${currentLibrary}" skin="standard" priority="primary" size="medium">Discard</button>
                     </div>
                   </div>
                 </div>`,

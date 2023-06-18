@@ -57,6 +57,10 @@
   --Y30: #FFD16E;
   --Y40: #FFE2A5;
   --Y50: #FFF0D1;
+  /* Orange */
+  --O00: #DF4D00;
+  --O10: #FE620F;
+  --O20: #FF7D38;
   /* Transparent */
   --D10-03: rgba(0, 6, 36, 0.03);
   --D10-05: rgba(0, 6, 36, 0.05);
@@ -467,6 +471,140 @@
 
 .pcu-icon-button[data-library="wsr"][size="small"], .pcu-icon-button[size="tiny"] {
   --icon-size: 18px;
+}
+
+/* ---------------------- Badge ---------------------- */
+
+/* general style button */
+.pcu-badge[data-library="wsr"] {
+  border: 1px solid;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  line-height: 1;
+  max-width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-color: var(--border-color);
+  color: var(--color);
+  background: var(--background-color);
+  padding: var(--padding);
+  height: var(--height);
+  text-transform: var(--text-transform);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+/* Size Badges */
+.pcu-badge[data-library="wsr"][size="tiny"] {
+  --padding: 0 5.5px;
+  --height: 18px;
+  --font-size: 8px;
+  --line-height: 12px;
+}
+
+.pcu-badge[data-library="wsr"][size="small"] {
+  --padding: 0 6px;
+  --height: 18px;
+  --font-size: 10px;
+  --line-height: 14px;
+}
+
+.pcu-badge[data-library="wsr"][size="medium"] {
+  --padding: 0 12px;
+  --height: 24px;
+  --font-size: 10px;
+  --line-height: 14px;
+}
+
+/* Size Uppercase */
+.pcu-badge[data-library="wsr"][uppercase="true"] {
+  --text-transform: uppercase;
+}
+
+.pcu-badge[data-library="wsr"][uppercase="false"] {
+  --text-transform: capitalize;
+}
+
+/* Type Badge */
+.pcu-badge[data-library="wsr"][type="solid"] {
+  --border-color: var(--skin-color);
+  --background-color: var(--skin-color);
+  --color: white;
+}
+
+.pcu-badge[data-library="wsr"][type="outlined"] {
+  --border-color: var(--skin-color);
+  --background-color: white;
+  --color: var(--skin-color);
+}
+
+.pcu-badge[data-library="wsr"][type="transparent"] {
+  --border-color: transparent;
+  --background-color: transparent;
+  --color: var(--skin-color);
+}
+
+/* Skin Badge */
+.pcu-badge[data-library="wsr"][skin="general"] {
+  --skin-color: var(--D20)
+}
+
+.pcu-badge[data-library="wsr"][skin="standard"] {
+  --skin-color: var(--B20)
+}
+
+.pcu-badge[data-library="wsr"][skin="neutralStandard"] {
+  --skin-color: var(--B40);
+  --color: var(--D20);
+}
+
+.pcu-badge[data-library="wsr"][skin="danger"] {
+  --skin-color: var(--R10)
+}
+
+.pcu-badge[data-library="wsr"][skin="neutralDanger"] {
+  --skin-color: var(--R40);
+  --color: var(--D20);
+}
+
+.pcu-badge[data-library="wsr"][skin="success"] {
+  --skin-color: var(--G10)
+}
+
+.pcu-badge[data-library="wsr"][skin="neutralSuccess"] {
+  --skin-color: var(--G40);
+  --color: var(--D20);
+}
+
+.pcu-badge[data-library="wsr"][skin="neutral"] {
+  --skin-color: var(--D40)
+}
+
+.pcu-badge[data-library="wsr"][skin="neutralLight"] {
+  --skin-color: var(--D70);
+  --color: var(--D20);
+}
+
+.pcu-badge[data-library="wsr"][skin="warning"] {
+  --skin-color: var(--Y10)
+}
+
+.pcu-badge[data-library="wsr"][skin="warningLight"] {
+  --skin-color: var(--Y40);
+  --color: var(--D20);
+}
+
+.pcu-badge[data-library="wsr"][skin="urgent"] {
+  --skin-color: var(--O10)
+}
+
+.pcu-badge[data-library="wsr"][skin="premium"] {
+  --skin-color: var(--P10)
 }
 
 /* ---------------------- Loader Button ---------------------- */
@@ -1208,16 +1346,14 @@ div[type=text].pcu-text-input[data-library="wsr"][placeholder]:empty:before {
 }
 
 .pcu-dropdown[data-library="wsr"]::after {
-  content: "";
   position: absolute;
-  height: 6px;
-  width: 6px;
-  border-bottom: 1px solid var(--B10);
-  border-right: 1px solid var(--B10);
-  border-radius: 1px;
   right: 14px;
   top: 50%;
-  transform: rotate(45deg) translateY(-49%);
+  transform: translateY(-50%);
+  color: var(--B10);
+  content: "\25BC";
+  bottom: 2px;
+  font-size: 14px;
 }
 
 [data-library="wsr"] .pcu-dropdown-content {
@@ -1757,10 +1893,10 @@ div[type=text].pcu-text-input[data-library="wsr"][placeholder]:empty:before {
 }
 
 .pcu-dropdown[data-library="wsr"][skin="badge"]::after {
-  border-bottom: 1px solid #fff;
-  border-right: 1px solid #fff;
   top: 9px;
   right: 7px;
+  color: white;
+  font-size: 12px;
 }
 
 .pcu-dropdown[data-library="wsr"][skin="badge"] .pcu-dropdown-content {
